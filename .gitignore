@@ -62,7 +62,28 @@ data/experiments/.mordred_progress.txt
 # 실험 모델 바이너리 — 재생성 가능, 일부 100MB 초과 (메타데이터 json 은 추적)
 models/experiments/*/best_model.pkl
 models/experiments_mordred/*/best_model.pkl
+models/experiments_rdkit210/*/best_model.pkl
 data/codex/best_model.pkl
+
+# Chemprop 학습 산출 (큰 .pt + lightning 로그) — 재생성 가능
+models/chemprop/
+models/chemprop_v1_rdkit_2d_normalized/
+
+# 다양한 FP RF / DA / CatBoost / chEMBL clean 모델 — 재생성 가능
+models/diverse_fp/
+models/da/
+models/chembl_clean/
+models/molformer/
+
+# 핑거프린트·임베딩 캐시 — 재생성 가능
+data/experiments/fp_cache/
+data/molformer_cache/
+
+# CatBoost 학습 로그
+catboost_info/
+
+# numpy 캐시 (큰 확률 배열)
+*.npy
 
 # Claude Code 로컬 설정
 .claude/
