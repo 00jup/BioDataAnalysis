@@ -1,0 +1,33 @@
+{
+  "experiment": "exp2",
+  "model": {
+    "type": "Soft Voting Ensemble (tuned)",
+    "components": [
+      "Random Forest",
+      "XGBoost",
+      "LightGBM"
+    ],
+    "feature": "Morgan+MACCS+Mordred",
+    "n_features_selected": 2370
+  },
+  "training_data": {
+    "total": 6465,
+    "positives": 1465,
+    "negatives": 5000
+  },
+  "per_model_cv_auc": {
+    "Random Forest": 0.8190951910529551,
+    "XGBoost": 0.826110135165156,
+    "LightGBM": 0.8226611495933622
+  },
+  "cv_auc": 0.842848217253003,
+  "validation": {
+    "auc": 0.8367125382262997,
+    "accuracy": 0.8068181818181818,
+    "f1": 0.6237424547283702,
+    "precision": 0.5555555555555556,
+    "recall": 0.7110091743119266
+  },
+  "classification_threshold": 0.269,
+  "threshold_method": "youden_j"
+}
