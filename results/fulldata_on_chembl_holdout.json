@@ -1,0 +1,18 @@
+{
+  "scenario": "FULL DATA model evaluated on chEMBL non-overlapping (val+test)",
+  "train_n": 12450,
+  "eval_n": 299,
+  "eval_pos": 208,
+  "eval_neg": 91,
+  "threshold": 0.24999999999999994,
+  "tp": 170,
+  "fn": 38,
+  "fp": 25,
+  "tn": 66,
+  "tpr": 0.8173076923076923,
+  "tnr": 0.7252747252747253,
+  "mcc": 0.524184415269673,
+  "auc": 0.8169378698224852,
+  "f1": 0.8436724565756824,
+  "accuracy": 0.7892976588628763
+}
