@@ -1,0 +1,172 @@
+{
+  "vivo_priority": {
+    "vivo_test": {
+      "n_total": 1821,
+      "n_decided": 1821,
+      "n_abstain": 0,
+      "n_pos": 175,
+      "n_neg": 1646,
+      "tp": 71,
+      "fn": 104,
+      "fp": 157,
+      "tn": 1489,
+      "tpr": 0.4057142857142857,
+      "tnr": 0.9046172539489672,
+      "precision": 0.31140350877192985,
+      "npv": 0.9347143753923415,
+      "accuracy": 0.85667215815486,
+      "f1": 0.3523573200992556,
+      "mcc": 0.27636595653473756,
+      "source_distribution": {
+        "model": 1821
+      },
+      "auc": 0.7515830584967887
+    },
+    "vitro_test": {
+      "n_total": 1247,
+      "n_decided": 1247,
+      "n_abstain": 0,
+      "n_pos": 444,
+      "n_neg": 803,
+      "tp": 90,
+      "fn": 354,
+      "fp": 69,
+      "tn": 734,
+      "tpr": 0.20270270270270271,
+      "tnr": 0.9140722291407223,
+      "precision": 0.5660377358490566,
+      "npv": 0.6746323529411765,
+      "accuracy": 0.6607858861267041,
+      "f1": 0.29850746268656714,
+      "mcc": 0.16764317228933157,
+      "source_distribution": {
+        "model": 1247
+      },
+      "auc": 0.5838410016492208
+    },
+    "professor_test": {
+      "n": 3,
+      "preds_only": true,
+      "pred_distribution": {
+        "0": 2,
+        "1": 1
+      },
+      "source_distribution": {
+        "model": 3
+      }
+    }
+  },
+  "weighted": {
+    "vivo_test": {
+      "n_total": 1821,
+      "n_decided": 1821,
+      "n_abstain": 0,
+      "n_pos": 175,
+      "n_neg": 1646,
+      "tp": 85,
+      "fn": 90,
+      "fp": 223,
+      "tn": 1423,
+      "tpr": 0.4857142857142857,
+      "tnr": 0.8645200486026732,
+      "precision": 0.275974025974026,
+      "npv": 0.9405155320555189,
+      "accuracy": 0.828116419549698,
+      "f1": 0.35196687370600416,
+      "mcc": 0.2753580873027888,
+      "source_distribution": {
+        "model": 1821
+      },
+      "auc": 0.7104339524388127
+    },
+    "vitro_test": {
+      "n_total": 1247,
+      "n_decided": 1247,
+      "n_abstain": 0,
+      "n_pos": 444,
+      "n_neg": 803,
+      "tp": 164,
+      "fn": 280,
+      "fp": 71,
+      "tn": 732,
+      "tpr": 0.36936936936936937,
+      "tnr": 0.9115815691158157,
+      "precision": 0.6978723404255319,
+      "npv": 0.7233201581027668,
+      "accuracy": 0.7185244587008821,
+      "f1": 0.48306332842415317,
+      "mcc": 0.3439977147372427,
+      "source_distribution": {
+        "model": 1247
+      },
+      "auc": 0.7776076200733736
+    },
+    "professor_test": {
+      "n": 3,
+      "preds_only": true,
+      "pred_distribution": {
+        "0": 3
+      },
+      "source_distribution": {
+        "model": 3
+      }
+    }
+  },
+  "consensus": {
+    "vivo_test": {
+      "n_total": 1821,
+      "n_decided": 1273,
+      "n_abstain": 548,
+      "n_pos": 94,
+      "n_neg": 1179,
+      "tp": 41,
+      "fn": 53,
+      "fp": 86,
+      "tn": 1093,
+      "tpr": 0.43617021276595747,
+      "tnr": 0.9270568278201866,
+      "precision": 0.3228346456692913,
+      "npv": 0.9537521815008726,
+      "accuracy": 0.8908091123330715,
+      "f1": 0.37104072398190047,
+      "mcc": 0.3169602730597794,
+      "source_distribution": {
+        "model": 1821
+      },
+      "auc": 0.6984101203688665
+    },
+    "vitro_test": {
+      "n_total": 1247,
+      "n_decided": 908,
+      "n_abstain": 339,
+      "n_pos": 233,
+      "n_neg": 675,
+      "tp": 52,
+      "fn": 181,
+      "fp": 27,
+      "tn": 648,
+      "tpr": 0.22317596566523606,
+      "tnr": 0.96,
+      "precision": 0.6582278481012658,
+      "npv": 0.781664656212304,
+      "accuracy": 0.7709251101321586,
+      "f1": 0.3333333333333333,
+      "mcc": 0.2838621747724363,
+      "source_distribution": {
+        "model": 1247
+      },
+      "auc": 0.7386107137180099
+    },
+    "professor_test": {
+      "n": 3,
+      "preds_only": true,
+      "pred_distribution": {
+        "NaN": 2,
+        "0.0": 1
+      },
+      "source_distribution": {
+        "model": 3
+      }
+    }
+  }
+}
