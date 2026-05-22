@@ -74,6 +74,12 @@ models/diverse_fp/
 models/da/
 models/chembl_clean/
 models/molformer/
+models/vivo/
+models/vitro/
+models/vivo_filtered/
+models/vitro_filtered/
+# 메타 데이터(JSON)는 추적
+!models/*/ensemble_meta.json
 
 # 핑거프린트·임베딩 캐시 — 재생성 가능
 data/experiments/fp_cache/

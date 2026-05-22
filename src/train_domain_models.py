@@ -111,20 +111,95 @@ def ensure_fp_cache(smiles_list: list[str], fp_name: str) -> pd.DataFrame:
     return cache
 
 
-def fp_xy(fp_name: str, df: pd.DataFrame):
+CONF_WEIGHT = {"high": 3.0, "med": 2.0, "low": 1.0, None: 1.0}
+
+# 데이터 기반 출처별 weight (source_reliability.py 방법 2 결과)
+DATA_WEIGHT_VIVO = {
+    "dilirank_pos": 4.0,        # vMost/vLess (AUC 0.89-0.92)
+    "dilirank_vNo": 4.0,        # FDA 음성 (대칭)
+    "livertox_A_B": 4.0,        # AUC 0.93
+    "livertox_C_D": 3.0,        # AUC 0.89
+    "livertox_E":   3.5,        # AUC 0.91
+    "marketed_clean_neg": 2.5,  # 시판 음성, 약간 신뢰
+    "clintox":      1.5,        # AUC 0.61
+    "tdc_dili":     0.5,
+    "dilist":       0.5,        # 거의 random
+    "sider_strict": 0.3,
+    "sider_lenient":0.2,
+    "gold":         0.1,        # 역방향 (신뢰 ↓)
+}
+DATA_WEIGHT_VITRO = {
+    "tox21":  1.5,
+    "chembl": 0.7,
+}
+
+
+def _vivo_sample_weight(row, db_row) -> float:
+    """한 분자의 vivo sample weight — 가장 강한 출처 기준."""
+    weights = []
+    if db_row.get("vivo_dilirank") in ("vMost-DILI-Concern", "vLess-DILI-Concern"):
+        weights.append(DATA_WEIGHT_VIVO["dilirank_pos"])
+    if db_row.get("vivo_dilirank") == "vNo-DILI-Concern":
+        weights.append(DATA_WEIGHT_VIVO["dilirank_vNo"])
+    lt = db_row.get("vivo_livertox")
+    if lt in ("A", "B"): weights.append(DATA_WEIGHT_VIVO["livertox_A_B"])
+    elif lt in ("C", "D"): weights.append(DATA_WEIGHT_VIVO["livertox_C_D"])
+    elif lt == "E":        weights.append(DATA_WEIGHT_VIVO["livertox_E"])
+    if db_row.get("vivo_marketed_clean_neg") == 1 and row.get("label") == 0:
+        weights.append(DATA_WEIGHT_VIVO["marketed_clean_neg"])
+    if pd.notna(db_row.get("vivo_clintox")):
+        weights.append(DATA_WEIGHT_VIVO["clintox"])
+    if db_row.get("vivo_tdc_dili") == 1: weights.append(DATA_WEIGHT_VIVO["tdc_dili"])
+    if db_row.get("vivo_dilist") == 1:   weights.append(DATA_WEIGHT_VIVO["dilist"])
+    if db_row.get("vivo_gold") == 1:     weights.append(DATA_WEIGHT_VIVO["gold"])
+    if db_row.get("vivo_sider_liver") == 1:     weights.append(DATA_WEIGHT_VIVO["sider_strict"])
+    if db_row.get("vivo_sider_hepatotox") == 1: weights.append(DATA_WEIGHT_VIVO["sider_lenient"])
+    return max(weights) if weights else 1.0
+
+
+def _vitro_sample_weight(row, db_row) -> float:
+    weights = []
+    if pd.notna(db_row.get("vitro_tox21")):  weights.append(DATA_WEIGHT_VITRO["tox21"])
+    if pd.notna(db_row.get("vitro_chembl")): weights.append(DATA_WEIGHT_VITRO["chembl"])
+    return max(weights) if weights else 1.0
+
+
+def fp_xy(fp_name: str, df: pd.DataFrame, domain: str = "vivo", db: pd.DataFrame | None = None):
     cache = ensure_fp_cache(df["canonical_smiles"].tolist(), fp_name)
     cols = [c for c in cache.columns]
     mask = df["canonical_smiles"].isin(cache.index)
     sub = df[mask].reset_index(drop=True)
     X = cache.loc[sub["canonical_smiles"], cols].to_numpy(dtype=np.uint8)
     y = sub["label"].to_numpy(int)
-    return X, y, sub
+
+    # sample_weight: DB 와 join 해서 출처별 데이터 기반 weight
+    if db is not None:
+        db_by_ik = db.set_index("inchi_key")
+        sw = []
+        for _, r in sub.iterrows():
+            ik = r.get("inchi_key")
+            if ik in db_by_ik.index:
+                db_row = db_by_ik.loc[ik]
+                if isinstance(db_row, pd.DataFrame): db_row = db_row.iloc[0]
+                w = _vivo_sample_weight(r, db_row) if domain == "vivo" else _vitro_sample_weight(r, db_row)
+            else:
+                w = 1.0
+            sw.append(w)
+        sw = np.array(sw, dtype=float)
+    else:
+        # fallback: confidence-based
+        conf_col = f"{domain}_confidence"
+        if conf_col in sub.columns:
+            sw = sub[conf_col].map(CONF_WEIGHT).fillna(1.0).to_numpy(dtype=float)
+        else:
+            sw = np.ones(len(sub))
+    return X, y, sub, sw
 
 
-def train_sub_model(fp_name: str, kind: str, train_df, val_df, test_df):
-    Xtr, ytr, _ = fp_xy(fp_name, train_df)
-    Xv, yv, _ = fp_xy(fp_name, val_df)
-    Xte, yte, _ = fp_xy(fp_name, test_df)
+def train_sub_model(fp_name: str, kind: str, train_df, val_df, test_df, domain: str = "vivo", db=None):
+    Xtr, ytr, _, sw_tr = fp_xy(fp_name, train_df, domain, db=db)
+    Xv, yv, _, _ = fp_xy(fp_name, val_df, domain, db=db)
+    Xte, yte, _, _ = fp_xy(fp_name, test_df, domain, db=db)
     spw = float((ytr == 0).sum()) / max(int(ytr.sum()), 1)
     if kind == "rf":
         m = RandomForestClassifier(n_estimators=500, max_features="sqrt",
@@ -135,7 +210,7 @@ def train_sub_model(fp_name: str, kind: str, train_df, val_df, test_df):
             l2_leaf_reg=3, scale_pos_weight=spw, verbose=0,
             random_seed=RANDOM_STATE)
     t0 = time.time()
-    m.fit(Xtr, ytr)
+    m.fit(Xtr, ytr, sample_weight=sw_tr)  # confidence-weighted
     pv = m.predict_proba(Xv)[:, 1]
     pte = m.predict_proba(Xte)[:, 1]
     return m, pv, pte, yv, yte, time.time() - t0
@@ -189,8 +264,11 @@ def train_domain(domain: str):
     out_dir = os.path.join(MODELS_DIR, domain)
     os.makedirs(out_dir, exist_ok=True)
     print(f"\n{'='*70}")
-    print(f"  {domain.upper()} 도메인 모델 학습")
+    print(f"  {domain.upper()} 도메인 모델 학습 (data-driven sample_weight)")
     print(f"{'='*70}")
+
+    # DB 로드 (sample_weight 계산용)
+    db = pd.read_parquet(os.path.join(PROJECT_ROOT, "data", "labels_db", "full.parquet"))
 
     tr = pd.read_csv(os.path.join(TRAIN_DIR, f"{domain}.csv"))
     va = pd.read_csv(os.path.join(VAL_DIR, f"{domain}.csv"))
@@ -205,7 +283,7 @@ def train_domain(domain: str):
         for kind in ("rf", "cb"):
             name = f"{kind}_{fp_name}"
             model_names.append(name)
-            m, pv, pte, yv, yte, elapsed = train_sub_model(fp_name, kind, tr, va, te)
+            m, pv, pte, yv, yte, elapsed = train_sub_model(fp_name, kind, tr, va, te, domain, db=db)
             val_probs.append(pv); test_probs.append(pte)
             if yv_ref is None: yv_ref, yte_ref = yv, yte
             sub_dir = os.path.join(out_dir, name)

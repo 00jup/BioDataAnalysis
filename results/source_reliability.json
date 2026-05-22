@@ -1,0 +1,381 @@
+{
+  "label_counts": {
+    "dilirank_vMost": 11929,
+    "dilirank_vLess": 11929,
+    "dilirank_vNo": 11929,
+    "livertox_A_B": 586,
+    "livertox_C_D": 684,
+    "livertox_E": 845,
+    "dilist": 797,
+    "gold": 797,
+    "sider_strict": 586,
+    "sider_lenient": 814,
+    "tdc_dili": 22,
+    "clintox": 1419,
+    "marketed_clean_neg": 10782,
+    "chembl": 1293,
+    "tox21": 7561
+  },
+  "pairwise_agreement": {
+    "dilirank_vLess": {
+      "n_common": 11929,
+      "agreement": 0.9560734344873837,
+      "n_agreed": 11405
+    },
+    "dilirank_vNo": {
+      "n_common": 11929,
+      "agreement": 0.05909967306563836,
+      "n_agreed": 705
+    },
+    "livertox_A_B": {
+      "n_common": 511,
+      "agreement": 0.8336594911937377,
+      "n_agreed": 426
+    },
+    "livertox_C_D": {
+      "n_common": 600,
+      "agreement": 0.69,
+      "n_agreed": 414
+    },
+    "livertox_E": {
+      "n_common": 748,
+      "agreement": 0.6443850267379679,
+      "n_agreed": 482
+    },
+    "dilist": {
+      "n_common": 555,
+      "agreement": 0.34774774774774775,
+      "n_agreed": 193
+    },
+    "gold": {
+      "n_common": 555,
+      "agreement": 0.6522522522522523,
+      "n_agreed": 362
+    },
+    "sider_strict": {
+      "n_common": 436,
+      "agreement": 0.10321100917431193,
+      "n_agreed": 45
+    },
+    "sider_lenient": {
+      "n_common": 640,
+      "agreement": 0.171875,
+      "n_agreed": 110
+    },
+    "tdc_dili": {
+      "n_common": 14,
+      "agreement": 0.07142857142857142,
+      "n_agreed": 1
+    },
+    "clintox": {
+      "n_common": 1149,
+      "agreement": 0.8999129677980853,
+      "n_agreed": 1034
+    },
+    "marketed_clean_neg": {
+      "n_common": 10782,
+      "agreement": 0.999350769801521,
+      "n_agreed": 10775
+    },
+    "chembl": {
+      "n_common": 652,
+      "agreement": 0.11349693251533742,
+      "n_agreed": 74
+    },
+    "tox21": {
+      "n_common": 2476,
+      "agreement": 0.7346526655896607,
+      "n_agreed": 1819
+    }
+  },
+  "classifier_auc": {
+    "dilirank_vLess": {
+      "n_train": 11224,
+      "n_pos": 319,
+      "n_neg": 10905,
+      "auc": 0.5950536585365853
+    },
+    "dilirank_vNo": {
+      "n_train": 11224,
+      "auc": null
+    },
+    "livertox_A_B": {
+      "n_train": 383,
+      "n_pos": 90,
+      "n_neg": 293,
+      "auc": 0.5605073170731707
+    },
+    "livertox_C_D": {
+      "n_train": 491,
+      "n_pos": 198,
+      "n_neg": 293,
+      "auc": 0.5419804878048781
+    },
+    "livertox_E": {
+      "n_train": 581,
+      "n_pos": 288,
+      "n_neg": 293,
+      "auc": 0.5702439024390245
+    },
+    "dilist": {
+      "n_train": 632,
+      "n_pos": 545,
+      "n_neg": 87,
+      "auc": 0.5449951219512195
+    },
+    "gold": {
+      "n_train": 632,
+      "n_pos": 87,
+      "n_neg": 545,
+      "auc": 0.4537658536585366
+    },
+    "sider_strict": {
+      "n_train": 495,
+      "auc": null
+    },
+    "sider_lenient": {
+      "n_train": 658,
+      "auc": null
+    },
+    "tdc_dili": {
+      "n_train": 20,
+      "auc": null
+    },
+    "clintox": {
+      "n_train": 1156,
+      "n_pos": 64,
+      "n_neg": 1092,
+      "auc": 0.5370634146341464
+    },
+    "marketed_clean_neg": {
+      "n_train": 10465,
+      "auc": null
+    },
+    "chembl": {
+      "n_train": 1218,
+      "n_pos": 907,
+      "n_neg": 311,
+      "auc": 0.4638926829268293
+    },
+    "tox21": {
+      "n_train": 7270,
+      "n_pos": 2046,
+      "n_neg": 5224,
+      "auc": 0.6569560975609756
+    }
+  },
+  "feature_based": {
+    "dilirank_vMost": {
+      "n_train_consensus": 11525,
+      "n_target_labeled": 11929,
+      "agreement": 0.929080392321234,
+      "auc_against_target_labels": 0.916783583393664,
+      "n_pos_target": 205,
+      "n_neg_target": 11724
+    },
+    "dilirank_vLess": {
+      "n_train_consensus": 11530,
+      "n_target_labeled": 11929,
+      "agreement": 0.9345292983485624,
+      "auc_against_target_labels": 0.8901251218412405,
+      "n_pos_target": 319,
+      "n_neg_target": 11610
+    },
+    "dilirank_vNo": {
+      "n_train_consensus": 12133,
+      "n_target_labeled": 11929,
+      "agreement": 0.09355352502305306,
+      "auc_against_target_labels": 0.6294498206317263,
+      "n_pos_target": 11429,
+      "n_neg_target": 500
+    },
+    "livertox_A_B": {
+      "n_train_consensus": 12152,
+      "n_target_labeled": 586,
+      "agreement": 0.909556313993174,
+      "auc_against_target_labels": 0.9318670076726342,
+      "n_pos_target": 161,
+      "n_neg_target": 425
+    },
+    "livertox_C_D": {
+      "n_train_consensus": 12122,
+      "n_target_labeled": 684,
+      "agreement": 0.8640350877192983,
+      "auc_against_target_labels": 0.8903838292073586,
+      "n_pos_target": 259,
+      "n_neg_target": 425
+    },
+    "livertox_E": {
+      "n_train_consensus": 12112,
+      "n_target_labeled": 845,
+      "agreement": 0.863905325443787,
+      "auc_against_target_labels": 0.9057871148459383,
+      "n_pos_target": 420,
+      "n_neg_target": 425
+    },
+    "dilist": {
+      "n_train_consensus": 12137,
+      "n_target_labeled": 797,
+      "agreement": 0.5031367628607277,
+      "auc_against_target_labels": 0.5763319189061763,
+      "n_pos_target": 707,
+      "n_neg_target": 90
+    },
+    "gold": {
+      "n_train_consensus": 12161,
+      "n_target_labeled": 797,
+      "agreement": 0.36260978670012545,
+      "auc_against_target_labels": 0.2806066320917806,
+      "n_pos_target": 90,
+      "n_neg_target": 707
+    },
+    "sider_strict": {
+      "n_train_consensus": 12048,
+      "n_target_labeled": 586,
+      "agreement": 0.37372013651877134,
+      "auc_against_target_labels": NaN,
+      "n_pos_target": 586,
+      "n_neg_target": 0
+    },
+    "sider_lenient": {
+      "n_train_consensus": 12049,
+      "n_target_labeled": 814,
+      "agreement": 0.48894348894348894,
+      "auc_against_target_labels": NaN,
+      "n_pos_target": 814,
+      "n_neg_target": 0
+    },
+    "tdc_dili": {
+      "n_train_consensus": 12166,
+      "n_target_labeled": 22,
+      "agreement": 0.3181818181818182,
+      "auc_against_target_labels": NaN,
+      "n_pos_target": 22,
+      "n_neg_target": 0
+    },
+    "clintox": {
+      "n_train_consensus": 12058,
+      "n_target_labeled": 1419,
+      "agreement": 0.6300211416490487,
+      "auc_against_target_labels": 0.6067945849825045,
+      "n_pos_target": 78,
+      "n_neg_target": 1341
+    },
+    "marketed_clean_neg": {
+      "n_train_consensus": 11673,
+      "n_target_labeled": 10782,
+      "agreement": 0.9693934335002783,
+      "auc_against_target_labels": NaN,
+      "n_pos_target": 0,
+      "n_neg_target": 10782
+    },
+    "chembl": {
+      "n_train_consensus": 12162,
+      "n_target_labeled": 1293,
+      "agreement": 0.4245939675174014,
+      "auc_against_target_labels": 0.5565025769313888,
+      "n_pos_target": 982,
+      "n_neg_target": 311
+    },
+    "tox21": {
+      "n_train_consensus": 12076,
+      "n_target_labeled": 7561,
+      "agreement": 0.6969977516201561,
+      "auc_against_target_labels": 0.5672697612171439,
+      "n_pos_target": 2117,
+      "n_neg_target": 5444
+    }
+  },
+  "summary_weights": {
+    "dilirank_vMost": {
+      "agreement_DILIrank_gold": null,
+      "classifier_auc": null,
+      "feature_truth_agreement": 0.929080392321234,
+      "final_weight": 0.929080392321234
+    },
+    "dilirank_vLess": {
+      "agreement_DILIrank_gold": 0.9560734344873837,
+      "classifier_auc": 0.5950536585365853,
+      "feature_truth_agreement": 0.9345292983485624,
+      "final_weight": 0.6935700166363722
+    },
+    "dilirank_vNo": {
+      "agreement_DILIrank_gold": 0.05909967306563836,
+      "classifier_auc": null,
+      "feature_truth_agreement": 0.09355352502305306,
+      "final_weight": 0.07632659904434572
+    },
+    "livertox_A_B": {
+      "agreement_DILIrank_gold": 0.8336594911937377,
+      "classifier_auc": 0.5605073170731707,
+      "feature_truth_agreement": 0.909556313993174,
+      "final_weight": 0.6214101464444177
+    },
+    "livertox_C_D": {
+      "agreement_DILIrank_gold": 0.69,
+      "classifier_auc": 0.5419804878048781,
+      "feature_truth_agreement": 0.8640350877192983,
+      "final_weight": 0.5459986877763514
+    },
+    "livertox_E": {
+      "agreement_DILIrank_gold": 0.6443850267379679,
+      "classifier_auc": 0.5702439024390245,
+      "feature_truth_agreement": 0.863905325443787,
+      "final_weight": 0.5495927190199347
+    },
+    "dilist": {
+      "agreement_DILIrank_gold": 0.34774774774774775,
+      "classifier_auc": 0.5449951219512195,
+      "feature_truth_agreement": 0.5031367628607277,
+      "final_weight": 0.3136249181703048
+    },
+    "gold": {
+      "agreement_DILIrank_gold": 0.6522522522522523,
+      "classifier_auc": 0.4537658536585366,
+      "feature_truth_agreement": 0.36260978670012545,
+      "final_weight": 0.307464582089817
+    },
+    "sider_strict": {
+      "agreement_DILIrank_gold": 0.10321100917431193,
+      "classifier_auc": null,
+      "feature_truth_agreement": 0.37372013651877134,
+      "final_weight": 0.23846557284654163
+    },
+    "sider_lenient": {
+      "agreement_DILIrank_gold": 0.171875,
+      "classifier_auc": null,
+      "feature_truth_agreement": 0.48894348894348894,
+      "final_weight": 0.33040924447174447
+    },
+    "tdc_dili": {
+      "agreement_DILIrank_gold": 0.07142857142857142,
+      "classifier_auc": null,
+      "feature_truth_agreement": 0.3181818181818182,
+      "final_weight": 0.19480519480519481
+    },
+    "clintox": {
+      "agreement_DILIrank_gold": 0.8999129677980853,
+      "classifier_auc": 0.5370634146341464,
+      "feature_truth_agreement": 0.6300211416490487,
+      "final_weight": 0.5346869795718089
+    },
+    "marketed_clean_neg": {
+      "agreement_DILIrank_gold": 0.999350769801521,
+      "classifier_auc": null,
+      "feature_truth_agreement": 0.9693934335002783,
+      "final_weight": 0.9843721016508997
+    },
+    "chembl": {
+      "agreement_DILIrank_gold": 0.11349693251533742,
+      "classifier_auc": 0.4638926829268293,
+      "feature_truth_agreement": 0.4245939675174014,
+      "final_weight": 0.15529208862879915
+    },
+    "tox21": {
+      "agreement_DILIrank_gold": 0.7346526655896607,
+      "classifier_auc": 0.6569560975609756,
+      "feature_truth_agreement": 0.6969977516201561,
+      "final_weight": 0.5818542041105893
+    }
+  }
+}
