@@ -96,6 +96,75 @@ def load_livertox() -> pd.DataFrame:
     return p[["canonical_smiles", "name", "vivo_livertox"]]
 
 
+def load_dailymed() -> pd.DataFrame:
+    """DailyMed/openFDA Drug Label — hepatotox 심각도별 라벨."""
+    p = pd.read_csv(os.path.join(RAW, "dailymed", "dailymed.csv"))
+    p = p.dropna(subset=["canonical_smiles", "severity"])
+    # severity 별 코드화
+    p["vivo_dailymed"] = p["severity"]
+    return p[["canonical_smiles", "name", "vivo_dailymed"]]
+
+
+def load_pubmed() -> pd.DataFrame:
+    """PubMed DILI MeSH 기반 — n_papers 빈도로 신뢰도 코드화."""
+    p = pd.read_csv(os.path.join(RAW, "pubmed", "pubmed_dili.csv"))
+    p = p.dropna(subset=["canonical_smiles", "n_papers"])
+    # n_papers 별 강도
+    #   >= 20 = strong (Acetaminophen 같은 well-known hepatotox)
+    #   5-19 = medium
+    #   3-4  = weak
+    def code(n):
+        if n >= 20: return "strong"
+        if n >= 5: return "medium"
+        return "weak"
+    p["vivo_pubmed"] = p["n_papers"].apply(code)
+    p["pubmed_n_papers"] = p["n_papers"]
+    return p[["canonical_smiles", "name", "vivo_pubmed", "pubmed_n_papers"]]
+
+
+def load_ctd() -> pd.DataFrame:
+    """CTD chemical-disease 매핑 (NIH/EPA 큐레이션).
+
+    강한 증거 (strong_evidence ≥ 1) 또는 다수 evidence (n_evidence ≥ 5) 보유한
+    chemical 만. liver disease 관련 화합물 ~3,000개.
+    """
+    path = os.path.join(RAW, "ctd", "ctd_dili.csv")
+    if not os.path.exists(path):
+        return pd.DataFrame(columns=["canonical_smiles", "name", "vivo_ctd",
+                                      "ctd_strong", "ctd_pmid"])
+    p = pd.read_csv(path)
+    p = p.dropna(subset=["canonical_smiles"])
+    # 강도 코드화
+    def code(row):
+        if row.get("strong_evidence", 0) >= 1: return "strong"
+        if row.get("n_evidence", 0) >= 10: return "medium"
+        return "weak"
+    p["vivo_ctd"] = p.apply(code, axis=1)
+    p["ctd_strong"] = p.get("strong_evidence", 0)
+    p["ctd_pmid"] = p.get("max_pmid", 0)
+    return p[["canonical_smiles", "name", "vivo_ctd", "ctd_strong", "ctd_pmid"]]
+
+
+def load_faers() -> pd.DataFrame:
+    """FAERS (FDA Adverse Event Reporting) — 환자 보고 hepatic AE.
+
+    n_reports 별 강도 — 보고 수가 많을수록 강한 신호.
+    """
+    path = os.path.join(RAW, "faers", "faers_dili.csv")
+    if not os.path.exists(path):
+        return pd.DataFrame(columns=["canonical_smiles", "name", "vivo_faers",
+                                      "faers_n_reports"])
+    p = pd.read_csv(path)
+    p = p.dropna(subset=["canonical_smiles"])
+    def code(n):
+        if n >= 5000: return "strong"
+        if n >= 1000: return "medium"
+        return "weak"
+    p["vivo_faers"] = p["n_reports"].apply(code)
+    p["faers_n_reports"] = p["n_reports"]
+    return p[["canonical_smiles", "name", "vivo_faers", "faers_n_reports"]]
+
+
 def load_sider_strict() -> pd.DataFrame:
     """SIDER 간 부작용 strict (간 키워드 매칭)."""
     p = pd.read_csv(os.path.join(RAW, "sider", "sider_liver_strict.csv"))
@@ -234,7 +303,9 @@ def merge_and_label(loaded: dict[str, pd.DataFrame]) -> pd.DataFrame:
     df = pd.DataFrame(records)
 
     # 4. vivo / vitro 라벨 컬럼 정렬 (없는 컬럼은 NaN)
-    vivo_cols = ["vivo_dilirank", "vivo_livertox", "vivo_dilist", "vivo_gold",
+    vivo_cols = ["vivo_dilirank", "vivo_livertox", "vivo_dailymed", "vivo_pubmed",
+                 "vivo_ctd", "vivo_faers",
+                 "vivo_dilist", "vivo_gold",
                  "vivo_sider_liver", "vivo_sider_hepatotox",
                  "vivo_tdc_dili", "vivo_clintox", "vivo_marketed_clean_neg"]
     vitro_cols = ["vitro_chembl", "vitro_tox21"]
@@ -253,15 +324,35 @@ def merge_and_label(loaded: dict[str, pd.DataFrame]) -> pd.DataFrame:
         if lt in ("A", "B"): pos += 2
         elif lt == "C":     pos += 1
         elif lt == "D":     pos += 0.5
-        if pd.notna(row["vivo_dilist"]) and row["vivo_dilist"] == 1: pos += 1
-        if pd.notna(row["vivo_gold"]) and row["vivo_gold"] == 1: pos += 1
-        # SIDER: strict 와 lenient 둘 다 양성이면 +1, lenient 만이면 +0.5 (약한 신호)
-        if pd.notna(row["vivo_sider_liver"]) and row["vivo_sider_liver"] == 1:
-            pos += 1
-        elif pd.notna(row["vivo_sider_hepatotox"]) and row["vivo_sider_hepatotox"] == 1:
-            pos += 0.5  # lenient 만 — 더 약한 신호
-        if pd.notna(row["vivo_tdc_dili"]) and row["vivo_tdc_dili"] == 1: pos += 1
-        if pd.notna(row["vivo_clintox"]) and row["vivo_clintox"] == 1: pos += 1
+        # DailyMed FDA 라벨 — 심각도별 점수
+        dm = row.get("vivo_dailymed")
+        if dm == "boxed_hepatotox": pos += 3       # FDA Boxed Warning (가장 강한 양성)
+        elif dm == "warning_hepatotox": pos += 1.5  # Warnings & Precautions
+        elif dm == "adverse_hepatotox": pos += 0.5  # Adverse Reactions
+        elif dm == "contraindication_hepatic": pos += 1  # 간 손상 환자 금기 = 간에 부담
+        # PubMed DILI MeSH (Major Topic + Case Reports/Clinical Trial/Meta-Analysis)
+        pm = row.get("vivo_pubmed")
+        if pm == "strong": pos += 2          # n_papers >= 20 (Acetaminophen 등 well-known)
+        elif pm == "medium": pos += 1        # 5-19 papers
+        elif pm == "weak": pos += 0.5        # 3-4 papers
+        # CTD (NIH/EPA chemical-disease 큐레이션)
+        ct = row.get("vivo_ctd")
+        if ct == "strong": pos += 2          # marker/mechanism direct evidence
+        elif ct == "medium": pos += 1        # multiple PMID evidence (≥10)
+        elif ct == "weak": pos += 0.3
+        # FAERS (FDA 환자 보고)
+        fa = row.get("vivo_faers")
+        if fa == "strong": pos += 1.5        # n_reports ≥ 5000
+        elif fa == "medium": pos += 0.8      # n_reports 1000-5000
+        elif fa == "weak": pos += 0.3        # n_reports 50-1000
+        # 약한 출처들 (DILIst/Gold/SIDER/TDC/ClinTox) — _unreliable 로 분리
+        # 가중치 0 (사실상 미사용). 컬럼은 NaN 이므로 if pd.notna 통과 안 함.
+        if pd.notna(row["vivo_dilist"]) and row["vivo_dilist"] == 1: pos += 0
+        if pd.notna(row["vivo_gold"]) and row["vivo_gold"] == 1: pos += 0
+        if pd.notna(row["vivo_sider_liver"]) and row["vivo_sider_liver"] == 1: pos += 0
+        elif pd.notna(row["vivo_sider_hepatotox"]) and row["vivo_sider_hepatotox"] == 1: pos += 0
+        if pd.notna(row["vivo_tdc_dili"]) and row["vivo_tdc_dili"] == 1: pos += 0
+        if pd.notna(row["vivo_clintox"]) and row["vivo_clintox"] == 1: pos += 0
 
         # 음성 신호
         neg = 0
@@ -395,42 +486,56 @@ def main():
     print(f"  {len(lt)} 분자")
     print(f"  Likelihood: {lt['vivo_livertox'].value_counts().to_dict()}")
 
-    print("\n[3/10] DILIst + GoldStandard")
-    dl = load_dilist_gold()
-    print(f"  {len(dl)} 분자")
+    # 약한 출처 (Gold/DILIst/SIDER/TDC/ClinTox) — _unreliable 로 분리 (학습 미사용)
+    # source_reliability 분석 결과 AUC ≤ 0.58 → 노이즈 우세 → 제외
+    # raw 데이터는 data/raw/_unreliable/ 에 보존
+    dl = pd.DataFrame(columns=["canonical_smiles", "inchi_key", "name",
+                                "vivo_dilist", "vivo_gold"])
+    sd_s = pd.DataFrame(columns=["canonical_smiles", "inchi_key", "name", "vivo_sider_liver"])
+    sd_l = pd.DataFrame(columns=["canonical_smiles", "inchi_key", "name", "vivo_sider_hepatotox"])
+    td = pd.DataFrame(columns=["canonical_smiles", "inchi_key", "name", "vivo_tdc_dili"])
+    ct = pd.DataFrame(columns=["canonical_smiles", "inchi_key", "name", "vivo_clintox"])
 
-    print("[4/10] SIDER strict (sider_liver_strict)")
-    sd_s = load_sider_strict()
-    print(f"  {len(sd_s)} 분자")
-
-    print("[5/10] SIDER lenient")
-    sd_l = load_sider_lenient()
-    print(f"  {len(sd_l)} 분자")
-
-    print("[6/10] TDC DILI 양성")
-    td = load_tdc_dili()
-    print(f"  {len(td)} 분자")
-
-    print("[7/10] 시판약 음성 풀")
+    print("\n[3/10] 시판약 음성 풀")
     mc = load_marketed_clean()
     print(f"  {len(mc)} 분자")
-
-    print("[8/10] ClinTox")
-    ct = load_clintox()
-    print(f"  {len(ct)} 분자")
 
     print("[9/10] chEMBL (in vitro)")
     ch = load_chembl()
     print(f"  {len(ch)} 분자 (양성 {int((ch.vitro_chembl==1).sum())} / 음성 {int((ch.vitro_chembl==0).sum())})")
 
-    print("[10/10] Tox21 통합 (in vitro)")
+    print("[10/11] Tox21 통합 (in vitro)")
     tx = load_tox21()
+
+    print("\n[11/12] DailyMed / openFDA 라벨")
+    dm = load_dailymed()
+    print(f"  {len(dm)} 분자 (심각도: {dm['vivo_dailymed'].value_counts().to_dict()})")
+
+    print("\n[12/14] PubMed DILI MeSH (strict: Major Topic + 임상 publication types)")
+    pm = load_pubmed()
+    print(f"  {len(pm)} 분자 (강도: {pm['vivo_pubmed'].value_counts().to_dict()})")
+
+    print("\n[13/14] CTD (NIH/EPA chemical-disease 매핑)")
+    ctd = load_ctd()
+    if len(ctd) > 0:
+        print(f"  {len(ctd)} 분자 (강도: {ctd['vivo_ctd'].value_counts().to_dict()})")
+    else:
+        print("  데이터 없음 — fetch_ctd.py 실행 필요")
+
+    print("\n[14/14] FAERS (FDA 환자 보고 hepatic AE)")
+    fa = load_faers()
+    if len(fa) > 0:
+        print(f"  {len(fa)} 분자 (강도: {fa['vivo_faers'].value_counts().to_dict()})")
+    else:
+        print("  데이터 없음 — fetch_faers.py 실행 필요")
 
     # 순서 중요 — merge 시 뒤에 오는 게 같은 컬럼 덮어씀
     # marketed_clean 의 dilirank_category 보다 dilirank_full 우선
     loaded = {"marketed_clean": mc, "dilirank_full": drk, "livertox": lt,
               "dilist_gold": dl, "sider_strict": sd_s, "sider_lenient": sd_l,
-              "tdc": td, "clintox": ct, "chembl": ch, "tox21": tx}
+              "tdc": td, "clintox": ct, "dailymed": dm, "pubmed": pm,
+              "ctd": ctd, "faers": fa,
+              "chembl": ch, "tox21": tx}
 
     print("\n=== 병합 + 라벨 결정 ===")
     db = merge_and_label(loaded)

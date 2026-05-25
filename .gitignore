@@ -65,6 +65,32 @@ models/experiments_mordred/*/best_model.pkl
 models/experiments_rdkit210/*/best_model.pkl
 data/codex/best_model.pkl
 
+# DrugBank — 학술 라이센스 (re-distribution 금지)
+data/raw/drugbank/
+
+# CTD 큰 bulk file (160MB) — 재다운로드 가능
+data/raw/ctd/CTD_chemicals_diseases.tsv.gz
+
+# Chemprop 학습 산출 (큰 .pt + lightning 로그) — 재생성 가능
+models/chemprop_scaffold_v2/
+models/chemprop_v10/
+models/chemprop_v11/
+models/chemprop_v9/
+models/chemprop_scaffold/
+models/rfcb_scaffold/
+models/rfcb_scaffold_v2/
+data/chemprop_v9/
+data/chemprop_scaffold/
+data/chemprop_scaffold_v2/
+
+# old experiments
+models/per_source/
+models/unified/
+models/v8/
+models/vp/
+models/vivo_balanced/
+models/vitro_balanced/
+
 # Chemprop 학습 산출 (큰 .pt + lightning 로그) — 재생성 가능
 models/chemprop/
 models/chemprop_v1_rdkit_2d_normalized/

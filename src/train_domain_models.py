@@ -181,7 +181,12 @@ def fp_xy(fp_name: str, df: pd.DataFrame, domain: str = "vivo", db: pd.DataFrame
             if ik in db_by_ik.index:
                 db_row = db_by_ik.loc[ik]
                 if isinstance(db_row, pd.DataFrame): db_row = db_row.iloc[0]
-                w = _vivo_sample_weight(r, db_row) if domain == "vivo" else _vitro_sample_weight(r, db_row)
+                if domain == "vivo":
+                    w = _vivo_sample_weight(r, db_row)
+                elif domain == "vitro":
+                    w = _vitro_sample_weight(r, db_row)
+                else:  # unified — 양 도메인 가장 강한 신호
+                    w = max(_vivo_sample_weight(r, db_row), _vitro_sample_weight(r, db_row))
             else:
                 w = 1.0
             sw.append(w)
