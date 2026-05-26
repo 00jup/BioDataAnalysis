@@ -1,28 +1,32 @@
-"""통합 라벨 DB 구축 — in vivo (임상) + in vitro (어세이) 라벨 분리 보관.
+"""통합 라벨 DB 구축 — OR 룰 + curated 충돌 lookup (가중치 코드 폐기).
 
-소스
-====
-in vivo (임상/사람 데이터, 우선)
-  - DILIrank vMost / vLess / vNo / Ambiguous (FDA 공식)
-  - DILIst + GoldStandard (외부 양성)
-  - SIDER 간 부작용 (시판 후 부작용)
-  - TDC DILI (학술 정제)
-  - ClinTox (MoleculeNet, 임상시험 실패)
+라벨링 룰
+=========
+in vivo (임상 데이터):
+  1. 양성 신호 only → 1
+  2. 음성 신호 only → 0
+  3. 양성 + 음성 충돌 → conflicts_curated.csv 의 manual_label
+     - DILIrank/LiverTox/DM Boxed 보유: 공식 라벨 그대로
+     - 약 지식 사전 매칭: 잘 알려진 시판약 양성/음성 분류
+     - 비약물 화학물질 또는 무명 화합물: 제외 (None)
+  4. DILIrank=Ambiguous: 제외
+  5. 신호 없음: 제외
 
-in vitro (어세이 데이터)
-  - chEMBL hepatotoxicity (어세이 결과)
-  - Tox21 간 관련 어세이 (HepG2, 미토콘드리아, BSEP 등)
+in vitro (어세이): Tox21 만 사용. chEMBL 은 vivo 로 재분류됨.
 
 저장 형식
 =========
-data/labels_db/full.parquet — 컬럼:
+data/labels_db/full.parquet — 핵심 컬럼:
   inchi_key, canonical_smiles, name,
-  vivo_dilirank, vivo_dilist, vivo_gold, vivo_sider_liver, vivo_tdc_dili,
-  vivo_clintox, vivo_marketed_clean_neg,
-  vivo_label, vivo_n_sources, vivo_confidence,
-  vitro_chembl, vitro_tox21,
-  vitro_label, vitro_n_sources, vitro_confidence,
-  final_label, final_source, conflict
+  vivo_dilirank, vivo_livertox, vivo_dailymed, vivo_pubmed, vivo_ctd,
+  vivo_faers, vivo_chembl, vivo_marketed_clean_neg,
+  vivo_label,    ← 최종 vivo 라벨 (1/0/None)
+  vitro_tox21,
+  vitro_label    ← 최종 vitro 라벨 (1/0/None)
+
+제거된 컬럼 (가중치 룰 폐기):
+  vivo_confidence, vivo_n_sources, vitro_confidence, vitro_n_sources,
+  label_vivo_priority, label_weighted, label_consensus, final_source, conflict
 """
 
 from __future__ import annotations
@@ -219,7 +223,14 @@ def load_clintox():
 
 
 def load_chembl() -> pd.DataFrame:
-    """chEMBL — in vitro 라벨 (raw 에서 직접 재정제)."""
+    """chEMBL hepatotoxicity — 사람 (Homo sapiens) 임상 데이터.
+
+    confirmed via assay_organism = 'Homo sapiens' (7,881개, 100%),
+    activity_comment = 'HH: Evidence of human hepatotoxicity' 등.
+    이전엔 vitro 로 잘못 분류 — vivo 가 맞다.
+
+    한 컬럼 'vivo_chembl' 로 라벨 부여.
+    """
     POS_TERMS = {
         "drug-induced liver injury reported", "Toxic", "Most-Dili-Concern",
         "Less-Dili-Concern", "HH: Evidence of human hepatotoxicity",
@@ -244,9 +255,9 @@ def load_chembl() -> pd.DataFrame:
     g = pool.groupby("molecule_chembl_id")["label"].nunique()
     pool = pool[~pool["molecule_chembl_id"].isin(set(g[g>1].index))]
 
-    pool["vitro_chembl"] = pool["label"].astype("Int64")
+    pool["vivo_chembl"] = pool["label"].astype("Int64")
     pool["name"] = pool["molecule_chembl_id"]
-    return pool[["canonical_smiles","name","vitro_chembl"]].drop_duplicates("canonical_smiles")
+    return pool[["canonical_smiles","name","vivo_chembl"]].drop_duplicates("canonical_smiles")
 
 
 def load_tox21() -> pd.DataFrame:
@@ -304,172 +315,83 @@ def merge_and_label(loaded: dict[str, pd.DataFrame]) -> pd.DataFrame:
 
     # 4. vivo / vitro 라벨 컬럼 정렬 (없는 컬럼은 NaN)
     vivo_cols = ["vivo_dilirank", "vivo_livertox", "vivo_dailymed", "vivo_pubmed",
-                 "vivo_ctd", "vivo_faers",
+                 "vivo_ctd", "vivo_faers", "vivo_chembl",   # chEMBL human assay 추가
                  "vivo_dilist", "vivo_gold",
                  "vivo_sider_liver", "vivo_sider_hepatotox",
                  "vivo_tdc_dili", "vivo_clintox", "vivo_marketed_clean_neg"]
-    vitro_cols = ["vitro_chembl", "vitro_tox21"]
+    vitro_cols = ["vitro_tox21"]  # chEMBL 은 vivo 로 옮김
     for c in vivo_cols + vitro_cols + ["tox21_pos_count", "tox21_total_assays"]:
         if c not in df.columns:
             df[c] = pd.NA
 
-    # 5. vivo label 결정
+    # 5. vivo label 결정 — OR 룰 + 충돌은 curated lookup
+    #
+    # 새 룰 (가중치 코드 폐기):
+    #   - 양성 신호만 있음 → 1
+    #   - 음성 신호만 있음 → 0
+    #   - 둘 다 있음 (충돌) → conflicts_curated.csv 에서 manual_label 조회
+    #   - 둘 다 없음 / DILIrank=Ambiguous → None
+    #
+    def has_pos_signal(row) -> bool:
+        if row.get("vivo_dilirank") in ("vMost-DILI-Concern", "vLess-DILI-Concern"): return True
+        if row.get("vivo_livertox") in ("A", "B", "C", "D"): return True
+        if row.get("vivo_dailymed") in ("boxed_hepatotox", "warning_hepatotox",
+                                         "adverse_hepatotox"): return True
+        if row.get("vivo_pubmed") in ("strong", "medium", "weak"): return True
+        if row.get("vivo_ctd") in ("strong", "medium", "weak"): return True
+        if row.get("vivo_faers") in ("strong", "medium", "weak"): return True
+        ce = row.get("vivo_chembl")
+        if pd.notna(ce) and int(ce) == 1: return True
+        return False
+
+    def has_neg_signal(row) -> bool:
+        if row.get("vivo_dilirank") == "vNo-DILI-Concern": return True
+        if row.get("vivo_livertox") == "E": return True
+        ce = row.get("vivo_chembl")
+        if pd.notna(ce) and int(ce) == 0: return True
+        if pd.notna(row.get("vivo_marketed_clean_neg")) and row["vivo_marketed_clean_neg"] == 1:
+            return True
+        return False
+
+    # 충돌 curated lookup 로드
+    curated_path = os.path.join(OUT_DIR, "conflicts", "conflicts_curated.csv")
+    curated_map: dict[str, float | None] = {}
+    if os.path.exists(curated_path):
+        cur = pd.read_csv(curated_path)
+        for _, r in cur.iterrows():
+            lab = r["manual_label"]
+            curated_map[r["inchi_key"]] = (None if pd.isna(lab) else int(lab))
+        print(f"  curated 충돌 라벨: {len(curated_map)}건 로드 (양성 "
+              f"{sum(1 for v in curated_map.values() if v == 1)}, "
+              f"음성 {sum(1 for v in curated_map.values() if v == 0)}, "
+              f"제외 {sum(1 for v in curated_map.values() if v is None)})")
+    else:
+        print(f"  ⚠️  curated 파일 없음 — 충돌 케이스 전부 제외됨")
+
     def vivo_decide(row):
-        # 양성 신호
-        pos = 0
-        if row["vivo_dilirank"] in ("vMost-DILI-Concern", "vLess-DILI-Concern"):
-            pos += 2  # FDA 공식 = 강한 신호
-        # LiverTox Likelihood Score: A/B = 강한 양성, C = 양성, D = 약한 양성
-        lt = row["vivo_livertox"]
-        if lt in ("A", "B"): pos += 2
-        elif lt == "C":     pos += 1
-        elif lt == "D":     pos += 0.5
-        # DailyMed FDA 라벨 — 심각도별 점수
-        dm = row.get("vivo_dailymed")
-        if dm == "boxed_hepatotox": pos += 3       # FDA Boxed Warning (가장 강한 양성)
-        elif dm == "warning_hepatotox": pos += 1.5  # Warnings & Precautions
-        elif dm == "adverse_hepatotox": pos += 0.5  # Adverse Reactions
-        elif dm == "contraindication_hepatic": pos += 1  # 간 손상 환자 금기 = 간에 부담
-        # PubMed DILI MeSH (Major Topic + Case Reports/Clinical Trial/Meta-Analysis)
-        pm = row.get("vivo_pubmed")
-        if pm == "strong": pos += 2          # n_papers >= 20 (Acetaminophen 등 well-known)
-        elif pm == "medium": pos += 1        # 5-19 papers
-        elif pm == "weak": pos += 0.5        # 3-4 papers
-        # CTD (NIH/EPA chemical-disease 큐레이션)
-        ct = row.get("vivo_ctd")
-        if ct == "strong": pos += 2          # marker/mechanism direct evidence
-        elif ct == "medium": pos += 1        # multiple PMID evidence (≥10)
-        elif ct == "weak": pos += 0.3
-        # FAERS (FDA 환자 보고)
-        fa = row.get("vivo_faers")
-        if fa == "strong": pos += 1.5        # n_reports ≥ 5000
-        elif fa == "medium": pos += 0.8      # n_reports 1000-5000
-        elif fa == "weak": pos += 0.3        # n_reports 50-1000
-        # 약한 출처들 (DILIst/Gold/SIDER/TDC/ClinTox) — _unreliable 로 분리
-        # 가중치 0 (사실상 미사용). 컬럼은 NaN 이므로 if pd.notna 통과 안 함.
-        if pd.notna(row["vivo_dilist"]) and row["vivo_dilist"] == 1: pos += 0
-        if pd.notna(row["vivo_gold"]) and row["vivo_gold"] == 1: pos += 0
-        if pd.notna(row["vivo_sider_liver"]) and row["vivo_sider_liver"] == 1: pos += 0
-        elif pd.notna(row["vivo_sider_hepatotox"]) and row["vivo_sider_hepatotox"] == 1: pos += 0
-        if pd.notna(row["vivo_tdc_dili"]) and row["vivo_tdc_dili"] == 1: pos += 0
-        if pd.notna(row["vivo_clintox"]) and row["vivo_clintox"] == 1: pos += 0
+        # Ambiguous → 제외
+        if row.get("vivo_dilirank") == "Ambiguous-DILI-Concern":
+            return None
+        pos = has_pos_signal(row)
+        neg = has_neg_signal(row)
+        if not pos and not neg:
+            return None
+        if pos and not neg:
+            return 1
+        if neg and not pos:
+            return 0
+        # 충돌 — curated lookup
+        return curated_map.get(row["inchi_key"], None)
 
-        # 음성 신호
-        neg = 0
-        if row["vivo_dilirank"] == "vNo-DILI-Concern":
-            neg += 2  # FDA 공식
-        if lt == "E": neg += 2  # LiverTox unlikely — 강한 음성 신호
-        if pd.notna(row["vivo_marketed_clean_neg"]) and row["vivo_marketed_clean_neg"] == 1 and pos == 0:
-            neg += 1  # 시판 안전약 신호 (양성 신호 없을 때만)
-        if pd.notna(row["vivo_clintox"]) and row["vivo_clintox"] == 0 and pos == 0:
-            neg += 1  # ClinTox FDA approved + no fail
+    df["vivo_label"] = df.apply(vivo_decide, axis=1)
 
-        # Ambiguous → vivo_label None
-        if row["vivo_dilirank"] == "Ambiguous-DILI-Concern":
-            return None, "ambiguous", 0
-        if pos == 0 and neg == 0:
-            return None, "no_signal", 0
-
-        label = 1 if pos > neg else (0 if neg > pos else None)
-        # 충돌
-        if pos > 0 and neg > 0:
-            # DILIrank 가 vNo 인데 다른 출처가 양성이면? — vivo_dilirank 가 우선
-            if row["vivo_dilirank"] == "vNo-DILI-Concern" and pos >= 2:
-                conf = "low"
-                label = 0  # FDA vNo 우선
-            else:
-                conf = "low"
-        elif pos > 0:
-            conf = "high" if pos >= 3 else "med"
-        else:
-            conf = "high" if neg >= 2 else "med"
-
-        n_sources = sum([
-            pd.notna(row[c]) and row[c] not in (None, "Ambiguous-DILI-Concern")
-            for c in vivo_cols
-        ])
-        return label, conf, n_sources
-
-    df[["vivo_label", "vivo_confidence", "vivo_n_sources"]] = df.apply(
-        lambda r: pd.Series(vivo_decide(r)), axis=1)
-
-    # 6. vitro label 결정 (chEMBL > Tox21)
+    # 6. vitro label 결정 (Tox21 만)
     def vitro_decide(row):
-        labels = []
-        if pd.notna(row["vitro_chembl"]): labels.append(int(row["vitro_chembl"]))
-        if pd.notna(row["vitro_tox21"]):  labels.append(int(row["vitro_tox21"]))
-        if not labels:
-            return None, None, 0
-        # 합의 — 어느 하나라도 양성이면 양성 (보수적)
-        if 1 in labels:
-            label = 1
-        elif all(l == 0 for l in labels):
-            label = 0
-        else:
-            label = None
-        conf = "high" if len(labels) == 2 else "med"
-        return label, conf, len(labels)
+        if pd.notna(row.get("vitro_tox21")):
+            return int(row["vitro_tox21"])
+        return None
 
-    df[["vitro_label", "vitro_confidence", "vitro_n_sources"]] = df.apply(
-        lambda r: pd.Series(vitro_decide(r)), axis=1)
-
-    # 7. 3가지 룰별 라벨 + final_source + conflict
-    CONF_SCORE = {"high": 3, "med": 2, "low": 1, None: 0}
-
-    def rules(row):
-        v = row["vivo_label"]; vi = row["vitro_label"]
-        v_conf = CONF_SCORE.get(row["vivo_confidence"], 0)
-        vi_conf = CONF_SCORE.get(row["vitro_confidence"], 0)
-
-        # ── 룰 1: 임상우선 ─────────────────────────────
-        if pd.notna(v):
-            r1 = int(v)
-        elif pd.notna(vi):
-            r1 = int(vi)
-        else:
-            r1 = None
-
-        # ── 룰 2: 신뢰도가중 ──────────────────────────
-        # vivo+ → +v_conf,  vivo- → -v_conf,  None → 0
-        s = 0
-        if pd.notna(v): s += v_conf if int(v) == 1 else -v_conf
-        if pd.notna(vi): s += vi_conf if int(vi) == 1 else -vi_conf
-        if s > 0: r2 = 1
-        elif s < 0: r2 = 0
-        else: r2 = None  # 동점 또는 둘 다 None
-
-        # ── 룰 3: 양쪽합의 ────────────────────────────
-        if pd.notna(v) and pd.notna(vi):
-            if int(v) == int(vi):
-                r3 = int(v)
-            else:
-                r3 = None  # 충돌 → 모델로 fallback
-        else:
-            r3 = None  # 한쪽만 있으면 합의 X → 모델로 fallback
-
-        # final_source 표시
-        if pd.notna(v) and pd.notna(vi):
-            if int(v) == int(vi):
-                source = "both_agree"
-                conflict = False
-            else:
-                source = "conflict"
-                conflict = True
-        elif pd.notna(v):
-            source = "vivo_only"
-            conflict = False
-        elif pd.notna(vi):
-            source = "vitro_only"
-            conflict = False
-        else:
-            source = "no_label"
-            conflict = False
-
-        return r1, r2, r3, source, conflict
-
-    df[["label_vivo_priority", "label_weighted", "label_consensus",
-        "final_source", "conflict"]] = df.apply(
-        lambda r: pd.Series(rules(r)), axis=1)
+    df["vitro_label"] = df.apply(vitro_decide, axis=1)
     return df
 
 
@@ -502,7 +424,7 @@ def main():
 
     print("[9/10] chEMBL (in vitro)")
     ch = load_chembl()
-    print(f"  {len(ch)} 분자 (양성 {int((ch.vitro_chembl==1).sum())} / 음성 {int((ch.vitro_chembl==0).sum())})")
+    print(f"  {len(ch)} 분자 (양성 {int((ch.vivo_chembl==1).sum())} / 음성 {int((ch.vivo_chembl==0).sum())}) — vivo 로 재분류")
 
     print("[10/11] Tox21 통합 (in vitro)")
     tx = load_tox21()
@@ -546,15 +468,6 @@ def main():
     print(db["vivo_label"].value_counts(dropna=False).to_dict())
     print(f"\n=== vitro 라벨 분포 ===")
     print(db["vitro_label"].value_counts(dropna=False).to_dict())
-    print(f"\n=== final_source 분포 ===")
-    print(db["final_source"].value_counts(dropna=False).to_dict())
-    print(f"\n=== rule 1: vivo_priority 라벨 분포 ===")
-    print(db["label_vivo_priority"].value_counts(dropna=False).to_dict())
-    print(f"\n=== rule 2: weighted 라벨 분포 ===")
-    print(db["label_weighted"].value_counts(dropna=False).to_dict())
-    print(f"\n=== rule 3: consensus 라벨 분포 ===")
-    print(db["label_consensus"].value_counts(dropna=False).to_dict())
-    print(f"\n=== 라벨 충돌 (vivo ≠ vitro) ===  {int(db['conflict'].sum())} 건")
 
     # 저장
     out = os.path.join(OUT_DIR, "full.parquet")

@@ -1,0 +1,77 @@
+inchi_key,name,verified_label,evidence,original_label
+OFVLGDICTFRJMM-WESIUVDSSA-N,TETRACYCLINE,1,LiverTox Likelihood Score A[HD] - well known cause of clinically apparent liver injury (acute fatty liver),1.0
+VVFDMWZLBPUKTD-ZKRNHDOASA-N,cefotiam hexetil,-1,Cephalosporin class B but cefotiam-specific data limited; PRR signal in elderly,0.0
+HTJXMOGUGMSZOG-UHFFFAOYSA-N,tiaramide,-1,Insufficient WebSearch data on tiaramide hepatotoxicity,1.0
+REOJLIXKJWXUGB-UHFFFAOYSA-N,mofebutazone,-1,Pyrazolone NSAID class associated with DILI but mofebutazone-specific data lacking,1.0
+RGLYKWWBQGJZGM-ISLYRVAYSA-N,DIETHYLSTILBESTROL,-1,No specific LiverTox hepatotoxicity data found; estrogens generally associated with cholestasis,1.0
+FIAFUQMPZJWCLV-UHFFFAOYSA-N,suramin,-1,Complex hepatic effects - protective acutely but chronic infiltration; not classic DILI,1.0
+XQLWNAFCTODIRK-UHFFFAOYSA-N,gallopamil,-1,Calcium channel blocker class implicated; gallopamil-specific data insufficient,0.0
+SEBMTIQKRHYNIT-UHFFFAOYSA-N,AZATADINE,0,Antihistamine class rarely causes liver injury (low dose short duration); no specific reports,0.0
+ZAIPMKNFIOOWCQ-UEKVPHQBSA-N,CEPHALEXIN ANHYDROUS,1,LiverTox Likelihood Score B - very likely but rare cause of clinically apparent liver injury,0.0
+SYLKGLMBLAAGSC-QLVMHMETSA-N,cefsulodin,-1,Cephalosporin class effect but cefsulodin-specific data not found,0.0
+VMMKGHQPQIEGSQ-UHFFFAOYSA-N,MINODRONIC ACID,0,Bisphosphonate class with low rate of enzyme elevations; no specific reports for minodronic,0.0
+BZCALJIHZVNMGJ-HSZRJFAPSA-N,Fasiglifam,1,Withdrawn from Phase III due to DILI (bile acid transporter inhibition),1.0
+XUIIKFGFIJCVMT-GFCCVEGCSA-N,DEXTROTHYROXINE,-1,No specific dextrothyroxine hepatotoxicity data; thyroid hormones rarely cause mild injury,0.0
+NFBAXHOPROOJAW-UHFFFAOYSA-N,PHENINDIONE,1,>100 cases hypersensitivity with ~10% jaundice (cholestatic and hepatocellular),1.0
+MKKYBZZTJQGVCD-XTCKQBCOSA-N,arbekacin,-1,Hepatotoxicity reported as adverse reaction but mostly mild/recoverable; aminoglycoside class rare DILI,0.0
+JCYZMTMYPZHVBF-UHFFFAOYSA-N,melarsoprol,1,Common side effects include hepatic dysfunction and liver problems (toxic arsenical),1.0
+CPEUVMUXAHMANV-UHFFFAOYSA-N,flubendazole,1,Benzimidazole class linked to rare hepatocellular or mixed liver injury,1.0
+CPTIBDHUFVHUJK-NZYDNVMFSA-N,mitopodozide,-1,Insufficient WebSearch data on mitopodozide hepatotoxicity,1.0
+GJJRIOLBUILIGK-UHFFFAOYSA-N,difebarbamate,1,Atrium combination (with febarbamate/phenobarbital) withdrawn 1997 due to hepatitis and acute liver failure,1.0
+PVBQYTCFVWZSJK-UHFFFAOYSA-N,meldonium,0,Long-term mildronate not associated with liver function disturbances,0.0
+MFDFERRIHVXMIY-UHFFFAOYSA-N,PROCAINE,0,No specific procaine hepatotoxicity data; local anesthetic,0.0
+TYYBFXNZMFNZJT-UHFFFAOYSA-N,IOXAGLATE MEGLUMINE,0,Iodinated contrast media; primary concern is nephropathy not hepatotoxicity,0.0
+YHXISWVBGDMDLQ-UHFFFAOYSA-N,MOCLOBEMIDE,-1,Clinical trials show no hepatotoxicity in 3900 patients; animal data only suggests concern,1.0
+YNZFUWZUGRBMHL-UHFFFAOYSA-N,opipramol,-1,Rare case reports of hepatitis exist but typically only mild enzyme elevations,0.0
+WVYXNIXAMZOZFK-UHFFFAOYSA-N,diaziquone,-1,Hepatic metabolism with GSH depletion in vitro but clinical trials show infrequent and not severe,1.0
+AGBQKNBQESQNJD-UHFFFAOYSA-N,thioctic acid,0,LiverTox: hepatotoxicity not reported; not associated with enzyme elevations or DILI,0.0
+WHXMKTBCFHIYNQ-UHFFFAOYSA-N,Simendan,0,Levosimendan shows hepatoprotective effects against ischemia-reperfusion injury,0.0
+PHEZJEYUWHETKO-UHFFFAOYSA-N,Brequinar,-1,In vitro hepatocyte stress responses; clinical hepatotoxicity not well established,1.0
+VZJFGSRCJCXDSG-UHFFFAOYSA-N,hexamethonium,0,Not taken up by liver cells; renal excretion; no documented hepatotoxicity,0.0
+YGCODSQDUUUKIV-UHFFFAOYSA-N,zoxazolamine,1,Withdrawn 1961 due to hepatotoxicity (fatal hepatic necrosis reported),1.0
+WEUCDJCFJHYFRL-UHFFFAOYSA-N,homochlorcyclizine,0,Cyclizine/chlorcyclizine rarely linked to liver injury; favorable safety profile,0.0
+TWHSQQYCDVSBRK-UHFFFAOYSA-N,asulacrine,-1,Hepatotoxicity mentioned but phlebitis is main toxicity; limited clinical data,1.0
+WLOHNSSYAXHWNR-DWIOZXRMSA-N,DIRITHROMYCIN,1,Macrolide class causes self-limited cholestatic hepatitis (LiverTox class effect),1.0
+WDVSHHCDHLJJJR-UHFFFAOYSA-N,proflavine,-1,No specific hepatotoxicity data found in search,0.0
+HXNFUBHNUDHIGC-UHFFFAOYSA-N,Oxypurinol,-1,Active metabolite of allopurinol (known hepatotoxin) but oxypurinol-specific data limited,0.0
+BIDUPMYXGFNAEJ-APGVDKLISA-N,astromicin,0,Aminoglycoside class - liver injury rare due to limited hepatocyte uptake,0.0
+ZKUDBRCEOBOWLF-UHFFFAOYSA-N,glisoxepide,-1,Sulfonylurea class known but glisoxepide-specific data not found,1.0
+FPCCSQOGAWCVBH-UHFFFAOYSA-N,ketanserin,-1,Search returned ketamine not ketanserin; no specific ketanserin DILI data,0.0
+SPOAFZKFCYREMW-FWYLUGOYSA-N,rioprostil,0,Low order of acute toxicity; no evidence of hepatotoxicity in tox studies,0.0
+IPOPQVVNCFQFRK-UHFFFAOYSA-N,phenoperidine,-1,No specific phenoperidine hepatotoxicity data; opioids generally low hepatotoxicity at therapeutic doses,0.0
+WSEQXVZVJXJVFP-FQEVSTJZSA-N,ESCITALOPRAM,1,Case reports of escitalopram-induced hepatitis/cholestasis; lowest DILI rate among SSRIs but documented,0.0
+HIGRLDNHDGYWQJ-UHFFFAOYSA-P,obidoxime,1,Hepatotoxic at high recommended doses; liver dysfunction in 9.4% in clinical study,1.0
+PTQXTEKSNBVPQJ-UHFFFAOYSA-N,Avasimibe,1,Significant hepatic toxicity in preclinical studies at higher doses; dose-limiting hepatic effects,1.0
+OHKOGUYZJXTSFX-KZFFXBSXSA-N,TICARCILLIN,1,Ticarcillin linked with idiosyncratic liver injury (isolated cases); ticarcillin-clavulanate causes cholestatic hepatitis,0.0
+NBQKINXMPLXUET-UHFFFAOYSA-N,Pranlukast,1,Liver injury reported in up to 0.5% of patients,0.0
+MXWHMTNPTTVWDM-NXOFHUPFSA-N,Mitoguazone,1,Hepatic toxicity recognized concern; high tissue accumulation in liver,1.0
+VUAFHZCUKUDDBC-BYPYZUCNSA-N,bucillamine,-1,May cause kidney/liver dysfunction; generally favorable safety profile but monitoring required,0.0
+AURFZBICLPNKBZ-YZRLXODZSA-N,eltanolone,-1,Never marketed (discontinued due to convulsions); no hepatotoxicity data,0.0
+WYUSVOMTXWRGEK-HBWVYFAYSA-N,Cefpodoxime,0,Oral cephalosporin - liver injury rare and idiosyncratic only,0.0
+QPFYXYFORQJZEC-UHFFFAOYSA-N,Phenazopyridine,1,Rare cases of hepatotoxicity especially at overdose; hypersensitivity hepatitis reported,0.0
+FMHHVULEAZTJMA-UHFFFAOYSA-N,TRIOXSALEN,-1,Psoralen class linked to rare clinically apparent acute liver injury; trioxsalen-specific data limited,0.0
+ARAIBEBZBOPLMB-UFGQHTETSA-N,Zanamivir,0,LiverTox Likelihood Score E - unlikely cause of clinically apparent liver injury,0.0
+KMSKQZKKOZQFFG-YXRRJAAWSA-N,pirarubicin,1,Hepatotoxicity is known concern (anthracycline class with ferroptosis/oxidative stress mechanism),1.0
+CUHVIMMYOGQXCV-UHFFFAOYSA-N,medetomidine,-1,Veterinary sedative - contraindicated in liver dysfunction but no direct hepatotoxicity,0.0
+BHELIUBJHYAEDK-OAIUPTLZSA-N,aspoxicillin,-1,Aminopenicillin class can cause cholestatic hepatitis; aspoxicillin-specific data lacking,0.0
+JTIGKVIOEQASGT-UHFFFAOYSA-N,proquazone,1,Withdrawn from use because of hepatotoxicity (quinazolone derivative),1.0
+FOHHNHSLJDZUGQ-UHFFFAOYSA-N,HALOFANTRINE,-1,Elevated liver enzymes reported but cardiotoxicity (QT prolongation) is primary concern,1.0
+AGMMTXLNIQSRCG-UHFFFAOYSA-N,QUINETHAZONE,0,Thiazide-type diuretic class rarely implicated in liver injury,0.0
+BYBLEWFAAKGYCD-UHFFFAOYSA-N,MICONAZOLE,1,Azole antifungal class associated with hepatotoxicity (LiverTox documented),1.0
+SEDQWOMFMIJKCU-UHFFFAOYSA-N,demexiptiline,-1,Tricyclic antidepressant class can cause hepatotoxicity but demexiptiline-specific data lacking,1.0
+BMKDZUISNHGIBY-UHFFFAOYSA-N,razoxane,-1,No specific LiverTox or PubMed data on razoxane hepatotoxicity in search,1.0
+GWBPFRGXNGPPMF-UHFFFAOYSA-N,Sulfanitran,-1,Sulfonamide class effect but sulfanitran-specific data not found (veterinary use),1.0
+OHTXTCNTQJFRIG-UHFFFAOYSA-N,sulfobromophthalein,-1,Diagnostic dye for liver function testing - not a clinical therapeutic; exclude,0.0
+ZNRGQMMCGHDTEI-ITGUQSILSA-N,tropisetron,0,Antiemetics rarely cause liver injury; tropisetron shows hepatoprotective effects,0.0
+YQVALJGIKVYRNI-UHFFFAOYSA-N,difetarsone,-1,No specific difetarsone hepatotoxicity data found,1.0
+XIURVHNZVLADCM-IUODEOHRSA-N,CEPHALOTHIN,1,Cephalosporin with reported cholestatic injury (class B LiverTox likelihood),0.0
+UKOQVLAXCBRRGH-UHFFFAOYSA-N,Pafuramidine,1,Phase III pulled in 2008 due to liver toxicity and renal insufficiency,1.0
+USZYSDMBJDPRIF-SVEJIMAYSA-N,aclarubicin,-1,Anthracycline class hepatotoxicity documented but aclarubicin-specific clinical data limited,1.0
+VXMOONUMYLCFJD-DHLKQENFSA-N,barnidipine,-1,Dihydropyridine CCB class with rare reports; barnidipine-specific data lacking,0.0
+SMSRCGPDNDCXFR-CYWZMYCQSA-N,cefbuperazone,-1,Cephalosporin class effect possible but cefbuperazone-specific data not found,0.0
+LJJFNFYPZOHRHM-UHFFFAOYSA-N,Technetium (99mTc) sestamibi,-1,Radiopharmaceutical (diagnostic); not a typical therapeutic drug - exclude,0.0
+CHBRHODLKOZEPZ-UHFFFAOYSA-N,clotiazepam,1,Clotiazepam-induced acute hepatitis case reports (hepatocellular pattern),0.0
+OSWPMRLSEDHDFF-UHFFFAOYSA-N,METHYL SALICYLATE,-1,Topical counterirritant; toxicity at overdose only similar to salicylates,0.0
+JTPUMZTWMWIVPA-UHFFFAOYSA-O,ISOPROPAMIDE IODIDE,0,No evidence of hepatotoxicity directly associated with isopropamide iodide,0.0
+UFLGIAIHIAPJJC-UHFFFAOYSA-N,TRIPELENNAMINE,0,Antihistamine class rarely causes liver injury (low dose short duration),0.0
+YAPQBXQYLJRXSA-UHFFFAOYSA-N,theobromine,0,Methylxanthine; no specific reports of theobromine-induced liver injury,0.0

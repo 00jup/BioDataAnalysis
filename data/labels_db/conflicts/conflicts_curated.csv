@@ -1,0 +1,1211 @@
+inchi_key,canonical_smiles,name,vivo_dilirank,vivo_livertox,vivo_dailymed,vivo_pubmed,vivo_ctd,vivo_faers,vivo_chembl,vivo_marketed_clean_neg,manual_label,source,reason
+AURFZBICLPNKBZ-UHFFFAOYSA-N,CC(=O)C1CCC2C3CCC4CC(O)CCC4(C)C3CCC12C,Brexanolone,vNo-DILI-Concern,E,,,medium,,,,0.0,DILIrank_neg,FDA vNo
+QIRNGVVZBINFMX-UHFFFAOYSA-N,C=CCc1ccccc1O,2-Allylphenol,unknown,,,,weak,,,1.0,,non_drug,industrial/lab chemical
+JTJMJGYZQZDUJJ-UHFFFAOYSA-N,c1ccc(C2(N3CCCCC3)CCCCC2)cc1,phencyclidine,unknown,C,,,medium,,1.0,1.0,1.0,LiverTox_pos,NIH LiverTox=C
+MYMOFIZGZYHOMD-UHFFFAOYSA-N,O=O,OXYGEN,unknown,,,weak,strong,,,1.0,,non_drug,industrial/lab chemical
+YFDSDPIBEUFTMI-UHFFFAOYSA-N,OCC(Br)(Br)Br,tribromoethanol,unknown,,,,weak,,1.0,1.0,,non_drug,industrial/lab chemical
+IQPNAANSBPBGFQ-UHFFFAOYSA-N,O=c1cc(-c2ccc(O)c(O)c2)oc2cc(O)cc(O)c12,Luteolin,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+BTFHLQRNAMSNLC-UHFFFAOYSA-N,C#CCN(C)CCCOc1ccc(Cl)cc1Cl,Clorgyline,unknown,,,,medium,,,1.0,,verified_exclude,WebSearch: insufficient evidence
+DYAIAHUQIPBDIP-AXAPSJFSSA-N,O=C(O)C1=C(CSc2nnnn2CS(=O)(=O)O)CS[C@@H]2[C@H](NC(=O)[C@H](O)c3ccccc3)C(=O)N12,CEFONICID,unknown,,,,,,1.0,1.0,1.0,verified_pos,WebSearch verified
+HHJUWIANJFBDHT-ZVTSDNJWSA-N,CC[C@]1(O)C[C@@H]2CN(CCc3c([nH]c4ccccc34)[C@@](C(=O)OC)(c3cc4c(cc3OC)N(C)[C@H]3[C@@](O)(C(N)=O)[C@H](O)[C@]5(CC)C=CCN6CC[C@]43[C@@H]65)C2)C1,vindesine,unknown,,,,,,1.0,1.0,,verified_exclude,WebSearch: insufficient evidence
+ZGXJTSGNIOSYLO-UHFFFAOYSA-N,NCC(=O)CCC(=O)O,AMINOLEVULINIC ACID,unknown,,,weak,medium,,1.0,1.0,0.0,verified_neg,WebSearch verified
+RWMKKWXZFRMVPB-UHFFFAOYSA-N,[Si+4],Magnesium Silicate,unknown,,,,strong,,,1.0,,non_drug,industrial/lab chemical
+CPMDPSXJELVGJG-UHFFFAOYSA-N,COC(=O)c1ccc2c(C(=Nc3ccc(N(C)C(=O)CN4CCN(C)CC4)cc3)c3ccccc3)c(O)[nH]c2c1,Nintedanib,vMost-DILI-Concern,C,,,,,,1.0,1.0,DILIrank_pos,FDA vMost-DILI-Concern
+MEZZCSHVIGVWFI-UHFFFAOYSA-N,COc1ccc(C(=O)c2ccccc2O)c(O)c1,dioxybenzone,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+IZEKFCXSFNUWAM-UHFFFAOYSA-N,OCCN(CCO)c1nc(N2CCCCC2)c2nc(N(CCO)CCO)nc(N3CCCCC3)c2n1,Dipyridamole,Ambiguous-DILI-Concern,E,adverse_hepatotox,,strong,,1.0,,0.0,LiverTox_neg,NIH LiverTox=E
+UFUVLHLTWXBHGZ-MGZQPHGTSA-N,CCC[C@@H]1C[C@@H](C(=O)N[C@@H]([C@H]2O[C@H](SC)[C@H](OP(=O)(O)O)[C@@H](O)[C@H]2O)[C@H](C)Cl)N(C)C1,CLINDAMYCIN PHOSPHATE,unknown,,,,,,1.0,1.0,1.0,verified_pos,WebSearch verified
+KBAFPSLPKGSANY-UHFFFAOYSA-N,CCN(CC)CCOC(=O)C(Cc1cccc2ccccc12)CC1CCCO1,naftidrofuryl,unknown,,,weak,,,,1.0,1.0,verified_pos,WebSearch verified
+NSVFSAJIGAJDMR-UHFFFAOYSA-N,CC1=C(C(=O)OCCN(Cc2ccccc2)c2ccccc2)C(c2cccc([N+](=O)[O-])c2)C(P2(=O)OCC(C)(C)CO2)=C(C)N1,efonidipine,unknown,,,,weak,,,1.0,,verified_exclude,WebSearch: insufficient evidence
+DOIRQSBPFJWKBE-UHFFFAOYSA-N,CCCCOC(=O)c1ccccc1C(=O)OCCCC,dibutylphthalate,unknown,,,,strong,,,1.0,,non_drug,industrial/lab chemical
+RMHMFHUVIITRHF-UHFFFAOYSA-N,CN1CCN(CC(=O)N2c3ccccc3C(=O)Nc3cccnc32)CC1,pirenzepine,unknown,,,weak,,,1.0,1.0,,verified_exclude,WebSearch: insufficient evidence
+LISFMEBWQUVKPJ-UHFFFAOYSA-N,O=c1ccc2ccccc2[nH]1,2-Hydroxyquinoline,unknown,,,weak,,,,1.0,,non_drug,industrial/lab chemical
+PVHUJELLJLJGLN-UHFFFAOYSA-N,CCOC(=O)C1=C(C)NC(C)=C(C(=O)OC)C1c1cccc([N+](=O)[O-])c1,nitrendipine,unknown,,,,weak,,,1.0,,verified_exclude,WebSearch: insufficient evidence
+UZFMOKQJFYMBGY-UHFFFAOYSA-N,CC1(C)CC(O)CC(C)(C)N1[O],Tempol,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+DPSPPJIUMHPXMA-UHFFFAOYSA-N,CC1CCc2cc(F)cc3c(=O)c(C(=O)O)cn1c23,flumequine,unknown,,,,strong,,1.0,1.0,1.0,verified_pos,WebSearch verified
+FPIPGXGPPPQFEQ-OVSJKPMPSA-N,CC1=C(/C=C/C(C)=C/C=C/C(C)=C/CO)C(C)(C)CCC1,RETINOL,unknown,,,,,,1.0,1.0,,non_drug,industrial/lab chemical
+WWXBHTZSYYGCSG-UHFFFAOYSA-N,NC(=O)Nc1ccc([As](=O)(O)O)cc1,carbarsone,unknown,,,,,,1.0,1.0,,non_drug,industrial/lab chemical
+VDKMYSMWQCFYBQ-UHFFFAOYSA-N,CCC(C)(C)NCC(O)COc1ccccc1C(=O)CCc1ccccc1,diprafenone,unknown,,,,,,1.0,1.0,,verified_exclude,WebSearch: insufficient evidence
+DKMFBWQBDIGMHM-UHFFFAOYSA-N,CC1CCN(CCCC(=O)c2ccc(F)cc2)CC1,melperone,unknown,,,,,,1.0,1.0,,verified_exclude,WebSearch: insufficient evidence
+MOTIYCLHZZLHHQ-UHFFFAOYSA-N,CC(Cl)(Cl)C(c1ccc(Cl)cc1)c1ccccc1Cl,Mitometh,unknown,,,,strong,,,1.0,,verified_exclude,WebSearch: insufficient evidence
+IUTCEZPPWBHGIX-UHFFFAOYSA-N,[Sn+2],stannous fluoride,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+QWGDMFLQWFTERH-UHFFFAOYSA-N,Clc1ccc2c(c1)C(N1CCNCC1)=Nc1ccccc1O2,AMOXAPINE,Ambiguous-DILI-Concern,E,,,strong,,1.0,0.0,0.0,LiverTox_neg,NIH LiverTox=E
+UMJJGDUYVQCBMC-UHFFFAOYSA-N,CCNCCCNCCCNCCCNCC,"N1,N11-Diethylnorspermine",unknown,,,,weak,,,1.0,,non_drug,industrial/lab chemical
+KAATUXNTWXVJKI-UHFFFAOYSA-N,CC1(C)C(C=C(Cl)Cl)C1C(=O)OC(C#N)c1cccc(Oc2ccccc2)c1,cypermethrin,unknown,,,,strong,,,1.0,,non_drug,industrial/lab chemical
+XCWPUUGSGHNIDZ-UHFFFAOYSA-N,COc1cc2[nH]c(C)c(CCN3CCN(c4ccccc4)CC3)c2cc1OC,oxypertine,unknown,,,,,,1.0,1.0,,non_drug,industrial/lab chemical
+CYDMQBQPVICBEU-XRNKAMNCSA-N,CN(C)[C@@H]1C(O)=C(C(N)=O)C(=O)[C@@]2(O)C(O)=C3C(=O)c4c(O)ccc(Cl)c4[C@@](C)(O)[C@H]3C[C@@H]12,CHLORTETRACYCLINE,unknown,,,,,,1.0,1.0,1.0,verified_pos,WebSearch verified
+UCTWMZQNUQWSLP-UHFFFAOYSA-N,CNCC(O)c1ccc(O)c(O)c1,racepinefrine,vNo-DILI-Concern,,,,strong,,,1.0,0.0,DILIrank_neg,FDA vNo
+OQDPVLVUJFGPGQ-UHFFFAOYSA-N,c1cnc(N2CCN(Cc3ccc4c(c3)OCO4)CC2)nc1,piribedil,unknown,,,,,,1.0,1.0,0.0,verified_neg,WebSearch verified
+MOTZDAYCYVMXPC-UHFFFAOYSA-N,CCCCCCCCCCCCOS(=O)(=O)O,Lauryl sulfate,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+WYMSBXTXOHUIGT-UHFFFAOYSA-N,CCOP(=O)(OCC)Oc1ccc([N+](=O)[O-])cc1,paraoxon,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+BACHBFVBHLGWSL-UHFFFAOYSA-N,COC(=O)C(C)Oc1ccc(Oc2ccc(Cl)cc2Cl)cc1,Diclofop-methyl,unknown,,,,strong,,,1.0,,non_drug,industrial/lab chemical
+CKNAQFVBEHDJQV-UHFFFAOYSA-N,Cc1c(-c2cnccn2)ssc1=S,Oltipraz,unknown,,,,strong,,,1.0,0.0,verified_neg,WebSearch verified
+BPICBUSOMSTKRF-UHFFFAOYSA-N,Cc1cccc(C)c1NC1=NCCCS1,Xylazine,unknown,,,,weak,,,1.0,1.0,verified_pos,WebSearch verified
+YXFVVABEGXRONW-UHFFFAOYSA-N,Cc1ccccc1,Toluene,unknown,,,medium,medium,,,1.0,,non_drug,industrial/lab chemical
+URAYPUMNDPQOKB-UHFFFAOYSA-N,CC(=O)OCC(COC(C)=O)OC(C)=O,triacetin,unknown,,,,weak,,,1.0,,non_drug,industrial/lab chemical
+IWDCLRJOBJJRNH-UHFFFAOYSA-N,Cc1ccc(O)cc1,P-Cresol,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+UHWVSEOVJBQKBE-UHFFFAOYSA-N,COc1ccc(CN2CCNCC2)c(OC)c1OC,trimetazidine,unknown,,,,medium,,,1.0,0.0,verified_neg,WebSearch verified
+SEBPXHSZHLFWRL-UHFFFAOYSA-N,Cc1c(C)c2c(c(C)c1O)CCC(C)(C)O2,"2,2,5,7,8-Pentamethyl-6-chromanol",unknown,,,,strong,,,1.0,,non_drug,industrial/lab chemical
+GFFGJBXGBJISGV-UHFFFAOYSA-N,Nc1ncnc2nc[nH]c12,adenine,unknown,,,weak,strong,,,1.0,,non_drug,industrial/lab chemical
+MHAJPDPJQMAIIY-UHFFFAOYSA-N,OO,magnesium peroxide,unknown,,,,strong,,,1.0,,non_drug,industrial/lab chemical
+SOWBFZRMHSNYGE-UHFFFAOYSA-N,NC(=O)C(=O)O,Oxamic Acid,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+RUZYUOTYCVRMRZ-UHFFFAOYSA-N,COc1cc2nc(N3CCN(C(=O)C4COc5ccccc5O4)CC3)nc(N)c2cc1OC,Doxazosin mesylate,vLess-DILI-Concern,E,,,medium,,1.0,,1.0,DILIrank_pos,FDA vLess-DILI-Concern
+KSFOVUSSGSKXFI-UHFFFAOYSA-N,C=CC1=C(C)c2cc3[nH]c(cc4nc(cc5[nH]c(cc1n2)c(C)c5CCC(=O)O)C(CCC(=O)O)=C4C)c(C)c3C=C,protoporphyrin,unknown,,,,medium,,,1.0,,verified_exclude,WebSearch: insufficient evidence
+STUWGJZDJHPWGZ-UHFFFAOYSA-N,Cc1nc(NC(=O)N2CCCC2C(N)=O)sc1-c1ccnc(C(C)(C)C(F)(F)F)c1,Alpelisib,vLess-DILI-Concern,E,,,,,,,1.0,DILIrank_pos,FDA vLess-DILI-Concern
+MFYSYFVPBJMHGN-ZPOLXVRWSA-N,C[C@]12CCC(=O)C=C1CC[C@@H]1[C@@H]2C(=O)C[C@@]2(C)[C@H]1CC[C@]2(O)C(=O)CO,Cortisone,unknown,,,,,,1.0,1.0,1.0,verified_pos,WebSearch verified
+AFCGFAGUEYAMAO-UHFFFAOYSA-N,CC(=O)NCCCS(=O)(=O)O,Acamprosate calcium,vLess-DILI-Concern,E,,,,,1.0,,1.0,DILIrank_pos,FDA vLess-DILI-Concern
+BCSVCWVQNOXFGL-UHFFFAOYSA-N,O=C(O)Cc1nn(Cc2nc3cc(C(F)(F)F)ccc3s2)c(=O)c2ccccc12,Zopolrestat,unknown,,,,medium,,1.0,1.0,1.0,verified_pos,WebSearch verified
+BPLBGHOLXOTWMN-UHFFFAOYSA-N,CC1(C)SC2C(NC(=O)COc3ccccc3)C(=O)N2C1C(=O)O,Penicillin v potassium,vNo-DILI-Concern,,,weak,weak,,,,0.0,DILIrank_neg,FDA vNo
+NPUKDXXFDDZOKR-UHFFFAOYSA-N,CCOC(=O)c1cncn1C(C)c1ccccc1,Etomidate,vNo-DILI-Concern,,,,weak,,,,0.0,DILIrank_neg,FDA vNo
+ZTHYODDOHIVTJV-UHFFFAOYSA-N,CCCOC(=O)c1cc(O)c(O)c(O)c1,Propyl Gallate,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+WSFSSNUMVMOOMR-UHFFFAOYSA-N,C=O,formaldehyde,unknown,,,,strong,,,1.0,,non_drug,industrial/lab chemical
+LMJSLTNSBFUCMU-UHFFFAOYSA-N,NS(=O)(=O)c1cc2c(cc1Cl)NC(C(Cl)Cl)NS2(=O)=O,TRICHLORMETHIAZIDE,unknown,,,,,,1.0,1.0,1.0,verified_pos,WebSearch verified
+DMUAPQTXSSNEDD-QALJCMCCSA-N,CCC(=O)O[C@@H]1CC(=O)O[C@H](C)C/C=C/C=C/[C@H](O)[C@H](C)C[C@H](CC=O)[C@H](O[C@@H]2O[C@H](C)[C@@H](O[C@H]3C[C@@](C)(O)[C@@H](OC(=O)CC)[C@H](C)O3)[C@H](N(C)C)[C@H]2O)[C@H]1OC,mydecamycin,unknown,,,,,,1.0,1.0,1.0,verified_pos,WebSearch verified
+WWJZWCUNLNYYAU-UHFFFAOYSA-N,COP(=S)(OC)Oc1ccc(Sc2ccc(OP(=S)(OC)OC)cc2)cc1,Temephos,unknown,,,,weak,,,1.0,,non_drug,industrial/lab chemical
+KOHIRBRYDXPAMZ-UHFFFAOYSA-N,OC(CNCC(O)C1CCc2cc(F)ccc2O1)C1CCc2cc(F)ccc2O1,NEBIVOLOL,Ambiguous-DILI-Concern,E,,,,,1.0,0.0,0.0,LiverTox_neg,NIH LiverTox=E
+FLOSMHQXBMRNHR-UHFFFAOYSA-N,CC(=O)N=c1sc(S(N)(=O)=O)nn1C,methazolamide,vLess-DILI-Concern,,,,strong,,,1.0,1.0,DILIrank_pos,FDA vLess-DILI-Concern
+WVDDGKGOMKODPV-UHFFFAOYSA-N,OCc1ccccc1,BENZYL ALCOHOL,unknown,,,,weak,,,1.0,,non_drug,industrial/lab chemical
+VSWBSWWIRNCQIJ-UHFFFAOYSA-N,CN1CC2c3ccccc3Oc3ccc(Cl)cc3C2C1,ASENAPINE,unknown,D,,,,,,1.0,1.0,LiverTox_pos,NIH LiverTox=D
+HFFLGKNGCAIQMO-UHFFFAOYSA-N,O=CC(Cl)(Cl)Cl,Chloral,unknown,,,,weak,,,1.0,0.0,verified_neg,WebSearch verified
+YGSDEFSMJLZEOE-UHFFFAOYSA-N,O=C(O)c1ccccc1O,salicylic acid,unknown,,,medium,medium,,1.0,1.0,,non_drug,industrial/lab chemical
+OGWKCGZFUXNPDA-XQKSVPLYSA-N,CC[C@]1(O)C[C@H]2CN(CCc3c([nH]c4ccccc34)[C@@](C(=O)OC)(c3cc4c(cc3OC)N(C=O)[C@H]3[C@@](O)(C(=O)OC)[C@H](OC(C)=O)[C@]5(CC)C=CCN6CC[C@]43[C@@H]65)C2)C1,VINCRISTINE,unknown,,,,,,1.0,1.0,,non_drug,industrial/lab chemical
+NQRKYASMKDDGHT-UHFFFAOYSA-N,NOCC(=O)O,(Aminooxy)acetic acid,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+ARPYQKTVRGFPIS-VIFPVBQESA-N,C[C@H](C(=O)O)c1ccc2oc(-c3ccc(F)cc3)nc2c1,flunoxaprofen,unknown,,,,,,1.0,1.0,1.0,verified_pos,WebSearch verified
+WOUOLAUOZXOLJQ-MBSDFSHPSA-N,CCOC(=O)[C@H](CCc1ccccc1)N[C@@H](C)C(=O)N(CC(=O)O)C1Cc2ccccc2C1,delapril,unknown,,,,,,1.0,1.0,0.0,verified_neg,WebSearch verified
+IMONTRJLAWHYGT-UHFFFAOYSA-N,C#CC1(OC(C)=O)CCC2C3CCC4=CC(=O)CCC4C3CCC21C,Norethindrone acetate,vNo-DILI-Concern,,warning_hepatotox,,strong,,,,0.0,DILIrank_neg,FDA vNo
+HCZHHEIFKROPDY-UHFFFAOYSA-N,O=C(O)c1cc(=O)c2ccccc2[nH]1,Kynurenic Acid,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+SUPKOOSCJHTBAH-UHFFFAOYSA-N,Nc1ncnc2c1ncn2CCOCP(=O)(O)O,Adefovir,unknown,,,,medium,,1.0,1.0,0.0,verified_neg,WebSearch verified
+UVKZSORBKUEBAZ-UHFFFAOYSA-N,CN1CCN(C(c2ccccc2)c2ccccc2)CC1,CYCLIZINE,unknown,,,,medium,,1.0,1.0,0.0,verified_neg,WebSearch verified
+XMBWDFGMSWQBCA-UHFFFAOYSA-N,I,POTASSIUM IODIDE,unknown,,,weak,medium,,,1.0,,non_drug,industrial/lab chemical
+BUGBHKTXTAQXES-UHFFFAOYSA-N,[Se],Selenium,unknown,,,,strong,,,1.0,,non_drug,industrial/lab chemical
+POJWUDADGALRAB-UHFFFAOYSA-N,NC(=O)NC1N=C(O)NC1=O,Alcloxa,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+FXUAIOOAOAVCGD-WCTZXXKLSA-N,O[C@H]1[C@H]2[C@H](O)CCCN2C[C@H]1O,Swainsonine,unknown,,,,,,1.0,1.0,,non_drug,industrial/lab chemical
+GKIRPKYJQBWNGO-OCEACIFDSA-N,CCN(CC)CCOc1ccc(/C(=C(/Cl)c2ccccc2)c2ccccc2)cc1,Enclomiphene,unknown,,,,,,1.0,1.0,0.0,verified_neg,WebSearch verified
+KJQFBVYMGADDTQ-UHFFFAOYSA-N,CCCCS(=N)(=O)CCC(N)C(=O)O,2-amino-4-(S-butylsulfonimidoyl)butanoic acid,unknown,,,,strong,,,1.0,,non_drug,industrial/lab chemical
+LNXBEIZREVRNTF-UHFFFAOYSA-N,CC(C)(C)c1ccc(CCC(O)COc2ccc(C(=O)O)cc2)cc1,Lifibrol,unknown,,,,,,1.0,1.0,0.0,verified_neg,WebSearch verified
+IIXWYSCJSQVBQM-UHFFFAOYSA-N,CC1Oc2cc(cnc2N)-c2c(nn(C)c2C#N)CN(C)C(=O)c2ccc(F)cc21,Lorlatinib,Ambiguous-DILI-Concern,E,warning_hepatotox,,,,,,0.0,LiverTox_neg,NIH LiverTox=E
+DUYJMQONPNNFPI-UHFFFAOYSA-N,C=CC(=O)Nc1cc(Nc2nccc(-c3cn(C)c4ccccc34)n2)c(OC)cc1N(C)CCN(C)C,Osimertinib mesylate,vLess-DILI-Concern,E,,weak,,,,,1.0,DILIrank_pos,FDA vLess-DILI-Concern
+VHFVKMTVMIZMIK-UHFFFAOYSA-N,Clc1cccc(N2CCNCC2)c1,1-(3-Chlorophenyl)piperazine,unknown,,,,weak,,,1.0,,non_drug,industrial/lab chemical
+GMRQFYUYWCNGIN-UHFFFAOYSA-N,C=C1C(=CC=C2CCCC3(C)C2CCC3C(C)CCCC(C)(C)O)CC(O)CC1O,Calcitriol,vNo-DILI-Concern,,,,medium,,,,0.0,DILIrank_neg,FDA vNo
+MBNGWHIJMBWFHU-UHFFFAOYSA-N,COc1ccc(-c2cc(=O)c3c(O)cc(O)cc3o2)cc1O,diosmetin,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+VSQQQLOSPVPRAZ-UHFFFAOYSA-N,O=c1[nH]c(=O)n(C2CC(O)C(CO)O2)cc1C(F)(F)F,Trifluridine,,E,,,weak,,,,0.0,LiverTox_neg,NIH LiverTox=E
+MNJVRJDLRVPLFE-UHFFFAOYSA-N,Cc1ccc(-c2ncc(Cl)cc2-c2ccc(S(C)(=O)=O)cc2)cn1,ETORICOXIB,unknown,,,,weak,,,1.0,1.0,verified_pos,WebSearch verified
+XHEFDIBZLJXQHF-UHFFFAOYSA-N,O=c1c(O)c(-c2ccc(O)c(O)c2)oc2cc(O)ccc12,Fisetin,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+UXYRZJKIQKRJCF-TZPFWLJSSA-N,C[C@H]1CC(=O)C[C@@H]2CC[C@H]3[C@@H]4CC[C@H](O)[C@@]4(C)CC[C@@H]3[C@]21C,mesterolone,unknown,,,,,,1.0,1.0,1.0,verified_pos,WebSearch verified
+ZQPPMHVWECSIRJ-UHFFFAOYSA-N,CCCCCCCCC=CCCCCCCCC(=O)O,Ethanolamine oleate,vNo-DILI-Concern,,,,medium,,,,0.0,DILIrank_neg,FDA vNo
+SERHTTSLBVGRBY-UHFFFAOYSA-N,CCCC1(CCC)CCC2(CCN(CCCN(CC)CC)C2)CC1,Atiprimod,unknown,,,,medium,,,1.0,,verified_exclude,WebSearch: insufficient evidence
+QEVHRUUCFGRFIF-UHFFFAOYSA-N,COC(=O)C1C2CC3c4[nH]c5cc(OC)ccc5c4CCN3CC2CC(OC(=O)c2cc(OC)c(OC)c(OC)c2)C1OC,Reserpine,vNo-DILI-Concern,E,,,strong,,,,0.0,DILIrank_neg,FDA vNo
+PHIQHXFUZVPYII-UHFFFAOYSA-N,C[N+](C)(C)CC(O)CC(=O)[O-],Levocarnitine,vNo-DILI-Concern,,,medium,,,1.0,,0.0,DILIrank_neg,FDA vNo
+QSQQQURBVYWZKJ-UHFFFAOYSA-N,CC(N)Cc1c[nH]c2ccccc12,(+-)-alpha-Methyltryptamine,unknown,,,,weak,,,1.0,,non_drug,industrial/lab chemical
+UXOWGYHJODZGMF-QORCZRPOSA-N,COCCCOc1cc(C[C@@H](C[C@H](N)[C@@H](O)C[C@H](C(=O)NCC(C)(C)C(N)=O)C(C)C)C(C)C)ccc1OC,ALISKIREN,unknown,,,,,,1.0,1.0,1.0,verified_pos,WebSearch verified
+CZFFBEXEKNGXKS-UHFFFAOYSA-N,Cc1nnc(C(=O)NC(C)(C)c2nc(C(=O)NCc3ccc(F)cc3)c(O)c(=O)n2C)o1,Raltegravir potassium,vMost-DILI-Concern,E,,medium,,,1.0,,1.0,DILIrank_pos,FDA vMost-DILI-Concern
+GMZVRMREEHBGGF-UHFFFAOYSA-N,NC(=O)CN1CCCC1=O,piracetam,unknown,,,medium,,,,1.0,0.0,verified_neg,WebSearch verified
+IVRMZWNICZWHMI-UHFFFAOYSA-N,[N-]=[N+]=[N-],Iron Azide Hydrate,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+SLAYUXIURFNXPG-CRAIPNDOSA-N,NCc1ccccc1CC(=O)N[C@@H]1C(=O)N2C(C(=O)O)=C(CSc3nnnn3CC(=O)O)CS[C@H]12,CEFORANIDE,unknown,,,,,,1.0,1.0,0.0,verified_neg,WebSearch verified
+IDINUJSAMVOPCM-UHFFFAOYSA-N,N=C(N)NCCCCCCC(=O)NC(O)C(=O)NCCCCNCCCN,gusperimus,unknown,,,,,,1.0,1.0,,verified_exclude,WebSearch: insufficient evidence
+QWPPOHNGKGFGJK-UHFFFAOYSA-N,OCl,Hypochlorous Acid,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+KWTSXDURSIMDCE-QMMMGPOBSA-N,C[C@H](N)Cc1ccccc1,DEXTROAMPHETAMINE,vNo-DILI-Concern,,,,,,1.0,1.0,0.0,DILIrank_neg,FDA vNo
+QGZKDVFQNNGYKY-UHFFFAOYSA-N,N,"AMMONIA SOLUTION, STRONG",vNo-DILI-Concern,C,adverse_hepatotox,medium,strong,weak,,1.0,0.0,DILIrank_neg,FDA vNo
+IZJDOKYDEWTZSO-UHFFFAOYSA-N,S=C=NCCc1ccccc1,Phenethyl Isothiocyanate,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+ZCFFYALKHPIRKJ-UHFFFAOYSA-N,C=Cc1c(C)c2cc3[nH]c(cc4nc(cc5nc(cc1[nH]2)C(C)=C5CCC(=O)O)C(CCC(=O)O)=C4C)c(C)c3C=C,protoporphyrin IX,unknown,,,,medium,,,1.0,,verified_exclude,WebSearch: insufficient evidence
+GBBSUAFBMRNDJC-UHFFFAOYSA-N,CN1CCN(C(=O)OC2c3nccnc3C(=O)N2c2ccc(Cl)cn2)CC1,Eszopiclone,vLess-DILI-Concern,E,warning_hepatotox,,,,1.0,,1.0,DILIrank_pos,FDA vLess-DILI-Concern
+APJYDQYYACXCRM-UHFFFAOYSA-N,NCCc1c[nH]c2ccccc12,Tryptamine,unknown,,,,weak,,,1.0,,non_drug,industrial/lab chemical
+GKQPCPXONLDCMU-CCEZHUSRSA-N,CCOC(=O)C1=C(C)NC(C)=C(C(=O)OCC)C1c1ccccc1/C=C/C(=O)OC(C)(C)C,lacidipine,unknown,,,,,,1.0,1.0,0.0,verified_neg,WebSearch verified
+PXGPLTODNUVGFL-YNNPMVKQSA-N,CCCCC[C@H](O)/C=C/[C@@H]1[C@@H](C/C=C\CCCC(=O)O)[C@@H](O)C[C@H]1O,DINOPROST,unknown,,,,,,1.0,1.0,,verified_exclude,WebSearch: insufficient evidence
+DTGKSKDOIYIVQL-UHFFFAOYSA-N,CC1(C)C2CCC1(C)C(O)C2,Borneol,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+YWPHCCPCQOJSGZ-UHFFFAOYSA-N,CCOc1ccccc1OCC1CNCCO1,VILOXAZINE,vNo-DILI-Concern,E,,,,,1.0,1.0,0.0,DILIrank_neg,FDA vNo
+SESFRYSPDFLNCH-UHFFFAOYSA-N,O=C(OCc1ccccc1)c1ccccc1,BENZYL BENZOATE,unknown,,,,weak,,,1.0,,non_drug,industrial/lab chemical
+MUCZHBLJLSDCSD-UHFFFAOYSA-N,CC(C)OP(=O)(F)OC(C)C,ISOFLUROPHATE,unknown,,,,medium,,,1.0,,verified_exclude,WebSearch: insufficient evidence
+PUDHBTGHUJUUFI-SCTWWAJVSA-N,CC(C)[C@@H]1NC(=O)[C@H](CCCCN)NC(=O)[C@@H](Cc2c[nH]c3ccccc23)NC(=O)[C@H](Cc2ccc(O)cc2)NC(=O)[C@@H](NC(=O)[C@H](N)Cc2ccc3ccccc3c2)CSSC[C@@H](C(=O)N[C@H](C(N)=O)[C@@H](C)O)NC1=O,LANREOTIDE ACETATE,unknown,,,,,,1.0,1.0,0.0,verified_neg,WebSearch verified
+BELBBZDIHDAJOR-UHFFFAOYSA-N,O=S1(=O)OC(c2ccc(O)cc2)(c2ccc(O)cc2)c2ccccc21,phenolsulfonphthalein,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+DBEPLOCGEIEOCV-UHFFFAOYSA-N,CC(C)(C)NC(=O)C1CCC2C3CCC4NC(=O)C=CC4(C)C3CCC12C,Finasteride,vLess-DILI-Concern,E,,,strong,,,,1.0,DILIrank_pos,FDA vLess-DILI-Concern
+YCIMNLLNPGFGHC-UHFFFAOYSA-N,Oc1ccccc1O,Catechol,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+NBQNWMBBSKPBAY-UHFFFAOYSA-N,CC(=O)N(CC(O)CN(C(C)=O)c1c(I)c(C(=O)NCC(O)CO)c(I)c(C(=O)NCC(O)CO)c1I)c1c(I)c(C(=O)NCC(O)CO)c(I)c(C(=O)NCC(O)CO)c1I,IODIXANOL,unknown,,,,medium,,,1.0,0.0,verified_neg,WebSearch verified
+WWVAPFRKZMUPHZ-UHFFFAOYSA-N,O=C(CCOCCOCCOCCOCCC(=O)Nc1c(I)cc(I)c(C(=O)O)c1I)Nc1c(I)cc(I)c(C(=O)O)c1I,IODOXAMIC ACID,unknown,,,,,,1.0,1.0,,non_drug,industrial/lab chemical
+ZCTXEAQXZGPWFG-UHFFFAOYSA-N,O=C(NCNC(=O)NC1C(=O)NC(=O)N1CO)NC1C(=O)NC(=O)N1CO,Imidazolidinyl Urea,unknown,,,,weak,,,1.0,,non_drug,industrial/lab chemical
+PLIKAWJENQZMHA-UHFFFAOYSA-N,Nc1ccc(O)cc1,4-Aminophenol,unknown,,,,medium,,0.0,1.0,,non_drug,industrial/lab chemical
+YQNQNVDNTFHQSW-UHFFFAOYSA-N,CC(=O)Oc1ccccc1C(=O)Nc1ncc([N+](=O)[O-])s1,NITAZOXANIDE,vNo-DILI-Concern,E,,,medium,,,1.0,0.0,DILIrank_neg,FDA vNo
+GIJXKZJWITVLHI-UHFFFAOYSA-N,CN1C2CCC1CC(OC(c1ccccc1)c1ccccc1)C2,Benztropine mesylate,vNo-DILI-Concern,E,,,strong,,,,0.0,DILIrank_neg,FDA vNo
+JMBQKKAJIKAWKF-UHFFFAOYSA-N,CCC1(c2ccccc2)CCC(=O)NC1=O,GLUTETHIMIDE,unknown,,,,weak,,,1.0,,verified_exclude,WebSearch: insufficient evidence
+NHZMQXZHNVQTQA-UHFFFAOYSA-N,Cc1ncc(CO)c(CN)c1O,Pyridoxamine,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+AUYYCJSJGJYCDS-UHFFFAOYSA-N,NC(Cc1cc(I)c(Oc2ccc(O)c(I)c2)c(I)c1)C(=O)O,Liothyronine sodium,vNo-DILI-Concern,,,medium,strong,,,,0.0,DILIrank_neg,FDA vNo
+XOEUHCONYHZURQ-HNUBZJOYSA-N,CC[C@H]1OC(=O)[C@H](C)[C@@H](O[C@H]2C[C@@](C)(OC)[C@@H](O)[C@H](C)O2)[C@H](C)[C@@H](O[C@@H]2O[C@H](C)C[C@H](N(C)C)[C@H]2O)[C@](C)(O)C[C@](C)(F)C(=O)[C@H](C)[C@@H](O)[C@]1(C)O,flurithromycin,unknown,,,,,,1.0,1.0,1.0,verified_pos,WebSearch verified
+HWHLPVGTWGOCJO-UHFFFAOYSA-N,OC(CCN1CCCCC1)(c1ccccc1)C1CCCCC1,TRIHEXYPHENIDYL HYDROCHLORIDE,vNo-DILI-Concern,E,,,strong,,,1.0,0.0,DILIrank_neg,FDA vNo
+CMSMOCZEIVJLDB-UHFFFAOYSA-N,O=P1(N(CCCl)CCCl)NCCCO1,CYCLOPHOSPHAMIDE ANHYDROUS,vLess-DILI-Concern,B,adverse_hepatotox,strong,strong,strong,,1.0,1.0,DILIrank_pos,FDA vLess-DILI-Concern
+DBGVGMSCBYYSLD-UHFFFAOYSA-N,CCCC[SnH](CCCC)CCCC,Tributylstannane,unknown,,,,strong,,,1.0,,non_drug,industrial/lab chemical
+PUPZLCDOIYMWBV-UHFFFAOYSA-N,CC(O)CCO,"1,3-Butanediol",unknown,,,,strong,,,1.0,,non_drug,industrial/lab chemical
+XSTXAVWGXDQKEL-UHFFFAOYSA-N,ClC=C(Cl)Cl,trichloroethylene,unknown,,,medium,strong,,,1.0,,non_drug,industrial/lab chemical
+PMXMIIMHBWHSKN-UHFFFAOYSA-N,Cc1nc2n(c(=O)c1CCN1CCC(c3noc4cc(F)ccc34)CC1)CCCC2O,Paliperidone,vLess-DILI-Concern,E,,,,,,,1.0,DILIrank_pos,FDA vLess-DILI-Concern
+IMOZEMNVLZVGJZ-UHFFFAOYSA-N,CCOc1cc(C(CS(C)(=O)=O)N2C(=O)c3cccc(NC(C)=O)c3C2=O)ccc1OC,Apremilast,vNo-DILI-Concern,E,,,,strong,,,0.0,DILIrank_neg,FDA vNo
+ZDXUKAKRHYTAKV-UHFFFAOYSA-N,COC(=O)C1=C(C)NC(C)=C(C(=O)OC(C)(C)CN(C)CCC(c2ccccc2)c2ccccc2)C1c1cccc([N+](=O)[O-])c1,lercanidipine,unknown,,,,weak,,,1.0,0.0,verified_neg,WebSearch verified
+HBUBKKRHXORPQB-FJFJXFQQSA-N,Nc1nc(F)nc2c1ncn2[C@@H]1O[C@H](CO)[C@@H](O)[C@@H]1O,Fludarabine,vNo-DILI-Concern,,,,,,1.0,1.0,0.0,DILIrank_neg,FDA vNo
+SNICXCGAKADSCV-JTQLQIEISA-N,CN1CCC[C@H]1c1cccnc1,NICOTINE,unknown,,,,,,1.0,1.0,,non_drug,industrial/lab chemical
+PIWKPBJCKXDKJR-UHFFFAOYSA-N,FC(F)OC(Cl)C(F)(F)F,ISOFLURANE,unknown,B,warning_hepatotox,strong,strong,,1.0,1.0,1.0,LiverTox_pos,NIH LiverTox=B
+VZYCZNZBPPHOFY-UHFFFAOYSA-N,CN1CCN(CCCN2c3ccccc3Sc3ccc(S(=O)(=O)N(C)C)cc32)CC1,thioproperazine,unknown,,,,,,1.0,1.0,1.0,verified_pos,WebSearch verified
+STJMRWALKKWQGH-UHFFFAOYSA-N,CC(C)(C)NCC(O)c1cc(Cl)c(N)c(Cl)c1,clenbuterol,unknown,,,,medium,,,1.0,1.0,verified_pos,WebSearch verified
+JXDYKVIHCLTXOP-UHFFFAOYSA-N,O=C1Nc2ccccc2C1=O,Isatin,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+LIRYPHYGHXZJBZ-UHFFFAOYSA-N,CC(=O)Nc1cccc(-n2c(=O)n(C3CC3)c(=O)c3c(Nc4ccc(I)cc4F)n(C)c(=O)c(C)c32)c1,TRAMETINIB,vLess-DILI-Concern,E,,,,,,1.0,1.0,DILIrank_pos,FDA vLess-DILI-Concern
+RAGOYPUPXAKGKH-UHFFFAOYSA-N,CCC(C(C)O)n1ncn(-c2ccc(N3CCN(c4ccc(OCC5COC(Cn6cncn6)(c6ccc(F)cc6F)C5)cc4)CC3)cc2)c1=O,Posaconazole,vMost-DILI-Concern,E,warning_hepatotox,,,,,,1.0,DILIrank_pos,FDA vMost-DILI-Concern
+PJSFRIWCGOHTNF-UHFFFAOYSA-N,COc1ncnc(NS(=O)(=O)c2ccc(N)cc2)c1OC,SULFADOXINE,unknown,,,medium,strong,,1.0,1.0,1.0,verified_pos,WebSearch verified
+HCHKCACWOHOZIP-UHFFFAOYSA-N,[Zn],Zinc,unknown,E,,weak,strong,,,1.0,0.0,LiverTox_neg,NIH LiverTox=E
+INJOMKTZOLKMBF-UHFFFAOYSA-N,N=C(N)NC(=O)Cc1c(Cl)cccc1Cl,GUANFACINE,Ambiguous-DILI-Concern,E,,,,,1.0,0.0,0.0,LiverTox_neg,NIH LiverTox=E
+ATHGHQPFGPMSJY-UHFFFAOYSA-N,NCCCCNCCCN,Spermidine,unknown,,,,strong,,,1.0,,non_drug,industrial/lab chemical
+BHTRKEVKTKCXOH-LBSADWJPSA-N,C[C@H](CCC(=O)NCCS(=O)(=O)O)[C@H]1CC[C@H]2[C@@H]3[C@@H](O)C[C@@H]4C[C@H](O)CC[C@]4(C)[C@H]3CC[C@]12C,TAURURSODIOL,unknown,,,,,,1.0,1.0,0.0,verified_neg,WebSearch verified
+DHVLDKHFGIVEIP-UHFFFAOYSA-N,N#CCCC(Br)(C#N)CBr,"1,2-Dibromo-2,4-dicyanobutane",unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+CXOXHMZGEKVPMT-UHFFFAOYSA-N,CN1C(=O)CC(=O)N(c2ccccc2)c2cc(Cl)ccc21,CLOBAZAM,Ambiguous-DILI-Concern,E,boxed_hepatotox,,weak,,,0.0,0.0,LiverTox_neg,NIH LiverTox=E
+FGXWKSZFVQUSTL-UHFFFAOYSA-N,O=c1[nH]c2ccccc2n1CCCN1CCC(n2c(=O)[nH]c3cc(Cl)ccc32)CC1,domperidone,unknown,,,,medium,,1.0,1.0,,verified_exclude,WebSearch: insufficient evidence
+UFLRJROFPAGRPN-UHFFFAOYSA-N,CN1CCN(C(=S)Nc2ccc(Nc3ccc([N+](=O)[O-])cc3)cc2)CC1,amocarzine,unknown,,,,,,1.0,1.0,,verified_exclude,WebSearch: insufficient evidence
+BMOVQUBVGICXQN-UHFFFAOYSA-N,CCC(C)(Oc1ccc(C2(c3ccc(OC(C)(CC)C(=O)O)cc3)CCCCC2)cc1)C(=O)O,clinofibrate,unknown,,,,weak,,,1.0,1.0,verified_pos,WebSearch verified
+QBKSWRVVCFFDOT-UHFFFAOYSA-N,Cc1cc2c(C(C)C)c(O)c(O)c(C=O)c2c(O)c1-c1c(C)cc2c(C(C)C)c(O)c(O)c(C=O)c2c1O,gossypol,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+UIEATEWHFDRYRU-UHFFFAOYSA-N,CC(C)COCC(CN(Cc1ccccc1)c1ccccc1)N1CCCC1,BEPRIDIL,unknown,,,,weak,,1.0,1.0,1.0,verified_pos,WebSearch verified
+WHWZLSFABNNENI-UHFFFAOYSA-N,NC1=NCC2c3ccccc3Cc3ccccc3N12,EPINASTINE,unknown,,,,weak,,,1.0,,non_drug,industrial/lab chemical
+FMTDIUIBLCQGJB-SEYHBJAFSA-N,CN(C)[C@@H]1C(O)=C(C(N)=O)C(=O)[C@@]2(O)C(O)=C3C(=O)c4c(O)ccc(Cl)c4[C@@H](O)[C@H]3C[C@@H]12,DEMECLOCYCLINE,unknown,,,,,,1.0,1.0,1.0,verified_pos,WebSearch verified
+IAIDUHCBNLFXEF-MNEFBYGVSA-N,C[C@H](CSC(=O)c1ccccc1)C(=O)N1C[C@@H](Sc2ccccc2)C[C@H]1C(=O)O,zofenopril,unknown,,,,,,1.0,1.0,,verified_exclude,WebSearch: insufficient evidence
+SPSSULHKWOKEEL-UHFFFAOYSA-N,Cc1c([N+](=O)[O-])cc([N+](=O)[O-])cc1[N+](=O)[O-],"2,4,6-Trinitrotoluene",unknown,,,,strong,,,1.0,,non_drug,industrial/lab chemical
+LMBWSYZSUOEYSN-UHFFFAOYSA-N,CCN(CC)C(=S)S,ditiocarb,unknown,,,,strong,,,1.0,,non_drug,industrial/lab chemical
+SOYKEARSMXGVTM-UHFFFAOYSA-N,CN(C)CCC(c1ccc(Cl)cc1)c1ccccn1,CHLORPHENIRAMINE,vNo-DILI-Concern,,,,medium,,1.0,1.0,0.0,DILIrank_neg,FDA vNo
+WKOLLVMJNQIZCI-UHFFFAOYSA-N,COc1cc(C(=O)O)ccc1O,Vanillate,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+JOMHSQGEWSNUKU-UHFFFAOYSA-N,CN(C)S(=O)(=O)c1ccc2c(c1)N(CCCN1CCC(CCO)CC1)c1ccccc1S2,Pipotiazine,unknown,,,,,,1.0,1.0,0.0,verified_neg,WebSearch verified
+AQNDDEOPVVGCPG-UHFFFAOYSA-N,COC(=O)CCc1ccc(OCC(O)CNC(C)C)cc1,Esmolol hydrochloride,vNo-DILI-Concern,E,,,medium,,,,0.0,DILIrank_neg,FDA vNo
+ZRWPUFFVAOMMNM-UHFFFAOYSA-N,O=C1C=C2C(=CCOC2O)O1,Patulin,unknown,,,,strong,,,1.0,,non_drug,industrial/lab chemical
+TVFDJXOCXUVLDH-UHFFFAOYSA-N,[Cs],Cesium,unknown,,,,weak,,,1.0,,non_drug,industrial/lab chemical
+OMPJBNCRMGITSC-UHFFFAOYSA-N,O=C(OOC(=O)c1ccccc1)c1ccccc1,BENZOYL PEROXIDE,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+JBDGDEWWOUBZPM-UHFFFAOYSA-N,Nc1c(Br)cc(Br)cc1CNC1CCC(O)CC1,Ambroxol,unknown,,,,medium,,,1.0,0.0,verified_neg,WebSearch verified
+XXRCUYVCPSWGCC-UHFFFAOYSA-N,CCOC(=O)C(C)=O,Ethyl pyruvate,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+RWSOTUBLDIXVET-UHFFFAOYSA-N,S,CID 5460692,unknown,,,medium,medium,,,1.0,,non_drug,industrial/lab chemical
+CCQPAEQGAVNNIA-UHFFFAOYSA-N,O=C(O)C1(C(=O)O)CCC1,"Caronplatin, 4",vLess-DILI-Concern,D,,weak,strong,medium,,1.0,1.0,DILIrank_pos,FDA vLess-DILI-Concern
+OPYGFNJSCUDTBT-PMLPCWDUSA-N,CC1(C)S[C@@H]2[C@H](NC(=O)[C@H](N)c3ccccc3)C(=O)N2[C@H]1C(=O)OCOC(=O)[C@@H]1N2C(=O)C[C@H]2S(=O)(=O)C1(C)C,sultamicillin,unknown,,,,,,1.0,1.0,,verified_exclude,WebSearch: insufficient evidence
+LEONUFNNVUYDNQ-UHFFFAOYSA-N,[V],Vanadium,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+MXWJVTOOROXGIU-UHFFFAOYSA-N,CCNc1nc(Cl)nc(NC(C)C)n1,Atrazine,unknown,,,,strong,,,1.0,,non_drug,industrial/lab chemical
+GXDALQBWZGODGZ-UHFFFAOYSA-N,COc1ccc(CCN2CCC(Nc3nc4ccccc4n3Cc3ccc(F)cc3)CC2)cc1,Kelp,,E,,,strong,,,,0.0,LiverTox_neg,NIH LiverTox=E
+NUKYPUAOHBNCPY-UHFFFAOYSA-N,Nc1ccncc1,DALFAMPRIDINE,vNo-DILI-Concern,E,,,weak,,,1.0,0.0,DILIrank_neg,FDA vNo
+QPCVHQBVMYCJOM-UHFFFAOYSA-N,CCCOC(C(=O)OC1CCN(C)CC1)(c1ccccc1)c1ccccc1,propiverine,unknown,,,,medium,,,1.0,0.0,verified_neg,WebSearch verified
+LVZWSLJZHVFIQJ-UHFFFAOYSA-N,C1CC1,Cyclopropane,unknown,,,,,,1.0,1.0,,non_drug,industrial/lab chemical
+HJORMJIFDVBMOB-UHFFFAOYSA-N,COc1ccc(C2CNC(=O)C2)cc1OC1CCCC1,Rolipram,unknown,,,,medium,,,1.0,0.0,verified_neg,WebSearch verified
+CZQHHVNHHHRRDU-UHFFFAOYSA-N,O=c1cc(N2CCOCC2)oc2c(-c3ccccc3)cccc12,2-(4-morpholinyl)-8-phenyl-4H-1-benzopyran-4-one,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+VFTRKSBEFQDZKX-UHFFFAOYSA-N,c1ccc2c(Cc3c[nH]c4ccccc34)c[nH]c2c1,"3,3'-Diindolylmethane",unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+QTGIAADRBBLJGA-UHFFFAOYSA-N,CCCNC(C)C(=O)Nc1c(C)csc1C(=O)OC,ARTICAINE,unknown,,,,medium,,,1.0,0.0,verified_neg,WebSearch verified
+XRASPMIURGNCCH-UHFFFAOYSA-N,O=P(O)(O)C(O)(Cn1ccnc1)P(=O)(O)O,ZOLEDRONIC ACID ANHYDROUS,vLess-DILI-Concern,,,weak,,,1.0,1.0,1.0,DILIrank_pos,FDA vLess-DILI-Concern
+XDRYMKDFEDOLFX-UHFFFAOYSA-N,N=C(N)c1ccc(OCCCCCOc2ccc(C(=N)N)cc2)cc1,PENTAMIDINE,vLess-DILI-Concern,D,,,strong,,1.0,1.0,1.0,DILIrank_pos,FDA vLess-DILI-Concern
+KXDHJXZQYSOELW-UHFFFAOYSA-N,NC(=O)O,Carbamic Acid,unknown,,,medium,,,,1.0,,non_drug,industrial/lab chemical
+XLJKHNWPARRRJB-UHFFFAOYSA-N,[Co+2],Cobalt(2+),unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+XGOYIMQSIKSOBS-UHFFFAOYSA-N,Cc1ccc2c(=O)c3cccc(CC(=O)O)c3oc2c1C,"5,6-Dimethylxanthenone-4-Acetic Acid",unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+XXEPPPIWZFICOJ-UHFFFAOYSA-N,CCN(CC)C(C)C(=O)c1ccccc1,Diethylpropion hydrochloride,vNo-DILI-Concern,E,,,strong,,,,0.0,DILIrank_neg,FDA vNo
+TUESWZZJYCLFNL-DAFODLJHSA-N,N=C(N)c1ccc(/C=C/c2ccc(C(=N)N)cc2O)cc1,HYDROXYSTILBAMIDINE,unknown,,,,,,1.0,1.0,,verified_exclude,WebSearch: insufficient evidence
+PWWVAXIEGOYWEE-UHFFFAOYSA-N,CC(CN1c2ccccc2Sc2ccccc21)N(C)C,Promethazine hydrochloride,vLess-DILI-Concern,E,,,strong,,,,1.0,DILIrank_pos,FDA vLess-DILI-Concern
+SONNWYBIRXJNDC-VIFPVBQESA-N,CNC[C@H](O)c1cccc(O)c1,PHENYLEPHRINE,unknown,,,,,,1.0,1.0,0.0,verified_neg,WebSearch verified
+XNYZHCFCZNMTFY-UHFFFAOYSA-N,N=C(N)c1ccc(N=NNc2ccc(C(=N)N)cc2)cc1,Diminazene,unknown,,,,medium,,,1.0,,verified_exclude,WebSearch: insufficient evidence
+NHUHCSRWZMLRLA-UHFFFAOYSA-N,Cc1noc(NS(=O)(=O)c2ccc(N)cc2)c1C,SULFISOXAZOLE,unknown,,,,weak,,1.0,1.0,1.0,verified_pos,WebSearch verified
+JDLKFOPOAOFWQN-UHFFFAOYSA-N,C=CCS[S+]([O-])CC=C,Allicin,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+VRDIULHPQTYCLN-UHFFFAOYSA-N,CCCc1cc(C(N)=S)ccn1,protionamide,unknown,,,weak,,,,1.0,1.0,verified_pos,WebSearch verified
+ZOEFCCMDUURGSE-UHFFFAOYSA-N,CSCCC(NC(=O)C(CO)NC(=O)C(Cc1ccc(O)cc1)NC(=O)C(N)CO)C(=O)NC(CCC(=O)O)C(=O)NC(Cc1c[nH]cn1)C(=O)NC(Cc1ccccc1)C(=O)NC(CCCNC(=N)N)C(=O)NC(Cc1c[nH]c2ccccc12)C(=O)NCC(=O)NC(CCCCN)C(=O)N1CCCC1C(=O)NC(C(=O)NCC(=O)NC(CCCCN)C(=O)NC(CCCCN)C(=O)NC(CCCNC(=N)N)C(=O)NC(CCCNC(=N)N)C(=O)N1CCCC1C(=O)NC(C(=O)NC(CCCCN)C(=O)NC(C(=O)NC(Cc1ccc(O)cc1)C(=O)N1CCCC1C(=O)O)C(C)C)C(C)C)C(C)C,Cosyntropin,vNo-DILI-Concern,,,,medium,,,,0.0,DILIrank_neg,FDA vNo
+NGGMYCMLYOUNGM-CSDLUJIJSA-N,CO[C@@H]1[C@H](OC(=O)/C=C/C=C/C=C/C=C/C(=O)O)CC[C@]2(CO2)[C@H]1[C@@]1(C)O[C@@H]1CC=C(C)C,fumagillin,unknown,,,,,,1.0,1.0,1.0,verified_pos,WebSearch verified
+XSQUKJJJFZCRTK-UHFFFAOYSA-N,NC(N)=O,UREA,unknown,,,weak,medium,,,1.0,,non_drug,industrial/lab chemical
+OENHQHLEOONYIE-JLTXGRSLSA-N,CC1=C(/C=C/C(C)=C/C=C/C(C)=C/C=C/C=C(C)/C=C/C=C(C)/C=C/C2=C(C)CCCC2(C)C)C(C)(C)CCC1,BETA CAROTENE,unknown,,,,,,1.0,1.0,0.0,verified_neg,WebSearch verified
+QAXBVGVYDCAVLV-UHFFFAOYSA-N,CCNC1(c2cccs2)CCCCC1=O,Tiletamine,unknown,,,medium,,,,1.0,,verified_exclude,WebSearch: insufficient evidence
+DVNYTAVYBRSTGK-UHFFFAOYSA-N,NC(=O)c1nc[nH]c1N,orazamide,unknown,,,,medium,,,1.0,,verified_exclude,WebSearch: insufficient evidence
+MOZDKDIOPSPTBH-UHFFFAOYSA-N,O=C(OCc1ccccc1)c1ccc(O)cc1,Benzyl 4-Hydroxybenzoate,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+UUQMNUMQCIQDMZ-UHFFFAOYSA-N,CNCCc1ccccn1,betahistine,unknown,,,,,,1.0,1.0,,non_drug,industrial/lab chemical
+PWKSKIMOESPYIA-UHFFFAOYSA-N,CC(=O)NC(CS)C(=O)O,Acetylcysteine,vNo-DILI-Concern,E,,strong,strong,,,,0.0,DILIrank_neg,FDA vNo
+WSLDOOZREJYCGB-UHFFFAOYSA-N,ClCCCl,"1,2-Dichloroethane",unknown,,,,strong,,1.0,1.0,,non_drug,industrial/lab chemical
+HHVIBTZHLRERCL-UHFFFAOYSA-N,CS(C)(=O)=O,Dimethyl Sulfone,unknown,,,,weak,,,1.0,,non_drug,industrial/lab chemical
+NNKVPIKMPCQWCG-UHFFFAOYSA-N,COP(N)(=O)SC,Methamidophos,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+FZDZULUFHNDEDJ-UHFFFAOYSA-N,O=C(COCC(=O)Nc1c(I)cc(I)c(C(=O)O)c1I)Nc1c(I)cc(I)c(C(=O)O)c1I,ioglycamic acid,unknown,,,,,,1.0,1.0,1.0,verified_pos,WebSearch verified
+FBQPGGIHOFZRGH-UHFFFAOYSA-N,CCN(CC)CCNc1ccc(C)c2sc3ccccc3c(=O)c12,lucanthone,unknown,,,,medium,,,1.0,1.0,verified_pos,WebSearch verified
+QDGZDCVAUDNJFG-UHFFFAOYSA-N,C=C1C(CO)C(O)CC1n1cnc2c(=O)[nH]c(N)nc21,Entecavir,Ambiguous-DILI-Concern,E,boxed_hepatotox,,,,,,0.0,LiverTox_neg,NIH LiverTox=E
+HDDSHPAODJUKPD-UHFFFAOYSA-N,COC(=O)Nc1nc2cc(Sc3ccccc3)ccc2[nH]1,fenbendazole,unknown,C,,,strong,,,1.0,1.0,LiverTox_pos,NIH LiverTox=C
+OMZCMEYTWSXEPZ-UHFFFAOYSA-N,C=CC(=O)Nc1cc2c(Nc3ccc(F)c(Cl)c3)ncnc2cc1OCCCN1CCOCC1,Canertinib,unknown,,,,weak,,,1.0,,non_drug,industrial/lab chemical
+UDIIBEDMEYAVNG-ZKFPOVNWSA-N,CN[C@@H]1[C@@H](O)[C@@H](O[C@@H]2[C@@H](O)[C@H](O[C@H]3O[C@H](CN)[C@@H](O)[C@H](O)[C@H]3O)[C@@H](N)C[C@H]2NC(=O)[C@@H](O)CN)OC[C@]1(C)O,isepamicin,unknown,,,,,,1.0,1.0,0.0,verified_neg,WebSearch verified
+SUJUHGSWHZTSEU-UHFFFAOYSA-N,CCCC1(CCc2ccccc2)CC(O)=C(C(CC)c2cccc(NS(=O)(=O)c3ccc(C(F)(F)F)cn3)c2)C(=O)O1,Tipranavir,vMost-DILI-Concern,E,boxed_hepatotox,,,weak,,,1.0,DILIrank_pos,FDA vMost-DILI-Concern
+YQNWZWMKLDQSAC-UHFFFAOYSA-N,Cc1ccc(Sc2ccccc2N2CCNCC2)c(C)c1,Vortioxetine hydrobromide,vLess-DILI-Concern,E,,,,,,,1.0,DILIrank_pos,FDA vLess-DILI-Concern
+BDVFVCGFMNCYPV-UHFFFAOYSA-N,CC1CNCCN1S(=O)(=O)c1cccc2cnccc12,1-(5-Isoquinolinylsulfonyl)-2-Methylpiperazine,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+DHNRXBZYEKSXIM-UHFFFAOYSA-N,Cn1sc(Cl)cc1=O,5-Chloro-2-methyl-4-isothiazolin-3-one,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+PPRRDFIXUUSXRA-UHFFFAOYSA-N,O=c1[nH]c2ccccc2n1CCN1CCN(c2cccc(C(F)(F)F)c2)CC1,FLIBANSERIN,vNo-DILI-Concern,E,adverse_hepatotox,,,,,1.0,0.0,DILIrank_neg,FDA vNo
+QTGAJCQTLIRCFL-UHFFFAOYSA-N,CCN(CC)CC(=O)Oc1ccc(NC(C)=O)cc1,propacetamol,unknown,,,,strong,,1.0,1.0,1.0,verified_pos,WebSearch verified
+FULZLIGZKMKICU-UHFFFAOYSA-N,NC(=S)Nc1ccccc1,Phenylthiourea,unknown,,,,strong,,,1.0,,non_drug,industrial/lab chemical
+DSAJWYNOEDNPEQ-UHFFFAOYSA-N,[Ba],Barium,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+WEYVCQFUGFRXOM-UHFFFAOYSA-N,CN1CCN(CCCN2c3ccccc3Sc3ccccc32)CC1,perazine,unknown,,,weak,,,,1.0,1.0,verified_pos,WebSearch verified
+CYFLXLSBHQBMFT-UHFFFAOYSA-N,Cc1nc(NS(=O)(=O)c2ccc(N)cc2)oc1C,sulfamoxole,unknown,,,,,,1.0,1.0,1.0,verified_pos,WebSearch verified
+ANEBWFXPVPTEET-UHFFFAOYSA-N,COC(=O)C1=C(C)NC(C)=C(C(=O)OCCN2CCN(C(c3ccccc3)c3ccccc3)CC2)C1c1cccc([N+](=O)[O-])c1,manidipine,unknown,,,,medium,,,1.0,0.0,verified_neg,WebSearch verified
+DKOQGJHPHLTOJR-WHRDSVKCSA-N,CO/N=C(\C(=O)N[C@@H]1C(=O)N2C(C(=O)[O-])=C(C[n+]3cccc4c3CCC4)CS[C@H]12)c1csc(N)n1,cefpirome,unknown,,,,,,1.0,1.0,,verified_exclude,WebSearch: insufficient evidence
+AHEVKYYGXVEWNO-UEPZRUIBSA-N,CN(C)[C@@H]1C(O)=C(C(=O)NCNCCCC[C@H](N)C(=O)O)C(=O)[C@@]2(O)C(O)=C3C(=O)c4c(O)cccc4[C@@](C)(O)[C@H]3C[C@@H]12,lymecycline,unknown,,,,,,1.0,1.0,1.0,verified_pos,WebSearch verified
+OIRDTQYFTABQOQ-UHFFFAOYSA-N,Nc1ncnc2c1ncn2C1OC(CO)C(O)C1O,Adenosine,vNo-DILI-Concern,,,,strong,,,,0.0,DILIrank_neg,FDA vNo
+RRGUKTPIGVIEKM-UHFFFAOYSA-N,O=C1CCc2cc(OCCCCc3nnnn3C3CCCCC3)ccc2N1,CILOSTAZOL,Ambiguous-DILI-Concern,E,,,medium,,1.0,0.0,0.0,LiverTox_neg,NIH LiverTox=E
+IJKVHSBPTUYDLN-UHFFFAOYSA-N,O=[Si](O)O,Silodrate,unknown,,,,medium,,,1.0,,verified_exclude,WebSearch: insufficient evidence
+LCTONWCANYUPML-UHFFFAOYSA-N,CC(=O)C(=O)O,Pyruvic Acid,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+NBRBXGKOEOGLOI-UHFFFAOYSA-N,COc1c(-c2ccc3cc(NS(C)(=O)=O)ccc3c2)cc(-n2ccc(=O)[nH]c2=O)cc1C(C)(C)C,DASABUVIR,unknown,,,weak,,,,1.0,1.0,verified_pos,WebSearch verified
+IANQTJSKSUMEQM-UHFFFAOYSA-N,c1ccc2occc2c1,Benzofuran,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+FFEARJCKVFRZRR-UHFFFAOYSA-N,CSCCC(N)C(=O)O,(+-)-Methionine,vNo-DILI-Concern,,,weak,strong,,,1.0,0.0,DILIrank_neg,FDA vNo
+ZPAKPRAICRBAOD-UHFFFAOYSA-N,O=C(O)CCC(=O)c1ccc(-c2ccccc2)cc1,fenbufen,unknown,,,,,,1.0,1.0,1.0,verified_pos,WebSearch verified
+CYTYCFOTNPOANT-UHFFFAOYSA-N,ClC(Cl)=C(Cl)Cl,tetrachloroethylene,unknown,,,,strong,,,1.0,,non_drug,industrial/lab chemical
+YMBXTVYHTMGZDW-UHFFFAOYSA-N,CC(C(=O)O)c1ccc(CC2CCCC2=O)cc1,LOXOPROFEN,unknown,,,,weak,,1.0,1.0,1.0,verified_pos,WebSearch verified
+UNJFKXSSGBWRBZ-BJCIPQKHSA-N,Nc1nc(/C(=C/CC(=O)O)C(=O)N[C@@H]2C(=O)N3C(C(=O)O)=CCS[C@H]23)cs1,CEFTIBUTEN,unknown,,,,,,1.0,1.0,0.0,verified_neg,WebSearch verified
+KRKNYBCHXYNGOX-UHFFFAOYSA-N,O=C(O)CC(O)(CC(=O)O)C(=O)O,CITRIC ACID,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+ANMATWQYLIFGOK-UHFFFAOYSA-N,CS(=O)(=O)Nc1cc2occ(NC=O)c(=O)c2cc1Oc1ccccc1,iguratimod,unknown,,,,weak,,,1.0,1.0,verified_pos,WebSearch verified
+LHGVFZTZFXWLCP-UHFFFAOYSA-N,COc1ccccc1O,guaiacol,unknown,,,,weak,,,1.0,,non_drug,industrial/lab chemical
+JGSARLDLIJGVTE-MBNYWOFBSA-N,CC1(C)S[C@@H]2[C@H](NC(=O)Cc3ccccc3)C(=O)N2[C@H]1C(=O)O,PENICILLIN G,unknown,,,,,,1.0,1.0,0.0,verified_neg,WebSearch verified
+XAYGBKHKBBXDAK-UHFFFAOYSA-N,O=C(c1ccc(NS(=O)(=O)c2cccc3cccnc23)cc1)N1CCN(CC2CC2)CC1,MITAPIVAT SULFATE,unknown,,boxed_hepatotox,,,,,1.0,1.0,DM_boxed,FDA Boxed Warning
+BDBMLMBYCXNVMC-UHFFFAOYSA-N,CC1(C)C(/C=C/C=C/C=C/C=C2\N(CCCCS(=O)(=O)O)c3ccc4ccccc4c3C2(C)C)=[N+](CCCCS(=O)(=O)[O-])c2ccc3ccccc3c21,INDOCYANINE GREEN,vNo-DILI-Concern,,,,strong,,,1.0,0.0,DILIrank_neg,FDA vNo
+NEUSVAOJNUQRTM-UHFFFAOYSA-N,CCCCCCCCCCCCCCCC[n+]1ccccc1,cetylpyridinium,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+GLEVLJDDWXEYCO-UHFFFAOYSA-N,Cc1c(C)c2c(c(C)c1O)CCC(C)(C(=O)O)O2,"6-hydroxy-2,5,7,8-tetramethylchroman-2-carboxylic acid",,,,,medium,,0.0,,,non_drug,industrial/lab chemical
+RMMXLENWKUUMAY-UHFFFAOYSA-N,CCCc1nc2c(C)cc(-c3nc4ccccc4n3C)cc2n1Cc1ccc(-c2ccccc2C(=O)O)cc1,Telmisartan,vLess-DILI-Concern,E,,,,,,,1.0,DILIrank_pos,FDA vLess-DILI-Concern
+IVRXNBXKWIJUQB-UHFFFAOYSA-N,Cc1cccc(-c2nn3c(c2-c2ccnc4ccc(C(N)=O)cc24)CCC3)n1,Galunisertib,unknown,,,,weak,,,1.0,,verified_exclude,WebSearch: insufficient evidence
+VFMMPHCGEFXGIP-UHFFFAOYSA-N,O=c1cc(-c2ccccc2)oc2c1ccc1ccccc12,Alpha-Naphthoflavone,unknown,,,,strong,,,1.0,,non_drug,industrial/lab chemical
+JJCQSGDBDPYCEO-XVZSLQNASA-N,NC[C@@H]1CC[C@@H](N)[C@@H](O[C@H]2[C@H](O)[C@@H](O[C@H]3O[C@H](CO)[C@@H](O)[C@H](N)[C@H]3O)[C@H](N)C[C@@H]2N)O1,dibekacin,unknown,,,,,,1.0,1.0,0.0,verified_neg,WebSearch verified
+PZRHRDRVRGEVNW-UHFFFAOYSA-N,Cc1[nH]c(=O)c(C#N)cc1-c1ccncc1,MILRINONE,Ambiguous-DILI-Concern,,,,,,1.0,1.0,0.0,verified_neg,WebSearch verified
+FMJSMJQBSVNSBF-UHFFFAOYSA-N,CCCCC(CC)COC(=O)C(C#N)=C(c1ccccc1)c1ccccc1,OCTOCRYLENE,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+IUEWXNHSKRWHDY-UHFFFAOYSA-N,CCCS(=O)(=O)NC1CC(N(C)c2ncnc3[nH]ccc23)C1,"N-(cis-3-(Methyl(7H-pyrrolo(2,3-d)pyrimidin-4-yl)amino)cyclobutyl)-1-propanesulfonamide",unknown,E,warning_hepatotox,,,,,1.0,0.0,LiverTox_neg,NIH LiverTox=E
+RRAFCDWBNXTKKO-UHFFFAOYSA-N,C=CCc1ccc(O)c(OC)c1,eugenol,unknown,C,,,medium,,,1.0,1.0,LiverTox_pos,NIH LiverTox=C
+HAMNKKUPIHEESI-UHFFFAOYSA-N,NN=C(N)N,Aminoguanidine,unknown,,,,strong,,,1.0,,non_drug,industrial/lab chemical
+CWRVKFFCRWGWCS-UHFFFAOYSA-N,C1CCc2nnnn2CC1,pentetrazol,unknown,,,,medium,,,1.0,,verified_exclude,WebSearch: insufficient evidence
+JWPGJSVJDAJRLW-UHFFFAOYSA-N,N=C(N)N1CCc2ccccc2C1,debrisoquine,unknown,,,weak,,,,1.0,,verified_exclude,WebSearch: insufficient evidence
+RAXXELZNTBOGNW-UHFFFAOYSA-N,c1c[nH]cn1,Imidazole,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+KJONHKAYOJNZEC-UHFFFAOYSA-N,O=C1CN=C(c2ccccc2)c2cc([N+](=O)[O-])ccc2N1,nitrazepam,unknown,,,,weak,,,1.0,0.0,verified_neg,WebSearch verified
+WDRYRZXSPDWGEB-UHFFFAOYSA-N,O=C(O)c1nn(Cc2ccc(Cl)cc2Cl)c2ccccc12,lonidamine,unknown,,,,strong,,1.0,1.0,1.0,verified_pos,WebSearch verified
+BWBONKHPVHMQHE-UHFFFAOYSA-N,CC(C)CCOc1ccc(NC(=S)Nc2ccc(OCCC(C)C)cc2)cc1,tiocarlide,unknown,,,,,,1.0,1.0,,verified_exclude,WebSearch: insufficient evidence
+ZJQHPWUVQPJPQT-UHFFFAOYSA-N,NCc1cc(=O)[nH]o1,Muscimol,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+YXVZOBVWVRFPTE-UHFFFAOYSA-N,CNC1Cc2ccccc2N(C)c2ccccc21,metapramine,unknown,,,,,,1.0,1.0,,verified_exclude,WebSearch: insufficient evidence
+CLKOFPXJLQSYAH-UHFFFAOYSA-N,CCC(C)C(N)C1=NC(C(=O)NC(CC(C)C)C(=O)NC(CCC(=O)O)C(=O)NC(C(=O)NC2CCCCNC(=O)C(CC(N)=O)NC(=O)C(CC(=O)O)NC(=O)C(Cc3cnc[nH]3)NC(=O)C(Cc3ccccc3)NC(=O)C(C(C)CC)NC(=O)C(CCCN)NC2=O)C(C)CC)CS1,Bacitracin,vNo-DILI-Concern,,,,medium,,,,0.0,DILIrank_neg,FDA vNo
+IXOXBSCIXZEQEQ-UHFFFAOYSA-N,COc1nc(N)nc2c1ncn2C1OC(CO)C(O)C1O,Nelarabine,vLess-DILI-Concern,E,,,,,,,1.0,DILIrank_pos,FDA vLess-DILI-Concern
+AJOQSQHYDOFIOX-UHFFFAOYSA-N,CCC(C(=O)NC(N)=O)c1ccccc1,pheneturide,unknown,,,,,,1.0,1.0,,verified_exclude,WebSearch: insufficient evidence
+FCDLCPWAQCPTKC-UHFFFAOYSA-N,O=C(O)c1cc(O)c2c(c1)C(=O)c1cccc(O)c1C2=O,Rhein,unknown,,,,strong,,,1.0,,non_drug,industrial/lab chemical
+YEKQSSHBERGOJK-UHFFFAOYSA-N,CNC(=O)OCc1cccc(COC(=O)NC)n1,pyricarbate,unknown,,,medium,,,,1.0,1.0,verified_pos,WebSearch verified
+CIWBSHSKHKDKBQ-UHFFFAOYSA-N,O=C1OC(C(O)CO)C(O)=C1O,Vitamin C,vNo-DILI-Concern,,,weak,medium,medium,,,0.0,DILIrank_neg,FDA vNo
+BGNXCDMCOKJUMV-UHFFFAOYSA-N,CC(C)(C)c1cc(O)ccc1O,Tert-Butylhydroquinone,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+OBKXEAXTFZPCHS-UHFFFAOYSA-N,O=C(O)CCCc1ccccc1,PHENYLBUTANOIC ACID,Ambiguous-DILI-Concern,E,,,medium,,1.0,1.0,0.0,LiverTox_neg,NIH LiverTox=E
+VGZSUPCWNCWDAN-UHFFFAOYSA-N,CC(=O)c1ccc(S(=O)(=O)NC(=O)NC2CCCCC2)cc1,ACETOHEXAMIDE,unknown,,,,strong,,,1.0,1.0,verified_pos,WebSearch verified
+XAGMUUZPGZWTRP-ZETCQYMHSA-N,C[C@H]1COc2c(C3(N)CC3)c(F)cc3c(=O)c(C(=O)O)cn1c23,pazufloxacin,unknown,,,,,,1.0,1.0,1.0,verified_pos,WebSearch verified
+KYYIDSXMWOZKMP-UHFFFAOYSA-N,CN(C)CC(c1ccc(O)cc1)C1(O)CCCCC1,DESVENLAFAXINE,vLess-DILI-Concern,,,,,,1.0,1.0,1.0,DILIrank_pos,FDA vLess-DILI-Concern
+LCKIEQZJEYYRIY-UHFFFAOYSA-N,[Ti+4],titanium dioxide,unknown,,,,weak,,,1.0,,non_drug,industrial/lab chemical
+XBJBPGROQZJDOJ-UHFFFAOYSA-N,CN1CCN(c2c(F)cc3c(=O)c(C(=O)O)cn(CCF)c3c2F)CC1,fleroxacin,unknown,,,,strong,,1.0,1.0,1.0,verified_pos,WebSearch verified
+BSWWXRFVMJHFBN-UHFFFAOYSA-N,Oc1c(Br)cc(Br)cc1Br,"2,4,6-Tribromophenol",unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+IWUCXVSUMQZMFG-UHFFFAOYSA-N,NC(=O)c1ncn(C2OC(CO)C(O)C2O)n1,Ribavirin,vLess-DILI-Concern,E,,medium,strong,medium,,,1.0,DILIrank_pos,FDA vLess-DILI-Concern
+IPCSVZSSVZVIGE-UHFFFAOYSA-N,CCCCCCCCCCCCCCCC(=O)O,Palmitic Acid,unknown,,,,strong,,,1.0,,non_drug,industrial/lab chemical
+WTARULDDTDQWMU-UHFFFAOYSA-N,C=C1CCC2CC1C2(C)C,Beta-Pinene,unknown,,,,weak,,,1.0,,non_drug,industrial/lab chemical
+YHHSONZFOIEMCP-UHFFFAOYSA-N,C[N+](C)(C)CCOP(=O)([O-])O,phosphorylcholine,unknown,,,,weak,,,1.0,,non_drug,industrial/lab chemical
+JGFDZZLUDWMUQH-UHFFFAOYSA-N,CCCCCCCCCC[N+](C)(C)CCCCCCCCCC,Didecyldimethylammonium,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+DGAIEPBNLOQYER-UHFFFAOYSA-N,COCC(=O)Nc1c(I)c(C(=O)NCC(O)CO)c(I)c(C(=O)N(C)CC(O)CO)c1I,IOPROMIDE,unknown,,,,,,1.0,1.0,0.0,verified_neg,WebSearch verified
+YBGZDTIWKVFICR-UHFFFAOYSA-N,CCCCC(CC)COC(=O)C=Cc1ccc(OC)cc1,OCTINOXATE,unknown,,,,,,1.0,1.0,,non_drug,industrial/lab chemical
+KGBXLFKZBHKPEV-UHFFFAOYSA-N,OB(O)O,boric acid,unknown,,,,strong,,,1.0,,non_drug,industrial/lab chemical
+HMJIYCCIJYRONP-UHFFFAOYSA-N,COC(=O)C1=C(C)NC(C)=C(C(=O)OC(C)C)C1c1cccc2nonc12,Isradipine,vLess-DILI-Concern,E,,,strong,,,,1.0,DILIrank_pos,FDA vLess-DILI-Concern
+NIXOWILDQLNWCW-UHFFFAOYSA-N,C=CC(=O)O,Acrylic Acid,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+MXAYKZJJDUDWDS-UHFFFAOYSA-N,CC(C)CC(NC(=O)CNC(=O)c1cc(Cl)ccc1Cl)B(O)O,Ixazomib,,E,warning_hepatotox,,,,,,0.0,LiverTox_neg,NIH LiverTox=E
+BXNANOICGRISHX-UHFFFAOYSA-N,CCOP(=S)(OCC)Oc1ccc2c(C)c(Cl)c(=O)oc2c1,Coumaphos,unknown,,,,weak,,,1.0,,non_drug,industrial/lab chemical
+BCQZXOMGPXTTIC-UHFFFAOYSA-N,FC(F)(F)C(Cl)Br,HALOTHANE,unknown,A,,strong,strong,,1.0,1.0,1.0,LiverTox_pos,NIH LiverTox=A
+XJGVXQDUIWGIRW-UHFFFAOYSA-N,CN1CCN(C2=Nc3ccccc3Oc3ccc(Cl)cc32)CC1,LOXAPINE,Ambiguous-DILI-Concern,D,,,,,1.0,1.0,1.0,LiverTox_pos,NIH LiverTox=D
+VEQOALNAAJBPNY-UHFFFAOYSA-N,Cc1cc(=O)n(-c2ccccc2)n1C,phenazone,unknown,,,,weak,,1.0,1.0,,non_drug,industrial/lab chemical
+BLXXJMDCKKHMKV-UHFFFAOYSA-N,COc1ccc2cc(CCC(C)=O)ccc2c1,NABUMETONE,Ambiguous-DILI-Concern,E,,,weak,,,0.0,0.0,LiverTox_neg,NIH LiverTox=E
+NOOLISFMXDJSKH-UHFFFAOYSA-N,CC1CCC(C(C)C)C(O)C1,MENTHOL,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+RWQNBRDOKXIBIV-UHFFFAOYSA-N,Cc1c[nH]c(=O)[nH]c1=O,Thymine,unknown,,,,weak,,,1.0,,non_drug,industrial/lab chemical
+CWYNVVGOOAEACU-UHFFFAOYSA-N,[Fe+2],ferrous chloride,vNo-DILI-Concern,,,,medium,,,1.0,0.0,DILIrank_neg,FDA vNo
+UBQYURCVBFRUQT-UHFFFAOYSA-N,CC(=O)N(O)CCCCCNC(=O)CCC(=O)N(O)CCCCCNC(=O)CCC(=O)N(O)CCCCCN,Deferoxamine mesylate,vLess-DILI-Concern,E,,weak,strong,,1.0,,1.0,DILIrank_pos,FDA vLess-DILI-Concern
+OELFLUMRDSZNSF-BRWVUGGUSA-N,CC(C)[C@H]1CC[C@H](C(=O)N[C@H](Cc2ccccc2)C(=O)O)CC1,NATEGLINIDE,unknown,,,,,,1.0,1.0,0.0,verified_neg,WebSearch verified
+YBBJKCMMCRQZMA-UHFFFAOYSA-N,On1ccccc1=S,Pyrithione,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+SPJAGILXQBHHSZ-UHFFFAOYSA-N,O=c1[nH]c(=O)n(COCCO)cc1Cc1ccccc1,Benzylacyclouridine,unknown,,,,weak,,,1.0,,verified_exclude,WebSearch: insufficient evidence
+BHXLLRXDAYEMPP-SBGRAJFYSA-N,CO/N=C(\C(=O)N[C@@H]1C(=O)N2C(C(=O)[O-])=C(C[n+]3ccc(N)n3CCO)CS[C@H]12)c1csc(N)n1,cefoselis,unknown,,,,,,1.0,1.0,,verified_exclude,WebSearch: insufficient evidence
+ZDXPYRJPNDTMRX-VKHMYHEASA-N,NC(=O)CC[C@H](N)C(=O)O,GLUTAMINE,unknown,,,,,,1.0,1.0,,non_drug,industrial/lab chemical
+YRCWQPVGYLYSOX-UHFFFAOYSA-N,CNCC(O)c1ccc(O)cc1,oxedrine,unknown,,,,medium,,,1.0,0.0,verified_neg,WebSearch verified
+WWYNJERNGUHSAO-UHFFFAOYSA-N,C#CC1(O)CCC2C3CCC4=CC(=O)CCC4C3CCC21CC,Ovrette,vNo-DILI-Concern,,boxed_hepatotox,medium,strong,,,1.0,0.0,DILIrank_neg,FDA vNo
+XEEQGYMUWCZPDN-DOMZBBRYSA-N,O[C@@H](c1cc(C(F)(F)F)nc2c(C(F)(F)F)cccc12)[C@H]1CCCCN1,mefloquine,unknown,,,,,,1.0,1.0,1.0,verified_pos,WebSearch verified
+RGPDEAGGEXEMMM-UHFFFAOYSA-N,CN1CCOC(c2ccccc2)c2ccccc2C1,nefopam,unknown,,,,,,1.0,1.0,1.0,verified_pos,WebSearch verified
+UGFHIPBXIWJXNA-UHFFFAOYSA-N,Clc1cccc(C(c2ccc3nc[nH]c3c2)n2ccnc2)c1,Liarozole,unknown,,,,,,1.0,1.0,,verified_exclude,WebSearch: insufficient evidence
+BRUQQQPBMZOVGD-UHFFFAOYSA-N,COc1ccc2c3c1OC1C(=O)CCC4(O)C(C2)N(C)CCC314,Oxycodone hydrochloride,vLess-DILI-Concern,E,boxed_hepatotox,,medium,strong,,,1.0,DILIrank_pos,FDA vLess-DILI-Concern
+OWQIUQKMMPDHQQ-UHFFFAOYSA-N,CCN(CC)CC(C)(C)COC(=O)c1ccc(N)cc1,dimethocaine,unknown,,,,weak,,,1.0,,verified_exclude,WebSearch: insufficient evidence
+IDEHCMNLNCJQST-UHFFFAOYSA-N,NCCCCCCNS(=O)(=O)c1cccc2c(Cl)cccc12,N-(6-Aminohexyl)-5-Chloro-1-Naphthalenesulfonamide,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+QDUIJCOKQCCXQY-WHJQOFBOSA-N,CO/N=C(\C(=O)N[C@@H]1C(=O)N2C(C(=O)[O-])=C(C[n+]3ccn4ncccc43)CS[C@H]12)c1nsc(N)n1,cefozopran,unknown,,,,,,1.0,1.0,,verified_exclude,WebSearch: insufficient evidence
+BHPQYMZQTOCNFJ-UHFFFAOYSA-N,[Ca+2],CALCIUM CHLORIDE,unknown,,,,medium,medium,,1.0,,non_drug,industrial/lab chemical
+KRHYYFGTRYWZRS-UHFFFAOYSA-N,F,hydrofluoric acid,unknown,,,,weak,,,1.0,,non_drug,industrial/lab chemical
+QHMBSVQNZZTUGM-UHFFFAOYSA-N,C=C(C)C1CCC(C)=CC1c1c(O)cc(CCCCC)cc1O,Cannabidiol,Ambiguous-DILI-Concern,E,,,medium,,,,0.0,LiverTox_neg,NIH LiverTox=E
+LWJROJCJINYWOX-UHFFFAOYSA-L,Cl[Hg]Cl,mercuric chloride,unknown,,,,strong,,,1.0,,non_drug,industrial/lab chemical
+LRFVTYWOQMYALW-UHFFFAOYSA-N,O=c1[nH]c(=O)c2[nH]cnc2[nH]1,Xanthine,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+HBBGRARXTFLTSG-UHFFFAOYSA-N,[Li+],Lithium ion,unknown,E,,,strong,weak,1.0,1.0,0.0,LiverTox_neg,NIH LiverTox=E
+PPJYSSNKSXAVDB-UHFFFAOYSA-N,O=C(O)Cc1cc(I)c(Oc2cc(I)c(O)c(I)c2)c(I)c1,Tetraiodothyroacetic acid,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+OROGSEYTTFOCAN-UHFFFAOYSA-N,COc1ccc2c3c1OC1C(O)C=CC4C(C2)N(C)CCC341,Codeine sulfate,vNo-DILI-Concern,,boxed_hepatotox,weak,weak,,,,0.0,DILIrank_neg,FDA vNo
+XNGIFLGASWRNHJ-UHFFFAOYSA-N,O=C(O)c1ccccc1C(=O)O,Phthalic Acid,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+VWFCHDSQECPREK-UHFFFAOYSA-N,Nc1ccn(CC(CO)OCP(=O)(O)O)c(=O)n1,Cidofovir,Ambiguous-DILI-Concern,E,,,strong,,,,0.0,LiverTox_neg,NIH LiverTox=E
+ZPFXAOWNKLFJDN-UHFFFAOYSA-N,CCN(CCCc1ccccc1)CCCc1ccccc1,alverine,unknown,,,weak,strong,,,1.0,1.0,verified_pos,WebSearch verified
+ALEXXDVDDISNDU-UHFFFAOYSA-N,CC(=O)OCC(=O)C1(O)CCC2C3CCC4=CC(=O)CCC4(C)C3C(O)CC21C,Hydrocortisone acetate,vNo-DILI-Concern,,,,,strong,,,0.0,DILIrank_neg,FDA vNo
+JTVPZMFULRWINT-UHFFFAOYSA-N,CCN(CC)CCNC(=O)c1cc(S(C)(=O)=O)ccc1OC,tiapride,unknown,,,,medium,,,1.0,,verified_exclude,WebSearch: insufficient evidence
+JUVIOZPCNVVQFO-HBGVWJBISA-N,C=C(C)[C@H]1Cc2c(ccc3c2O[C@@H]2COc4cc(OC)c(OC)cc4[C@@H]2C3=O)O1,Rotenone,unknown,,,,,,1.0,1.0,,non_drug,industrial/lab chemical
+OGBMKVWORPGQRR-UHFFFAOYSA-N,CCC(C)C(NC(=O)C(CCC(=O)O)NC(=O)C(CO)NC(=O)C(NC(=O)C(N)CO)C(C)C)C(=O)NC(CCC(N)=O)C(=O)NC(CC(C)C)C(=O)NC(CCSC)C(=O)NC(Cc1c[nH]cn1)C(=O)NC(CC(N)=O)C(=O)NC(CC(C)C)C(=O)NCC(=O)NC(CCCCN)C(=O)NC(Cc1c[nH]cn1)C(=O)NC(CC(C)C)C(=O)NC(CC(N)=O)C(=O)NC(CO)C(=O)NC(CCSC)C(=O)NC(CCC(=O)O)C(=O)NC(CCCNC(=N)N)C(=O)NC(C(=O)NC(CCC(=O)O)C(=O)NC(Cc1c[nH]c2ccccc12)C(=O)NC(CC(C)C)C(=O)NC(CCCNC(=N)N)C(=O)NC(CCCCN)C(=O)NC(CCCCN)C(=O)NC(CC(C)C)C(=O)NC(CCC(N)=O)C(=O)NC(CC(=O)O)C(=O)NC(C(=O)NC(Cc1c[nH]cn1)C(=O)NC(CC(N)=O)C(=O)NC(Cc1ccccc1)C(=O)O)C(C)C)C(C)C,Teriparatide acetate,vLess-DILI-Concern,E,,,,,,,1.0,DILIrank_pos,FDA vLess-DILI-Concern
+GOLXRNDWAUTYKT-UHFFFAOYSA-N,O=C(O)CCc1c[nH]c2ccccc12,1H-Indole-3-propanoic acid,unknown,,,,weak,,,1.0,,non_drug,industrial/lab chemical
+MGQLHRYJBWGORO-UHFFFAOYSA-N,CNC1CCCN(c2c(F)cc3c(=O)c(C(=O)O)cn(C4CC4)c3c2OC)C1,balofloxacin,unknown,,,,,,1.0,1.0,1.0,verified_pos,WebSearch verified
+MHIGBKBJSQVXNH-IWVLMIASSA-N,C=C1c2cccc(O)c2C(=O)C2=C(O)[C@]3(O)C(=O)C(C(N)=O)=C(O)[C@@H](N(C)C)[C@@H]3[C@@H](O)[C@H]12,METHACYCLINE,unknown,,,,,,1.0,1.0,1.0,verified_pos,WebSearch verified
+SSMIFVHARFVINF-UHFFFAOYSA-N,Nc1ccc2c3c(cccc13)C(=O)NC2=O,"4-Amino-1,8-naphthalimide",unknown,,,,weak,,,1.0,,non_drug,industrial/lab chemical
+VMWNQDUVQKEIOC-UHFFFAOYSA-N,CN1CCc2cccc3c2C1Cc1ccc(O)c(O)c1-3,Apomorphine hydrochloride,vNo-DILI-Concern,E,,,weak,,,,0.0,DILIrank_neg,FDA vNo
+KQKPFRSPSRPDEB-UHFFFAOYSA-N,CNS(=O)(=O)Cc1ccc2[nH]cc(CCN(C)C)c2c1,SUMATRIPTAN,Ambiguous-DILI-Concern,,,,medium,,1.0,1.0,0.0,verified_neg,WebSearch verified
+HAMGRBXTJNITHG-UHFFFAOYSA-N,CN=C=O,Methyl Isocyanate,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+NPAGDVCDWIYMMC-IZPLOLCNSA-N,C[C@]12CC[C@H]3[C@@H](CCC4=CC(=O)CC[C@@H]43)[C@@H]1CC[C@@H]2O,nandrolone,unknown,,,,,,1.0,1.0,1.0,verified_pos,WebSearch verified
+PFOLLRNADZZWEX-FFGRCDKISA-N,CCOC(=O)OC(C)OC(=O)[C@@H]1N2C(=O)[C@@H](NC(=O)[C@H](N)c3ccccc3)[C@H]2SC1(C)C,BACAMPICILLIN,unknown,,,,,,1.0,1.0,0.0,verified_neg,WebSearch verified
+XLOQNFNTQIRSOX-UHFFFAOYSA-N,CC(=O)c1ccc2c(c1)N(CC(C)N(C)C)c1ccccc1S2,aceprometazine,unknown,,,,,,1.0,1.0,,verified_exclude,WebSearch: insufficient evidence
+WVPAABNYMHNFJG-QDVBXLKVSA-N,CC/C=C(\C(=O)N[C@@H]1C(=O)N2C(C(=O)OCOC(=O)C(C)(C)C)=C(COC(N)=O)CS[C@H]12)c1csc(N)n1,cefcapene pivoxil,unknown,,,,,,1.0,1.0,1.0,verified_pos,WebSearch verified
+KQXKVJAGOJTNJS-UHFFFAOYSA-N,CC(C)(C)NCC(O)COc1ccccc1C1CCCC1,Penbutolol sulfate,vNo-DILI-Concern,E,,,weak,,,,0.0,DILIrank_neg,FDA vNo
+XVUQHFRQHBLHQD-UHFFFAOYSA-N,O=C(O)Cc1cn(-c2ccccc2)nc1-c1ccc(Cl)cc1,lonazolac,unknown,,,,,,1.0,1.0,,verified_exclude,WebSearch: insufficient evidence
+PFENFDGYVLAFBR-UHFFFAOYSA-N,CCOC(=O)c1c(N)sc2c1CCN(Cc1ccccc1)C2,tinoridine,unknown,,,,,,1.0,1.0,,non_drug,industrial/lab chemical
+FAIIFDPAEUKBEP-UHFFFAOYSA-N,COC(=O)C1=C(C#N)NC(C)=C(C(=O)OC(C)C)C1c1cccc([N+](=O)[O-])c1,nilvadipine,unknown,,,,,,1.0,1.0,,verified_exclude,WebSearch: insufficient evidence
+GKCBAIGFKIBETG-UHFFFAOYSA-N,CCCCNc1ccc(C(=O)OCCN(C)C)cc1,TETRACAINE,unknown,,,,weak,,,1.0,,verified_exclude,WebSearch: insufficient evidence
+ZNQVEEAIQZEUHB-UHFFFAOYSA-N,CCOCCO,Glycol monoethyl ether,unknown,,,,weak,,,1.0,,non_drug,industrial/lab chemical
+SRVJKTDHMYAMHA-WUXMJOGZSA-N,CC(=O)Nc1ccc(/C=N/NC(N)=S)cc1,Amithiozone,unknown,,,,,,1.0,1.0,,non_drug,industrial/lab chemical
+OLVCFLKTBJRLHI-AXAPSJFSSA-N,Cn1nnnc1SCC1=C(C(=O)O)N2C(=O)[C@@H](NC(=O)[C@H](O)c3ccccc3)[C@H]2SC1,cefamandole,unknown,,,,,,1.0,1.0,1.0,verified_pos,WebSearch verified
+LPLLVINFLBSFRP-UHFFFAOYSA-N,CNC(C)C(=O)c1ccccc1,Monomethylpropion,unknown,,,,weak,,,1.0,,non_drug,industrial/lab chemical
+GBFLZEXEOZUWRN-VKHMYHEASA-N,N[C@@H](CSCC(=O)O)C(=O)O,carbocisteine,unknown,,,,,,1.0,1.0,0.0,verified_neg,WebSearch verified
+LXBIFEVIBLOUGU-UHFFFAOYSA-N,OCC1NCC(O)C(O)C1O,Migalastat hydrochloride,vNo-DILI-Concern,E,,,medium,,,,0.0,DILIrank_neg,FDA vNo
+LGYTZKPVOAIUKX-UHFFFAOYSA-N,CC(=O)CCC1C(=O)N(c2ccccc2)N(c2ccccc2)C1=O,kebuzone,unknown,,,,,,1.0,1.0,1.0,verified_pos,WebSearch verified
+QFOHBWFCKVYLES-UHFFFAOYSA-N,CCCCOC(=O)c1ccc(O)cc1,Butylparaben,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+CVSVTCORWBXHQV-UHFFFAOYSA-N,CN(CC(=O)O)C(=N)N,creatine,unknown,,,,strong,,,1.0,,non_drug,industrial/lab chemical
+JIEKMACRVQTPRC-UHFFFAOYSA-N,O=C(O)Cc1sc(-c2ccccc2)nc1-c1ccc(Cl)cc1,fentiazac,unknown,,,,,,1.0,1.0,1.0,verified_pos,WebSearch verified
+AIZFEOPQVZBNGH-UHFFFAOYSA-N,O=C1CN=C(c2ccccc2)c2c(sc3c2CCCC3)N1,bentazepam,unknown,,,weak,,,1.0,1.0,1.0,verified_pos,WebSearch verified
+QELSKZZBTMNZEB-UHFFFAOYSA-N,CCCOC(=O)c1ccc(O)cc1,propylparaben,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+HXQVQGWHFRNKMS-UHFFFAOYSA-M,CC[Hg]Sc1ccccc1C(=O)O,Ethylmercury thiosalicylate,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+GQPLMRYTRLFLPF-UHFFFAOYSA-N,N#[N+][O-],nitrous oxide,unknown,,,weak,,,1.0,1.0,,non_drug,industrial/lab chemical
+TXBBUSUXYMIVOS-UHFFFAOYSA-N,O=C(CC(=O)C(F)(F)F)c1cccs1,Thenoyltrifluoroacetone,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+NGOGFTYYXHNFQH-UHFFFAOYSA-N,O=S(=O)(c1cccc2cnccc12)N1CCCNCC1,fasudil,unknown,,,,medium,,,1.0,0.0,verified_neg,WebSearch verified
+LEBVLXFERQHONN-UHFFFAOYSA-N,CCCCN1CCCCC1C(=O)Nc1c(C)cccc1C,BUPIVACAINE,unknown,,,weak,medium,,,1.0,1.0,verified_pos,WebSearch verified
+MKXZASYAUGDDCJ-UHFFFAOYSA-N,COc1ccc2c(c1)C13CCCCC1C(C2)N(C)CC3,Dextromethorphan polistirex,vNo-DILI-Concern,,,,strong,,,,0.0,DILIrank_neg,FDA vNo
+ALLWOAVDORUJLA-UHFFFAOYSA-N,O=C(NC(Cc1cc(=O)[nH]c2ccccc12)C(=O)O)c1ccc(Cl)cc1,rebamipide,unknown,,,,medium,,,1.0,0.0,verified_neg,WebSearch verified
+ZXSWTMLNIIZPET-ZOFHRBRSSA-N,C[C@]1(O)CC[C@H]2[C@@H]3CCC4=CC(=O)CC[C@@H]4[C@H]3CC[C@@]21C,methylestrenolone,unknown,,,,,,1.0,1.0,1.0,verified_pos,WebSearch verified
+TTZHDVOVKQGIBA-UHFFFAOYSA-N,CC(C)OC(=O)C(C)NP(=O)(OCC1OC(n2ccc(=O)[nH]c2=O)C(C)(F)C1O)Oc1ccccc1,Sofosbuvir,vNo-DILI-Concern,A,,,,medium,,,0.0,DILIrank_neg,FDA vNo
+QMHSXPLYMTVAMK-UHFFFAOYSA-N,Cc1cc(/C=C/c2ccc3cc(N(C)C)ccc3[n+]2C)c(C)n1-c1ccccc1,PYRVINIUM,unknown,,,,medium,,,1.0,0.0,verified_neg,WebSearch verified
+GSEJCLTVZPLZKY-UHFFFAOYSA-N,OCCN(CCO)CCO,trolamine,unknown,,,,weak,,,1.0,,non_drug,industrial/lab chemical
+IPVQLZZIHOAWMC-UHFFFAOYSA-N,CCCC(NC(C)C(=O)N1C(C(=O)O)CC2CCCCC21)C(=O)OCC,Perindopril erbumine,Ambiguous-DILI-Concern,E,,,medium,,,,0.0,LiverTox_neg,NIH LiverTox=E
+JPVYNHNXODAKFH-UHFFFAOYSA-N,[Cu+2],cupric chloride,vNo-DILI-Concern,,,,strong,,,1.0,0.0,DILIrank_neg,FDA vNo
+VLLFGVHGKLDDLW-SFHVURJKSA-N,C[C@@]1(c2cc(NC(=O)c3ccc(C#N)cn3)ccc2F)C=CSC(N)=N1,Atabecestat,unknown,,,,,,1.0,1.0,1.0,verified_pos,WebSearch verified
+NMUSYJAQQFHJEW-UHFFFAOYSA-N,Nc1ncn(C2OC(CO)C(O)C2O)c(=O)n1,Azacitidine,Ambiguous-DILI-Concern,E,warning_hepatotox,,strong,,,,0.0,LiverTox_neg,NIH LiverTox=E
+LXIKEPCNDFVJKC-QXMHVHEDSA-N,NC(=O)N1C(=O)/C(=C(\O)c2cccs2)c2cc(Cl)ccc21,tenidap,unknown,,,,,,1.0,1.0,1.0,verified_pos,WebSearch verified
+BAINIUMDFURPJM-UHFFFAOYSA-N,O=c1[nH]c2ccccc2n1CCCN1CCN(C(c2ccccc2)c2ccccc2)CC1,oxatomide,unknown,,,weak,,,1.0,1.0,1.0,verified_pos,WebSearch verified
+IYRMWMYZSQPJKC-UHFFFAOYSA-N,O=c1c(O)c(-c2ccc(O)cc2)oc2cc(O)cc(O)c12,Kaempferol,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+UJEWTUDSLQGTOA-UHFFFAOYSA-N,NS(=O)(=O)c1cc(C(=O)O)cc(N2CCCC2)c1Oc1ccccc1,piretanide,unknown,,,,,,1.0,1.0,0.0,verified_neg,WebSearch verified
+JKKFKPJIXZFSSB-CBZIJGRNSA-N,C[C@]12CC[C@@H]3c4ccc(OS(=O)(=O)O)cc4CC[C@H]3[C@@H]1CCC2=O,ESTRONE SULFURIC ACID,unknown,,,,,,1.0,1.0,,non_drug,industrial/lab chemical
+JVTAAEKCZFNVCJ-UHFFFAOYSA-N,CC(O)C(=O)O,SODIUM LACTATE,vNo-DILI-Concern,,,,medium,,1.0,1.0,0.0,DILIrank_neg,FDA vNo
+MMXZSJMASHPLLR-UHFFFAOYSA-N,O=C(O)c1cc(C(=O)O)c2c(n1)C(=O)C(=O)c1cc(C(=O)O)[nH]c1-2,Pyrroloquinoline Quinone,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+SHXWCVYOXRDMCX-UHFFFAOYSA-N,CNC(C)Cc1ccc2c(c1)OCO2,"3,4-Methylenedioxymethamphetamine",unknown,,,strong,strong,,,1.0,,non_drug,industrial/lab chemical
+QHZQILHUJDRDAI-UHFFFAOYSA-N,CCCCOCC(CN1C(=O)NC(=O)C(CC)(c2ccccc2)C1=O)OC(N)=O,febarbamate,unknown,,,,strong,,1.0,1.0,1.0,verified_pos,WebSearch verified
+YEHCICAEULNIGD-UHFFFAOYSA-N,CCCN1CC(CSC)CC2c3cccc4[nH]cc(c34)CC21,Pergolide mesylate,Ambiguous-DILI-Concern,E,,,weak,,,,0.0,LiverTox_neg,NIH LiverTox=E
+XDXWLKQMMKQXPV-QYQHSDTDSA-N,CC1=NN(c2ccc(C)c(C)c2)C(=O)/C1=N\Nc1cccc(-c2cccc(C(=O)O)c2)c1O,ELTROMBOPAG,unknown,,,,,,1.0,1.0,1.0,verified_pos,WebSearch verified
+HHHKFGXWKKUNCY-FHWLQOOXSA-N,CCOC(=O)[C@H](CCc1ccccc1)N[C@H]1CCCN2CCC[C@@H](C(=O)O)N2C1=O,cilazapril,unknown,,,,,,1.0,1.0,,verified_exclude,WebSearch: insufficient evidence
+MFZWMTSUNYWVBU-UHFFFAOYSA-N,CCN(CC)CCNc1ccc(CO)c2sc3ccccc3c(=O)c12,hycanthone,unknown,,,medium,,,1.0,1.0,1.0,verified_pos,WebSearch verified
+GUTLYIVDDKVIGB-UHFFFAOYSA-N,[Co],Cobalt,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+XXAXVMUWHZHZMJ-UHFFFAOYSA-N,O=S(=O)(O)c1cc(O)c(O)c(S(=O)(=O)O)c1,"Antimony bis(pyrocatechol-2,4-disulfonate) heptahydrate",unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+NIJJYAXOARWZEE-UHFFFAOYSA-N,CCCC(CCC)C(=O)O,VALPROATE SODIUM,vMost-DILI-Concern,A,boxed_hepatotox,strong,strong,weak,1.0,1.0,1.0,DILIrank_pos,FDA vMost-DILI-Concern
+VXKHXGOKWPXYNA-UHFFFAOYSA-N,CC(C)CC(NC(=O)C(Cc1c[nH]c2ccccc12)NC(=O)C(Cc1ccc(O)cc1)NC(=O)C(CO)NC(=O)C(Cc1c[nH]c2ccccc12)NC(=O)C(Cc1cnc[nH]1)NC(=O)C1CCC(=O)N1)C(=O)NC(CCCN=C(N)N)C(=O)N1CCCC1C(=O)NCC(N)=O,Triptorelin pamoate,vLess-DILI-Concern,E,,,,,,,1.0,DILIrank_pos,FDA vLess-DILI-Concern
+NMCHYWGKBADVMK-UHFFFAOYSA-N,CC(Cc1ccccc1)NCCn1cnc2c1c(=O)n(C)c(=O)n2C,fenetylline,unknown,,,,medium,,,1.0,,verified_exclude,WebSearch: insufficient evidence
+HSHNITRMYYLLCV-UHFFFAOYSA-N,Cc1cc(=O)oc2cc(O)ccc12,hymecromone,unknown,,,,medium,,,1.0,0.0,verified_neg,WebSearch verified
+MYBLAOJMRYYKMS-RTRLPJTCSA-N,O=NN(CCCl)C(=O)N[C@H]1C(O)O[C@H](CO)[C@@H](O)[C@@H]1O,chlorozotocin,unknown,,,,,,1.0,1.0,1.0,verified_pos,WebSearch verified
+FPZLLRFZJZRHSY-HJYUBDRYSA-N,CN(C)c1cc(NC(=O)CNC(C)(C)C)c(O)c2c1C[C@H]1C[C@H]3[C@H](N(C)C)C(O)=C(C(N)=O)C(=O)[C@@]3(O)C(O)=C1C2=O,TIGECYCLINE,unknown,,,,,,1.0,1.0,1.0,verified_pos,WebSearch verified
+YJYPHIXNFHFHND-UHFFFAOYSA-N,COc1ccc2cccc(CCNC(C)=O)c2c1,AGOMELATINE,unknown,,,weak,,,,1.0,,non_drug,industrial/lab chemical
+XBDQKXXYIPTUBI-UHFFFAOYSA-N,CCC(=O)O,Propionic Acid,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+XYKWNRUXCOIMFZ-UHFFFAOYSA-N,COc1ccc(-n2nc(CCC(=O)N(C)O)cc2-c2ccc(Cl)cc2)cc1,Tepoxalin,unknown,,,,,,1.0,1.0,,verified_exclude,WebSearch: insufficient evidence
+QGJUIPDUBHWZPV-UHFFFAOYSA-N,N#CC1CC2CC2N1C(=O)C(N)C12CC3CC(CC(O)(C3)C1)C2,Saxagliptin hydrochloride,vLess-DILI-Concern,E,,,,,,,1.0,DILIrank_pos,FDA vLess-DILI-Concern
+UYXTWWCETRIEDR-UHFFFAOYSA-N,CCCC(=O)OCC(COC(=O)CCC)OC(=O)CCC,Tributyrin,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+HGGAKXAHAYOLDJ-FHZUQPTBSA-N,C[C@@H](O)[C@H]1C(=O)N2C(C(=O)O)=C([C@H]3CCCO3)S[C@H]12,faropenem,unknown,,,,,,1.0,1.0,,verified_exclude,WebSearch: insufficient evidence
+AFLFKFHDSCQHOL-IZZDOVSWSA-N,CSc1ccc(C(=O)/C=C/c2cc(C)c(OC(C)(C)C(=O)O)c(C)c2)cc1,ELAFIBRANOR,unknown,,,,,,1.0,1.0,1.0,verified_pos,WebSearch verified
+QCUPYFTWJOZAOB-HYXAFXHYSA-N,C/C=C(/CC)C(=O)NC(N)=O,ectylurea,unknown,,,,,,1.0,1.0,,non_drug,industrial/lab chemical
+XKLMZUWKNUAPSZ-UHFFFAOYSA-N,COc1ccccc1OCC(O)CN1CCN(CC(=O)Nc2c(C)cccc2C)CC1,RANOLAZINE,vNo-DILI-Concern,D,,,,,,1.0,0.0,DILIrank_neg,FDA vNo
+RNFNDJAIBTYOQL-UHFFFAOYSA-N,OC(O)C(Cl)(Cl)Cl,chloral hydrate,unknown,E,,,medium,,,1.0,0.0,LiverTox_neg,NIH LiverTox=E
+RKUNBYITZUJHSG-FXUDXRNXSA-N,CN1[C@@H]2CC[C@H]1C[C@@H](OC(=O)[C@H](CO)c1ccccc1)C2,hyoscyamine,unknown,,,,,,1.0,1.0,0.0,verified_neg,WebSearch verified
+SEOVTRFCIGRIMH-UHFFFAOYSA-N,O=C(O)Cc1c[nH]c2ccccc12,Indole-3-Acetic Acid,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+HJJPJSXJAXAIPN-UHFFFAOYSA-N,COC(=O)C1=CCCN(C)C1,Arecoline,unknown,,,,strong,,,1.0,,non_drug,industrial/lab chemical
+DERZBLKQOCDDDZ-UHFFFAOYSA-N,C(=Cc1ccccc1)CN1CCN(C(c2ccccc2)c2ccccc2)CC1,1-(Diphenylmethyl)-4-(3-phenylprop-2-enyl)piperazine,unknown,,,,strong,,,1.0,,non_drug,industrial/lab chemical
+KSEBMYQBYZTDHS-HWKANZROSA-N,COc1cc(/C=C/C(=O)O)ccc1O,Ferulic Acid,unknown,,,,,,1.0,1.0,,non_drug,industrial/lab chemical
+PXBVEXGRHZFEOF-UHFFFAOYSA-N,CN(C)C(=O)OC1N=C(c2ccccc2)c2cc(Cl)ccc2N(C)C1=O,camazepam,unknown,,,,,,1.0,1.0,,verified_exclude,WebSearch: insufficient evidence
+REFJWTPEDVJJIY-UHFFFAOYSA-N,O=c1c(O)c(-c2ccc(O)c(O)c2)oc2cc(O)cc(O)c12,quercetin,unknown,E,,,medium,,,1.0,0.0,LiverTox_neg,NIH LiverTox=E
+NUZWLKWWNNJHPT-UHFFFAOYSA-N,O=C1c2c(O)cccc2Cc2cccc(O)c21,dithranol,unknown,,,,medium,,,1.0,0.0,verified_neg,WebSearch verified
+SSOLNOMRVKKSON-UHFFFAOYSA-N,CC(C)N=C(N)/N=C(\N)Nc1ccc(Cl)cc1,Proguanil,unknown,E,,weak,strong,,,1.0,0.0,LiverTox_neg,NIH LiverTox=E
+PFNFFQXMRSDOHW-UHFFFAOYSA-N,NCCCNCCCCNCCCN,Spermine,unknown,,,,weak,,,1.0,,non_drug,industrial/lab chemical
+LLEMOWNGBBNAJR-UHFFFAOYSA-N,Oc1ccccc1-c1ccccc1,biphenylol,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+OBBCSXFCDPPXOL-UHFFFAOYSA-N,COCC(O)Cn1ccnc1[N+](=O)[O-],Misonidazole,unknown,,,,weak,,,1.0,,verified_exclude,WebSearch: insufficient evidence
+SXRSQZLOMIGNAQ-UHFFFAOYSA-N,O=CCCCC=O,glutaral,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+HKVAMNSJSFKALM-UHFFFAOYSA-N,COC1CC2CCC(C)C(O)(O2)C(=O)C(=O)N2CCCCC2C(=O)OC(C(C)CC2CCC(OCCO)C(OC)C2)CC(=O)C(C)C=C(C)C(O)C(OC)C(=O)C(C)CC(C)C=CC=CC=C1C,Everolimus,vLess-DILI-Concern,E,warning_hepatotox,weak,,,,,1.0,DILIrank_pos,FDA vLess-DILI-Concern
+MOQADKPFYVWPSE-UHFFFAOYSA-N,O=[As][As+](=O)[O-],ARSENIC TRIOXIDE,unknown,,,,,,1.0,1.0,,non_drug,industrial/lab chemical
+DHCLVCXQIBBOPH-UHFFFAOYSA-N,O=P(O)(O)OC(CO)CO,beta-Glycerophosphate,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+XIQVNETUBQGFHX-UHFFFAOYSA-N,CCN(CC)CC#CCOC(=O)C(O)(c1ccccc1)C1CCCCC1,Oxybutynin chloride,vLess-DILI-Concern,E,,,medium,,,,1.0,DILIrank_pos,FDA vLess-DILI-Concern
+YWTYJOPNNQFBPC-UHFFFAOYSA-N,O=[N+]([O-])/N=C1\NCCN1Cc1ccc(Cl)nc1,Imidacloprid,unknown,,,,strong,,,1.0,,non_drug,industrial/lab chemical
+AFZSMODLJJCVPP-UHFFFAOYSA-N,c1ccc2sc(SSc3nc4ccccc4s3)nc2c1,Accelerator DM,unknown,,,,weak,,,1.0,,non_drug,industrial/lab chemical
+RCKMWOKWVGPNJF-UHFFFAOYSA-N,CCN(CC)C(=O)N1CCN(C)CC1,DIETHYLCARBAMAZINE,unknown,,,,,,1.0,1.0,,non_drug,industrial/lab chemical
+HYVABZIGRDEKCD-UHFFFAOYSA-N,CC(C)=CCNc1ncnc2nc[nH]c12,Isopentenyladenine,unknown,,,,weak,,,1.0,,non_drug,industrial/lab chemical
+CHNUOJQWGUIOLD-NFZZJPOKSA-N,CC(/C=C1\SC(=S)N(CC(=O)O)C1=O)=C\c1ccccc1,EPALRESTAT,unknown,,,,,,1.0,1.0,1.0,verified_pos,WebSearch verified
+LGGHDPFKSSRQNS-UHFFFAOYSA-N,COc1cc2c(cc1OC)CN(CCc1ccc(NC(=O)c3cc(OC)c(OC)cc3NC(=O)c3cnc4ccccc4c3)cc1)CC2,Tariquidar,unknown,,,,weak,,,1.0,,verified_exclude,WebSearch: insufficient evidence
+HDOZVRUNCMBHFH-UHFFFAOYSA-N,CN(C)CCOC1=Cc2ccccc2Sc2ccc(Cl)cc21,zotepine,unknown,,,,,,1.0,1.0,,verified_exclude,WebSearch: insufficient evidence
+ROFVEXUMMXZLPA-UHFFFAOYSA-N,c1ccc(-c2ccccn2)nc1,Imidazol-3-ide;bis(2-pyridin-2-ylpyridine);ruthenium(3+),unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+UJLAWZDWDVHWOW-UHFFFAOYSA-N,CC1CCN(C(=O)CC#N)CC1N(C)c1ncnc2[nH]ccc12,Tofacitinib citrate,Ambiguous-DILI-Concern,E,warning_hepatotox,,,strong,,,0.0,LiverTox_neg,NIH LiverTox=E
+RHMXXJGYXNZAPX-UHFFFAOYSA-N,Cc1cc(O)c2c(c1)C(=O)c1cc(O)cc(O)c1C2=O,Emodin,unknown,,,,strong,,,1.0,,non_drug,industrial/lab chemical
+XJGFWWJLMVZSIG-UHFFFAOYSA-N,Nc1c2ccccc2nc2ccccc12,aminoacridine,unknown,,,,weak,,,1.0,,verified_exclude,WebSearch: insufficient evidence
+MBGGBVCUIVRRBF-UHFFFAOYSA-N,O=C1C(CC[S+]([O-])c2ccccc2)C(=O)N(c2ccccc2)N1c1ccccc1,sulfinpyrazone,unknown,,,,medium,,,1.0,1.0,verified_pos,WebSearch verified
+UGFAIRIUMAVXCW-UHFFFAOYSA-N,[C-]#[O+],Carbon Monoxide,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+BGRJTUBHPOOWDU-UHFFFAOYSA-N,CCN1CCCC1CNC(=O)c1cc(S(N)(=O)=O)ccc1OC,sulpiride,unknown,,,,strong,,,1.0,1.0,verified_pos,WebSearch verified
+NJBFOOCLYDNZJN-UHFFFAOYSA-N,O=C(CCBr)N1CCN(C(=O)CCBr)CC1,PIPOBROMAN,unknown,,,,,,1.0,1.0,1.0,verified_pos,WebSearch verified
+VILCJCGEZXAXTO-UHFFFAOYSA-N,NCCNCCNCCN,TRIENTINE,vNo-DILI-Concern,E,,,medium,,,1.0,0.0,DILIrank_neg,FDA vNo
+GECHUMIMRBOMGK-UHFFFAOYSA-N,Nc1ccc(S(=O)(=O)Nc2ccccn2)cc1,SULFAPYRIDINE,unknown,,,,medium,,,1.0,1.0,verified_pos,WebSearch verified
+UFULAYFCSOUIOV-UHFFFAOYSA-N,NCCS,CYSTEAMINE,unknown,D,,weak,strong,,1.0,1.0,1.0,LiverTox_pos,NIH LiverTox=D
+RTIXKCRFFJGDFG-UHFFFAOYSA-N,O=c1cc(-c2ccccc2)oc2cc(O)cc(O)c12,Chrysin,unknown,,,,strong,,,1.0,,non_drug,industrial/lab chemical
+TZBJGXHYKVUXJN-UHFFFAOYSA-N,O=c1c(-c2ccc(O)cc2)coc2cc(O)cc(O)c12,Genistein,unknown,,,,strong,,,1.0,,non_drug,industrial/lab chemical
+LWAFSWPYPHEXKX-UHFFFAOYSA-N,CC(C)(C)NCC(O)COc1cccc2c1CCC(=O)N2,CARTEOLOL,unknown,,,,medium,,,1.0,,verified_exclude,WebSearch: insufficient evidence
+IVVNZDGDKPTYHK-UHFFFAOYSA-N,CC(N/C(=N\C#N)Nc1ccncc1)C(C)(C)C,PINACIDIL ANHYDROUS,unknown,,,,weak,,,1.0,,verified_exclude,WebSearch: insufficient evidence
+SPFYMRJSYKOXGV-UHFFFAOYSA-N,CCN1CCN(c2cc3c(cc2F)c(=O)c(C(=O)O)cn3C2CC2)CC1,Enrofloxacin,unknown,,,,weak,,,1.0,,verified_exclude,WebSearch: insufficient evidence
+HNSDLXPSAYFUHK-UHFFFAOYSA-N,CCCCC(CC)COC(=O)CC(C(=O)OCC(CC)CCCC)S(=O)(=O)O,docusate sodium,unknown,E,,,medium,,1.0,1.0,0.0,LiverTox_neg,NIH LiverTox=E
+ZCVMWBYGMWKGHF-UHFFFAOYSA-N,CN1CCC(=C2c3ccccc3CC(=O)c3sccc32)CC1,KETOTIFEN,unknown,,,,strong,,1.0,1.0,1.0,verified_pos,WebSearch verified
+NTHXOOBQLCIOLC-UHFFFAOYSA-N,CC(=O)N(CC(O)CO)c1c(I)c(C(=O)NCC(O)CO)c(I)c(C(=O)NCC(O)CO)c1I,IOHEXOL,unknown,,,weak,medium,,,1.0,0.0,verified_neg,WebSearch verified
+JUUBCHWRXWPFFH-UHFFFAOYSA-N,OCCc1ccc(O)c(O)c1,Hydroxytyrosol,unknown,,,,medium,,,1.0,0.0,verified_neg,WebSearch verified
+HKQYGTCOTHHOMP-UHFFFAOYSA-N,COc1ccc(-c2coc3cc(O)ccc3c2=O)cc1,Formononetin,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+PYAOPMWCFSVFOT-UHFFFAOYSA-N,S=c1nc[nH]c2[nH]ncc12,tisopurine,unknown,,,,,,1.0,1.0,,non_drug,industrial/lab chemical
+HPHUVLMMVZITSG-UHFFFAOYSA-N,CCC(C(N)=O)N1CCCC1=O,alpha-ethyl-2-oxo-1-Pyrrolidineacetamide,vLess-DILI-Concern,C,warning_hepatotox,medium,,medium,,1.0,1.0,DILIrank_pos,FDA vLess-DILI-Concern
+OEKWJQXRCDYSHL-UHFFFAOYSA-N,CCCSc1nc(NC2CC2c2ccc(F)c(F)c2)c2nnn(C3CC(OCCO)C(O)C3O)c2n1,Ticagrelor,vNo-DILI-Concern,D,,,,,,,0.0,DILIrank_neg,FDA vNo
+RWZYAGGXGHYGMB-UHFFFAOYSA-N,Nc1ccccc1C(=O)O,Anthranilic Acid,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+YDSDEBIZUNNPOB-UHFFFAOYSA-N,CCC(=O)N(c1ccccc1)C1(C(=O)OC)CCN(CCc2ccccc2)CC1,Carfentanil,unknown,,,,weak,,,1.0,,verified_exclude,WebSearch: insufficient evidence
+ITRJWOMZKQRYTA-UHFFFAOYSA-N,CC(=O)OCC(=O)C1(O)CCC2C3CCC4=CC(=O)CCC4(C)C3C(=O)CC21C,Cortisone acetate,vNo-DILI-Concern,,,,,strong,,,0.0,DILIrank_neg,FDA vNo
+IMWZZHHPURKASS-UHFFFAOYSA-N,Cc1cc(C)cc(OCC2CNC(=O)O2)c1,Metaxalone,vLess-DILI-Concern,E,,,,,1.0,,1.0,DILIrank_pos,FDA vLess-DILI-Concern
+WIIZWVCIJKGZOK-UHFFFAOYSA-N,O=C(NC(CO)C(O)c1ccc([N+](=O)[O-])cc1)C(Cl)Cl,Chloramphenicol,vNo-DILI-Concern,B,,,strong,,,,0.0,DILIrank_neg,FDA vNo
+VGGGPCQERPFHOB-RDBSUJKOSA-N,CC(C)C[C@H](NC(=O)[C@@H](O)[C@H](N)Cc1ccccc1)C(=O)O,ubenimex,unknown,,,,,,1.0,1.0,1.0,verified_pos,WebSearch verified
+JXTHNDFMNIQAHM-UHFFFAOYSA-N,O=C(O)C(Cl)Cl,dichloroacetic acid,unknown,,,,strong,,,1.0,,non_drug,industrial/lab chemical
+JXMIBUGMYLQZGO-UHFFFAOYSA-N,O=C(COCCOCCOCC(=O)Nc1c(I)cc(I)c(C(=O)O)c1I)Nc1c(I)cc(I)c(C(=O)O)c1I,iotroxic acid,unknown,,,,,,1.0,1.0,0.0,verified_neg,WebSearch verified
+WAOQONBSWFLFPE-VIFPVBQESA-N,CCN1CCC[C@H]1CNC(=O)c1c(O)c(Cl)cc(Cl)c1OC,Raclopride,unknown,,,,,,1.0,1.0,,verified_exclude,WebSearch: insufficient evidence
+SFLSHLFXELFNJZ-UHFFFAOYSA-N,NCC(O)c1ccc(O)c(O)c1,Norepinephrine bitartrate,vNo-DILI-Concern,,,,medium,,,,0.0,DILIrank_neg,FDA vNo
+IXTMWRCNAAVVAI-UHFFFAOYSA-N,CN(CCOc1ccc(NS(C)(=O)=O)cc1)CCc1ccc(NS(C)(=O)=O)cc1,Dofetilide,vLess-DILI-Concern,E,,,,,,,1.0,DILIrank_pos,FDA vLess-DILI-Concern
+BARDROPHSZEBKC-OITMNORJSA-N,C[C@@H](O[C@H]1OCCN(Cc2nn(P(=O)(O)O)c(=O)[nH]2)[C@H]1c1ccc(F)cc1)c1cc(C(F)(F)F)cc(C(F)(F)F)c1,FOSAPREPITANT,unknown,,,,,,1.0,1.0,0.0,verified_neg,WebSearch verified
+NTJOBXMMWNYJFB-UHFFFAOYSA-N,CCN1CCCC1CNC(=O)c1cc(S(=O)(=O)CC)c(N)cc1OC,Amisulpride,vLess-DILI-Concern,E,,,,,1.0,,1.0,DILIrank_pos,FDA vLess-DILI-Concern
+LNTHITQWFMADLM-UHFFFAOYSA-N,O=C(O)c1cc(O)c(O)c(O)c1,bismuth subgallate,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+ZDHCJEIGTNNEMY-XGXHKTLJSA-N,CC[C@]1(O)CC[C@H]2[C@@H]3CCC4=CC(=O)CC[C@@H]4[C@H]3CC[C@@]21C,norethandrolone,unknown,,,,,,1.0,1.0,1.0,verified_pos,WebSearch verified
+BTCSSZJGUNDROE-UHFFFAOYSA-N,NCCCC(=O)O,aminobutyric acid,unknown,,,medium,medium,,,1.0,,non_drug,industrial/lab chemical
+NNJVILVZKWQKPM-UHFFFAOYSA-N,CCN(CC)CC(=O)Nc1c(C)cccc1C,LIDOCAINE,vNo-DILI-Concern,,,medium,medium,,,1.0,0.0,DILIrank_neg,FDA vNo
+NZWOPGCLSHLLPA-UHFFFAOYSA-N,CC(=O)OC(C)C[N+](C)(C)C,METHACHOLINE,unknown,,,,medium,,,1.0,,verified_exclude,WebSearch: insufficient evidence
+DJEIHHYCDCTAAH-UHFFFAOYSA-N,COc1ccc(-c2noc(CC(=O)O)c2-c2ccc(OC)cc2)cc1,MOFEZOLAC,unknown,,,,weak,,1.0,1.0,,verified_exclude,WebSearch: insufficient evidence
+DEGAKNSWVGKMLS-UHFFFAOYSA-N,O=C(O)CN(CC(=O)O)Cc1cc2c(cc1O)Oc1cc(O)c(CN(CC(=O)O)CC(=O)O)cc1C21OC(=O)c2ccccc21,oftasceine,unknown,,,,weak,,,1.0,0.0,verified_neg,WebSearch verified
+NMMHHSLZJLPMEG-UHFFFAOYSA-N,O=S(=O)(O)CCNCl,N-Chlorotaurine,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+RQTOOFIXOKYGAN-UHFFFAOYSA-N,CCCc1c2oc(C(=O)O)cc(=O)c2cc2c(=O)cc(C(=O)O)n(CC)c12,NEDOCROMIL,unknown,,,,,,1.0,1.0,0.0,verified_neg,WebSearch verified
+UREBDLICKHMUKA-CXSFZGCWSA-N,C[C@@H]1C[C@H]2[C@@H]3CCC4=CC(=O)C=C[C@]4(C)[C@@]3(F)[C@@H](O)C[C@]2(C)[C@@]1(O)C(=O)CO,DEXAMETHASONE,unknown,,,,,,1.0,1.0,0.0,verified_neg,WebSearch verified
+PLHJDBGFXBMTGZ-UHFFFAOYSA-N,O=C1OCCN1N=Cc1ccc([N+](=O)[O-])o1,furazolidone,unknown,,,,strong,,,1.0,1.0,verified_pos,WebSearch verified
+RYHBNJHYFVUHQT-UHFFFAOYSA-N,C1COCCO1,"1,4-Dioxane",unknown,,,,strong,,,1.0,,non_drug,industrial/lab chemical
+BOVGTQGAOIONJV-UHFFFAOYSA-N,Cc1ccc(S(=O)(=O)NC(=O)NN2CC3CCCC3C2)cc1,gliclazide,unknown,,,weak,strong,,,1.0,1.0,verified_pos,WebSearch verified
+BNQDCRGUHNALGH-UHFFFAOYSA-N,NC(CO)C(=O)NNCc1ccc(O)c(O)c1O,benserazide,unknown,,,,,,1.0,1.0,0.0,verified_neg,WebSearch verified
+POULHZVOKOAJMA-UHFFFAOYSA-N,CCCCCCCCCCCC(=O)O,dodecanoic acid,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+YSGASDXSLKIKOD-UHFFFAOYSA-N,CC(Cc1ccccc1)(NC(=O)CN)c1ccccc1,Remacemide,unknown,,,,,,1.0,1.0,,verified_exclude,WebSearch: insufficient evidence
+BUJAGSGYPOAWEI-UHFFFAOYSA-N,Cc1cccc(C)c1NC(=O)C(C)N,TOCAINIDE,unknown,,,weak,strong,,1.0,1.0,1.0,verified_pos,WebSearch verified
+MGSRCZKZVOBKFT-UHFFFAOYSA-N,Cc1ccc(C(C)C)c(O)c1,thymol,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+LEHOTFFKMJEONL-UHFFFAOYSA-N,O=c1[nH]c(=O)c2[nH]c(=O)[nH]c2[nH]1,Uric Acid,unknown,,,medium,strong,,,1.0,,non_drug,industrial/lab chemical
+PJMPHNIQZUBGLI-UHFFFAOYSA-N,CCC(=O)N(c1ccccc1)C1CCN(CCc2ccccc2)CC1,FENTANYL,unknown,,,medium,medium,weak,1.0,1.0,0.0,verified_neg,WebSearch verified
+VWUXBMIQPBEWFH-UHFFFAOYSA-N,CC12CCC3c4ccc(O)cc4CC(CCCCCCCCC[S+]([O-])CCCC(F)(F)C(F)(F)F)C3C1CCC2O,Fulvestrant,Ambiguous-DILI-Concern,E,adverse_hepatotox,,strong,,,,0.0,LiverTox_neg,NIH LiverTox=E
+PNDPGZBMCMUPRI-UHFFFAOYSA-N,II,iodine,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+MUBZPKHOEPUJKR-UHFFFAOYSA-N,O=C(O)C(=O)O,Oxalic Acid,unknown,,,,medium,,1.0,1.0,,non_drug,industrial/lab chemical
+RJOJUSXNYCILHH-UHFFFAOYSA-N,[Gd+3],Gadolinium Cation (3+),unknown,,,,strong,,,1.0,,non_drug,industrial/lab chemical
+LZNWYQJJBLGYLT-UHFFFAOYSA-N,CN1C(C(=O)Nc2ccccn2)=C(O)c2sccc2S1(=O)=O,tenoxicam,unknown,,,weak,strong,,,1.0,1.0,verified_pos,WebSearch verified
+JLVSRWOIZZXQAD-UHFFFAOYSA-N,O=S(=O)(O)CC(S)CS,unithiol,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+KQXKVJAGOJTNJS-HNNXBMFYSA-N,CC(C)(C)NC[C@H](O)COc1ccccc1C1CCCC1,PENBUTOLOL,vNo-DILI-Concern,,,,,,1.0,1.0,0.0,DILIrank_neg,FDA vNo
+NUVBSKCKDOMJSU-UHFFFAOYSA-N,CCOC(=O)c1ccc(O)cc1,ethyl hydroxybenzoate,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+JZFPYUNJRRFVQU-UHFFFAOYSA-N,O=C(O)c1cccnc1Nc1cccc(C(F)(F)F)c1,niflumic acid,unknown,,,,strong,,,1.0,1.0,verified_pos,WebSearch verified
+LFVVNPBBFUSSHL-UHFFFAOYSA-N,CCCCC(CC)CNC(=N)NC(=N)NCCCCCCNC(=N)NC(=N)NCC(CC)CCCC,alexidine,unknown,,,,medium,,,1.0,,verified_exclude,WebSearch: insufficient evidence
+XPFRXWCVYUEORT-UHFFFAOYSA-N,NC(=O)NC(=O)Cc1ccccc1,PHENACEMIDE,unknown,,,,,,1.0,1.0,1.0,verified_pos,WebSearch verified
+XMXHEBAFVSFQEX-UHFFFAOYSA-N,COc1cc(C(C)=O)ccc1OCCCN1CCC(c2noc3cc(F)ccc23)CC1,ILOPERIDONE,Ambiguous-DILI-Concern,E,,,,,1.0,0.0,0.0,LiverTox_neg,NIH LiverTox=E
+UIWYJDYFSGRHKR-UHFFFAOYSA-N,[Gd],Gadolinium,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+NQPDXQQQCQDHHW-UHFFFAOYSA-N,CSc1nc2cc(Cl)c(Oc3cccc(Cl)c3Cl)cc2[nH]1,TRICLABENDAZOLE,Ambiguous-DILI-Concern,E,,,,,1.0,0.0,0.0,LiverTox_neg,NIH LiverTox=E
+BUCORZSTKDOEKQ-UHFFFAOYSA-N,CN=C1CN(O)C(c2ccccc2)=c2cc(Cl)ccc2=N1,"7-Chloro-2-(methylimino)-5-phenyl-2,3-dihydro-4H-1,4-benzodiazepin-4-ol",vLess-DILI-Concern,C,,,strong,,,1.0,1.0,DILIrank_pos,FDA vLess-DILI-Concern
+QGFORSXNKQLDNO-UHFFFAOYSA-N,O=C(O)CSCC(=O)NC1CCSC1=O,erdosteine,unknown,,,,medium,,,1.0,0.0,verified_neg,WebSearch verified
+QWCRAEMEVRGPNT-UHFFFAOYSA-N,O=C1CC2(CCCC2)CC(=O)N1CCCCN1CCN(c2ncccn2)CC1,BUSPIRONE,Ambiguous-DILI-Concern,E,,,medium,,,0.0,0.0,LiverTox_neg,NIH LiverTox=E
+LPEPZBJOKDYZAD-UHFFFAOYSA-N,O=C(O)c1ccccc1Nc1cccc(C(F)(F)F)c1,flufenamic acid,unknown,,,,medium,,,1.0,1.0,verified_pos,WebSearch verified
+BEZZFPOZAYTVHN-UHFFFAOYSA-N,COC(=O)Nc1nc2ccc([S+]([O-])c3ccccc3)cc2[nH]1,Oxfendazole,unknown,,,,strong,,,1.0,1.0,verified_pos,WebSearch verified
+VOXZDWNPVJITMN-ZBRFXRBCSA-N,C[C@]12CC[C@@H]3c4ccc(O)cc4CC[C@H]3[C@@H]1CC[C@@H]2O,ESTRADIOL,unknown,,,,,,1.0,1.0,1.0,verified_pos,WebSearch verified
+VOVIALXJUBGFJZ-UHFFFAOYSA-N,CCCC1OC2CC3C4CCC5=CC(=O)C=CC5(C)C4C(O)CC3(C)C2(C(=O)CO)O1,Budesonide,vNo-DILI-Concern,E,warning_hepatotox,weak,strong,,,,0.0,DILIrank_neg,FDA vNo
+WCDWBPCFGJXFJZ-UHFFFAOYSA-N,O=C(Cn1ccnc1[N+](=O)[O-])NCCO,Etanidazole,unknown,,,,strong,,,1.0,,verified_exclude,WebSearch: insufficient evidence
+JLYXXMFPNIAWKQ-UHFFFAOYSA-N,ClC1C(Cl)C(Cl)C(Cl)C(Cl)C1Cl,Hexachlorocyclohexane,unknown,,,,strong,,,1.0,,non_drug,industrial/lab chemical
+DBPWSSGDRRHUNT-CEGNMAFCSA-N,CC(=O)[C@@]1(O)CC[C@H]2[C@@H]3CCC4=CC(=O)CC[C@]4(C)[C@H]3CC[C@@]21C,17-Hydroxyprogesterone,unknown,,,,,,1.0,1.0,,non_drug,industrial/lab chemical
+BTJIUGUIPKRLHP-UHFFFAOYSA-N,O=[N+]([O-])c1ccc(O)cc1,4-Nitrophenol,unknown,,,,strong,,,1.0,,non_drug,industrial/lab chemical
+GSNOZLZNQMLSKJ-UHFFFAOYSA-N,CCN(CC)c1cc(C)nc2ncnn12,trapidil,unknown,,,,weak,,1.0,1.0,0.0,verified_neg,WebSearch verified
+ZPACYDRSPFRDHO-ROBAGEODSA-N,CC(C)=CCC/C(C)=C/CC/C(C)=C/CCC(=O)OC/C=C(\C)CCC=C(C)C,gefarnate,unknown,,,,,,1.0,1.0,,verified_exclude,WebSearch: insufficient evidence
+VXFJYXUZANRPDJ-UHFFFAOYSA-N,CCOC(=O)C(CCc1ccccc1)NC(C)C(=O)N1C(C(=O)O)CC2CCCCC21,Trandolapril,vLess-DILI-Concern,E,warning_hepatotox,,,,,,1.0,DILIrank_pos,FDA vLess-DILI-Concern
+DKGAVHZHDRPRBM-UHFFFAOYSA-N,CC(C)(C)O,tert-Butanol,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+DOBMPNYZJYQDGZ-UHFFFAOYSA-N,O=c1oc2ccccc2c(O)c1Cc1c(O)c2ccccc2oc1=O,DICUMAROL,unknown,,,,medium,,,1.0,1.0,verified_pos,WebSearch verified
+KPQZUUQMTUIKBP-UHFFFAOYSA-N,Cc1ncc([N+](=O)[O-])n1CC(C)O,SECNIDAZOLE,Ambiguous-DILI-Concern,E,adverse_hepatotox,,,,,0.0,0.0,LiverTox_neg,NIH LiverTox=E
+YKGYIDJEEQRWQH-UHFFFAOYSA-N,CCOC(=O)c1ccc(OC(=O)CCCCCN=C(N)N)cc1,Gabexate,unknown,,,,weak,,,1.0,0.0,verified_neg,WebSearch verified
+FPPNZSSZRUTDAP-UWFZAAFLSA-N,CC1(C)S[C@@H]2[C@H](NC(=O)C(C(=O)O)c3ccccc3)C(=O)N2[C@H]1C(=O)O,CARBENICILLIN,unknown,,,,,,1.0,1.0,1.0,verified_pos,WebSearch verified
+NOSIYYJFMPDDSA-UHFFFAOYSA-N,CC(=O)c1ccc2c(c1)N(CCCN(C)C)c1ccccc1S2,acepromazine,unknown,,,,,,1.0,1.0,,verified_exclude,WebSearch: insufficient evidence
+RDMOROXKXONCAL-UEKVPHQBSA-N,COC1=C(C(=O)O)N2C(=O)[C@@H](NC(=O)[C@H](N)C3=CCC=CC3)[C@H]2SC1,cefroxadine,unknown,,,,,,1.0,1.0,,verified_exclude,WebSearch: insufficient evidence
+QQODLKZGRKWIFG-UHFFFAOYSA-N,CC1(C)C(C=C(Cl)Cl)C1C(=O)OC(C#N)c1ccc(F)c(Oc2ccccc2)c1,cyfluthrin,unknown,,,,strong,,,1.0,,non_drug,industrial/lab chemical
+FJLBFSROUSIWMA-UHFFFAOYSA-N,CC(C)(C(=O)c1cccnc1)c1cccnc1,METYRAPONE,vNo-DILI-Concern,,,,strong,,,1.0,0.0,DILIrank_neg,FDA vNo
+VQKLRVZQQYVIJW-UHFFFAOYSA-N,N/N=c1\[nH][nH]/c(=N\N)c2ccccc12,dihydralazine,unknown,,,medium,strong,,,1.0,1.0,verified_pos,WebSearch verified
+RERZNCLIYCABFS-UHFFFAOYSA-N,COc1ccc2c3c([nH]c2c1)C(C)=NCC3,Harmaline,unknown,,,,strong,,,1.0,,non_drug,industrial/lab chemical
+GHMLBKRAJCXXBS-UHFFFAOYSA-N,Oc1cccc(O)c1,resorcinol,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+NFACJZMKEDPNKN-UHFFFAOYSA-N,COP(=O)(OC)C(O)C(Cl)(Cl)Cl,metrifonate,unknown,,,,strong,,,1.0,1.0,verified_pos,WebSearch verified
+LMOINURANNBYCM-UHFFFAOYSA-N,CC(C)NCC(O)c1cc(O)cc(O)c1,Metaproterenol sulfate,vNo-DILI-Concern,,,,medium,,1.0,,0.0,DILIrank_neg,FDA vNo
+WUWFMDMBOJLQIV-UHFFFAOYSA-N,NC1CCN(c2nc3c(cc2F)c(=O)c(C(=O)O)cn3-c2ccc(F)cc2F)C1,tosufloxacin,unknown,,,,,,1.0,1.0,1.0,verified_pos,WebSearch verified
+HAPOVYFOVVWLRS-UHFFFAOYSA-N,CCC1(C)CC(=O)NC1=O,ETHOSUXIMIDE,Ambiguous-DILI-Concern,E,,,strong,,1.0,0.0,0.0,LiverTox_neg,NIH LiverTox=E
+TYMABNNERDVXID-DLYFRVTGSA-N,CC(=N)N1CC[C@H](SC2=C(C(=O)O)N3C(=O)[C@H]([C@@H](C)O)[C@H]3C2)C1,panipenem,unknown,,,,,,1.0,1.0,,verified_exclude,WebSearch: insufficient evidence
+RUDATBOHQWOJDD-UHFFFAOYSA-N,CC(CCC(=O)O)C1CCC2C3C(O)CC4CC(O)CCC4(C)C3CCC12C,Chenodiol,Ambiguous-DILI-Concern,E,warning_hepatotox,strong,strong,,,,0.0,LiverTox_neg,NIH LiverTox=E
+QXHHHPZILQDDPS-UHFFFAOYSA-N,Clc1ccc(C(Cn2ccnc2)OCc2ccsc2Cl)c(Cl)c1,TIOCONAZOLE,unknown,,,,,,1.0,1.0,1.0,verified_pos,WebSearch verified
+IOVGROKTTNBUGK-UHFFFAOYSA-N,CC(NCCc1ccc(O)cc1)C(O)c1ccc(O)cc1,RITODRINE,unknown,,,weak,strong,,1.0,1.0,1.0,verified_pos,WebSearch verified
+ZKUKMWMSYCIYRD-ZXFNITATSA-N,Cc1oc(=O)oc1COC(=O)[C@@H]1N2C(=O)[C@@H](NC(=O)[C@H](N)c3ccccc3)[C@H]2SC1(C)C,lenampicillin,unknown,,,,,,1.0,1.0,,verified_exclude,WebSearch: insufficient evidence
+UIMOJFJSJSIGLV-JNHMLNOCSA-N,NC(=O)OC[C@@H]1[C@H](NC(=O)/C(=N\OCC(=O)O)c2csc(N)n2)C(=O)N1S(=O)(=O)O,carumonam,unknown,,,,,,1.0,1.0,1.0,verified_pos,WebSearch verified
+ZMXDDKWLCZADIW-UHFFFAOYSA-N,CN(C)C=O,Dimethylformamide,unknown,,,medium,strong,,,1.0,,non_drug,industrial/lab chemical
+RRYMAQUWDLIUPV-BXKDBHETSA-N,CC(=O)OCC1=C(C(=O)O)N2C(=O)[C@@H](NC(=O)CC#N)[C@H]2SC1,cefacetrile,unknown,,,,,,1.0,1.0,,verified_exclude,WebSearch: insufficient evidence
+MPBVHIBUJCELCL-UHFFFAOYSA-N,CCCCCN(C)CCC(O)(P(=O)(O)O)P(=O)(O)O,IBANDRONIC ACID,vLess-DILI-Concern,,,,medium,,,1.0,1.0,DILIrank_pos,FDA vLess-DILI-Concern
+JURKNVYFZMSNLP-UHFFFAOYSA-N,CN(C)CCC=C1c2ccccc2C=Cc2ccccc21,Cyclobenzaprine hydrochloride,vLess-DILI-Concern,E,adverse_hepatotox,,,,1.0,,1.0,DILIrank_pos,FDA vLess-DILI-Concern
+GNXFOGHNGIVQEH-UHFFFAOYSA-N,COc1ccccc1OCC(O)COC(N)=O,METHOCARBAMOL,Ambiguous-DILI-Concern,E,,,,,1.0,0.0,0.0,LiverTox_neg,NIH LiverTox=E
+VTLYFUHAOXGGBS-UHFFFAOYSA-N,[Fe+3],Iron chloride (FeCl3),unknown,,,,strong,,,1.0,,non_drug,industrial/lab chemical
+YVGGHNCTFXOJCH-UHFFFAOYSA-N,Clc1ccc(C(c2ccc(Cl)cc2)C(Cl)(Cl)Cl)cc1,clofenotane,unknown,,,,strong,,,1.0,,non_drug,industrial/lab chemical
+SIYLLGKDQZGJHK-UHFFFAOYSA-N,CC(C)(C)CC(C)(C)c1ccc(OCCOCC[N+](C)(C)Cc2ccccc2)cc1,benzethonium,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+JPGQOUSTVILISH-UHFFFAOYSA-N,FC(F)OC(F)(F)C(F)Cl,ENFLURANE,unknown,B,,strong,strong,,1.0,1.0,1.0,LiverTox_pos,NIH LiverTox=B
+JKOQGQFVAUAYPM-UHFFFAOYSA-N,NCCCNCCSP(=O)(O)O,AMIFOSTINE,vNo-DILI-Concern,,,,strong,,,1.0,0.0,DILIrank_neg,FDA vNo
+VEQPNABPJHWNSG-UHFFFAOYSA-N,[Ni+2],Nickel cation,unknown,,,,strong,,,1.0,,non_drug,industrial/lab chemical
+KZUIYQJTUIACIG-YBZCJVABSA-N,CC(=O)[C@@]1(O)CC[C@H]2[C@@H]3C=C(C)C4=CC(=O)CC[C@@H]4[C@H]3CC[C@@]21C,nomegestrol,unknown,,,,,,1.0,1.0,,verified_exclude,WebSearch: insufficient evidence
+IPOBOOXFSRWSHL-UHFFFAOYSA-N,c1ccc(C2(c3ccccc3)CC2C2=NCCN2)cc1,cibenzoline,unknown,,,,,,1.0,1.0,0.0,verified_neg,WebSearch verified
+UUVWYPNAQBNQJQ-UHFFFAOYSA-N,CN(C)c1nc(N(C)C)nc(N(C)C)n1,ALTRETAMINE,Ambiguous-DILI-Concern,E,,,,,1.0,0.0,0.0,LiverTox_neg,NIH LiverTox=E
+ZQDWXGKKHFNSQK-UHFFFAOYSA-N,OCCOCCN1CCN(C(c2ccccc2)c2ccc(Cl)cc2)CC1,HYDROXYZINE,vNo-DILI-Concern,E,,,weak,,,1.0,0.0,DILIrank_neg,FDA vNo
+NZUPCNDJBJXXRF-UHFFFAOYSA-O,CC(C[N+](C)(C)C)OC(N)=O,BETHANECHOL,vNo-DILI-Concern,,,,medium,,,1.0,0.0,DILIrank_neg,FDA vNo
+IIDJRNMFWXDHID-UHFFFAOYSA-N,O=P(O)(O)C(O)(Cc1cccnc1)P(=O)(O)O,RISEDRONIC ACID,Ambiguous-DILI-Concern,,,,,,1.0,1.0,1.0,verified_pos,WebSearch verified
+VABCILAOYCMVPS-UHFFFAOYSA-N,CC(=O)CC(c1ccc([N+](=O)[O-])cc1)c1c(O)c2ccccc2oc1=O,acenocoumarol,unknown,,,weak,strong,,,1.0,1.0,verified_pos,WebSearch verified
+RMAQACBXLXPBSY-UHFFFAOYSA-N,O[Si](O)(O)O,Calcium Silicate,unknown,,,,weak,,,1.0,,non_drug,industrial/lab chemical
+VZCYOOQTPOCHFL-UPHRSURJSA-N,O=C(O)/C=C\C(=O)O,Maleic Acid,unknown,,,,,,1.0,1.0,,non_drug,industrial/lab chemical
+MRMBZHPJVKCOMA-YJFSRANCSA-N,C[C@@H](O)[C@H]1C(=O)N2C(C(=O)[O-])=C(SC3Cn4cnc[n+]4C3)[C@H](C)[C@H]12,biapenem,unknown,,,,,,1.0,1.0,,non_drug,industrial/lab chemical
+IOVCWXUNBOPUCH-UHFFFAOYSA-N,O=NO,SODIUM NITRITE,unknown,,,,strong,,,1.0,,non_drug,industrial/lab chemical
+WDZVGELJXXEGPV-UHFFFAOYSA-N,NC(N)=NN=Cc1c(Cl)cccc1Cl,"2-[(2,6-Dichlorophenyl)methylideneamino]guanidine",unknown,,,,weak,,,1.0,,non_drug,industrial/lab chemical
+RIUPLDUFZCXCHM-UHFFFAOYSA-N,O=c1oc2cc(O)ccc2c2ccc(O)cc12,Urolithin A,unknown,,,,weak,,,1.0,,non_drug,industrial/lab chemical
+JTEGQNOMFQHVDC-UHFFFAOYSA-N,Nc1ccn(C2CSC(CO)O2)c(=O)n1,Lamivudine,vLess-DILI-Concern,E,boxed_hepatotox,medium,strong,medium,,,1.0,DILIrank_pos,FDA vLess-DILI-Concern
+WFWLQNSHRPWKFK-UHFFFAOYSA-N,O=c1[nH]c(=O)n(C2CCCO2)cc1F,tegafur,unknown,,,medium,strong,,,1.0,1.0,verified_pos,WebSearch verified
+WGZDBVOTUVNQFP-UHFFFAOYSA-N,CCOC(=O)NNc1nncc2ccccc12,todralazine,unknown,,,,,,1.0,1.0,1.0,verified_pos,WebSearch verified
+NJSMWLQOCQIOPE-OCHFTUDZSA-N,C(=N/NC1=NCCN1)\c1c2ccccc2c(/C=N/NC2=NCCN2)c2ccccc12,bisantrene,unknown,,,,,,1.0,1.0,,verified_exclude,WebSearch: insufficient evidence
+ZIYVHBGGAOATLY-UHFFFAOYSA-N,CC(C(=O)O)C(=O)O,Methylmalonic Acid,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+FSIRXIHZBIXHKT-MHTVFEQDSA-N,CCC(Cc1cnc2nc(N)nc(N)c2n1)c1ccc(C(=O)N[C@@H](CCC(=O)O)C(=O)O)cc1,edatrexate,unknown,,,,,,1.0,1.0,,verified_exclude,WebSearch: insufficient evidence
+CJKGNDLRMLFWEX-UHFFFAOYSA-N,COC1C(O)CC(=O)OC(C)CC=CC=CC(OC2CC(C)(O)C(O)C(C)O2)C(C)CC(CCO)C1OC1OC(C)C(OC2CC(C)(O)C(O)C(C)O2)C(N(C)C)C1O,Epoetin alfa,vNo-DILI-Concern,,warning_hepatotox,,,,,,0.0,DILIrank_neg,FDA vNo
+CXQGFLBVUNUQIA-UHFFFAOYSA-N,CN(C)C(=O)CCCOC(=O)C(C)(C)Oc1ccc(Cl)cc1,clofibride,unknown,,,,,,1.0,1.0,1.0,verified_pos,WebSearch verified
+BQDBKDMTIJBJLA-UHFFFAOYSA-N,CS(=O)(=O)c1ccc2c(c1)N(CCCN1CCC(C(N)=O)CC1)c1ccccc1S2,metopimazine,unknown,,,,,,1.0,1.0,0.0,verified_neg,WebSearch verified
+GIIZNNXWQWCKIB-UHFFFAOYSA-N,OCc1cc(C(O)CNCCCCCCOCCCCc2ccccc2)ccc1O,SALMETEROL,unknown,,,,,,1.0,1.0,0.0,verified_neg,WebSearch verified
+XOAAWQZATWQOTB-UHFFFAOYSA-N,NCCS(=O)(=O)O,taurine,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+RHXHGRAEPCAFML-UHFFFAOYSA-N,CN(C)C(=O)c1cc2cnc(Nc3ccc(N4CCNCC4)cn3)nc2n1C1CCCC1,RIBOCICLIB,vMost-DILI-Concern,C,,medium,,medium,,1.0,1.0,DILIrank_pos,FDA vMost-DILI-Concern
+VGEREEWJJVICBM-UHFFFAOYSA-N,O=C(CCc1ccc(O)cc1)c1c(O)cc(O)cc1O,Phloretin,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+QQBDLJCYGRGAKP-UHFFFAOYSA-N,O=C(O)c1cc(N=Nc2ccc(O)c(C(=O)O)c2)ccc1O,olsalazine,vLess-DILI-Concern,,,,strong,,,1.0,1.0,DILIrank_pos,FDA vLess-DILI-Concern
+HTQBXNHDCUEHJF-UHFFFAOYSA-N,CCC(C)C(NC(=O)C(Cc1ccccc1)NC(=O)C(CC(C)C)NC(=O)C(CCCNC(=N)N)NC(=O)C(NC(=O)C(C)NC(=O)C(CCC(=O)O)NC(=O)C(CCC(=O)O)NC(=O)C(CCC(=O)O)NC(=O)C(CCSC)NC(=O)C(CCC(N)=O)NC(=O)C(CCCCN)NC(=O)C(CO)NC(=O)C(CC(C)C)NC(=O)C(CC(=O)O)NC(=O)C(CO)NC(=O)C(NC(=O)C(Cc1ccccc1)NC(=O)C(NC(=O)CNC(=O)C(CCC(=O)O)NC(=O)CNC(=O)C(N)Cc1c[nH]cn1)C(C)O)C(C)O)C(C)C)C(=O)NC(CCC(=O)O)C(=O)NC(Cc1c[nH]c2ccccc12)C(=O)NC(CC(C)C)C(=O)NC(CCCCN)C(=O)NC(CC(N)=O)C(=O)NCC(=O)NCC(=O)N1CCCC1C(=O)NC(CO)C(=O)NC(CO)C(=O)NCC(=O)NC(C)C(=O)N1CCCC1C(=O)N1CCCC1C(=O)N1CCCC1C(=O)NC(CO)C(N)=O,Exenatide synthetic,vNo-DILI-Concern,,,,medium,weak,,,0.0,DILIrank_neg,FDA vNo
+GSNHKUDZZFZSJB-QUMGSSFMSA-N,Cc1nnc(C(C)C)n1[C@H]1C[C@H]2CC[C@@H](C1)N2CC[C@H](NC(=O)C1CCC(F)(F)CC1)c1ccccc1,MARAVIROC,unknown,,,,,,1.0,1.0,1.0,verified_pos,WebSearch verified
+UCKMPCXJQFINFW-UHFFFAOYSA-N,[S-2],Sodium Sulfide,unknown,,,,weak,,,1.0,,non_drug,industrial/lab chemical
+QYQDKDWGWDOFFU-IUODEOHRSA-N,CN(C)CCn1nnnc1SCC1=C(C(=O)O)N2C(=O)[C@@H](NC(=O)Cc3csc(N)n3)[C@H]2SC1,CEFOTIAM,unknown,,,,,,1.0,1.0,1.0,verified_pos,WebSearch verified
+JRWZLRBJNMZMFE-UHFFFAOYSA-N,CC(CCc1ccc(O)cc1)NCCc1ccc(O)c(O)c1,DOBUTAMINE,vNo-DILI-Concern,,,,medium,,,1.0,0.0,DILIrank_neg,FDA vNo
+QCDYQQDYXPDABM-UHFFFAOYSA-N,Oc1cc(O)cc(O)c1,phloroglucinol,unknown,,,,weak,,,1.0,,non_drug,industrial/lab chemical
+XXYTXQGCRQLRHA-UHFFFAOYSA-N,Cc1ccc(S(=O)(=O)NC(=O)NC2CCCCC2)cc1N,metahexamide,unknown,,,,,,1.0,1.0,1.0,verified_pos,WebSearch verified
+ACSIXWWBWUQEHA-UHFFFAOYSA-N,O=P(O)(O)C(Cl)(Cl)P(=O)(O)O,clodronic acid,unknown,,,,strong,,,1.0,1.0,verified_pos,WebSearch verified
+VXTWEDPZMSVFEF-UHFFFAOYSA-N,CC(Cc1ccccc1)NN,pheniprazine,unknown,,,,strong,,1.0,1.0,1.0,verified_pos,WebSearch verified
+OIPILFWXSMYKGL-UHFFFAOYSA-N,CC(=O)OCC[N+](C)(C)C,ACETYLCHOLINE,vNo-DILI-Concern,,,,medium,,,1.0,0.0,DILIrank_neg,FDA vNo
+NZCRJKRKKOLAOJ-UHFFFAOYSA-N,COC1C=COC2(C)Oc3c(C)c(O)c4c(O)c(c5c(nc6cc(C)ccn65)c4c3C2=O)NC(=O)C(C)=CC=CC(C)C(O)C(C)C(O)C(C)C(OC(C)=O)C1C,Rifaximin,Ambiguous-DILI-Concern,E,,,,weak,,,0.0,LiverTox_neg,NIH LiverTox=E
+JCCNYMKQOSZNPW-UHFFFAOYSA-N,CCOC(=O)N1CCC(=C2c3ccc(Cl)cc3CCc3cccnc32)CC1,LORATADINE,vNo-DILI-Concern,,,weak,strong,,,1.0,0.0,DILIrank_neg,FDA vNo
+SMANXXCATUTDDT-QPJJXVBHSA-N,Fc1ccc(C(c2ccc(F)cc2)N2CCN(C/C=C/c3ccccc3)CC2)cc1,flunarizine,unknown,,,,,,1.0,1.0,,verified_exclude,WebSearch: insufficient evidence
+SSEBTPPFLLCUMN-UHFFFAOYSA-N,CCc1cccc2cc(C(O)CNC(C)(C)C)oc12,bufuralol,unknown,,,,weak,,,1.0,,verified_exclude,WebSearch: insufficient evidence
+HDFGOPSGAURCEO-UHFFFAOYSA-N,CCN1C(=O)C=CC1=O,N-Ethylmaleimide,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+YPBATNHYBCGSSN-VWPFQQQWSA-N,CC1(C)S[C@@H]2[C@H](NC(=O)[C@H](NC(=O)N3CCN(S(C)(=O)=O)C3=O)c3ccccc3)C(=O)N2[C@H]1C(=O)O,MEZLOCILLIN,unknown,,,,,,1.0,1.0,1.0,verified_pos,WebSearch verified
+GMVPRGQOIOIIMI-DWKJAMRDSA-N,CCCCC[C@H](O)/C=C/[C@H]1[C@H](O)CC(=O)[C@@H]1CCCCCCC(=O)O,ALPROSTADIL,unknown,,,,,,1.0,1.0,0.0,verified_neg,WebSearch verified
+QZVCTJOXCFMACW-UHFFFAOYSA-N,CC(COc1ccccc1)N(CCCl)Cc1ccccc1,PHENOXYBENZAMINE,vNo-DILI-Concern,,,,weak,,,1.0,0.0,DILIrank_neg,FDA vNo
+OFVLGDICTFRJMM-WESIUVDSSA-N,CN(C)[C@@H]1C(O)=C(C(N)=O)C(=O)[C@@]2(O)C(O)=C3C(=O)c4c(O)cccc4[C@@](C)(O)[C@H]3C[C@@H]12,TETRACYCLINE,unknown,,,,,,1.0,1.0,1.0,verified_pos,WebSearch verified
+FERIUCNNQQJTOY-UHFFFAOYSA-N,CCCC(=O)O,Butyric Acid,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+RTAQQCXQSZGOHL-UHFFFAOYSA-N,[Ti],Titanium,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+AFSDNFLWKVMVRB-UHFFFAOYSA-N,O=c1oc2c(O)c(O)cc3c(=O)oc4c(O)c(O)cc1c4c23,Ellagic Acid,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+VVFDMWZLBPUKTD-ZKRNHDOASA-N,CC(OC(=O)OC1CCCCC1)OC(=O)C1=C(CSc2nnnn2CCN(C)C)CS[C@@H]2[C@H](NC(=O)Cc3csc(N)n3)C(=O)N12,cefotiam hexetil,unknown,,,,,,1.0,1.0,,verified_exclude,WebSearch: insufficient evidence
+ALYNCZNDIQEVRV-UHFFFAOYSA-N,Nc1ccc(C(=O)O)cc1,aminobenzoic acid,unknown,,,weak,weak,,1.0,1.0,,non_drug,industrial/lab chemical
+QELUYTUMUWHWMC-UHFFFAOYSA-N,CC1=NN(c2ccccc2)C(=O)C1,EDARAVONE,vNo-DILI-Concern,E,,,strong,,,1.0,0.0,DILIrank_neg,FDA vNo
+HTJXMOGUGMSZOG-UHFFFAOYSA-N,O=C(Cn1c(=O)sc2ccc(Cl)cc21)N1CCN(CCO)CC1,tiaramide,unknown,,,,,,1.0,1.0,,verified_exclude,WebSearch: insufficient evidence
+CDAISMWEOUEBRE-UHFFFAOYSA-N,OC1C(O)C(O)C(O)C(O)C1O,An inositol,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+PNXBXCRWXNESOV-UHFFFAOYSA-N,O=c1cc(Cc2ccccc2)[nH]c(=S)[nH]1,benzylthiouracil,unknown,,,,,,1.0,1.0,,non_drug,industrial/lab chemical
+ATALOFNDEOCMKK-UHFFFAOYSA-N,CC(OC1OCCN(Cc2n[nH]c(=O)[nH]2)C1c1ccc(F)cc1)c1cc(C(F)(F)F)cc(C(F)(F)F)c1,Aprepitant,Ambiguous-DILI-Concern,E,,,,weak,,,0.0,LiverTox_neg,NIH LiverTox=E
+FCCNSUIJIOOXEZ-SJYYZXOBSA-N,O=S(=O)(O)O[C@@H]1[C@@H](OS(=O)(=O)O)[C@H](O[C@@H]2CO[C@@H](O)[C@H](OS(=O)(=O)O)[C@H]2OS(=O)(=O)O)OC[C@H]1O,Xylan Sulfate,unknown,,,,,,1.0,1.0,,non_drug,industrial/lab chemical
+IPOKCKJONYRRHP-UHFFFAOYSA-N,O=C(O)CCNC(=O)c1ccc(N=Nc2ccc(O)c(C(=O)O)c2)cc1,5-((4-((2-Carboxyethyl)carbamoyl)phenyl)diazenyl)-2-hydroxybenzoic acid,Ambiguous-DILI-Concern,,warning_hepatotox,,,,,1.0,,non_drug,industrial/lab chemical
+REOJLIXKJWXUGB-UHFFFAOYSA-N,CCCCC1C(=O)NN(c2ccccc2)C1=O,mofebutazone,unknown,,,,,,1.0,1.0,,verified_exclude,WebSearch: insufficient evidence
+VYZAMTAEIAYCRO-UHFFFAOYSA-N,[Cr],Chromium,unknown,,,,strong,,,1.0,,non_drug,industrial/lab chemical
+ANGKOCUUWGHLCE-UHFFFAOYSA-N,C[N+]1(C)CCC(OC(=O)C(O)(c2ccccc2)C2CCCC2)C1,GLYCOPYRRONIUM BROMIDE,vNo-DILI-Concern,,,,,weak,,1.0,0.0,DILIrank_neg,FDA vNo
+RGLYKWWBQGJZGM-ISLYRVAYSA-N,CC/C(=C(/CC)c1ccc(O)cc1)c1ccc(O)cc1,DIETHYLSTILBESTROL,unknown,,,,,,1.0,1.0,,verified_exclude,WebSearch: insufficient evidence
+FIAFUQMPZJWCLV-UHFFFAOYSA-N,Cc1ccc(C(=O)Nc2ccc(S(=O)(=O)O)c3cc(S(=O)(=O)O)cc(S(=O)(=O)O)c23)cc1NC(=O)c1cccc(NC(=O)Nc2cccc(C(=O)Nc3cc(C(=O)Nc4ccc(S(=O)(=O)O)c5cc(S(=O)(=O)O)cc(S(=O)(=O)O)c45)ccc3C)c2)c1,suramin,unknown,,,,medium,,1.0,1.0,,verified_exclude,WebSearch: insufficient evidence
+XLYOFNOQVPJJNP-UHFFFAOYSA-N,O,WATER,vNo-DILI-Concern,,,,medium,,,1.0,0.0,DILIrank_neg,FDA vNo
+GCPXMJHSNVMWNM-UHFFFAOYSA-N,O[As](O)O,Arsenous acid,unknown,,,,strong,,,1.0,,non_drug,industrial/lab chemical
+PLIGPBGDXASWPX-UHFFFAOYSA-N,CN(C)CCCn1c2c(c3ccccc31)CCCCCC2,iprindole,unknown,,,,,,1.0,1.0,,non_drug,industrial/lab chemical
+XQLWNAFCTODIRK-UHFFFAOYSA-N,COc1ccc(CCN(C)CCCC(C#N)(c2cc(OC)c(OC)c(OC)c2)C(C)C)cc1OC,gallopamil,unknown,,,,,,1.0,1.0,,verified_exclude,WebSearch: insufficient evidence
+ZVHNDZWQTBEVRY-UHFFFAOYSA-N,N#CCNC(=O)c1ccc(-c2ccnc(Nc3ccc(N4CCOCC4)cc3)n2)cc1,MOMELOTINIB,unknown,D,,,,,,1.0,1.0,LiverTox_pos,NIH LiverTox=D
+NPYPAHLBTDXSSS-UHFFFAOYSA-N,[K+],POTASSIUM CHLORIDE,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+PEDCQBHIVMGVHV-UHFFFAOYSA-N,OCC(O)CO,GLYCERIN,unknown,,,,medium,,1.0,1.0,,non_drug,industrial/lab chemical
+JWZZKOKVBUJMES-UHFFFAOYSA-N,CC(C)NCC(O)c1ccc(O)c(O)c1,ISOPROTERENOL,vNo-DILI-Concern,,,,strong,,,1.0,0.0,DILIrank_neg,FDA vNo
+SEBMTIQKRHYNIT-UHFFFAOYSA-N,CN1CCC(=C2c3ccccc3CCc3cccnc32)CC1,AZATADINE,unknown,,,,,,1.0,1.0,0.0,verified_neg,WebSearch verified
+OHRURASPPZQGQM-UHFFFAOYSA-N,CC=C1NC(=O)C2CSSCCC=CC(CC(=O)NC(C(C)C)C(=O)N2)OC(=O)C(C(C)C)NC1=O,Romidepsin,vNo-DILI-Concern,C,warning_hepatotox,,,,,,0.0,DILIrank_neg,FDA vNo
+IZTQOLKUZKXIRV-UHFFFAOYSA-N,CSCCC(NC(=O)C(Cc1ccc(OS(=O)(=O)O)cc1)NC(=O)C(N)CC(=O)O)C(=O)NCC(=O)NC(Cc1c[nH]c2ccccc12)C(=O)NC(CCSC)C(=O)NC(CC(=O)O)C(=O)NC(Cc1ccccc1)C(N)=O,Sincalide,vNo-DILI-Concern,,,,medium,,,,0.0,DILIrank_neg,FDA vNo
+VZGDMQKNWNREIO-UHFFFAOYSA-N,ClC(Cl)(Cl)Cl,carbon tetrachloride,unknown,,,,strong,,1.0,1.0,,non_drug,industrial/lab chemical
+ZAIPMKNFIOOWCQ-UEKVPHQBSA-N,CC1=C(C(=O)O)N2C(=O)[C@@H](NC(=O)[C@H](N)c3ccccc3)[C@H]2SC1,CEPHALEXIN ANHYDROUS,unknown,,,,,,1.0,1.0,1.0,verified_pos,WebSearch verified
+SYLKGLMBLAAGSC-QLVMHMETSA-N,NC(=O)c1cc[n+](CC2=C(C(=O)O)N3C(=O)[C@@H](NC(=O)[C@@H](c4ccccc4)S(=O)(=O)[O-])[C@H]3SC2)cc1,cefsulodin,unknown,,,,,,1.0,1.0,,verified_exclude,WebSearch: insufficient evidence
+ZOBPZXTWZATXDG-UHFFFAOYSA-N,O=C1CSC(=O)N1,Thiazolidinedione,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+VMMKGHQPQIEGSQ-UHFFFAOYSA-N,O=P(O)(O)C(O)(Cc1cnc2ccccn12)P(=O)(O)O,MINODRONIC ACID,unknown,,,,weak,,,1.0,0.0,verified_neg,WebSearch verified
+DRLFMBDRBRZALE-UHFFFAOYSA-N,COc1ccc2[nH]cc(CCNC(C)=O)c2c1,MELATONIN,unknown,E,,,medium,,1.0,1.0,0.0,LiverTox_neg,NIH LiverTox=E
+UBPYILGKFZZVDX-UHFFFAOYSA-N,COc1cc(Nc2c(C#N)cnc3cc(OCCCN4CCN(C)CC4)c(OC)cc23)c(Cl)cc1Cl,BOSUTINIB,vMost-DILI-Concern,D,,,,,,1.0,1.0,DILIrank_pos,FDA vMost-DILI-Concern
+QVYRGXJJSLMXQH-UHFFFAOYSA-N,Cc1ccccc1C(OCCN(C)C)c1ccccc1,ORPHENADRINE,vNo-DILI-Concern,E,,,strong,,,1.0,0.0,DILIrank_neg,FDA vNo
+BZCALJIHZVNMGJ-HSZRJFAPSA-N,Cc1cc(OCCCS(C)(=O)=O)cc(C)c1-c1cccc(COc2ccc3c(c2)OC[C@H]3CC(=O)O)c1,Fasiglifam,unknown,,,,,,1.0,1.0,1.0,verified_pos,WebSearch verified
+BODKAQWWZBLGOU-UHFFFAOYSA-N,[Hg+]c1ccccc1,phenylmercuric nitrate,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+ZDWVWKDAWBGPDN-UHFFFAOYSA-O,CC[N+](C)(CC)CCC[n+]1c(-c2ccccc2)c2cc(N)ccc2c2ccc(N)cc21,Propidium,unknown,,,,weak,,,1.0,,non_drug,industrial/lab chemical
+KHPXUQMNIQBQEV-UHFFFAOYSA-N,O=C(O)CC(=O)C(=O)O,Oxaloacetate Ion,unknown,,,,weak,,,1.0,,non_drug,industrial/lab chemical
+DHSUYTOATWAVLW-WFVMDLQDSA-N,CC1(C)C[C@@H]1C(=O)N/C(=C\CCCCSC[C@H](N)C(=O)O)C(=O)O,CILASTATIN,unknown,,,,,,1.0,1.0,,non_drug,industrial/lab chemical
+XUIIKFGFIJCVMT-GFCCVEGCSA-N,N[C@H](Cc1cc(I)c(Oc2cc(I)c(O)c(I)c2)c(I)c1)C(=O)O,DEXTROTHYROXINE,unknown,,,,,,1.0,1.0,,verified_exclude,WebSearch: insufficient evidence
+VVIAGPKUTFNRDU-UHFFFAOYSA-N,Nc1nc2c(c(=O)[nH]1)N(C=O)C(CNc1ccc(C(=O)NC(CCC(=O)O)C(=O)O)cc1)CN2,Leucovorin calcium,vNo-DILI-Concern,,,medium,strong,,,,0.0,DILIrank_neg,FDA vNo
+NFBAXHOPROOJAW-UHFFFAOYSA-N,O=C1c2ccccc2C(=O)C1c1ccccc1,PHENINDIONE,unknown,,,medium,strong,,1.0,1.0,1.0,verified_pos,WebSearch verified
+FDBYIYFVSAHJLY-UHFFFAOYSA-N,CC(C)c1cc(Oc2c(Cl)cc(-n3nc(C#N)c(=O)[nH]c3=O)cc2Cl)n[nH]c1=O,RESMETIROM,unknown,D,,,,,,1.0,1.0,LiverTox_pos,NIH LiverTox=D
+WTKZEGDFNFYCGP-UHFFFAOYSA-N,c1cn[nH]c1,Pyrazole,unknown,,,,strong,,,1.0,,non_drug,industrial/lab chemical
+MKKYBZZTJQGVCD-XTCKQBCOSA-N,NCC[C@H](O)C(=O)N[C@@H]1C[C@H](N)[C@@H](O[C@H]2O[C@H](CN)CC[C@H]2N)[C@H](O)[C@H]1O[C@H]1O[C@H](CO)[C@@H](O)[C@H](N)[C@H]1O,arbekacin,unknown,,,,,,1.0,1.0,,verified_exclude,WebSearch: insufficient evidence
+RBKASMJPSJDQKY-RBFSKHHSSA-N,C[C@@H]1C[C@H]2[C@@H]3CCC4=CC(=O)C=C[C@]4(C)C3=CC[C@]2(C)[C@H]1C(=O)CN1CCN(c2cc(N3CCCC3)nc(N3CCCC3)n2)CC1,tirilazad,unknown,,,,,,1.0,1.0,,non_drug,industrial/lab chemical
+JCYZMTMYPZHVBF-UHFFFAOYSA-N,Nc1nc(N)nc(Nc2ccc([As]3SCC(CO)S3)cc2)n1,melarsoprol,unknown,,,,weak,,1.0,1.0,1.0,verified_pos,WebSearch verified
+PGBHMTALBVVCIT-UHFFFAOYSA-N,NCC1OC(OC2C(CO)OC(OC3C(O)C(N)CC(N)C3OC3OC(CN)C(O)C(O)C3N)C2O)C(N)C(O)C1O,Neomycin sulfate,vNo-DILI-Concern,,,,medium,,,,0.0,DILIrank_neg,FDA vNo
+CPEUVMUXAHMANV-UHFFFAOYSA-N,COC(=O)Nc1nc2cc(C(=O)c3ccc(F)cc3)ccc2[nH]1,flubendazole,unknown,,,,,,1.0,1.0,1.0,verified_pos,WebSearch verified
+CPTIBDHUFVHUJK-NZYDNVMFSA-N,CCNNC(=O)[C@@H]1[C@H](c2cc(OC)c(OC)c(OC)c2)c2cc3c(cc2[C@H](O)[C@H]1CO)OCO3,mitopodozide,unknown,,,,,,1.0,1.0,,verified_exclude,WebSearch: insufficient evidence
+GJJRIOLBUILIGK-UHFFFAOYSA-N,CCCCOCC(CN1C(=O)N(CC(COCCCC)OC(N)=O)C(=O)C(CC)(c2ccccc2)C1=O)OC(N)=O,difebarbamate,unknown,,,medium,strong,,1.0,1.0,1.0,verified_pos,WebSearch verified
+KDYFGRWQOYBRFD-UHFFFAOYSA-N,O=C(O)CCC(=O)O,SODIUM SUCCINATE,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+DNIAPMSPPWPWGF-UHFFFAOYSA-N,CC(O)CO,propylene glycol,unknown,,,,strong,,,1.0,,non_drug,industrial/lab chemical
+REDXJYDRNCIFBQ-UHFFFAOYSA-N,[Al+3],aluminium oxide,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+FABUFPQFXZVHFB-UHFFFAOYSA-N,CC(=Cc1csc(C)n1)C1CC2OC2(C)CCCC(C)C(O)C(C)C(=O)C(C)(C)C(O)CC(=O)N1,Ixabepilone,Ambiguous-DILI-Concern,E,boxed_hepatotox,,,,,,0.0,LiverTox_neg,NIH LiverTox=E
+MBBZMMPHUWSWHV-UHFFFAOYSA-N,CNCC(O)C(O)C(O)C(O)CO,Iothalamate meglumine,vNo-DILI-Concern,,,medium,weak,,,,0.0,DILIrank_neg,FDA vNo
+PVBQYTCFVWZSJK-UHFFFAOYSA-N,C[N+](C)(C)NCCC(=O)[O-],meldonium,unknown,,,,weak,,,1.0,0.0,verified_neg,WebSearch verified
+RDOIQAHITMMDAJ-UHFFFAOYSA-N,CN(C)C(=O)C(CCN1CCC(O)(c2ccc(Cl)cc2)CC1)(c1ccccc1)c1ccccc1,LOPERAMIDE,vNo-DILI-Concern,,,,medium,weak,,1.0,0.0,DILIrank_neg,FDA vNo
+ZEMGGZBWXRYJHK-UHFFFAOYSA-N,O=c1cc[nH]c(=S)[nH]1,thiouracil,unknown,,,,,,1.0,1.0,,non_drug,industrial/lab chemical
+YNJBWRMUSHSURL-UHFFFAOYSA-N,O=C(O)C(Cl)(Cl)Cl,trichloroacetic acid,unknown,,,,strong,,,1.0,,non_drug,industrial/lab chemical
+DYDCUQKUCUHJBH-UHFFFAOYSA-N,NC1CONC1=O,Cycloserine,Ambiguous-DILI-Concern,E,,,strong,,,,0.0,LiverTox_neg,NIH LiverTox=E
+WIGIZIANZCJQQY-UHFFFAOYSA-N,CCC1=C(C)CN(C(=O)NCCc2ccc(S(=O)(=O)NC(=O)NC3CCC(C)CC3)cc2)C1=O,"1H-Pyrrole-1-carboxamide, 3-ethyl-2,5-dihydro-4-methyl-N-2-4-(trans-4-methylcyclohexyl)aminocarbonylaminosulfonylphenylethyl-2-oxo-",vLess-DILI-Concern,,warning_hepatotox,weak,,,,1.0,1.0,DILIrank_pos,FDA vLess-DILI-Concern
+LVXJQMNHJWSHET-UHFFFAOYSA-N,COc1cc2ncnc(Nc3ccc(F)c(Cl)c3)c2cc1NC(=O)C=CCN1CCCCC1,Dacomitinib,vLess-DILI-Concern,E,,,,,,,1.0,DILIrank_pos,FDA vLess-DILI-Concern
+IPQVTOJGNYVQEO-UHFFFAOYSA-N,O=C(O)c1cc(O)c2c(c1)C(C1c3cc(C(=O)O)cc(O)c3C(=O)c3c(OC4OC(CO)C(O)C(O)C4O)cccc31)c1cccc(OC3OC(CO)C(O)C(O)C3O)c1C2=O,Sennosides,unknown,D,,,,,,1.0,1.0,LiverTox_pos,NIH LiverTox=D
+MFDFERRIHVXMIY-UHFFFAOYSA-N,CCN(CC)CCOC(=O)c1ccc(N)cc1,PROCAINE,unknown,,,,weak,,0.0,1.0,0.0,verified_neg,WebSearch verified
+TYYBFXNZMFNZJT-UHFFFAOYSA-N,CNC(=O)c1c(I)c(C(=O)NCC(=O)Nc2c(I)c(C(=O)O)c(I)c(C(=O)NCCO)c2I)c(I)c(N(C)C(C)=O)c1I,IOXAGLATE MEGLUMINE,unknown,,,,,,1.0,1.0,0.0,verified_neg,WebSearch verified
+YHXISWVBGDMDLQ-UHFFFAOYSA-N,O=C(NCCN1CCOCC1)c1ccc(Cl)cc1,MOCLOBEMIDE,unknown,,,,,,1.0,1.0,,verified_exclude,WebSearch: insufficient evidence
+JSDRRTOADPPCHY-UHFFFAOYSA-N,CCOC(=O)C(CCc1ccccc1)NC(C)C(=O)N1Cc2ccccc2CC1C(=O)O,Quinapril hydrochloride,vLess-DILI-Concern,E,,,strong,,,,1.0,DILIrank_pos,FDA vLess-DILI-Concern
+GVJHHUAWPYXKBD-IEOSBIPESA-N,Cc1c(C)c2c(c(C)c1O)CC[C@@](C)(CCC[C@H](C)CCC[C@H](C)CCCC(C)C)O2,tocofersolan,unknown,,,,,,1.0,1.0,,non_drug,industrial/lab chemical
+YNZFUWZUGRBMHL-UHFFFAOYSA-N,OCCN1CCN(CCCN2c3ccccc3C=Cc3ccccc32)CC1,opipramol,unknown,,,,,,1.0,1.0,,verified_exclude,WebSearch: insufficient evidence
+WVYXNIXAMZOZFK-UHFFFAOYSA-N,CCOC(=O)NC1=C(N2CC2)C(=O)C(NC(=O)OCC)=C(N2CC2)C1=O,diaziquone,unknown,,,,,,1.0,1.0,,verified_exclude,WebSearch: insufficient evidence
+YXIWHUQXZSMYRE-UHFFFAOYSA-N,S=c1[nH]c2ccccc2s1,2-Mercaptobenzothiazole,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+LTMHDMANZUZIPE-UHFFFAOYSA-N,CC1OC(OC2C(O)CC(OC3C(O)CC(OC4CCC5(C)C(CCC6C5CC(O)C5(C)C(C7=CC(=O)OC7)CCC65O)C4)OC3C)OC2C)CC(O)C1O,Digoxin,vNo-DILI-Concern,,,,strong,,,,0.0,DILIrank_neg,FDA vNo
+ZPMNHBXQOOVQJL-UHFFFAOYSA-N,COCCCN1CCC(NC(=O)c2cc(Cl)c(N)c3c2OCC3)CC1,PRUCALOPRIDE,vNo-DILI-Concern,E,,,,,1.0,1.0,0.0,DILIrank_neg,FDA vNo
+JWUBBDSIWDLEOM-DTOXIADCSA-N,C=C1CC[C@H](O)C/C1=C/C=C1\CCC[C@]2(C)[C@@H]([C@H](C)CCCC(C)(C)O)CC[C@@H]12,CALCIFEDIOL ANHYDROUS,unknown,,,,,,1.0,1.0,,non_drug,industrial/lab chemical
+AGBQKNBQESQNJD-UHFFFAOYSA-N,O=C(O)CCCCC1CCSS1,thioctic acid,unknown,,,,medium,,,1.0,0.0,verified_neg,WebSearch verified
+RGOVYLWUIBMPGK-UHFFFAOYSA-N,CCCCCCCCC(=O)NCc1ccc(O)c(OC)c1,Nonivamide,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+NBIIXXVUZAFLBC-UHFFFAOYSA-N,O=P(O)(O)O,"SODIUM PHOSPHATE, DIBASIC, ANHYDROUS",unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+WHXMKTBCFHIYNQ-UHFFFAOYSA-N,CC1CC(=O)NN=C1c1ccc(NN=C(C#N)C#N)cc1,Simendan,unknown,,,,weak,,,1.0,0.0,verified_neg,WebSearch verified
+PHEZJEYUWHETKO-UHFFFAOYSA-N,Cc1c(-c2ccc(-c3ccccc3F)cc2)nc2ccc(F)cc2c1C(=O)O,Brequinar,unknown,,,,medium,,,1.0,,verified_exclude,WebSearch: insufficient evidence
+VZJFGSRCJCXDSG-UHFFFAOYSA-N,C[N+](C)(C)CCCCCC[N+](C)(C)C,hexamethonium,unknown,,,,weak,,,1.0,0.0,verified_neg,WebSearch verified
+WYDUSKDSKCASEF-UHFFFAOYSA-N,OC(CCN1CCCC1)(c1ccccc1)C1CCCCC1,PROCYCLIDINE,vNo-DILI-Concern,,,,weak,,,1.0,0.0,DILIrank_neg,FDA vNo
+YGCODSQDUUUKIV-UHFFFAOYSA-N,Nc1nc2cc(Cl)ccc2o1,zoxazolamine,unknown,,,,weak,,1.0,1.0,1.0,verified_pos,WebSearch verified
+WEUCDJCFJHYFRL-UHFFFAOYSA-N,CN1CCCN(C(c2ccccc2)c2ccc(Cl)cc2)CC1,homochlorcyclizine,unknown,,,,,,1.0,1.0,0.0,verified_neg,WebSearch verified
+ACTRVOBWPAIOHC-UHFFFAOYSA-N,O=C(O)C(S)C(S)C(=O)O,Dimercaptosuccinic Acid,vLess-DILI-Concern,E,,,strong,,,1.0,1.0,DILIrank_pos,FDA vLess-DILI-Concern
+TWHSQQYCDVSBRK-UHFFFAOYSA-N,CNC(=O)c1cccc2c(Nc3ccc(NS(C)(=O)=O)cc3OC)c3cccc(C)c3nc12,asulacrine,unknown,,,,strong,,1.0,1.0,,verified_exclude,WebSearch: insufficient evidence
+GJSURZIOUXUGAL-UHFFFAOYSA-N,Clc1cccc(Cl)c1NC1=NCCN1,Clonidine hydrochloride,Ambiguous-DILI-Concern,E,adverse_hepatotox,weak,medium,,1.0,,0.0,LiverTox_neg,NIH LiverTox=E
+DFYRUELUNQRZTB-UHFFFAOYSA-N,COc1cc(C(C)=O)ccc1O,Acetovanillone,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+VNFPBHJOKIVQEB-UHFFFAOYSA-N,Clc1ccccc1C(c1ccccc1)(c1ccccc1)n1ccnc1,Clotrimazole,vLess-DILI-Concern,E,,,strong,,,,1.0,DILIrank_pos,FDA vLess-DILI-Concern
+BLGXFZZNTVWLAY-UHFFFAOYSA-N,COC(=O)C1C(O)CCC2CN3CCc4c([nH]c5ccccc45)C3CC21,Yohimbine,,E,,,medium,,,,0.0,LiverTox_neg,NIH LiverTox=E
+DPYMFVXJLLWWEU-UHFFFAOYSA-N,FC(F)OC(F)C(F)(F)F,DESFLURANE,unknown,C,,medium,,,,1.0,1.0,LiverTox_pos,NIH LiverTox=C
+WLOHNSSYAXHWNR-DWIOZXRMSA-N,CC[C@H]1OC(=O)[C@H](C)[C@@H](O[C@H]2C[C@@](C)(OC)[C@@H](O)[C@H](C)O2)[C@H](C)[C@@H](O[C@@H]2O[C@H](C)C[C@H](N(C)C)[C@H]2O)[C@](C)(O)C[C@@H](C)[C@@H]2N[C@@H](COCCOC)O[C@H]([C@H]2C)[C@]1(C)O,DIRITHROMYCIN,unknown,,,,,,1.0,1.0,1.0,verified_pos,WebSearch verified
+GJAWHXHKYYXBSV-UHFFFAOYSA-N,O=C(O)c1cccnc1C(=O)O,Quinolinic Acid,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+LMNZTLDVJIUSHT-UHFFFAOYSA-N,COP(=S)(OC)SCN1C(=O)c2ccccc2C1=O,Phosmet,unknown,,,,weak,,,1.0,,non_drug,industrial/lab chemical
+GPXBXXGIAQBQNI-UHFFFAOYSA-N,CCCS(=O)(=O)Nc1ccc(F)c(C(=O)c2c[nH]c3ncc(-c4ccc(Cl)cc4)cc23)c1F,Vemurafenib,vLess-DILI-Concern,E,,weak,,,,,1.0,DILIrank_pos,FDA vLess-DILI-Concern
+WDVSHHCDHLJJJR-UHFFFAOYSA-N,Nc1ccc2cc3ccc(N)cc3nc2c1,proflavine,unknown,,,,medium,,,1.0,,verified_exclude,WebSearch: insufficient evidence
+CBENFWSGALASAD-UHFFFAOYSA-N,O=[O+][O-],Ozone,unknown,,,,strong,,,1.0,,non_drug,industrial/lab chemical
+HXNFUBHNUDHIGC-UHFFFAOYSA-N,O=c1[nH]c(=O)c2cn[nH]c2[nH]1,Oxypurinol,unknown,,,,medium,,,1.0,,verified_exclude,WebSearch: insufficient evidence
+BIDUPMYXGFNAEJ-APGVDKLISA-N,CO[C@H]1[C@@H](O)[C@H](N)[C@@H](O[C@H]2O[C@H]([C@H](C)N)CC[C@H]2N)[C@H](O)[C@@H]1N(C)C(=O)CN,astromicin,unknown,,,,,,1.0,1.0,0.0,verified_neg,WebSearch verified
+LLPOLZWFYMWNKH-UHFFFAOYSA-N,COc1ccc2c3c1OC1C(=O)CCC4C(C2)N(C)CCC314,Hydrocodone,,E,boxed_hepatotox,,,,,,0.0,LiverTox_neg,NIH LiverTox=E
+ZBCATMYQYDCTIZ-UHFFFAOYSA-N,Cc1ccc(O)c(O)c1,4-Methylcatechol,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+YTKUWDBFDASYHO-UHFFFAOYSA-N,Cn1c(CCCC(=O)O)nc2cc(N(CCCl)CCCl)ccc21,BENDAMUSTINE,vNo-DILI-Concern,C,warning_hepatotox,,,,,1.0,0.0,DILIrank_neg,FDA vNo
+ASUTZQLVASHGKV-UHFFFAOYSA-N,COc1ccc2c3c1OC1CC(O)C=CC31CCN(C)C2,Galantamine hydrobromide,Ambiguous-DILI-Concern,E,,,medium,,,,0.0,LiverTox_neg,NIH LiverTox=E
+ZKUDBRCEOBOWLF-UHFFFAOYSA-N,Cc1cc(C(=O)NCCc2ccc(S(=O)(=O)NC(=O)NN3CCCCCC3)cc2)no1,glisoxepide,unknown,,,,,,1.0,1.0,,verified_exclude,WebSearch: insufficient evidence
+VDNLFJGJEQUWRB-UHFFFAOYSA-N,O=C(O)c1c(Cl)c(Cl)c(Cl)c(Cl)c1-c1c2cc(I)c(=O)c(I)c-2oc2c(I)c(O)c(I)cc12,ROSE BENGAL FREE ACID,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+CBCKQZAAMUWICA-UHFFFAOYSA-N,Nc1ccc(N)cc1,P-Phenylenediamine,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+FPCCSQOGAWCVBH-UHFFFAOYSA-N,O=C(c1ccc(F)cc1)C1CCN(CCn2c(=O)[nH]c3ccccc3c2=O)CC1,ketanserin,unknown,,,,weak,,,1.0,,verified_exclude,WebSearch: insufficient evidence
+WINHZLLDWRZWRT-ATVHPVEESA-N,CCN(CC)CCNC(=O)c1c(C)[nH]c(/C=C2\C(=O)Nc3ccc(F)cc32)c1C,SUNITINIB,unknown,,,,,,1.0,1.0,,non_drug,industrial/lab chemical
+ORFOPKXBNMVMKC-DWVKKRMSSA-N,CC(C)(O/N=C(\C(=O)N[C@@H]1C(=O)N2C(C(=O)O)=C(C[n+]3ccccc3)CS[C@H]12)c1csc(N)n1)C(=O)[O-],CEFTAZIDIME SODIUM,unknown,,,,,,1.0,1.0,,non_drug,industrial/lab chemical
+SPOAFZKFCYREMW-FWYLUGOYSA-N,CCCCC(C)(O)C/C=C/[C@H]1[C@H](O)CC(=O)[C@@H]1CCCCCCCO,rioprostil,unknown,,,,,,1.0,1.0,0.0,verified_neg,WebSearch verified
+IPOPQVVNCFQFRK-UHFFFAOYSA-N,CCOC(=O)C1(c2ccccc2)CCN(CCC(O)c2ccccc2)CC1,phenoperidine,unknown,,,,,,1.0,1.0,,verified_exclude,WebSearch: insufficient evidence
+YSXKPIUOCJLQIE-UHFFFAOYSA-N,OC(CCN1CCCCC1)(c1ccccc1)C1CC2C=CC1C2,BIPERIDEN,vNo-DILI-Concern,E,,,weak,,,1.0,0.0,DILIrank_neg,FDA vNo
+WSEQXVZVJXJVFP-FQEVSTJZSA-N,CN(C)CCC[C@@]1(c2ccc(F)cc2)OCc2cc(C#N)ccc21,ESCITALOPRAM,unknown,,,,,,1.0,1.0,1.0,verified_pos,WebSearch verified
+HIGRLDNHDGYWQJ-UHFFFAOYSA-P,O/N=C/c1cc[n+](COC[n+]2ccc(/C=N/O)cc2)cc1,obidoxime,unknown,,,,medium,,,1.0,1.0,verified_pos,WebSearch verified
+PTQXTEKSNBVPQJ-UHFFFAOYSA-N,CC(C)c1cc(C(C)C)c(CC(=O)NS(=O)(=O)Oc2c(C(C)C)cccc2C(C)C)c(C(C)C)c1,Avasimibe,unknown,,,,weak,,,1.0,1.0,verified_pos,WebSearch verified
+UGTJLJZQQFGTJD-UHFFFAOYSA-N,N#CC(C#N)=NNc1cccc(Cl)c1,Carbonyl Cyanide m-Chlorophenyl Hydrazone,,,,,strong,,0.0,,,non_drug,industrial/lab chemical
+KZNIFHPLKGYRTM-UHFFFAOYSA-N,O=c1cc(-c2ccc(O)cc2)oc2cc(O)cc(O)c12,Apigenin,unknown,,,,strong,,,1.0,,non_drug,industrial/lab chemical
+UCSJYZPVAKXKNQ-UHFFFAOYSA-N,CNC1C(OC2C(OC3C(O)C(O)C(N=C(N)N)C(O)C3N=C(N)N)OC(C)C2(O)C=O)OC(CO)C(O)C1O,Streptomycin sulfate,vNo-DILI-Concern,E,,weak,strong,,,,0.0,DILIrank_neg,FDA vNo
+OHKOGUYZJXTSFX-KZFFXBSXSA-N,CC1(C)S[C@@H]2[C@H](NC(=O)[C@H](C(=O)O)c3ccsc3)C(=O)N2[C@H]1C(=O)O,TICARCILLIN,unknown,,,,,,1.0,1.0,1.0,verified_pos,WebSearch verified
+NBQKINXMPLXUET-UHFFFAOYSA-N,O=C(Nc1cccc2c(=O)cc(-c3nn[nH]n3)oc12)c1ccc(OCCCCc2ccccc2)cc1,Pranlukast,unknown,,,,,,1.0,1.0,1.0,verified_pos,WebSearch verified
+UZVHFVZFNXBMQJ-UHFFFAOYSA-N,C=CCC1(CC(C)C)C(=O)NC(=O)NC1=O,BUTALBITAL,unknown,,boxed_hepatotox,,,,,1.0,1.0,DM_boxed,FDA Boxed Warning
+HAWPXGHAZFHHAD-UHFFFAOYSA-N,CN(CCCl)CCCl,MECHLORETHAMINE,Ambiguous-DILI-Concern,E,,,,,1.0,0.0,0.0,LiverTox_neg,NIH LiverTox=E
+MXWHMTNPTTVWDM-NXOFHUPFSA-N,CC(/C=N/N=C(N)N)=N\N=C(N)N,Mitoguazone,unknown,,,,,,1.0,1.0,1.0,verified_pos,WebSearch verified
+VUAFHZCUKUDDBC-BYPYZUCNSA-N,CC(C)(S)C(=O)N[C@@H](CS)C(=O)O,bucillamine,unknown,,,,,,1.0,1.0,,verified_exclude,WebSearch: insufficient evidence
+HGXFBVDWWKPUKZ-UHFFFAOYSA-N,C=CC1=C(C)c2cc3[nH]c(cc4[nH]c(cc5nc(cc1n2)C(C)=C5C=C)c(C)c4CCC(=O)O)c(CCC(=O)O)c3C,Phenodin,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+AURFZBICLPNKBZ-YZRLXODZSA-N,CC(=O)[C@H]1CC[C@H]2[C@@H]3CC[C@@H]4C[C@H](O)CC[C@]4(C)[C@H]3CC[C@]12C,eltanolone,unknown,,,,,,1.0,1.0,,verified_exclude,WebSearch: insufficient evidence
+WYUSVOMTXWRGEK-HBWVYFAYSA-N,COCC1=C(C(=O)O)N2C(=O)[C@@H](NC(=O)/C(=N\OC)c3csc(N)n3)[C@H]2SC1,Cefpodoxime,unknown,,,,,,1.0,1.0,0.0,verified_neg,WebSearch verified
+XDDJGVMJFWAHJX-UHFFFAOYSA-N,O=C(O)C1N=C(c2ccccc2)c2cc(Cl)ccc2NC1=O,CLORAZEPIC ACID,Ambiguous-DILI-Concern,D,,,,,1.0,1.0,1.0,LiverTox_pos,NIH LiverTox=D
+RYYVLZVUVIJVGH-UHFFFAOYSA-N,Cn1c(=O)c2c(ncn2C)n(C)c1=O,CAFFEINE,vNo-DILI-Concern,,,medium,strong,,,1.0,0.0,DILIrank_neg,FDA vNo
+QPFYXYFORQJZEC-UHFFFAOYSA-N,Nc1ccc(N=Nc2ccccc2)c(N)n1,Phenazopyridine,unknown,,,,strong,,,1.0,1.0,verified_pos,WebSearch verified
+JQSHBVHOMNKWFT-UHFFFAOYSA-N,c1cnc2cc3c(cc2n1)C1CNCC3C1,"5,8,14-Triazatetracyclo[10.3.1.02,11.04,9]hexadeca-2,4,6,8,10-pentaene",vLess-DILI-Concern,C,,weak,,weak,,1.0,1.0,DILIrank_pos,FDA vLess-DILI-Concern
+JXSJBGJIGXNWCI-UHFFFAOYSA-N,CCOC(=O)CC(SP(=S)(OC)OC)C(=O)OCC,MALATHION,unknown,,,,strong,,,1.0,,non_drug,industrial/lab chemical
+BVKZGUZCCUSVTD-UHFFFAOYSA-N,O=C(O)O,SODIUM BICARBONATE,vNo-DILI-Concern,,,,medium,strong,,1.0,0.0,DILIrank_neg,FDA vNo
+PAYRUJLWNCNPSJ-UHFFFAOYSA-N,Nc1ccccc1,Aniline,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+OCJYIGYOJCODJL-UHFFFAOYSA-N,Cc1cccc(CN2CCN(C(c3ccccc3)c3ccc(Cl)cc3)CC2)c1,MECLIZINE,vNo-DILI-Concern,E,,,medium,,,1.0,0.0,DILIrank_neg,FDA vNo
+TZRHLKRLEZJVIJ-UHFFFAOYSA-N,CCC(=O)NS(=O)(=O)c1ccc(-c2c(-c3ccccc3)noc2C)cc1,PARECOXIB SODIUM,unknown,,,,,,1.0,1.0,,non_drug,industrial/lab chemical
+FMHHVULEAZTJMA-UHFFFAOYSA-N,Cc1cc2cc3c(C)cc(=O)oc3c(C)c2o1,TRIOXSALEN,unknown,,,,weak,,,1.0,,verified_exclude,WebSearch: insufficient evidence
+POGQSBRIGCQNEG-UHFFFAOYSA-N,NC(=O)c1cn(Cc2c(F)cccc2F)nn1,RUFINAMIDE,Ambiguous-DILI-Concern,E,warning_hepatotox,,,,1.0,0.0,0.0,LiverTox_neg,NIH LiverTox=E
+VTRAEEWXHOVJFV-UHFFFAOYSA-N,CCCc1nc(C(C)(C)O)c(C(=O)O)n1Cc1ccc(-c2ccccc2-c2nn[nH]n2)cc1,Olmesartan,unknown,D,,weak,,,,1.0,1.0,LiverTox_pos,NIH LiverTox=D
+OVCDSSHSILBFBN-UHFFFAOYSA-N,CCN(CC)Cc1cc(Nc2ccnc3cc(Cl)ccc23)ccc1O,AMODIAQUINE,unknown,A,,medium,strong,,1.0,1.0,1.0,LiverTox_pos,NIH LiverTox=A
+FBPFZTCFMRRESA-UHFFFAOYSA-N,OCC(O)C(O)C(O)C(O)CO,Mannitol,vNo-DILI-Concern,,,medium,medium,,,,0.0,DILIrank_neg,FDA vNo
+STQGQHZAVUOBTE-UHFFFAOYSA-N,COc1cccc2c1C(=O)c1c(O)c3c(c(O)c1C2=O)CC(O)(C(C)=O)CC3OC1CC(N)C(O)C(C)O1,Daunorubicin hydrochloride,vNo-DILI-Concern,E,no_signal,,strong,,,,0.0,DILIrank_neg,FDA vNo
+FDGQSTZJBFJUBT-UHFFFAOYSA-N,O=c1[nH]cnc2nc[nH]c12,Hypoxanthine,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+QIGBRXMKCJKVMJ-UHFFFAOYSA-N,Oc1ccc(O)cc1,HYDROQUINONE,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+AEMRFAOFKBGASW-UHFFFAOYSA-N,O=C(O)CO,glycolic acid,unknown,,,,strong,,,1.0,,non_drug,industrial/lab chemical
+INDBQLZJXZLFIT-UHFFFAOYSA-N,COc1cc(NC(C)CCCN)c2ncccc2c1,PRIMAQUINE,vNo-DILI-Concern,E,,,medium,,,1.0,0.0,DILIrank_neg,FDA vNo
+LFQSCWFLJHTTHZ-UHFFFAOYSA-N,CCO,ALCOHOL,unknown,,,medium,strong,weak,1.0,1.0,,non_drug,industrial/lab chemical
+ARAIBEBZBOPLMB-UFGQHTETSA-N,CC(=O)N[C@H]1[C@H]([C@H](O)[C@H](O)CO)OC(C(=O)O)=C[C@@H]1N=C(N)N,Zanamivir,unknown,,,,,,1.0,1.0,0.0,verified_neg,WebSearch verified
+DLGOEMSEDOSKAD-UHFFFAOYSA-N,O=NN(CCCl)C(=O)NCCCl,CARMUSTINE,unknown,E,warning_hepatotox,,strong,,,1.0,0.0,LiverTox_neg,NIH LiverTox=E
+WWZKQHOCKIZLMA-UHFFFAOYSA-N,CCCCCCCC(=O)O,octanoic acid,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+PQCAUHUKTBHUSA-UHFFFAOYSA-N,O=[N+]([O-])c1cccc2cn[nH]c12,7-Nitroindazole,unknown,,,,weak,,,1.0,,non_drug,industrial/lab chemical
+GRWFGVWFFZKLTI-UHFFFAOYSA-N,CC1=CCC2CC1C2(C)C,(+-)-alpha-Pinene,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+KMSKQZKKOZQFFG-YXRRJAAWSA-N,COc1cccc2c1C(=O)c1c(O)c3c(c(O)c1C2=O)C[C@@](O)(C(=O)CO)C[C@@H]3O[C@H]1C[C@H](N)[C@H](O[C@@H]2CCCCO2)[C@H](C)O1,pirarubicin,unknown,,,,,,1.0,1.0,1.0,verified_pos,WebSearch verified
+VFEDRRNHLBGPNN-UHFFFAOYSA-N,Cc1ncc(CNC(=O)N(CCCl)N=O)c(N)n1,nimustine,unknown,,,,weak,,1.0,1.0,,non_drug,industrial/lab chemical
+CUHVIMMYOGQXCV-UHFFFAOYSA-N,Cc1cccc(C(C)c2c[nH]cn2)c1C,medetomidine,Ambiguous-DILI-Concern,,,,medium,,,1.0,,verified_exclude,WebSearch: insufficient evidence
+BHELIUBJHYAEDK-OAIUPTLZSA-N,CNC(=O)C[C@@H](N)C(=O)N[C@@H](C(=O)N[C@@H]1C(=O)N2[C@@H]1SC(C)(C)[C@@H]2C(=O)O)c1ccc(O)cc1,aspoxicillin,unknown,,,,,,1.0,1.0,,verified_exclude,WebSearch: insufficient evidence
+HPXRVTGHNJAIIH-UHFFFAOYSA-N,OC1CCCCC1,Cyclohexanol,unknown,,,medium,,,,1.0,,non_drug,industrial/lab chemical
+JTIGKVIOEQASGT-UHFFFAOYSA-N,Cc1ccc2c(-c3ccccc3)nc(=O)n(C(C)C)c2c1,proquazone,unknown,,,,,,1.0,1.0,1.0,verified_pos,WebSearch verified
+FOHHNHSLJDZUGQ-UHFFFAOYSA-N,CCCCN(CCCC)CCC(O)c1cc2c(Cl)cc(Cl)cc2c2cc(C(F)(F)F)ccc12,HALOFANTRINE,unknown,,,,,,1.0,1.0,,verified_exclude,WebSearch: insufficient evidence
+AGMMTXLNIQSRCG-UHFFFAOYSA-N,CCC1NC(=O)c2cc(S(N)(=O)=O)c(Cl)cc2N1,QUINETHAZONE,unknown,,,,,,1.0,1.0,0.0,verified_neg,WebSearch verified
+YBSJFWOBGCMAKL-UHFFFAOYSA-N,Cn1c(CNc2ccc(C(=N)N)cc2)nc2cc(C(=O)N(CCC(=O)O)c3ccccn3)ccc21,Dabigatran,unknown,D,,weak,,,,1.0,1.0,LiverTox_pos,NIH LiverTox=D
+WUADCCWRTIWANL-UHFFFAOYSA-N,COc1ccc(-c2coc3cc(O)cc(O)c3c2=O)cc1,Biochanin A,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+BYBLEWFAAKGYCD-UHFFFAOYSA-N,Clc1ccc(COC(Cn2ccnc2)c2ccc(Cl)cc2Cl)c(Cl)c1,MICONAZOLE,unknown,,,,strong,,,1.0,1.0,verified_pos,WebSearch verified
+SEDQWOMFMIJKCU-UHFFFAOYSA-N,CNCCON=c1c2ccccc2ccc2ccccc12,demexiptiline,unknown,,,,,,1.0,1.0,,verified_exclude,WebSearch: insufficient evidence
+WVCHIGAIXREVNS-UHFFFAOYSA-N,O=C1C=C(O)c2ccccc2C1=O,"2-Hydroxy-1,4-naphthoquinone",unknown,,,,weak,,,1.0,,non_drug,industrial/lab chemical
+BMKDZUISNHGIBY-UHFFFAOYSA-N,CC(CN1CC(=O)NC(=O)C1)N1CC(=O)NC(=O)C1,razoxane,Ambiguous-DILI-Concern,,,,strong,,,1.0,,verified_exclude,WebSearch: insufficient evidence
+GWBPFRGXNGPPMF-UHFFFAOYSA-N,CC(=O)Nc1ccc(S(=O)(=O)Nc2ccc([N+](=O)[O-])cc2)cc1,Sulfanitran,unknown,,,,weak,,,1.0,,verified_exclude,WebSearch: insufficient evidence
+OHTXTCNTQJFRIG-UHFFFAOYSA-N,O=C1OC(c2ccc(O)c(S(=O)(=O)O)c2)(c2ccc(O)c(S(=O)(=O)O)c2)c2c(Br)c(Br)c(Br)c(Br)c21,sulfobromophthalein,unknown,,,,medium,,1.0,1.0,,verified_exclude,WebSearch: insufficient evidence
+LRHPLDYGYMQRHN-UHFFFAOYSA-N,CCCCO,1-Butanol,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+ZNRGQMMCGHDTEI-ITGUQSILSA-N,CN1[C@@H]2CC[C@H]1C[C@@H](OC(=O)c1c[nH]c3ccccc13)C2,tropisetron,unknown,,,,,,1.0,1.0,0.0,verified_neg,WebSearch verified
+DZGWFCGJZKJUFP-UHFFFAOYSA-N,NCCc1ccc(O)cc1,tyramine,vNo-DILI-Concern,,,,weak,,,1.0,0.0,DILIrank_neg,FDA vNo
+YQVALJGIKVYRNI-UHFFFAOYSA-N,O=[As](O)(O)c1ccc(NCCNc2ccc([As](=O)(O)O)cc2)cc1,difetarsone,unknown,,,,,,1.0,1.0,,verified_exclude,WebSearch: insufficient evidence
+RBTBFTRPCNLSDE-UHFFFAOYSA-N,CN(C)c1ccc2nc3ccc(=[N+](C)C)cc-3sc2c1,METHYLENE BLUE CATION,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+DDRJAANPRJIHGJ-UHFFFAOYSA-N,CN1CC(=O)NC1=N,2-Imino-1-methyl-4-imidazolidinone,unknown,,,medium,weak,,,1.0,,non_drug,industrial/lab chemical
+XIURVHNZVLADCM-IUODEOHRSA-N,CC(=O)OCC1=C(C(=O)O)N2C(=O)[C@@H](NC(=O)Cc3cccs3)[C@H]2SC1,CEPHALOTHIN,unknown,,,,,,1.0,1.0,1.0,verified_pos,WebSearch verified
+MRBDMNSDAVCSSF-UHFFFAOYSA-N,Cc1ccc(N(CC2=NCCN2)c2cccc(O)c2)cc1,PHENTOLAMINE,vNo-DILI-Concern,,,,medium,,1.0,1.0,0.0,DILIrank_neg,FDA vNo
+PHXJVRSECIGDHY-UHFFFAOYSA-N,Cc1ccc(C(=O)Nc2ccc(CN3CCN(C)CC3)c(C(F)(F)F)c2)cc1C#Cc1cnc2cccnn12,PONATINIB,Ambiguous-DILI-Concern,E,boxed_hepatotox,,,,,0.0,0.0,LiverTox_neg,NIH LiverTox=E
+CVHZOJJKTDOEJC-UHFFFAOYSA-N,O=C1NS(=O)(=O)c2ccccc21,Saccharin,unknown,,,,medium,,1.0,1.0,,non_drug,industrial/lab chemical
+UKOQVLAXCBRRGH-UHFFFAOYSA-N,CO/N=C(\N)c1ccc(-c2ccc(-c3ccc(/C(N)=N/OC)cc3)o2)cc1,Pafuramidine,unknown,,,,,,1.0,1.0,1.0,verified_pos,WebSearch verified
+CURLTUGMZLYLDI-UHFFFAOYSA-N,O=C=O,carbon dioxide,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+JLVVSXFLKOJNIY-UHFFFAOYSA-N,[Mg+2],MAGNESIUM OXIDE,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+USZYSDMBJDPRIF-SVEJIMAYSA-N,CC[C@@]1(O)C[C@H](O[C@H]2C[C@H](N(C)C)[C@H](O[C@H]3C[C@H](O)[C@H](O[C@H]4CCC(=O)[C@H](C)O4)[C@H](C)O3)[C@H](C)O2)c2c(cc3c(c2O)C(=O)c2c(O)cccc2C3=O)[C@H]1C(=O)OC,aclarubicin,unknown,,,,,,1.0,1.0,,verified_exclude,WebSearch: insufficient evidence
+AXOIZCJOOAYSMI-UHFFFAOYSA-N,C[N+](C)(C)CCOC(=O)CCC(=O)OCC[N+](C)(C)C,SUXAMETHONIUM,vNo-DILI-Concern,,,,strong,,,1.0,0.0,DILIrank_neg,FDA vNo
+ZBNARPCCDMHDDV-UHFFFAOYSA-N,Cc1cc(-c2ccc(N=Nc3c(S(=O)(=O)O)cc4cc(S(=O)(=O)O)cc(N)c4c3O)c(C)c2)ccc1N=Nc1c(S(=O)(=O)O)cc2cc(S(=O)(=O)O)cc(N)c2c1O,Trypan Blue free acid,unknown,,,,strong,,,1.0,,non_drug,industrial/lab chemical
+VXMOONUMYLCFJD-DHLKQENFSA-N,COC(=O)C1=C(C)NC(C)=C(C(=O)O[C@H]2CCN(Cc3ccccc3)C2)[C@H]1c1cccc([N+](=O)[O-])c1,barnidipine,unknown,,,,,,1.0,1.0,,verified_exclude,WebSearch: insufficient evidence
+DFPAKSUCGFBDDF-UHFFFAOYSA-N,NC(=O)c1cccnc1,NIACINAMIDE,unknown,,,weak,strong,,,1.0,,non_drug,industrial/lab chemical
+SIOXPEMLGUPBBT-UHFFFAOYSA-N,O=C(O)c1ccccn1,Chromium(III) picolinate,unknown,,,,strong,,,1.0,,non_drug,industrial/lab chemical
+WEEGYLXZBRQIMU-UHFFFAOYSA-N,CC12CCC(CC1)C(C)(C)O2,cineole,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+ZOXJGFHDIHLPTG-UHFFFAOYSA-N,[B],Boron,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+WPFVBOQKRVRMJB-UHFFFAOYSA-N,CC(CC=O)CCCC(C)(C)O,Hydroxycitronellal,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+CZMAIROVPAYCMU-UHFFFAOYSA-N,[La+3],Lanthanum cation (3+),unknown,,,,strong,,,1.0,,non_drug,industrial/lab chemical
+SMSRCGPDNDCXFR-CYWZMYCQSA-N,CCN1CCN(C(=O)N[C@@H](C(=O)N[C@]2(OC)C(=O)N3C(C(=O)O)=C(CSc4nnnn4C)CS[C@@H]32)[C@H](C)O)C(=O)C1=O,cefbuperazone,unknown,,,,,,1.0,1.0,,verified_exclude,WebSearch: insufficient evidence
+NXPPAOGUKPJVDI-UHFFFAOYSA-N,Oc1ccc2ccccc2c1O,"1,2-Dihydroxynaphthalene",unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+ODKSFYDXXFIFQN-UHFFFAOYSA-N,NC(N)=NCCCC(N)C(=O)O,Arginine hydrochloride,vNo-DILI-Concern,,,,medium,,,,0.0,DILIrank_neg,FDA vNo
+LJJFNFYPZOHRHM-UHFFFAOYSA-N,[C-]#[N+]CC(C)(C)OC,Technetium (99mTc) sestamibi,unknown,,,,weak,,,1.0,,verified_exclude,WebSearch: insufficient evidence
+CHBRHODLKOZEPZ-UHFFFAOYSA-N,CCc1cc2c(s1)N(C)C(=O)CN=C2c1ccccc1Cl,clotiazepam,unknown,,,,strong,,,1.0,1.0,verified_pos,WebSearch verified
+WZPBZJONDBGPKJ-UHFFFAOYSA-N,CC1C(NC(=O)C(=NOC(C)(C)C(=O)O)c2csc(N)n2)C(=O)N1S(=O)(=O)O,Aztreonam,Ambiguous-DILI-Concern,E,,,weak,,,,0.0,LiverTox_neg,NIH LiverTox=E
+NIQCNGHVCWTJSM-UHFFFAOYSA-N,COC(=O)c1ccccc1C(=O)OC,dimethylphthalate,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+DQCKKXVULJGBQN-UHFFFAOYSA-N,O=C1CCC2(O)C3Cc4ccc(O)c5c4C2(CCN3CC2CC2)C1O5,Naltrexone hydrochloride,Ambiguous-DILI-Concern,E,warning_hepatotox,,strong,,,,0.0,LiverTox_neg,NIH LiverTox=E
+XNOPRXBHLZRZKH-UHFFFAOYSA-N,CCC(C)C1NC(=O)C(Cc2ccc(O)cc2)NC(=O)C(N)CSSCC(C(=O)N2CCCC2C(=O)NC(CC(C)C)C(=O)NCC(N)=O)NC(=O)C(CC(N)=O)NC(=O)C(CCC(N)=O)NC1=O,Oxytocin,vNo-DILI-Concern,,,,weak,,,,0.0,DILIrank_neg,FDA vNo
+OSWPMRLSEDHDFF-UHFFFAOYSA-N,COC(=O)c1ccccc1O,METHYL SALICYLATE,unknown,,,,medium,,,1.0,,verified_exclude,WebSearch: insufficient evidence
+JTPUMZTWMWIVPA-UHFFFAOYSA-O,CC(C)[N+](C)(CCC(C(N)=O)(c1ccccc1)c1ccccc1)C(C)C,ISOPROPAMIDE IODIDE,unknown,,,,,,1.0,1.0,0.0,verified_neg,WebSearch verified
+DGEZNRSVGBDHLK-UHFFFAOYSA-N,c1cnc2c(c1)ccc1cccnc12,"1,10-Phenanthroline",unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+DRBBFCLWYRJSJZ-UHFFFAOYSA-N,CN(CC(=O)O)/C(N)=N/P(=O)(O)O,Phosphocreatine,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+ZPBYVFQJHWLTFB-UHFFFAOYSA-N,Cn1cnc(=N)c2[nH]cnc21,3-Methyladenine,unknown,,,,strong,,,1.0,,non_drug,industrial/lab chemical
+APIXJSLKIYYUKG-UHFFFAOYSA-N,CC(C)Cn1c(=O)n(C)c(=O)c2[nH]cnc21,3-Isobutyl-1-methylxanthine,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+HCIBTBXNLVOFER-UHFFFAOYSA-N,O=c1c(-c2ccccc2)c1-c1ccccc1,Diphenylcyclopropenone,unknown,,,,weak,,,1.0,,non_drug,industrial/lab chemical
+UFLGIAIHIAPJJC-UHFFFAOYSA-N,CN(C)CCN(Cc1ccccc1)c1ccccn1,TRIPELENNAMINE,unknown,,,,,,1.0,1.0,0.0,verified_neg,WebSearch verified
+XAGFODPZIPBFFR-UHFFFAOYSA-N,[Al],Aluminum,unknown,,,,strong,,,1.0,,non_drug,industrial/lab chemical
+XYFCBTPGUUZFHI-UHFFFAOYSA-N,P,Phosphine,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+YAPQBXQYLJRXSA-UHFFFAOYSA-N,Cn1cnc2c1c(=O)[nH]c(=O)n2C,theobromine,unknown,,,,weak,,,1.0,0.0,verified_neg,WebSearch verified
+DFEYYRMXOJXZRJ-UHFFFAOYSA-N,FCOC(C(F)(F)F)C(F)(F)F,SEVOFLURANE,unknown,B,warning_hepatotox,medium,,,,1.0,1.0,LiverTox_pos,NIH LiverTox=B
+SXYIRMFQILZOAM-HVNFFKDJSA-N,CO[C@H]1O[C@@H]2O[C@@]3(C)CC[C@H]4[C@H](C)CC[C@@H]([C@H]1C)[C@@]24OO3,ARTEMETHER,unknown,,,,,,1.0,1.0,1.0,verified_pos,WebSearch verified
+IKMDFBPHZNJCSN-UHFFFAOYSA-N,O=c1c(O)c(-c2cc(O)c(O)c(O)c2)oc2cc(O)cc(O)c12,Myricetin,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+PCHJSUWPFVWCPO-UHFFFAOYSA-N,[Au],Gold,unknown,,,medium,medium,,,1.0,,non_drug,industrial/lab chemical
+ADIMAYPTOBDMTL-UHFFFAOYSA-N,O=C1Nc2ccc(Cl)cc2C(c2ccccc2)=NC1O,OXAZEPAM,Ambiguous-DILI-Concern,E,,,strong,,,0.0,0.0,LiverTox_neg,NIH LiverTox=E
+DTUQWGWMVIHBKE-UHFFFAOYSA-N,O=CCc1ccccc1,Phenylacetaldehyde,unknown,,,,weak,,,1.0,,non_drug,industrial/lab chemical
+XDZKBRJLTGRPSS-BGZQYGJUSA-N,CO/N=C(\C(=O)N[C@@H]1C(=O)N2C(C(=O)O)=C(CSc3nc(C)c(CC(=O)O)s3)CS[C@H]12)c1csc(N)n1,cefodizime,unknown,,,,,,1.0,1.0,,verified_exclude,WebSearch: insufficient evidence
+CJGYSWNGNKCJSB-YVLZZHOMSA-N,CCCC(=O)Nc1ncnc2c1ncn2[C@@H]1O[C@@H]2COP(=O)(O)O[C@H]2[C@H]1OC(=O)CCC,bucladesine,unknown,,,,,,1.0,1.0,,verified_exclude,WebSearch: insufficient evidence
+MVOUIYUWRXPNKD-UHFFFAOYSA-N,COc1cc(C(=S)N2CCOCC2)cc(OC)c1OC,tritiozine,unknown,,,,,,1.0,1.0,,verified_exclude,WebSearch: insufficient evidence
+NSPMIYGKQJPBQR-UHFFFAOYSA-N,c1nc[nH]n1,"1H-1,2,4-Triazole",unknown,,,,weak,,,1.0,,non_drug,industrial/lab chemical
+HWGBHCRJGXAGEU-UHFFFAOYSA-N,Cc1cc(=O)[nH]c(=S)[nH]1,methylthiouracil,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+MPHPHYZQRGLTBO-UHFFFAOYSA-N,CCCC1C(=O)N2C(N(C)C)=Nc3ccc(C)cc3N2C1=O,azapropazone,unknown,,,,,,1.0,1.0,,verified_exclude,WebSearch: insufficient evidence
+MBUVEWMHONZEQD-UHFFFAOYSA-N,CN1CCCC(n2nc(Cc3ccc(Cl)cc3)c3ccccc3c2=O)CC1,AZELASTINE,unknown,,,,weak,,,1.0,,non_drug,industrial/lab chemical
+MGFYIUFZLHCRTH-UHFFFAOYSA-N,O=C(O)CN(CC(=O)O)CC(=O)O,Nitrilotriacetic Acid,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+RJQXTJLFIWVMTO-TYNCELHUSA-N,COc1cccc(OC)c1C(=O)N[C@@H]1C(=O)N2[C@@H]1SC(C)(C)[C@@H]2C(=O)O,METHICILLIN,unknown,,,,,,1.0,1.0,1.0,verified_pos,WebSearch verified
+AELCINSCMGFISI-DTWKUNHWSA-N,N[C@@H]1C[C@H]1c1ccccc1,TRANYLCYPROMINE SULFATE,unknown,,,,,,1.0,1.0,1.0,verified_pos,WebSearch verified
+MDNWOSOZYLHTCG-UHFFFAOYSA-N,Oc1ccc(Cl)cc1Cc1cc(Cl)ccc1O,dichlorophen,unknown,,,,,,1.0,1.0,,non_drug,industrial/lab chemical
+IUJDSEJGGMCXSG-UHFFFAOYSA-N,CCCC(C)C1(CC)C(=O)NC(=S)NC1=O,THIOPENTAL,unknown,,,weak,medium,,1.0,1.0,0.0,verified_neg,WebSearch verified
+WRUUGTRCQOWXEG-UHFFFAOYSA-N,NCCC(O)(P(=O)(O)O)P(=O)(O)O,PAMIDRONIC ACID,Ambiguous-DILI-Concern,,,,medium,,1.0,1.0,0.0,verified_neg,WebSearch verified
+BTFMCMVEUCGQDX-UHFFFAOYSA-N,CC(=O)c1ccc2c(c1)N(CCCN1CCC(CCO)CC1)c1ccccc1S2,PIPERACETAZINE,unknown,,,,,,1.0,1.0,,verified_exclude,WebSearch: insufficient evidence
+DKGZKTPJOSAWFA-UHFFFAOYSA-N,O=C(CCCN1CCC2(CC1)C(=O)NCN2c1ccccc1)c1ccc(F)cc1,spiperone,unknown,,,,weak,,,1.0,,verified_exclude,WebSearch: insufficient evidence
+BEJNERDRQOWKJM-UHFFFAOYSA-N,O=c1cc(CO)occ1O,kojic acid,unknown,,,,strong,,,1.0,,non_drug,industrial/lab chemical
+RMWVZGDJPAKBDE-UHFFFAOYSA-N,CC(=O)Oc1cc(C(F)(F)F)ccc1C(=O)O,triflusal,unknown,,,,weak,,,1.0,,verified_exclude,WebSearch: insufficient evidence
+HTQMVQVXFRQIKW-UHFFFAOYSA-N,CCOc1nc2cccc(C(=O)O)c2n1Cc1ccc(-c2ccccc2-c2nn[nH]n2)cc1,Candesartan,unknown,C,,medium,strong,,1.0,1.0,1.0,LiverTox_pos,NIH LiverTox=C
+HBUBKKRHXORPQB-UHFFFAOYSA-N,Nc1nc(F)nc2c1ncn2C1OC(CO)C(O)C1O,Fludarabine,,E,,,medium,,,,0.0,LiverTox_neg,NIH LiverTox=E
+RYLHNOVXKPXDIP-UHFFFAOYSA-N,O=C(NC(=O)c1c(F)cccc1F)Nc1ccc(Oc2ccc(C(F)(F)F)cc2Cl)cc1F,Flufenoxuron,unknown,,,,weak,,,1.0,,non_drug,industrial/lab chemical
+PCLITLDOTJTVDJ-UHFFFAOYSA-N,Cc1ncsc1CCCl,clomethiazole,unknown,,,weak,medium,,,1.0,1.0,verified_pos,WebSearch verified
+QUIJNHUBAXPXFS-UHFFFAOYSA-N,COc1nc2ccc(Br)cc2cc1C(c1ccccc1)C(O)(CCN(C)C)c1cccc2ccccc12,Bedaquiline fumarate,Ambiguous-DILI-Concern,E,warning_hepatotox,,,,,,0.0,LiverTox_neg,NIH LiverTox=E
+CFOYWRHIYXMDOT-UHFFFAOYSA-N,CCOC(=O)n1ccn(C)c1=S,carbimazole,unknown,,,medium,strong,,,1.0,1.0,verified_pos,WebSearch verified
+WDZCUPBHRAEYDL-UHFFFAOYSA-N,COC1C=COC2(C)Oc3c(C)c(O)c4c(O)c(c(C=NN5CCN(C6CCCC6)CC5)c(O)c4c3C2=O)NC(=O)C(C)=CC=CC(C)C(O)C(C)C(O)C(C)C(OC(C)=O)C1C,Rifapentine,Ambiguous-DILI-Concern,E,,weak,strong,,,,0.0,LiverTox_neg,NIH LiverTox=E
+GLBJJMFZWDBELO-UHFFFAOYSA-N,COc1ccc(-c2nc3cc(C4=NNC(=O)CC4C)ccc3[nH]2)cc1,pimobendan,unknown,,,,medium,,,1.0,0.0,verified_neg,WebSearch verified
+AOCCBINRVIKJHY-UHFFFAOYSA-N,CCCCCCNC(=O)n1cc(F)c(=O)[nH]c1=O,carmofur,unknown,,,,strong,,,1.0,,verified_exclude,WebSearch: insufficient evidence
+BKYKPTRYDKTTJY-UHFFFAOYSA-N,NS(=O)(=O)c1cc2c(cc1Cl)NC(CC1CCCC1)NS2(=O)=O,cyclopenthiazide,unknown,,,,,,1.0,1.0,0.0,verified_neg,WebSearch verified
+XQZXYNRDCRIARQ-LURJTMIESA-N,C[C@H](O)C(=O)Nc1c(I)c(C(=O)NC(CO)CO)c(I)c(C(=O)NC(CO)CO)c1I,IOPAMIDOL,unknown,,,,,,1.0,1.0,,verified_exclude,WebSearch: insufficient evidence
+RLSSMJSEOOYNOY-UHFFFAOYSA-N,Cc1cccc(O)c1,M-Cresol,unknown,,,,strong,,,1.0,,non_drug,industrial/lab chemical
+TZXKOCQBRNJULO-UHFFFAOYSA-N,Cc1c(O)c(=O)ccn1C,DEFERIPRONE,Ambiguous-DILI-Concern,E,,,medium,,1.0,0.0,0.0,LiverTox_neg,NIH LiverTox=E
+WNAQOLSMVPFGTE-UHFFFAOYSA-N,Cc1nc2ccccc2n1Cc1ccc(Cl)cc1,chlormidazole,unknown,,,,weak,,,1.0,,verified_exclude,WebSearch: insufficient evidence
+URWAJWIAIPFPJE-YFMIWBNJSA-N,CN[C@@H]1[C@@H](O)[C@@H](O[C@@H]2[C@@H](O)[C@H](O[C@H]3OC(CN)=CC[C@H]3N)[C@@H](N)C[C@H]2N)OC[C@]1(C)O,sisomicin,unknown,,,,,,1.0,1.0,,verified_exclude,WebSearch: insufficient evidence
+MEXUTNIFSHFQRG-UHFFFAOYSA-N,O=C1NCc2c1c1c3ccccc3[nH]c1c1[nH]c3ccccc3c21,K-252C,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+UOWZUVNAGUAEQC-UHFFFAOYSA-N,O=C(O)Cc1cc(I)c(Oc2ccc(O)c(I)c2)c(I)c1,tiratricol,unknown,,,,medium,,,1.0,1.0,verified_pos,WebSearch verified
+FWYSMLBETOMXAG-UHFFFAOYSA-N,COc1cccc(N2CCN(C3=Nc4c(F)cccc4C(CC(=O)O)N3c3cc(C(F)(F)F)ccc3OC)CC2)c1,Letermovir,vLess-DILI-Concern,E,,,,,,,1.0,DILIrank_pos,FDA vLess-DILI-Concern
+BJJXHLWLUDYTGC-ANULTFPQSA-N,C#C[C@]1(O)CC[C@H]2[C@@H]3CCC4=CC(=O)CCC4=C3C=C[C@@]21CC,gestrinone,unknown,,,,,,1.0,1.0,1.0,verified_pos,WebSearch verified
+SYELZBGXAIXKHU-UHFFFAOYSA-N,CCCCCCCCCCCC[N+](C)(C)[O-],Dodecyldimethylamine oxide,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+RYQOGSFEJBUZBX-UHFFFAOYSA-N,CN(C)CCCN1c2ccccc2C(C)(C)c2ccccc21,dimetacrine,unknown,,,,,,1.0,1.0,1.0,verified_pos,WebSearch verified
+KEJCWVGMRLCZQQ-YJBYXUATSA-N,CO/N=C(\C(=O)N[C@@H]1C(=O)N2C(C(=O)OC(C)OC(C)=O)=C(COC(N)=O)CS[C@H]12)c1ccco1,CEFUROXIME AXETIL,unknown,,,,,,1.0,1.0,1.0,verified_pos,WebSearch verified
+YZFWTZACSRHJQD-UHFFFAOYSA-N,CC1(COc2ccc(CC3SC(=O)NC3=O)cc2)CCCCC1,Ciglitazone,unknown,,,,medium,,1.0,1.0,1.0,verified_pos,WebSearch verified
+RFDAIACWWDREDC-UHFFFAOYSA-N,CC(CCC(O)=NCC(=O)O)C1CCC2C3C(O)CC4CC(O)CCC4(C)C3CC(O)C12C,"Platinum(2+) [(3,7,12-trihydroxy-24-oxidocholan-24-ylidene)amino]acetate--ammonia--hydrogen chloride (1/1/2/1)",unknown,,,,strong,,,1.0,,non_drug,industrial/lab chemical
+NASXCEITKQITLD-UHFFFAOYSA-N,O=C1c2ccccc2C(=O)C1c1ccc(F)cc1,fluindione,unknown,,,medium,strong,,1.0,1.0,,verified_exclude,WebSearch: insufficient evidence
+MXUNKHLAEDCYJL-UHFFFAOYSA-N,Cc1cccc(N2CC(CO)OC2=O)c1,TOLOXATONE,unknown,,,,,,1.0,1.0,1.0,verified_pos,WebSearch verified
+ISAKRJDGNUQOIC-UHFFFAOYSA-N,O=c1cc[nH]c(=O)[nH]1,Uracil,unknown,,,medium,,,,1.0,,non_drug,industrial/lab chemical
+JCQLYHFGKNRPGE-UHFFFAOYSA-N,OCC1OC(OC2C(CO)OC(O)(CO)C2O)C(O)C(O)C1O,Lactulose,vNo-DILI-Concern,,,,medium,weak,,,0.0,DILIrank_neg,FDA vNo
+ZOAMBXDOGPRZLP-UHFFFAOYSA-N,NC(=O)Cc1c[nH]c2ccccc12,Indole-3-acetamide,unknown,,,,weak,,,1.0,,non_drug,industrial/lab chemical
+FEDYMSUPMFCVOD-UHFFFAOYSA-N,C=CC1=C(C)c2cc3[nH]c(cc4nc(cc5[nH]c(cc1n2)c(C)c5C=C)C(C)=C4CCC(=O)O)c(CCC(=O)O)c3C,zinc-protoporphyrin IX,unknown,,,,strong,,,1.0,,non_drug,industrial/lab chemical
+VEPKQEUBKLEPRA-UHFFFAOYSA-N,O=c1ncn2nc(Sc3ccc(F)cc3F)ccc2c1-c1c(Cl)cccc1Cl,"5-(2,6-Dichlorophenyl)-2-((2,4-difluorophenyl)thio)-6H-pyrimido(1,6-b)pyridazin-6-one",unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+ARAIBEBZBOPLMB-UHFFFAOYSA-N,CC(=O)NC1C(N=C(N)N)C=C(C(=O)O)OC1C(O)C(O)CO,Zanamivir,,E,,,weak,,,,0.0,LiverTox_neg,NIH LiverTox=E
+VBGLYOIFKLUMQG-UHFFFAOYSA-N,CCCCCc1cc(O)c2c(c1)OC(C)(C)c1ccc(C)cc1-2,Cannabinol,unknown,,,,medium,,,1.0,0.0,verified_neg,WebSearch verified
+NJRXVEJTAYWCQJ-UHFFFAOYSA-N,O=C(O)CC(S)C(=O)O,Gold Sodium Thiomalate,unknown,,,medium,weak,,,1.0,,non_drug,industrial/lab chemical
+NWIUTZDMDHAVTP-UHFFFAOYSA-N,CC(C)NCC(O)COc1ccc(CCOCC2CC2)cc1,BETAXOLOL,Ambiguous-DILI-Concern,E,,,weak,,1.0,0.0,0.0,LiverTox_neg,NIH LiverTox=E
+DXVUYOAEDJXBPY-NFFDBFGFSA-N,CC1(C)S[C@@H]2[C@H](N3C(=O)[C@@H](c4ccccc4)NC3(C)C)C(=O)N2[C@H]1C(=O)O,HETACILLIN,unknown,,,,,,1.0,1.0,,verified_exclude,WebSearch: insufficient evidence
+XNWFRZJHXBZDAG-UHFFFAOYSA-N,COCCO,2-Methoxyethanol,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+XEFQLINVKFYRCS-UHFFFAOYSA-N,Oc1cc(Cl)ccc1Oc1ccc(Cl)cc1Cl,TRICLOSAN,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+KWGRBVOPPLSCSI-UHFFFAOYSA-N,CNC(C)C(O)c1ccccc1,Ephedrine sulfate,vNo-DILI-Concern,,,weak,strong,strong,,,0.0,DILIrank_neg,FDA vNo
+HJLSLZFTEKNLFI-UHFFFAOYSA-N,CCS(=O)(=O)CCn1c([N+](=O)[O-])cnc1C,Tinidazole,vLess-DILI-Concern,E,,,,,1.0,,1.0,DILIrank_pos,FDA vLess-DILI-Concern
+KCXVZYZYPLLWCC-UHFFFAOYSA-N,O=C(O)CN(CCN(CC(=O)O)CC(=O)O)CC(=O)O,EDETATE DISODIUM ANHYDROUS,Ambiguous-DILI-Concern,,,,medium,,1.0,1.0,,non_drug,industrial/lab chemical
+SCKYRAXSEDYPSA-UHFFFAOYSA-N,Cc1cc(C2CCCCC2)n(O)c(=O)c1,CICLOPIROX,unknown,,,,weak,,,1.0,0.0,verified_neg,WebSearch verified
+SEQDDYPDSLOBDC-UHFFFAOYSA-N,CN1C(=O)C(O)N=C(c2ccccc2)c2cc(Cl)ccc21,TEMAZEPAM,Ambiguous-DILI-Concern,E,,,strong,,,1.0,0.0,LiverTox_neg,NIH LiverTox=E
+MGSKVZWGBWPBTF-UHFFFAOYSA-N,NCCc1ccc(S(=O)(=O)F)cc1,4-(2-Aminoethyl)Benzenesulfonyl Fluoride,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+IVYPNXXAYMYVSP-UHFFFAOYSA-N,OCc1c[nH]c2ccccc12,Indole-3-Carbinol,unknown,,,,strong,,,1.0,,non_drug,industrial/lab chemical
+VYFYYTLLBUKUHU-UHFFFAOYSA-N,NCCc1ccc(O)c(O)c1,DOPAMINE,vNo-DILI-Concern,,,,medium,,,1.0,0.0,DILIrank_neg,FDA vNo
+FJKROLUGYXJWQN-UHFFFAOYSA-N,O=C(O)c1ccc(O)cc1,4-Hydroxybenzoic Acid,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+WKEMJKQOLOHJLZ-UHFFFAOYSA-N,CN(C)CCc1c[nH]c2ccc(CS(=O)(=O)N3CCCC3)cc12,ALMOTRIPTAN,vNo-DILI-Concern,,,,weak,,,1.0,0.0,DILIrank_neg,FDA vNo
+ZQSIJRDFPHDXIC-UHFFFAOYSA-N,O=c1c(-c2ccc(O)cc2)coc2cc(O)ccc12,Daidzein,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+WDCYWAQPCXBPJA-UHFFFAOYSA-N,O=[N+]([O-])c1cccc([N+](=O)[O-])c1,"1,3-Dinitrobenzene",unknown,,,,medium,,1.0,1.0,,non_drug,industrial/lab chemical
+ZVNYJIZDIRKMBF-UHFFFAOYSA-N,COc1ccc(C(=O)N2CCN(c3ccc4c(c3)CCC(=O)N4)CC2)cc1OC,vesnarinone,unknown,,,,weak,,,1.0,,verified_exclude,WebSearch: insufficient evidence
+WSMYVTOQOOLQHP-UHFFFAOYSA-N,O=CCC=O,Malonaldehyde,unknown,,,weak,strong,,,1.0,,non_drug,industrial/lab chemical
+XUIMIQQOPSSXEZ-UHFFFAOYSA-N,[Si],Silicon,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+DYKFCLLONBREIL-KVUCHLLUSA-N,CN(C)c1ccc(O)c2c1C[C@H]1C[C@H]3[C@H](N(C)C)C(O)=C(C(N)=O)C(=O)[C@@]3(O)C(O)=C1C2=O,MINOCYCLINE,unknown,,,,,,1.0,1.0,1.0,verified_pos,WebSearch verified
+NGVDGCNFYWLIFO-UHFFFAOYSA-N,Cc1ncc(COP(=O)(O)O)c(C=O)c1O,pyridoxal phosphate,unknown,,,,weak,,,1.0,,non_drug,industrial/lab chemical
+NOYPYLRCIDNJJB-UHFFFAOYSA-N,COc1cc(NCc2ccc3nc(N)nc(N)c3c2C)cc(OC)c1OC,TRIMETREXATE,Ambiguous-DILI-Concern,E,,,,,1.0,1.0,0.0,LiverTox_neg,NIH LiverTox=E
+UCFGDBYHRUNTLO-UHFFFAOYSA-N,CCC1(O)C(=O)OCc2c1cc1n(c2=O)Cc2cc3c(CN(C)C)c(O)ccc3nc2-1,Topotecan hydrochloride,vNo-DILI-Concern,,,,strong,,,,0.0,DILIrank_neg,FDA vNo
+QZAYGJVTTNCVMB-UHFFFAOYSA-N,NCCc1c[nH]c2ccc(O)cc12,Serotonin,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+MECHNRXZTMCUDQ-UHFFFAOYSA-N,C=C1CCC(O)CC1=CC=C1CCCC2(C)C1CCC2C(C)C=CC(C)C(C)C,Ergocalciferol,vNo-DILI-Concern,,,,,strong,,,0.0,DILIrank_neg,FDA vNo
+JZRWCGZRTZMZEH-UHFFFAOYSA-N,Cc1ncc(C[n+]2csc(CCO)c2C)c(N)n1,THIAMINE ION,vNo-DILI-Concern,,,,medium,,,1.0,0.0,DILIrank_neg,FDA vNo
+OGGXGZAMXPVRFZ-UHFFFAOYSA-N,C[As](C)(=O)O,cacodylic acid,unknown,,,,strong,,,1.0,,non_drug,industrial/lab chemical
+LSNNMFCWUKXFEE-UHFFFAOYSA-N,O=S(O)O,Sodium Bisulfite,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+VEXZGXHMUGYJMC-UHFFFAOYSA-N,Cl,SODIUM CHLORIDE,unknown,,,,strong,,,1.0,,non_drug,industrial/lab chemical
+QPCDCPDFJACHGM-UHFFFAOYSA-N,O=C(O)CN(CCN(CC(=O)O)CC(=O)O)CCN(CC(=O)O)CC(=O)O,PENTETIC ACID,vNo-DILI-Concern,,,,weak,,,1.0,0.0,DILIrank_neg,FDA vNo
+BGDKAVGWHJFAGW-UHFFFAOYSA-N,CCN(Cc1ccncc1)C(=O)C(CO)c1ccccc1,TROPICAMIDE,unknown,,,,weak,,,1.0,,verified_exclude,WebSearch: insufficient evidence
+KYLIZBIRMBGUOP-UHFFFAOYSA-N,COc1ccc(-c2cc(=S)ss2)cc1,anethole trithione,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+FBOUYBDGKBSUES-VXKWHMMOSA-N,O=C(O[C@H]1CN2CCC1CC2)N1CCc2ccccc2[C@@H]1c1ccccc1,SOLIFENACIN,unknown,,,,,,1.0,1.0,0.0,verified_neg,WebSearch verified
+VVJKKWFAADXIJK-UHFFFAOYSA-N,C=CCN,2-(Chloromethyl)oxirane; prop-2-en-1-amine,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+PHTQWCKDNZKARW-UHFFFAOYSA-N,CC(C)CCO,Isoamyl Alcohol,unknown,,,,strong,,,1.0,,non_drug,industrial/lab chemical
+ULFRLSNUDGIQQP-UHFFFAOYSA-N,CN(C)CCc1c[nH]c2ccc(Cn3cncn3)cc12,RIZATRIPTAN,vLess-DILI-Concern,,,,weak,,,1.0,1.0,DILIrank_pos,FDA vLess-DILI-Concern
+CIUUIPMOFZIWIZ-UHFFFAOYSA-N,Nc1nc(-c2ccccc2)c(Br)c(=O)[nH]1,bropirimine,unknown,,,,,,1.0,1.0,,verified_exclude,WebSearch: insufficient evidence
+SKTFQHRVFFOHTQ-UHFFFAOYSA-N,Cn1c(=O)c2[nH]c(Br)nc2n(C)c1=O,Pamabrom,vNo-DILI-Concern,,,,weak,,,1.0,0.0,DILIrank_neg,FDA vNo
+UQLLWWBDSUHNEB-CZUORRHYSA-N,CC(=O)OCC1=C(C(=O)O)N2C(=O)[C@@H](NC(=O)CSc3ccncc3)[C@H]2SC1,CEPHAPIRIN,unknown,,,,,,1.0,1.0,,verified_exclude,WebSearch: insufficient evidence
+JAPHQRWPEGVNBT-UTUOFQBUSA-N,N[C@@H](C(=O)N[C@@H]1C(=O)N2C(C(=O)O)=C(Cl)CC[C@H]12)c1ccccc1,LORACARBEF ANHYDROUS,unknown,,,,,,1.0,1.0,0.0,verified_neg,WebSearch verified
+NRJAVPSFFCBXDT-UHFFFAOYSA-N,CCCCCCCCCCCCCCCCCC(=O)OCC(COP(=O)([O-])OCC[N+](C)(C)C)OC(=O)CCCCCCCCCCCCCCCCC,Distearoylphosphatidylcholine,unknown,,,,weak,,,1.0,,verified_exclude,WebSearch: insufficient evidence
+DHHVAGZRUROJKS-UHFFFAOYSA-N,CC(C)(N)Cc1ccccc1,Phentermine,,E,,,,,1.0,,0.0,LiverTox_neg,NIH LiverTox=E
+WZRCQWQRFZITDX-UHFFFAOYSA-N,Oc1ccc(CC2NCCc3cc(O)c(O)cc32)cc1,Higenamine,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+FIHJKUPKCHIPAT-UHFFFAOYSA-N,CC1CCC2C(C)C(OC(=O)CCC(=O)O)OC3OC4(C)CCC1C32OO4,Artesunate,Ambiguous-DILI-Concern,E,,weak,,,,,0.0,LiverTox_neg,NIH LiverTox=E
+IPWKIXLWTCNBKN-UHFFFAOYSA-N,Cc1ncc([N+](=O)[O-])n1CC(O)CCl,ornidazole,unknown,,,medium,,,1.0,1.0,1.0,verified_pos,WebSearch verified
+UQVKZNNCIHJZLS-UHFFFAOYSA-N,Cn1c(N)nc2ncc(-c3ccccc3)cc21,"2-Amino-1-Methyl-6-Phenylimidazo(4,5-b)Pyridine",unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+NPWPEPVYKMPDKK-UHFFFAOYSA-N,[O-][Cl+]O,Tetrachlorodecaoxide,unknown,,,,weak,,,1.0,,non_drug,industrial/lab chemical
+VADKRMSMGWJZCF-UHFFFAOYSA-N,Oc1ccccc1Br,2-Bromophenol,unknown,,,,,,1.0,1.0,,non_drug,industrial/lab chemical
+WSPOMRSOLSGNFJ-AUWJEWJLSA-N,CN(C)CC/C=C1/c2ccccc2Sc2ccc(Cl)cc21,CHLORPROTHIXENE,unknown,,,,,,1.0,1.0,1.0,verified_pos,WebSearch verified
+XMVJITFPVVRMHC-UHFFFAOYSA-N,O=[N+]([O-])c1cc([As](=O)(O)O)ccc1O,Roxarsone,unknown,,,,medium,,,1.0,1.0,verified_pos,WebSearch verified
+XUJNEKJLAYXESH-REOHCLBHSA-N,N[C@@H](CS)C(=O)O,CYSTEINE,unknown,,,,,,1.0,1.0,,non_drug,industrial/lab chemical
+TVURRHSHRRELCG-UHFFFAOYSA-N,Oc1ccc(C2CNCCc3c2cc(O)c(O)c3Cl)cc1,FENOLDOPAM,vNo-DILI-Concern,,,,medium,,,1.0,0.0,DILIrank_neg,FDA vNo
+PGSWEKYNAOWQDF-UHFFFAOYSA-N,Cc1cccc(O)c1O,3-Methylcatechol,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+KANJSNBRCNMZMV-UHFFFAOYSA-N,COC1OC(COS(=O)(=O)O)C(OC2OC(C(=O)O)C(OC3OC(COS(=O)(=O)O)C(OC4OC(C(=O)O)C(OC5OC(COS(=O)(=O)O)C(O)C(O)C5NS(=O)(=O)O)C(O)C4O)C(OS(=O)(=O)O)C3NS(=O)(=O)O)C(O)C2OS(=O)(=O)O)C(O)C1NS(=O)(=O)O,Fondaparinux sodium,vLess-DILI-Concern,E,,,,,,,1.0,DILIrank_pos,FDA vLess-DILI-Concern
+PXKHGMGELZGJQE-ILBGXUMGSA-N,CCCCCCCCCCCCCCCC(=O)OC[C@@H](NC(=O)C(Cl)Cl)[C@H](O)c1ccc([N+](=O)[O-])cc1,chloramphenicol palmitate,unknown,,,,,,1.0,1.0,1.0,verified_pos,WebSearch verified
+JSDXOWVAHXDYCU-VXSYNFHWSA-N,CO[C@@]1(NC(=O)CSC[C@@H](N)C(=O)O)C(=O)N2C(C(=O)O)=C(CSc3nnnn3C)CS[C@@H]21,cefminox,unknown,,,,,,1.0,1.0,,verified_exclude,WebSearch: insufficient evidence
+SECKRCOLJRRGGV-UHFFFAOYSA-N,CCCc1nc(C)c2c(=O)[nH]c(-c3cc(S(=O)(=O)N4CCN(CC)CC4)ccc3OCC)nn12,vardenafil,Ambiguous-DILI-Concern,E,,,,,1.0,0.0,0.0,LiverTox_neg,NIH LiverTox=E
+UIRKNQLZZXALBI-MSVGPLKSSA-N,CC(C)[C@@H](CC[C@@H](C)[C@H]1CC[C@H]2[C@@H]3[C@H](O)C[C@H]4C[C@@H](NCCCNCCCCN)CC[C@]4(C)[C@H]3CC[C@]12C)OS(=O)(=O)O,Squalamine,unknown,,,,,,1.0,1.0,1.0,verified_pos,WebSearch verified
+VYPSYNLAJGMNEJ-UHFFFAOYSA-N,O=[Si]=O,TALC,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+JLQNHALFVCURHW-UHFFFAOYSA-N,S1SSSSSSS1,SULFUR,unknown,,,weak,,,,1.0,,non_drug,industrial/lab chemical
+SNIOPGDIGTZGOP-UHFFFAOYSA-N,O=[N+]([O-])OCC(CO[N+](=O)[O-])O[N+](=O)[O-],NITROGLYCERIN,vNo-DILI-Concern,,,,strong,,,1.0,0.0,DILIrank_neg,FDA vNo
+PNUZDKCDAWUEGK-CYZMBNFOSA-N,N[C@@H]1CN(c2c(F)cc3c(=O)c(C(=O)O)cn([C@@H]4C[C@@H]4F)c3c2Cl)CC12CC2,sitafloxacin,unknown,,,,,,1.0,1.0,,verified_exclude,WebSearch: insufficient evidence
+JBIWCJUYHHGXTC-AKNGSSGZSA-N,C[C@H]1c2cccc(O)c2C(=O)C2=C(O)[C@]3(O)C(=O)C(C(N)=O)=C(O)[C@@H](N(C)C)[C@@H]3[C@@H](O)[C@@H]21,DOXYCYCLINE ANHYDROUS,unknown,,,,,,1.0,1.0,1.0,verified_pos,WebSearch verified
+QJMCKEPOKRERLN-UHFFFAOYSA-N,O=C(NO)c1ccc(O)c(O)c1,"N,3,4-Trihydroxybenzamide",unknown,,,,medium,,1.0,1.0,,non_drug,industrial/lab chemical
+OEYIOHPDSNJKLS-UHFFFAOYSA-N,C[N+](C)(C)CCO,CHOLINE CHLORIDE,vNo-DILI-Concern,A,,,strong,,,1.0,0.0,DILIrank_neg,FDA vNo
+SNBUBQHDYVFSQF-HIFRSBDPSA-N,CO[C@@]1(NC(=O)CSCC#N)C(=O)N2C(C(=O)O)=C(CSc3nnnn3C)CS[C@@H]21,CEFMETAZOLE SODIUM,unknown,,,,,,1.0,1.0,,non_drug,industrial/lab chemical
+PXQPEWDEAKTCGB-UHFFFAOYSA-N,O=C(O)c1cc(=O)[nH]c(=O)[nH]1,orotic acid,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+NTYJJOPFIAHURM-UHFFFAOYSA-N,NCCc1c[nH]cn1,HISTAMINE,vNo-DILI-Concern,,,,strong,,,1.0,0.0,DILIrank_neg,FDA vNo
+KSUUMAWCGDNLFK-UHFFFAOYSA-N,C=CCC(C(=O)NC(N)=O)C(C)C,apronal,unknown,,,,,,1.0,1.0,1.0,verified_pos,WebSearch verified
+KVGGQNNGLOIZSK-UHFFFAOYSA-N,Nc1cc([As]=O)ccc1O,oxophenarsine,unknown,,,,strong,,,1.0,1.0,verified_pos,WebSearch verified
+JMZOMFYRADAWOG-UHFFFAOYSA-N,COC(=O)c1cc(OC)c2c(c1-c1c(C(=O)OC)cc(OC)c3c1OCO3)OCO2,"7,7'-dimethoxy-(4,4'-bi-1,3-benzodioxole)-5,5'-dicarboxylic acid dimethyl ester",,,,,weak,,0.0,,,non_drug,industrial/lab chemical
+BXNJHAXVSOCGBA-UHFFFAOYSA-N,COc1ccc2c(c1)[nH]c1c(C)nccc12,Harmine,unknown,,,,strong,,,1.0,,non_drug,industrial/lab chemical
+AFNXATANNDIXLG-UHFFFAOYSA-N,Clc1ccc(CSC(Cn2ccnc2)c2ccc(Cl)cc2Cl)cc1,SULCONAZOLE,unknown,,,,medium,,,1.0,,verified_exclude,WebSearch: insufficient evidence
+WBXPDJSOTKVWSJ-ZDUSSCGKSA-N,Nc1nc(=O)c2c(CCc3ccc(C(=O)N[C@@H](CCC(=O)O)C(=O)O)cc3)c[nH]c2[nH]1,PEMETREXED TROMETHAMINE,unknown,,,,,,1.0,1.0,0.0,verified_neg,WebSearch verified
+SLFGIOIONGJGRT-UHFFFAOYSA-N,CC(CN(C)C)CN1c2ccccc2Sc2ccc(C#N)cc21,cyamemazine,unknown,,,,,,1.0,1.0,0.0,verified_neg,WebSearch verified
+BSJMWHQBCZFXBR-UHFFFAOYSA-N,O=C1C(=O)c2ccccc2C(O)=C1C1CCC(c2ccc(Cl)cc2)CC1,"3-(4-(4-Chlorophenyl)cyclohexyl)-4-hydroxynaphthalene-1,2-dione",Ambiguous-DILI-Concern,D,warning_hepatotox,,strong,,,1.0,1.0,LiverTox_pos,NIH LiverTox=D
+RFFLAFLAYFXFSW-UHFFFAOYSA-N,Clc1ccccc1Cl,"1,2-Dichlorobenzene",unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+MHSVUSZEHNVFKW-UHFFFAOYSA-N,O=[N+]([O-])c1ccc(OP(=O)(O)Oc2ccc([N+](=O)[O-])cc2)cc1,Bis(p-nitrophenyl) phosphate,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+YQUVCSBJEUQKSH-UHFFFAOYSA-N,O=C(O)c1ccc(O)c(O)c1,Protocatechuic Acid,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+DXGLGDHPHMLXJC-UHFFFAOYSA-N,COc1ccc(C(=O)c2ccccc2)c(O)c1,OXYBENZONE,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+IBYCYJFUEJQSMK-UHFFFAOYSA-N,CCN=C1Nc2ccc(Cl)cc2C(C)(c2ccccc2)O1,Etifoxine,unknown,,,,,,1.0,1.0,1.0,verified_pos,WebSearch verified
+JMEVHYCNAPFOAB-UHFFFAOYSA-N,O=C1C(c2[nH]c3ccc(S(=O)(=O)O)cc3c2O)=Nc2ccc(S(=O)(=O)O)cc21,Indigotindisulfonic acid,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+ZBMZVLHSJCTVON-UHFFFAOYSA-N,CC(C)NCC(O)c1ccc(NS(C)(=O)=O)cc1,SOTALOL,Ambiguous-DILI-Concern,E,,,medium,,,0.0,0.0,LiverTox_neg,NIH LiverTox=E
+DERZBLKQOCDDDZ-JLHYYAGUSA-N,C(=C/c1ccccc1)\CN1CCN(C(c2ccccc2)c2ccccc2)CC1,cinnarizine,unknown,,,,,,1.0,1.0,1.0,verified_pos,WebSearch verified
+VLTRZXGMWDSKGL-UHFFFAOYSA-N,[O-][Cl+3]([O-])([O-])O,POTASSIUM PERCHLORATE,unknown,,,,weak,,,1.0,,non_drug,industrial/lab chemical
+ORYDPOVDJJZGHQ-UHFFFAOYSA-N,Nc1n[n+]([O-])c2ccccc2[n+]1[O-],Tirapazamine,unknown,,,,weak,,,1.0,1.0,verified_pos,WebSearch verified
+XMGQYMWWDOXHJM-JTQLQIEISA-N,C=C(C)[C@H]1CC=C(C)CC1,(+)-Limonene,unknown,,,,,,1.0,1.0,,non_drug,industrial/lab chemical
+NCEXYHBECQHGNR-UHFFFAOYSA-N,O=C(O)c1cc(N=Nc2ccc(S(=O)(=O)Nc3ccccn3)cc2)ccc1O,Sulfasalazine,vMost-DILI-Concern,A,warning_hepatotox,strong,strong,strong,,1.0,1.0,DILIrank_pos,FDA vMost-DILI-Concern
+DXSUDONPFZKWOO-UHFFFAOYSA-N,O=C1OC(CCN2CCCCC2)OC1(c1ccccc1)c1ccccc1,pipoxolan,unknown,,,,medium,,,1.0,,verified_exclude,WebSearch: insufficient evidence
+HHLFWLYXYJOTON-UHFFFAOYSA-N,O=CC(=O)O,Glyoxylic Acid,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+QXAITBQSYVNQDR-UHFFFAOYSA-N,Cc1ccc(N=CN(C)C=Nc2ccc(C)cc2C)c(C)c1,Amitraz,unknown,,,,medium,,,1.0,1.0,verified_pos,WebSearch verified
+VRQVVMDWGGWHTJ-CQSZACIVSA-N,COc1ccc2c(c1)N(C[C@H](C)CN(C)C)c1ccccc1S2,LEVOMEPROMAZINE,unknown,,,,,,1.0,1.0,0.0,verified_neg,WebSearch verified
+OTBXOEAOVRKTNQ-UHFFFAOYSA-N,O=C1CN2Cc3c(ccc(Cl)c3Cl)N=C2N1,ANAGRELIDE,Ambiguous-DILI-Concern,E,,,,,1.0,0.0,0.0,LiverTox_neg,NIH LiverTox=E
+ZBNZXTGUTAYRHI-UHFFFAOYSA-N,Cc1nc(Nc2ncc(C(=O)Nc3c(C)cccc3Cl)s2)cc(N2CCN(CCO)CC2)n1,DASATINIB ANHYDROUS,vLess-DILI-Concern,D,warning_hepatotox,weak,,weak,1.0,1.0,1.0,DILIrank_pos,FDA vLess-DILI-Concern
+MUTNCGKQJGXKEM-UHFFFAOYSA-N,CC1(C)CCC(C)(C)c2cc(NC(=O)c3ccc(C(=O)O)cc3)ccc21,TAMIBAROTENE,unknown,,,,medium,,,1.0,1.0,verified_pos,WebSearch verified
+ROBVIMPUHSLWNV-UHFFFAOYSA-N,CCC1(c2ccc(N)cc2)CCC(=O)NC1=O,AMINOGLUTETHIMIDE,unknown,,,,weak,,,1.0,,verified_exclude,WebSearch: insufficient evidence
+BSSIRFLGSWHWDE-UHFFFAOYSA-N,CCC(C)CCCCC(=O)NC(CCNCS(=O)(=O)O)C(=O)NC(C(=O)NC(CCNCS(=O)(=O)O)C(=O)NC1CCNC(=O)C(C(C)O)NC(=O)C(CCNCS(=O)(=O)O)NC(=O)C(CCNCS(=O)(=O)O)NC(=O)C(CC(C)C)NC(=O)C(CC(C)C)NC(=O)C(CCNCS(=O)(=O)O)NC1=O)C(C)O,Colistin methanesulfonic acid,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+KXGVEGMKQFWNSR-UHFFFAOYSA-N,CC(CCC(=O)O)C1CCC2C3CCC4CC(O)CCC4(C)C3CC(O)C12C,Deoxycholic acid,vNo-DILI-Concern,,,,strong,,,,0.0,DILIrank_neg,FDA vNo
+YLJREFDVOIBQDA-UHFFFAOYSA-N,Nc1c2c(nc3ccccc13)CCCC2,TACRINE,unknown,A,,medium,strong,,1.0,1.0,1.0,LiverTox_pos,NIH LiverTox=A
+BDOSMKKIYDKNTQ-UHFFFAOYSA-N,[Cd],Cadmium,unknown,,,,strong,,,1.0,,non_drug,industrial/lab chemical
+KIDHWZJUCRJVML-UHFFFAOYSA-N,NCCCCN,Putrescine,unknown,,,,strong,,,1.0,,non_drug,industrial/lab chemical
+IMQLKJBTEOYOSI-UHFFFAOYSA-N,O=P(O)(O)OC1C(OP(=O)(O)O)C(OP(=O)(O)O)C(OP(=O)(O)O)C(OP(=O)(O)O)C1OP(=O)(O)O,Phytate,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+KHOITXIGCFIULA-UHFFFAOYSA-N,CC(=O)Oc1ccc(C(c2ccc(OC(C)=O)cc2)c2ccccn2)cc1,BISACODYL,vNo-DILI-Concern,E,,,,weak,,1.0,0.0,DILIrank_neg,FDA vNo
+NCNRHFGMJRPRSK-UHFFFAOYSA-N,O=C(C=Cc1cccc(S(=O)(=O)Nc2ccccc2)c1)NO,belinostat,Ambiguous-DILI-Concern,D,,,,,,1.0,1.0,LiverTox_pos,NIH LiverTox=D
+MQLRYUCJDNBWMV-GHXIOONMSA-N,CO/N=C(\C(=O)N[C@@H]1C(=O)N2C(C(=O)O)=C(C)CS[C@H]12)c1csc(N)n1,cefetamet,unknown,,,,,,1.0,1.0,,verified_exclude,WebSearch: insufficient evidence
+DLEGDLSLRSOURQ-UHFFFAOYSA-N,C=COCC(F)(F)F,fluroxene,unknown,,,,,,1.0,1.0,1.0,verified_pos,WebSearch verified
+XQFRJNBWHJMXHO-RRKCRQDMSA-N,O=c1[nH]c(=O)n([C@H]2C[C@H](O)[C@@H](CO)O2)cc1I,IDOXURIDINE,unknown,,,,,,1.0,1.0,1.0,verified_pos,WebSearch verified
+UPALIKSFLSVKIS-UHFFFAOYSA-N,CN(C)CCN1C(=O)c2cccc3cc(N)cc(c23)C1=O,Amonafide,unknown,,,,,,1.0,1.0,1.0,verified_pos,WebSearch verified
+QOYHHIBFXOOADH-UHFFFAOYSA-N,O=C1NCN(c2ccccc2)C12CCN(CCCC(c1ccc(F)cc1)c1ccc(F)cc1)CC2,fluspirilene,unknown,,,,,,1.0,1.0,,verified_exclude,WebSearch: insufficient evidence
+SVOQIEJWJCQGDQ-UHFFFAOYSA-N,Cc1ccc(-n2[nH]c(C)c(N=Nc3cccc(-c4cccc(C(=O)O)c4)c3O)c2=O)cc1C,Eltrombopag,vMost-DILI-Concern,,boxed_hepatotox,,,,,1.0,1.0,DILIrank_pos,FDA vMost-DILI-Concern
+MCPKSFINULVDNX-UHFFFAOYSA-N,Cc1ccc(O)c(-n2nc3ccccc3n2)c1,drometrizole,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+VHBFFQKBGNRLFZ-UHFFFAOYSA-N,O=c1cc(-c2ccccc2)oc2ccccc12,Flavone,unknown,,,,medium,,,1.0,,verified_exclude,WebSearch: insufficient evidence
+KPSRODZRAIWAKH-UHFFFAOYSA-N,CC(C)(Oc1ccc(C2CC2(Cl)Cl)cc1)C(=O)O,CIPROFIBRATE,unknown,,,weak,strong,,1.0,1.0,1.0,verified_pos,WebSearch verified
+ZEMIJUDPLILVNQ-ZXFNITATSA-N,CC(C)(C)C(=O)OCOC(=O)[C@@H]1N2C(=O)[C@@H](NC(=O)[C@H](N)c3ccccc3)[C@H]2SC1(C)C,pivampicillin,unknown,,,,,,1.0,1.0,0.0,verified_neg,WebSearch verified
+KDPAWGWELVVRCH-UHFFFAOYSA-N,O=C(O)CBr,Bromoacetic Acid,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+RYGMFSIKBFXOCR-UHFFFAOYSA-N,[Cu],Copper,unknown,A,,medium,strong,,,1.0,1.0,LiverTox_pos,NIH LiverTox=A
+JHVAMHSQVVQIOT-MFAJLEFUSA-N,CCCCCOc1ccc(-c2ccc(-c3ccc(C(=O)N[C@H]4C[C@@H](O)[C@@H](O)NC(=O)[C@@H]5[C@@H](O)[C@@H](C)CN5C(=O)[C@H]([C@@H](C)O)NC(=O)[C@H]([C@H](O)[C@@H](O)c5ccc(O)cc5)NC(=O)[C@@H]5C[C@@H](O)CN5C(=O)[C@H]([C@@H](C)O)NC4=O)cc3)cc2)cc1,ANIDULAFUNGIN,unknown,,,,,,1.0,1.0,1.0,verified_pos,WebSearch verified
+IENZQIKPVFGBNW-UHFFFAOYSA-N,COc1cc2nc(N3CCN(C(=O)c4ccco4)CC3)nc(N)c2cc1OC,PRAZOSIN,Ambiguous-DILI-Concern,E,,,medium,,,0.0,0.0,LiverTox_neg,NIH LiverTox=E
+ANZXOIAKUNOVQU-UHFFFAOYSA-N,CN(C)C(=O)Oc1cc(OC(=O)N(C)C)cc(C(O)CNC(C)(C)C)c1,bambuterol,unknown,,,,,,1.0,1.0,0.0,verified_neg,WebSearch verified
+ZBBHBTPTTSWHBA-UHFFFAOYSA-N,COC(=O)C1=C(C)NC(C)=C(C(=O)OCCN(C)Cc2ccccc2)C1c1cccc([N+](=O)[O-])c1,Nicardipine hydrochloride,Ambiguous-DILI-Concern,E,,,medium,,1.0,,0.0,LiverTox_neg,NIH LiverTox=E
+HVFLCNVBZFFHBT-ZKDACBOMSA-N,CO/N=C(\C(=O)N[C@@H]1C(=O)N2C(C(=O)[O-])=C(C[N+]3(C)CCCC3)CS[C@H]12)c1csc(N)n1,CEFEPIME,unknown,,,,,,1.0,1.0,1.0,verified_pos,WebSearch verified
+JWCSIUVGFCSJCK-CAVRMKNVSA-N,CO[C@@]1(NC(=O)C(C(=O)O)c2ccc(O)cc2)C(=O)N2C(C(=O)O)=C(CSc3nnnn3C)CO[C@@H]21,MOXALACTAM,unknown,,,,,,1.0,1.0,,verified_exclude,WebSearch: insufficient evidence
+IISBACLAFKSPIT-UHFFFAOYSA-N,CC(C)(c1ccc(O)cc1)c1ccc(O)cc1,Bisphenol A,unknown,,,,strong,,,1.0,,non_drug,industrial/lab chemical
+VKQFCGNPDRICFG-UHFFFAOYSA-N,COC(=O)C1=C(C)NC(C)=C(C(=O)OCC(C)C)C1c1ccccc1[N+](=O)[O-],NISOLDIPINE,Ambiguous-DILI-Concern,E,,,medium,,,0.0,0.0,LiverTox_neg,NIH LiverTox=E
+MGSPDRWOUCPKNZ-UHFFFAOYSA-N,CCN(CC)CCn1c(-c2ccccc2)noc1=N,imolamine,unknown,,,,,,1.0,1.0,,verified_exclude,WebSearch: insufficient evidence
+ABJKWBDEJIDSJZ-UHFFFAOYSA-N,CN(Cc1ccc(C(C)(C)C)cc1)Cc1cccc2ccccc12,BUTENAFINE,unknown,,,,weak,,,1.0,0.0,verified_neg,WebSearch verified
+KLPWJLBORRMFGK-UHFFFAOYSA-N,CCc1c(C)[nH]c2c1C(=O)C(CN1CCOCC1)CC2,MOLINDONE,unknown,D,,,,,1.0,1.0,1.0,LiverTox_pos,NIH LiverTox=D
+JGPMMRGNQUBGND-UHFFFAOYSA-N,COC1=C(OC)C(=O)C(CCCCCCCCCCO)=C(C)C1=O,IDEBENONE,unknown,,,,weak,,,1.0,,verified_exclude,WebSearch: insufficient evidence
+OFBIFZUFASYYRE-UHFFFAOYSA-N,CCOC(=O)c1ncn2c1CN(C)C(=O)c1cc(F)ccc1-2,FLUMAZENIL,vNo-DILI-Concern,,,,weak,,,1.0,0.0,DILIrank_neg,FDA vNo
+YBHILYKTIRIUTE-UHFFFAOYSA-N,COc1ccc2cc3[n+](cc2c1OC)CCc1cc2c(cc1-3)OCO2,Berberine,,E,,,medium,,,,0.0,LiverTox_neg,NIH LiverTox=E
+UULSDCUWMKTMND-UHFFFAOYSA-N,NC(=O)CNc1ccc([As](=O)(O)O)cc1,tryparsamide,unknown,,,,,,1.0,1.0,,non_drug,industrial/lab chemical
+LXCFILQKKLGQFO-UHFFFAOYSA-N,COC(=O)c1ccc(O)cc1,methylparaben,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+RZTAMFZIAATZDJ-UHFFFAOYSA-N,CCOC(=O)C1=C(C)NC(C)=C(C(=O)OC)C1c1cccc(Cl)c1Cl,Felodipine,vLess-DILI-Concern,E,,,strong,,,,1.0,DILIrank_pos,FDA vLess-DILI-Concern
+SXONDGSPUVNZLO-UHFFFAOYSA-N,O=C(O)Cn1c(=O)n(Cc2ccc(Br)cc2F)c(=O)c2ccc(Cl)cc21,Zenarestat,unknown,,,,,,1.0,1.0,,verified_exclude,WebSearch: insufficient evidence
+DQDAYGNAKTZFIW-UHFFFAOYSA-N,CCC(c1ccccc1)c1c(O)c2ccccc2oc1=O,PHENPROCOUMON,unknown,,,medium,strong,,,1.0,1.0,verified_pos,WebSearch verified
+KYRVNWMVYQXFEU-UHFFFAOYSA-N,COC(=O)Nc1nc2ccc(C(=O)c3cccs3)cc2[nH]1,Nocodazole,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+QXLPXWSKPNOQLE-UHFFFAOYSA-N,C#CC(C)(O)CC,methylpentynol,unknown,,,,,,1.0,1.0,,verified_exclude,WebSearch: insufficient evidence
+FFYNAVGJSYHHFO-UHFFFAOYSA-N,COc1cccc(CCc2ccccc2OCC(CN(C)C)OC(=O)CCC(=O)O)c1,sarpogrelate,unknown,,,,medium,,,1.0,,verified_exclude,WebSearch: insufficient evidence
+AQHHHDLHHXJYJD-UHFFFAOYSA-N,CC(C)NCC(O)COc1cccc2ccccc12,PROPRANOLOL,Ambiguous-DILI-Concern,E,,weak,strong,,1.0,0.0,0.0,LiverTox_neg,NIH LiverTox=E
+QVNNONOFASOXQV-UHFFFAOYSA-N,CC(C)c1cccc(C(C)C)c1OCOP(=O)(O)O,FOSPROPOFOL,vLess-DILI-Concern,,,,,,1.0,1.0,1.0,DILIrank_pos,FDA vLess-DILI-Concern
+XKFPYPQQHFEXRZ-UHFFFAOYSA-N,Cc1cc(C(=O)NNCc2ccccc2)no1,Isocarboxazid,Ambiguous-DILI-Concern,E,,,,,1.0,,0.0,LiverTox_neg,NIH LiverTox=E
+KBPLFHHGFOOTCA-UHFFFAOYSA-N,CCCCCCCCO,1-Octanol,unknown,,,,weak,,,1.0,,non_drug,industrial/lab chemical
+IMSSROKUHAOUJS-MJCUULBUSA-N,C#C[C@]1(O)CC[C@H]2[C@@H]3CCc4cc(OC)ccc4[C@H]3CC[C@@]21C,MESTRANOL,unknown,,,,,,1.0,1.0,1.0,verified_pos,WebSearch verified
+ZSBOMTDTBDDKMP-UHFFFAOYSA-N,Cn1c(=O)cc(N2CCCC(N)C2)n(Cc2ccccc2C#N)c1=O,Alogliptin benzoate,Ambiguous-DILI-Concern,E,warning_hepatotox,,,,,,0.0,LiverTox_neg,NIH LiverTox=E
+VFCNQNZNPKRXIT-UHFFFAOYSA-N,CN(C)c1ccc(C(=C2C=CC(=[N+](C)C)C=C2)c2ccccc2)cc1,Malachite green cation,unknown,,,,strong,,,1.0,,non_drug,industrial/lab chemical
+HTIQEAQVCYTUBX-UHFFFAOYSA-N,CCOC(=O)C1=C(COCCN)NC(C)=C(C(=O)OC)C1c1ccccc1Cl,AMLODIPINE,vLess-DILI-Concern,C,warning_hepatotox,medium,strong,medium,,1.0,1.0,DILIrank_pos,FDA vLess-DILI-Concern
+UZHSEJADLWPNLE-UHFFFAOYSA-N,C=CCN1CCC23c4c5ccc(O)c4OC2C(=O)CCC3(O)C1C5,Naloxone hydrochloride,vNo-DILI-Concern,E,,,medium,,,,0.0,DILIrank_neg,FDA vNo
+PNVJTZOFSHSLTO-UHFFFAOYSA-N,COP(=S)(OC)Oc1ccc(SC)c(C)c1,Fenthion,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+HJJDBAOLQAWBMH-YCRCPZNHSA-N,CO/N=C(\C(=O)N[C@@H]1C(=O)N2C(C(=O)O)=C(CSc3nnnn3C)CS[C@H]12)c1csc(N)n1,CEFMENOXIME,unknown,,,,,,1.0,1.0,0.0,verified_neg,WebSearch verified
+DYLJVOXRWLXDIG-UHFFFAOYSA-N,COc1cccc(OC)c1-c1cc(C(=O)NC2(C(=O)O)C3CC4CC(C3)CC2C4)nn1-c1ccnc2cc(Cl)ccc12,Meclinertant,unknown,,,,weak,,,1.0,,verified_exclude,WebSearch: insufficient evidence
+IAKHMKGGTNLKSZ-UHFFFAOYSA-N,COc1cc2c(c(OC)c1OC)-c1ccc(OC)c(=O)cc1C(NC(C)=O)CC2,"N-(5,6,7,9-Tetrahydro-1,2,3,10-tetramethoxy-9-oxobenzo(a)heptalen-7-yl)acetamide",Ambiguous-DILI-Concern,E,,weak,strong,,,1.0,0.0,LiverTox_neg,NIH LiverTox=E
+GFIJNRVAKGFPGQ-UHFFFAOYSA-N,CCNC(=O)C1CCCN1C(=O)C(CCCN=C(N)N)NC(=O)C(CC(C)C)NC(=O)C(CC(C)C)NC(=O)C(Cc1ccc(O)cc1)NC(=O)C(CO)NC(=O)C(Cc1c[nH]c2ccccc12)NC(=O)C(Cc1cnc[nH]1)NC(=O)C1CCC(=O)N1,Leuprolide acetate,vLess-DILI-Concern,E,,,medium,,,,1.0,DILIrank_pos,FDA vLess-DILI-Concern
+IBGBGRVKPALMCQ-UHFFFAOYSA-N,O=Cc1ccc(O)c(O)c1,protocatechualdehyde,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+IMYZQPCYWPFTAG-UHFFFAOYSA-N,CNC1(C)C2CCC(C2)C1(C)C,MECAMYLAMINE,vNo-DILI-Concern,,,,medium,,,1.0,0.0,DILIrank_neg,FDA vNo
+DDLIGBOFAVUZHB-UHFFFAOYSA-N,Cc1ncc2n1-c1ccc(Cl)cc1C(c1ccccc1F)=NC2,MIDAZOLAM,vNo-DILI-Concern,E,,,medium,,,1.0,0.0,DILIrank_neg,FDA vNo
+CDAWCLOXVUBKRW-UHFFFAOYSA-N,Nc1ccccc1O,2-Aminophenol,unknown,,,,weak,,,1.0,,non_drug,industrial/lab chemical
+NGBBVGZWCFBOGO-UHFFFAOYSA-N,CC(N)Cc1ccc2c(c1)OCO2,"3,4-Methylenedioxyamphetamine",unknown,,,medium,medium,,,1.0,,non_drug,industrial/lab chemical
+ZDZOTLJHXYCWBA-VCVYQWHSSA-N,CC(=O)O[C@@]12CO[C@@H]1C[C@H](O)[C@@]1(C)C(=O)[C@H](O)C3=C(C)[C@@H](OC(=O)[C@H](O)[C@@H](NC(=O)OC(C)(C)C)c4ccccc4)C[C@@](O)([C@@H](OC(=O)c4ccccc4)[C@H]21)C3(C)C,DOCETAXEL ANHYDROUS,unknown,,,,,,1.0,1.0,1.0,verified_pos,WebSearch verified
+BFGKITSFLPAWGI-UHFFFAOYSA-N,[Cr+3],chromic chloride,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+LSUVGSGHYCLVPU-UHFFFAOYSA-N,[O-][Cl+2]([O-])O,Chloric acid,unknown,,,,weak,,,1.0,,non_drug,industrial/lab chemical
+WFPIAZLQTJBIFN-DVZOWYKESA-N,OCCN1CCN(CC/C=C2/c3ccccc3Sc3ccc(Cl)cc32)CC1,zuclopenthixol,unknown,,,,,,1.0,1.0,,verified_exclude,WebSearch: insufficient evidence
+PRPINYUDVPFIRX-UHFFFAOYSA-N,O=C(O)Cc1cccc2ccccc12,1-Naphthaleneacetic Acid,unknown,,,,weak,,,1.0,,non_drug,industrial/lab chemical
+IIBYAHWJQTYFKB-UHFFFAOYSA-N,CC(C)(Oc1ccc(CCNC(=O)c2ccc(Cl)cc2)cc1)C(=O)O,bezafibrate,unknown,,,,strong,,,1.0,1.0,verified_pos,WebSearch verified
+ZZVUWRFHKOJYTH-UHFFFAOYSA-N,CN(C)CCOC(c1ccccc1)c1ccccc1,DIPHENHYDRAMINE,vNo-DILI-Concern,E,,,strong,medium,,1.0,0.0,DILIrank_neg,FDA vNo
+MYWUZJCMWCOHBA-UHFFFAOYSA-N,CNC(C)Cc1ccccc1,Methamphetamine hydrochloride,vNo-DILI-Concern,,,,strong,,,,0.0,DILIrank_neg,FDA vNo
+KTDZCOWXCWUPEO-UHFFFAOYSA-N,CS(=O)(=O)Nc1ccc([N+](=O)[O-])cc1OC1CCCCC1,N-(2-(Cyclohexyloxy)-4-nitrophenyl)methanesulfonamide,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+IMZMKUWMOSJXDT-UHFFFAOYSA-N,O=C(O)c1cc(=O)c2c(OCC(O)COc3cccc4oc(C(=O)O)cc(=O)c34)cccc2o1,CROMOLYN SODIUM,vLess-DILI-Concern,,,,medium,,1.0,1.0,1.0,DILIrank_pos,FDA vLess-DILI-Concern
+BGEBZHIAGXMEMV-UHFFFAOYSA-N,COc1c2ccoc2cc2oc(=O)ccc12,bergapten,unknown,,,,strong,,,1.0,0.0,verified_neg,WebSearch verified
+NLORYLAYLIXTID-ISLYRVAYSA-N,CC/C(=C(/CC)c1ccc(OP(=O)(O)O)cc1)c1ccc(OP(=O)(O)O)cc1,DIETHYLSTILBESTROL DIPHOSPHATE,unknown,,,,,,1.0,1.0,,verified_exclude,WebSearch: insufficient evidence
+FSQKKOOTNAMONP-UHFFFAOYSA-N,COc1ccc2c(c1)c(CC(=O)OCC(=O)O)c(C)n2C(=O)c1ccc(Cl)cc1,acemetacin,unknown,,,,,,1.0,1.0,,verified_exclude,WebSearch: insufficient evidence
+SVHOVVJFOWGYJO-UHFFFAOYSA-N,Oc1c(Br)c(Br)c(Br)c(Br)c1Br,Pentabromophenol,unknown,,,,weak,,,1.0,,non_drug,industrial/lab chemical
+FVGANPIKNNCIKX-UHFFFAOYSA-N,CCN(Cc1cccc(S(=O)(=O)O)c1)c1ccc(C(=C2C=CC(=[N+](CC)Cc3cccc(S(=O)(=O)[O-])c3)C=C2)c2ccc(S(=O)(=O)O)cc2)cc1,Light green SF yellowish,unknown,,,,strong,,,1.0,,non_drug,industrial/lab chemical
+MMOXZBCLCQITDF-UHFFFAOYSA-N,CCN(CC)C(=O)c1cccc(C)c1,diethyltoluamide,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+PIJVFDBKTWXHHD-UHFFFAOYSA-N,CNC(=O)Oc1ccc2c(c1)C1(C)CCN(C)C1N2C,Physostigmine salicylate,vNo-DILI-Concern,,,,medium,,,,0.0,DILIrank_neg,FDA vNo
+WXTMDXOMEHJXQO-UHFFFAOYSA-N,O=C(O)c1cc(O)ccc1O,gentisic acid,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+BFPYWIDHMRZLRN-SLHNCBLASA-N,C#C[C@]1(O)CC[C@H]2[C@@H]3CCc4cc(O)ccc4[C@H]3CC[C@@]21C,ETHINYL ESTRADIOL,unknown,,,,,,1.0,1.0,1.0,verified_pos,WebSearch verified
+WATWJIUSRGPENY-UHFFFAOYSA-N,[Sb],Antimony,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+YVPYQUNUQOZFHG-UHFFFAOYSA-N,CC(=O)Nc1c(I)c(NC(C)=O)c(I)c(C(=O)O)c1I,DIATRIZOATE SODIUM,vNo-DILI-Concern,,,,weak,,,1.0,0.0,DILIrank_neg,FDA vNo
+OYIKARCXOQLFHF-UHFFFAOYSA-N,CS(=O)(=O)c1cc(C(F)(F)F)ccc1C(=O)c1cnoc1C1CC1,Isoxaflutole,unknown,,,,strong,,,1.0,,non_drug,industrial/lab chemical
+NOEGNKMFWQHSLB-UHFFFAOYSA-N,O=Cc1ccc(CO)o1,5-(Hydroxymethyl)furfural,unknown,,,,strong,,,1.0,,non_drug,industrial/lab chemical
+LKCWBDHBTVXHDL-UHFFFAOYSA-N,NCCC(O)C(=O)NC1CC(N)C(OC2OC(CN)C(O)C(O)C2O)C(O)C1OC1OC(CO)C(O)C(N)C1O,Amikacin sulfate,vNo-DILI-Concern,E,,,medium,,,,0.0,DILIrank_neg,FDA vNo
+PTFCDOFLOPIGGS-UHFFFAOYSA-N,[Zn+2],zinc oxide,unknown,,,,strong,,,1.0,,non_drug,industrial/lab chemical
+FIPWRIJSWJWJAI-UHFFFAOYSA-N,CCCCOCCOCCOCc1cc2c(cc1CCC)OCO2,PIPERONYL BUTOXIDE,unknown,,,,strong,,,1.0,,non_drug,industrial/lab chemical
+GPKJTRJOBQGKQK-UHFFFAOYSA-N,CCN(CC)CCCC(C)Nc1c2ccc(Cl)cc2nc2ccc(OC)cc12,Mepacrine,,E,,,strong,,1.0,,0.0,LiverTox_neg,NIH LiverTox=E
+JNLNPCNGMHKCKO-UHFFFAOYSA-N,O=C1C(c2c(O)[nH]c3ccccc23)=Nc2ccccc21,"2H-Indol-2-one, 3-(1,3-dihydro-3-oxo-2H-indol-2-ylidene)-1,3-dihydro-",unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+GCUCIFQCGJIRNT-UHFFFAOYSA-N,O=C(O)CN1C(=O)c2cccc3cccc(c23)C1=O,Alrestatin,unknown,,,,,,1.0,1.0,,non_drug,industrial/lab chemical
+KZBUYRJDOAKODT-UHFFFAOYSA-N,ClCl,Chlorine,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+BASFCYQUMIYNBI-UHFFFAOYSA-N,[Pt],Platinum,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+LQBVNQSMGBZMKD-UHFFFAOYSA-N,CC1(C)CCC(CN2CCN(c3ccc(C(=O)NS(=O)(=O)c4ccc(NCC5CCOCC5)c([N+](=O)[O-])c4)c(Oc4cnc5[nH]ccc5c4)c3)CC2)=C(c2ccc(Cl)cc2)C1,Venetoclax,vLess-DILI-Concern,E,,,,,,,1.0,DILIrank_pos,FDA vLess-DILI-Concern
+ZJVFLBOZORBYFE-UHFFFAOYSA-N,CC(C)C(=O)c1c(C(C)C)nn2ccccc12,IBUDILAST,unknown,,,,medium,,,1.0,1.0,verified_pos,WebSearch verified
+JGCMEBMXRHSZKX-UHFFFAOYSA-N,CCCNS(=O)(=O)Nc1ncnc(OCCOc2ncc(Br)cn2)c1-c1ccc(Br)cc1,Macitentan,vMost-DILI-Concern,E,,,,,,,1.0,DILIrank_pos,FDA vMost-DILI-Concern
+TVYLLZQTGLZFBW-UHFFFAOYSA-N,COc1cccc(C2(O)CCCCC2CN(C)C)c1,Tramadol hydrochloride,vLess-DILI-Concern,E,boxed_hepatotox,,strong,,,,1.0,DILIrank_pos,FDA vLess-DILI-Concern
+ONDYALNGTUAJDX-UHFFFAOYSA-N,COc1cccc2c1c(O)c(C(=O)N(C)c1ccc(C(F)(F)F)cc1)c(=O)n2C,Tasquinimod,unknown,,,,weak,,,1.0,,verified_exclude,WebSearch: insufficient evidence
+OEBRKCOSUFCWJD-UHFFFAOYSA-N,COP(=O)(OC)OC=C(Cl)Cl,Dichlorvos,unknown,,,,strong,,,1.0,,non_drug,industrial/lab chemical
+MLDQJTXFUGDVEO-UHFFFAOYSA-N,CNC(=O)c1cc(Oc2ccc(NC(=O)Nc3ccc(Cl)c(C(F)(F)F)c3)cc2)ccn1,SORAFENIB,vMost-DILI-Concern,B,warning_hepatotox,weak,,weak,1.0,1.0,1.0,DILIrank_pos,FDA vMost-DILI-Concern
+CPELXLSAUQHCOX-UHFFFAOYSA-N,Br,Hexatantalum Dodecabromide,unknown,,,,,weak,,1.0,,non_drug,industrial/lab chemical
+LNZMRLHZGOBKAN-KAWPREARSA-N,O=C(O)C1=C(C[n+]2ccc(CCS(=O)(=O)[O-])cc2)CS[C@@H]2[C@H](NC(=O)[C@H](NC(=O)c3nc[nH]c3C(=O)O)c3ccccc3)C(=O)N12,cefpimizole,unknown,,,,,,1.0,1.0,0.0,verified_neg,WebSearch verified
+DYZJXZOQQRXDLE-UHFFFAOYSA-O,CCOCC(O)COc1ccc(NC(=O)CC[S+](C)C)cc1,suplatast,unknown,,,,weak,,,1.0,1.0,verified_pos,WebSearch verified
+DYEFUKCXAQOFHX-UHFFFAOYSA-N,O=c1c2ccccc2[se]n1-c1ccccc1,Ebselen,unknown,,,,medium,,,1.0,0.0,verified_neg,WebSearch verified
+CJXAEXPPLWQRFR-UHFFFAOYSA-N,Clc1ccc(Cn2c(CN3CCCC3)nc3ccccc32)cc1,clemizole,unknown,,,,medium,,,1.0,,verified_exclude,WebSearch: insufficient evidence
+RWZVPVOZTJJMNU-UHFFFAOYSA-N,CN(CCCCCCCCCCN(C)C(=O)Oc1cccc([N+](C)(C)C)c1)C(=O)Oc1cccc([N+](C)(C)C)c1,DEMECARIUM BROMIDE,unknown,,,,,,1.0,1.0,1.0,verified_pos,WebSearch verified
+WQZGKKKJIJFFOK-UHFFFAOYSA-N,OCC1OC(O)C(O)C(O)C1O,Dextrose,vNo-DILI-Concern,,,medium,strong,,,,0.0,DILIrank_neg,FDA vNo
+XXRVYAFBUDSLJX-UHFFFAOYSA-N,CC(C)(Oc1ccc(Cl)cc1)C(=O)OCCOC(=O)c1cccnc1,etofibrate,unknown,,,,,,1.0,1.0,1.0,verified_pos,WebSearch verified
+HQMNCQVAMBCHCO-UHFFFAOYSA-N,CCOC(=O)C=C(C)C=CC=C(C)C=Cc1c(C)cc(OC)c(C)c1C,"9-(4-Methoxy-2,3,6-trimethylphenyl)-3,7-dimethylnona-2,4,6,8-tetraenoic acid ethyl ester",unknown,,,medium,strong,,,1.0,,non_drug,industrial/lab chemical
+UIAGMCDKSXEBJQ-UHFFFAOYSA-N,COCCOC(=O)C1=C(C)NC(C)=C(C(=O)OC(C)C)C1c1cccc([N+](=O)[O-])c1,NIMODIPINE,Ambiguous-DILI-Concern,E,,,medium,,,0.0,0.0,LiverTox_neg,NIH LiverTox=E
+ZOCUOMKMBMEYQV-GSLJADNHSA-N,CC(=O)OCC(=O)[C@@]1(O)CC[C@H]2[C@@H]3CCC4=CC(=O)C=C[C@]4(C)[C@@]3(F)[C@@H](O)C[C@@]21C,isoflupredone acetate,unknown,,,,,,1.0,1.0,,verified_exclude,WebSearch: insufficient evidence
+ICUTUKXCWQYESQ-UHFFFAOYSA-N,O=C(Nc1ccc(Cl)cc1)Nc1ccc(Cl)c(Cl)c1,triclocarban,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+NZLBHDRPUJLHCE-UHFFFAOYSA-N,CCN(CC)CCCN(c1ccccc1)C1Cc2ccccc2C1,aprindine,unknown,,,,strong,,1.0,1.0,1.0,verified_pos,WebSearch verified
+RPVGLMKJGQMQSN-UHFFFAOYSA-N,Cc1ccc(O)c2ncccc12,tiliquinol,unknown,,,,,,1.0,1.0,,non_drug,industrial/lab chemical
+WLJNZVDCPSBLRP-UHFFFAOYSA-N,O=C(O)c1cc2ccccc2c(Cc2c(O)c(C(=O)O)cc3ccccc23)c1O,OLANZAPINE PAMOATE,vNo-DILI-Concern,,boxed_hepatotox,,,weak,,1.0,0.0,DILIrank_neg,FDA vNo
+QIQXTHQIDYTFRH-UHFFFAOYSA-N,CCCCCCCCCCCCCCCCCC(=O)O,stearic acid,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+JWAZRIHNYRIHIV-UHFFFAOYSA-N,Oc1ccc2ccccc2c1,betanaphthol,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+BQJCRHHNABKAKU-UHFFFAOYSA-N,CN1CCC23c4c5ccc(O)c4OC2C(O)C=CC3C1C5,Morphine sulfate,vNo-DILI-Concern,E,,,strong,weak,,,0.0,DILIrank_neg,FDA vNo
+DQMZLTXERSFNPB-UHFFFAOYSA-N,CCC1(c2ccccc2)C(=O)NCNC1=O,PRIMIDONE,vNo-DILI-Concern,E,,,medium,,,1.0,0.0,DILIrank_neg,FDA vNo
+FASDKYOPVNHBLU-ZETCQYMHSA-N,CCCN[C@H]1CCc2nc(N)sc2C1,PRAMIPEXOLE,unknown,,,,,,1.0,1.0,0.0,verified_neg,WebSearch verified
+MBWXNTAXLNYFJB-UHFFFAOYSA-N,CC(=CCC1=C(C)C(=O)c2ccccc2C1=O)CCCC(C)CCCC(C)CCCC(C)C,Phytonadione,vNo-DILI-Concern,,,weak,medium,,,,0.0,DILIrank_neg,FDA vNo
+CUCUKLJLRRAKFN-UHFFFAOYSA-N,CC(=O)c1c(O)c(C)c(O)c2c1OC1=CC(=O)C(C(C)=O)C(=O)C12C,Copper usnate,unknown,,,,strong,,,1.0,,non_drug,industrial/lab chemical
+DBVJJBKOTRCVKF-UHFFFAOYSA-N,CC(O)(P(=O)(O)O)P(=O)(O)O,ETIDRONIC ACID,vNo-DILI-Concern,,,,weak,,,1.0,0.0,DILIrank_neg,FDA vNo
+HIUVKVDQFXDZHU-UHFFFAOYSA-N,N=C(N)NCC1COc2ccccc2O1,guanoxan,unknown,,,,,,1.0,1.0,1.0,verified_pos,WebSearch verified
+IJGRMHOSHXDMSA-UHFFFAOYSA-N,N#N,NITROGEN,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+LQCLVBQBTUVCEQ-QTFUVMRISA-N,CO[C@H]1C[C@H](O[C@H]2[C@H](C)[C@@H](O[C@@H]3O[C@H](C)C[C@H](N(C)C)[C@H]3OC(C)=O)[C@@H](C)C[C@@]3(CO3)C(=O)[C@H](C)[C@@H](OC(C)=O)[C@@H](C)[C@@H](C)OC(=O)[C@@H]2C)O[C@@H](C)[C@@H]1OC(C)=O,TROLEANDOMYCIN,unknown,,,,,,1.0,1.0,1.0,verified_pos,WebSearch verified
+KWIUHFFTVRNATP-UHFFFAOYSA-N,C[N+](C)(C)CC(=O)[O-],betaine,vNo-DILI-Concern,E,,,medium,,,1.0,0.0,DILIrank_neg,FDA vNo
+XULACPAEUUWKFX-UHFFFAOYSA-N,O=[N+]([O-])c1cc(Cl)cc(-c2cc(Cl)cc([N+](=O)[O-])c2O)c1O,niclofolan,unknown,,,,,,1.0,1.0,,verified_exclude,WebSearch: insufficient evidence
+MGQRRMONVLMKJL-KWJIQSIXSA-N,CO[C@@H]1[C@@H](N)[C@@H](O[C@H]2[C@H](Oc3cccc4c(O)c5c(=O)oc6ccc(C)c7c(=O)oc(c34)c5c67)O[C@H](C)[C@H](O)[C@]2(C)O)O[C@H](C)[C@@H]1O,Elsamitrucin,unknown,,,,,,1.0,1.0,1.0,verified_pos,WebSearch verified
+OJSFTALXCYKKFQ-YLJYHZDGSA-N,COc1ccc(OC[C@H]2CN(C)CC[C@@H]2c2ccccc2)cc1,femoxetine,unknown,,,,,,1.0,1.0,,non_drug,industrial/lab chemical
+UZWDCWONPYILKI-UHFFFAOYSA-N,CCN1CCN(Cc2ccc(Nc3ncc(F)c(-c4cc(F)c5nc(C)n(C(C)C)c5c4)n3)nc2)CC1,Abemaciclib,vLess-DILI-Concern,E,,,,,,,1.0,DILIrank_pos,FDA vLess-DILI-Concern
+OGAKLTJNUQRZJU-UHFFFAOYSA-N,OC(CCCN1CCCCC1)(c1ccccc1)c1ccccc1,DIPHENIDOL,unknown,,,,,,1.0,1.0,,verified_exclude,WebSearch: insufficient evidence
+DGVVWUTYPXICAM-UHFFFAOYSA-N,OCCS,2-Mercaptoethanol,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+QTBSBXVTEAMEQO-UHFFFAOYSA-N,CC(=O)O,ACETIC ACID,vNo-DILI-Concern,,,,medium,,1.0,1.0,0.0,DILIrank_neg,FDA vNo
+FHFYDNQZQSQIAI-UHFFFAOYSA-N,CCn1cc(C(=O)O)c(=O)c2cc(F)c(N3CCN(C)CC3)cc21,pefloxacin,unknown,,,,weak,,1.0,1.0,1.0,verified_pos,WebSearch verified
+RGHNJXZEOKUKBD-UHFFFAOYSA-N,O=C(O)C(O)C(O)C(O)C(O)CO,Tribulus,,E,,,medium,,,,0.0,LiverTox_neg,NIH LiverTox=E
+MEFKEPWMEQBLKI-AIRLBKTGSA-N,C[S+](CC[C@H](N)C(=O)[O-])C[C@H]1O[C@@H](n2cnc3c(N)ncnc32)[C@H](O)[C@@H]1O,ademetionine,unknown,,,,,,1.0,1.0,0.0,verified_neg,WebSearch verified
+WBXPDJSOTKVWSJ-UHFFFAOYSA-N,Nc1nc2[nH]cc(CCc3ccc(C(=O)NC(CCC(=O)O)C(=O)O)cc3)c2c(=O)[nH]1,Pemetrexed disodium,Ambiguous-DILI-Concern,E,,,,weak,,,0.0,LiverTox_neg,NIH LiverTox=E
+OIRFJRBSRORBCM-UHFFFAOYSA-N,CCC(Cc1c(I)cc(I)c(N)c1I)C(=O)O,IOPANOIC ACID,unknown,,,,,,1.0,1.0,,verified_exclude,WebSearch: insufficient evidence
+NXTVQNIVUKXOIL-UHFFFAOYSA-N,Cc1ccc(S(=O)(=O)NCl)cc1,tosylchloramide sodium,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+VZCYOOQTPOCHFL-OWOJBTEDSA-N,O=C(O)/C=C/C(=O)O,fumaric acid,unknown,,,,,,1.0,1.0,,non_drug,industrial/lab chemical
+KFZMGEQAYNKOFK-UHFFFAOYSA-N,CC(C)O,ISOPROPYL ALCOHOL,unknown,,boxed_hepatotox,,medium,,,1.0,1.0,DM_boxed,FDA Boxed Warning
+MJVAVZPDRWSRRC-UHFFFAOYSA-N,CC1=CC(=O)c2ccccc2C1=O,MENADIONE,unknown,,,,strong,,1.0,1.0,1.0,verified_pos,WebSearch verified
+TYNLGDBUJLVSMA-UHFFFAOYSA-N,CC(=O)Oc1cccc2c1C(=O)c1c(OC(C)=O)cc(C(=O)O)cc1C2=O,diacerein,unknown,,,,,,1.0,1.0,1.0,verified_pos,WebSearch verified
+TXCGAZHTZHNUAI-UHFFFAOYSA-N,CC(C)(Oc1ccc(Cl)cc1)C(=O)O,clofibric acid,unknown,,,weak,strong,,,1.0,1.0,verified_pos,WebSearch verified
+VHYCDWMUTMEGQY-UHFFFAOYSA-N,CC(C)NCC(O)COc1ccc(COCCOC(C)C)cc1,BISOPROLOL,Ambiguous-DILI-Concern,E,,,medium,medium,,0.0,0.0,LiverTox_neg,NIH LiverTox=E
+WTHRRGMBUAHGNI-LCYNINFDSA-N,CC[C@H]1NC(=O)[C@@H](NC(=O)c2ncccc2O)[C@@H](C)OC(=O)[C@H](c2ccccc2)NC(=O)[C@@H]2CC(=O)[C@H](CS[C@@H]3CN4CCC3CC4)CN2C(=O)[C@H](Cc2ccc(N(C)C)cc2)N(C)C(=O)[C@@H]2CCCN2C1=O,QUINUPRISTIN,unknown,,,,,,1.0,1.0,,non_drug,industrial/lab chemical
+DLFVBJFMPXGRIB-UHFFFAOYSA-N,CC(N)=O,Acetamide,unknown,,,medium,strong,,,1.0,,non_drug,industrial/lab chemical
+LUZRJRNZXALNLM-UHFFFAOYSA-N,CN1CC(C(=O)NC2(C)OC3(O)C4CCCN4C(=O)C(Cc4ccccc4)N3C2=O)CC2c3cccc4[nH]cc(c34)CC21,Dihydroergotamine mesylate,vNo-DILI-Concern,,,,weak,,,,0.0,DILIrank_neg,FDA vNo
+VYWWNRMSAPEJLS-MDWYKHENSA-N,CCCC(=O)O[C@H]1[C@H](C)O[C@@H](O[C@H]2[C@H](N(C)C)[C@@H](O)[C@H](O[C@H]3[C@@H](CC=O)C[C@@H](C)[C@@H](O)/C=C/C=C/C[C@@H](C)OC(=O)C[C@@H](O)[C@@H]3OC)O[C@@H]2C)C[C@@]1(C)OC(=O)CC,rokitamycin,unknown,,,,,,1.0,1.0,1.0,verified_pos,WebSearch verified
+WQABCVAJNWAXTE-UHFFFAOYSA-N,OCC(S)CS,Dimercaprol,vNo-DILI-Concern,E,,weak,medium,,,,0.0,DILIrank_neg,FDA vNo
+ZPMKQFOGINQDAM-UHFFFAOYSA-N,C[N+](C)([O-])CCC=C1c2ccccc2CCc2ccccc21,amitriptylinoxide,unknown,,,,weak,,,1.0,1.0,verified_pos,WebSearch verified
+ZFXYFBGIUFBOJW-UHFFFAOYSA-N,Cn1c(=O)c2[nH]cnc2n(C)c1=O,THEOPHYLLINE ANHYDROUS,vNo-DILI-Concern,E,,,medium,,,1.0,0.0,DILIrank_neg,FDA vNo
+NUFNQYOELLVIPL-UHFFFAOYSA-N,O=C(O)c1cc(Oc2ccc(C(F)(F)F)cc2Cl)ccc1[N+](=O)[O-],Acifluorfen,unknown,,,,strong,,,1.0,,verified_exclude,WebSearch: insufficient evidence
+OJGDCBLYJGHCIH-UHFFFAOYSA-N,CN(Cc1cc(Br)cc(Br)c1N)C1CCCCC1,bromhexine,unknown,,,,,,1.0,1.0,0.0,verified_neg,WebSearch verified
+HLVVITIHAZBPKB-UHFFFAOYSA-N,Nc1c2c(nc3ccccc13)CCCC2O,velnacrine,unknown,,,,,,1.0,1.0,1.0,verified_pos,WebSearch verified
+PBJUNZJWGZTSKL-UHFFFAOYSA-N,Cc1ccsc1C(=CCCN1CCCC(C(=O)O)C1)c1sccc1C,Tiagabine hydrochloride,Ambiguous-DILI-Concern,E,,,weak,,,,0.0,LiverTox_neg,NIH LiverTox=E
+QWCJHSGMANYXCW-UHFFFAOYSA-N,Nc1ccc(S(=O)(=O)Nc2ccnn2-c2ccccc2)cc1,SULFAPHENAZOLE,unknown,,,,medium,,,1.0,1.0,verified_pos,WebSearch verified
+ZOKXTWBITQBERF-UHFFFAOYSA-N,[Mo],Molybdenum,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+JWBOIMRXGHLCPP-UHFFFAOYSA-N,Clc1ccc(C(c2ccccc2Cl)C(Cl)Cl)cc1,MITOTANE,vNo-DILI-Concern,E,,,strong,,,1.0,0.0,DILIrank_neg,FDA vNo
+SWXOGPJRIDTIRL-DOUNNPEJSA-N,CC(C)[C@@H]1NC(=O)[C@H](CCCCN)NC(=O)[C@@H](Cc2c[nH]c3ccccc23)NC(=O)[C@H](Cc2ccc(O)cc2)NC(=O)[C@@H](NC(=O)[C@H](N)Cc2ccccc2)CSSC[C@@H](C(=O)N[C@@H](Cc2c[nH]c3ccccc23)C(N)=O)NC1=O,Vapreotide,unknown,,,,,,1.0,1.0,,verified_exclude,WebSearch: insufficient evidence
+QFFCYTLOTYIJMR-XMGTWHOFSA-N,CCC(=O)[C@@]1(C)CC[C@H]2[C@@H]3CCC4=CC(=O)CCC4=C3CC[C@@]21C,promegestone,unknown,,,,,,1.0,1.0,,verified_exclude,WebSearch: insufficient evidence
+OVBPIULPVIDEAO-UHFFFAOYSA-N,Nc1nc2ncc(CNc3ccc(C(=O)NC(CCC(=O)O)C(=O)O)cc3)nc2c(=O)[nH]1,Folic acid,vNo-DILI-Concern,E,,medium,strong,strong,,,0.0,DILIrank_neg,FDA vNo
+IQFYYKKMVGJFEH-UHFFFAOYSA-N,Cc1cn(C2CC(O)C(CO)O2)c(=O)[nH]c1=O,Telbivudine,Ambiguous-DILI-Concern,E,,,medium,,,,0.0,LiverTox_neg,NIH LiverTox=E
+UFBJCMHMOXMLKC-UHFFFAOYSA-N,O=[N+]([O-])c1ccc(O)c([N+](=O)[O-])c1,"2,4-Dinitrophenol",unknown,,,,strong,,1.0,1.0,,non_drug,industrial/lab chemical
+CXMXRPHRNRROMY-UHFFFAOYSA-N,O=C(O)CCCCCCCCC(=O)O,Sebacic Acid,unknown,,,,weak,,,1.0,,non_drug,industrial/lab chemical
+QZIQORUGXBPDSU-UHFFFAOYSA-N,C[N+](C)([O-])CCCN1c2ccccc2CCc2ccccc21,imipramine oxide,unknown,,,,weak,,,1.0,,non_drug,industrial/lab chemical
+OUGIDAPQYNCXRA-UHFFFAOYSA-N,O=c1cc(-c2ccccc2)oc2ccc3ccccc3c12,Beta-Naphthoflavone,unknown,,,,strong,,,1.0,,non_drug,industrial/lab chemical
+DHCDFWKWKRSZHF-UHFFFAOYSA-N,O=S(O)(O)=S,THIOSULFURIC ACID,vNo-DILI-Concern,,,,weak,,,1.0,0.0,DILIrank_neg,FDA vNo
+CFFZDZCDUFSOFZ-UHFFFAOYSA-N,O=C(O)Cc1ccc(O)c(O)c1,Dopac,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+LNEPOXFFQSENCJ-UHFFFAOYSA-N,O=C(CCCN1CCC(O)(c2ccc(Cl)cc2)CC1)c1ccc(F)cc1,HALOPERIDOL,vLess-DILI-Concern,B,,medium,strong,,1.0,1.0,1.0,DILIrank_pos,FDA vLess-DILI-Concern
+GAGWJHPBXLXJQN-UHFFFAOYSA-N,CCCCCOC(=O)Nc1nc(=O)n(C2OC(C)C(O)C2O)cc1F,Capecitabine,vLess-DILI-Concern,E,boxed_hepatotox,medium,,weak,,,1.0,DILIrank_pos,FDA vLess-DILI-Concern
+ZGUGWUXLJSTTMA-UHFFFAOYSA-N,CN(C)CCCN1c2ccccc2Sc2ccccc21,PROMAZINE,unknown,,,,,,1.0,1.0,1.0,verified_pos,WebSearch verified
+PWAUCHMQEXVFJR-PMAPCBKXSA-N,Cc1cc(=O)c(C(=O)N[C@@H](C(=O)N[C@@H]2C(=O)N3C(C(=O)O)=C(CSc4nnnn4C)CS[C@H]23)c2ccc(O)cc2)c[nH]1,Cefpiramide,unknown,,,,,,1.0,1.0,0.0,verified_neg,WebSearch verified
+DDDQVDIPBFGVIG-UHFFFAOYSA-N,CC(C)(Oc1ccc(Cl)cc1)C(=O)NC(=O)NCN1CCOCC1,plafibride,unknown,,,,,,1.0,1.0,,verified_exclude,WebSearch: insufficient evidence
+WCWSTNLSLKSJPK-UHFFFAOYSA-N,CC1COC2Cn3cc(C(=O)NCc4ccc(F)cc4F)c(=O)c(O)c3C(=O)N12,Cabotegravir sodium,Ambiguous-DILI-Concern,E,warning_hepatotox,,,,,,0.0,LiverTox_neg,NIH LiverTox=E
+FBHSPRKOSMHSIF-UHFFFAOYSA-N,CC(=O)OCC(=O)C12N=C(C)OC1CC1C3CCC4=CC(=O)C=CC4(C)C3C(O)CC12C,Deflazacort,vNo-DILI-Concern,,warning_hepatotox,,,,,,0.0,DILIrank_neg,FDA vNo
+RNOAOAWBMHREKO-UHFFFAOYSA-N,C=CC(=O)N1CCC(C2CCNc3c(C(N)=O)c(-c4ccc(Oc5ccccc5)cc4)nn32)CC1,Zanubrutinib,vMost-DILI-Concern,E,,,,,,,1.0,DILIrank_pos,FDA vMost-DILI-Concern
+DHMQDGOQFOQNFH-UHFFFAOYSA-N,NCC(=O)O,GLYCINE,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+YQEZLKZALYSWHR-UHFFFAOYSA-N,CNC1(c2ccccc2Cl)CCCCC1=O,Ketamine hydrochloride,vLess-DILI-Concern,E,,weak,medium,,,,1.0,DILIrank_pos,FDA vLess-DILI-Concern
+HJXMNVQARNZTEE-UHFFFAOYSA-N,CCCCC1OC(=O)c2ccccc21,butylphthalide,unknown,,,,weak,,,1.0,1.0,verified_pos,WebSearch verified
+FKNQFGJONOIPTF-UHFFFAOYSA-N,[Na+],SODIUM FLUORIDE,vNo-DILI-Concern,,,,medium,,,1.0,0.0,DILIrank_neg,FDA vNo
+RWCCWEUUXYIKHB-UHFFFAOYSA-N,O=C(c1ccccc1)c1ccccc1,Benzophenone,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+XAUDJQYHKZQPEU-UHFFFAOYSA-N,Nc1ncn(C2CC(O)C(CO)O2)c(=O)n1,Decitabine,Ambiguous-DILI-Concern,E,,,medium,,,,0.0,LiverTox_neg,NIH LiverTox=E
+UHRBTBZOWWGKMK-DOMZBBRYSA-N,CO[C@@]1(NC(=O)CSC(F)F)C(=O)N2C(C(=O)O)=C(CSc3nnnn3CCO)CO[C@@H]21,flomoxef,unknown,,,,,,1.0,1.0,0.0,verified_neg,WebSearch verified
+RXWNCPJZOCPEPQ-NVWDDTSBSA-N,COc1ccc(C[C@H](N)C(=O)N[C@H]2[C@@H](O)[C@H](n3cnc4c(N(C)C)ncnc43)O[C@@H]2CO)cc1,Puromycin,unknown,,,,,,1.0,1.0,,non_drug,industrial/lab chemical
+PWNMXPDKBYZCOO-UHFFFAOYSA-N,Cc1oc(=O)oc1CN1CCN(c2cc3c(cc2F)c(=O)c(C(=O)O)c2n3C(C)S2)CC1,prulifloxacin,unknown,,,,weak,,1.0,1.0,1.0,verified_pos,WebSearch verified
+ALWKGYPQUAPLQC-UHFFFAOYSA-N,CN(C)C(=O)Oc1cccc([N+](C)(C)C)c1,NEOSTIGMINE,unknown,,,,weak,,,1.0,0.0,verified_neg,WebSearch verified
+VQOXZBDYSJBXMA-UHFFFAOYSA-N,CC1C=CC=CCCC=CC=CC=CC=CC(OC2OC(C)C(O)C(N)C2O)CC2OC(O)(CC(O)C(O)CCC(O)CC(O)CC(O)CC(=O)OC(C)C(C)C1O)CC(O)C2C(=O)O,Nystatin,vNo-DILI-Concern,E,,,medium,weak,,,0.0,DILIrank_neg,FDA vNo
+ZAFYATHCZYHLPB-UHFFFAOYSA-N,Cc1ccc(-c2nc3ccc(C)cn3c2CC(=O)N(C)C)cc1,ZOLPIDEM,Ambiguous-DILI-Concern,E,,,,weak,,0.0,0.0,LiverTox_neg,NIH LiverTox=E
+YAKWPXVTIGTRJH-UHFFFAOYSA-N,CCOP(=O)(OCC)C(C)NC(=O)N(CCCl)N=O,fotemustine,unknown,,,,,,1.0,1.0,,non_drug,industrial/lab chemical
+GPTXWRGISTZRIO-UHFFFAOYSA-N,Cc1ccc2c(Cl)cc(Cl)c(O)c2n1,chlorquinaldol,unknown,,,,weak,,,1.0,,verified_exclude,WebSearch: insufficient evidence
+HGBOYTHUEUWSSQ-UHFFFAOYSA-N,CCCCC=O,Pentanal,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+UXCAQJAQSWSNPQ-XLPZGREQSA-N,Cc1cn([C@H]2C[C@H](F)[C@@H](CO)O2)c(=O)[nH]c1=O,3'-Fluorothymidine,unknown,,,,,,1.0,1.0,,non_drug,industrial/lab chemical
+XPCTZQVDEJYUGT-UHFFFAOYSA-N,Cc1occc(=O)c1O,Ferric Maltol,vNo-DILI-Concern,,,,medium,,,1.0,0.0,DILIrank_neg,FDA vNo
+WLHQHAUOOXYABV-UHFFFAOYSA-N,CN1C(C(=O)Nc2ccccn2)=C(O)c2sc(Cl)cc2S1(=O)=O,lornoxicam,unknown,,,,weak,,,1.0,,verified_exclude,WebSearch: insufficient evidence
+YVNQAIFQFWTPLQ-UHFFFAOYSA-N,CCOc1ccc(Nc2ccc(/C(=C3/C=C/C(=[N+](/CC)Cc4cccc(S(=O)(=O)[O-])c4)C=C3C)c3ccc(N(CC)Cc4cccc(S(=O)(=O)O)c4)cc3C)cc2)cc1,BRILLIANT BLUE G,vNo-DILI-Concern,,,,medium,,,1.0,0.0,DILIrank_neg,FDA vNo
+DSSYKIVIOFKYAU-UHFFFAOYSA-N,CC12CCC(CC1=O)C2(C)C,camphor,unknown,,,,medium,,1.0,1.0,,non_drug,industrial/lab chemical
+TUNFSRHWOTWDNC-UHFFFAOYSA-N,CCCCCCCCCCCCCC(=O)O,Myristic Acid,unknown,,,,weak,,,1.0,,non_drug,industrial/lab chemical
+RJMUSRYZPJIFPJ-UHFFFAOYSA-N,O=C(Nc1ccc([N+](=O)[O-])cc1Cl)c1cc(Cl)ccc1O,NICLOSAMIDE,unknown,,,,medium,,,1.0,0.0,verified_neg,WebSearch verified
+KUAZQDVKQLNFPE-UHFFFAOYSA-N,CN(C)C(=S)SSC(=S)N(C)C,thiram,unknown,,,,strong,,,1.0,,non_drug,industrial/lab chemical
+KHAUBYTYGDOYRU-IRXASZMISA-N,CCCC[C@@H]1CC(=O)[C@]2(O)O[C@@H]3[C@@H](NC)[C@@H](O)[C@@H](NC)[C@H](O)[C@H]3O[C@@H]2O1,trospectomycin,unknown,,,,,,1.0,1.0,0.0,verified_neg,WebSearch verified
+QNAYBMKLOCPYGJ-UHFFFAOYSA-N,CC(N)C(=O)O,DL-Alanine,unknown,,,weak,,,,1.0,,non_drug,industrial/lab chemical
+JUKPWJGBANNWMW-UHFFFAOYSA-N,COC(=O)C1CC2=CC(=O)CCC2(C)C23OC2CC2(C)C(CCC24CCC(=O)O4)C13,Eplerenone,vLess-DILI-Concern,E,,,,,,,1.0,DILIrank_pos,FDA vLess-DILI-Concern
+OELFLUMRDSZNSF-UHFFFAOYSA-N,CC(C)C1CCC(C(=O)NC(Cc2ccccc2)C(=O)O)CC1,Nateglinide,Ambiguous-DILI-Concern,E,,,weak,,,,0.0,LiverTox_neg,NIH LiverTox=E
+QAOWNCQODCNURD-UHFFFAOYSA-N,O=S(=O)(O)O,SODIUM SULFATE ANHYDROUS,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+ZDXPYRJPNDTMRX-UHFFFAOYSA-N,NC(=O)CCC(N)C(=O)O,L-glutamine,Ambiguous-DILI-Concern,E,,,medium,,,,0.0,LiverTox_neg,NIH LiverTox=E
+MWUXSHHQAYIFBG-UHFFFAOYSA-N,[N]=O,NITRIC OXIDE,unknown,,,,strong,,,1.0,,non_drug,industrial/lab chemical
+BQCADISMDOOEFD-UHFFFAOYSA-N,[Ag],Silver,unknown,,,,strong,,,1.0,,non_drug,industrial/lab chemical
+GJXWDTUCERCKIX-UHFFFAOYSA-N,O=CN(O)CCCP(=O)(O)O,Fosmidomycin,unknown,,,,,,1.0,1.0,,verified_exclude,WebSearch: insufficient evidence
+OIRCOABEOLEUMC-UHFFFAOYSA-N,CCC(C)C(NC(=O)C(CCC(=O)O)NC(=O)C(CCC(=O)O)NC(=O)C(Cc1ccccc1)NC(=O)C(CC(=O)O)NC(=O)CNC(=O)C(CC(N)=O)NC(=O)CNC(=O)CNC(=O)CNC(=O)CNC(=O)C1CCCN1C(=O)C(CCCNC(=N)N)NC(=O)C1CCCN1C(=O)C(N)Cc1ccccc1)C(=O)N1CCCC1C(=O)NC(CCC(=O)O)C(=O)NC(CCC(=O)O)C(=O)NC(Cc1ccc(O)cc1)C(=O)NC(CC(C)C)C(=O)O,Bivalirudin,vNo-DILI-Concern,,,,weak,,,,0.0,DILIrank_neg,FDA vNo
+XZMCDFZZKTWFGF-UHFFFAOYSA-N,N#CN,Cyanamide,unknown,,,medium,strong,,1.0,1.0,,non_drug,industrial/lab chemical
+RXKJFZQQPQGTFL-UHFFFAOYSA-N,O=C(CO)CO,Dihydroxyacetone,unknown,,,,medium,,,1.0,,verified_exclude,WebSearch: insufficient evidence
+WHBIGIKBNXZKFE-UHFFFAOYSA-N,CC(C)Nc1cccnc1N1CCN(C(=O)c2cc3cc(NS(C)(=O)=O)ccc3[nH]2)CC1,DELAVIRDINE,Ambiguous-DILI-Concern,E,,,,,1.0,0.0,0.0,LiverTox_neg,NIH LiverTox=E
+HXRSXEDVVARPHP-UDWIEESQSA-N,CN(C)Cc1ccc(CSCCN/C(=C\[N+](=O)[O-])NCc2ccc3c(c2)OCO3)o1,Niperoditine,unknown,,,,,,1.0,1.0,,non_drug,industrial/lab chemical
+DJQOOSBJCLSSEY-UHFFFAOYSA-N,Cc1cnc(C(=O)O)c[n+]1[O-],acipimox,unknown,,,,medium,,,1.0,1.0,verified_pos,WebSearch verified
+MPIPASJGOJYODL-UHFFFAOYSA-N,Clc1ccc(C(Cn2ccnc2)OCc2c(Cl)cccc2Cl)c(Cl)c1,Isoconazole,unknown,,,,weak,,,1.0,,verified_exclude,WebSearch: insufficient evidence
+MVCOAUNKQVWQHZ-UHFFFAOYSA-N,Cc1ccc(-n2nc(C(C)(C)C)cc2NC(=O)Nc2ccc(OCCN3CCOCC3)c3ccccc23)cc1,Doramapimod,unknown,,,,,,1.0,1.0,1.0,verified_pos,WebSearch verified
+ACGDKVXYNVEAGU-UHFFFAOYSA-N,N=C(N)NCCN1CCCCCCC1,GUANETHIDINE,vNo-DILI-Concern,,,,,,1.0,1.0,0.0,DILIrank_neg,FDA vNo
+OJYLAHXKWMRDGS-UHFFFAOYSA-N,COc1cc(CCC(C)=O)ccc1O,Zingerone,unknown,,,,medium,,,1.0,0.0,verified_neg,WebSearch verified
+RKUNBYITZUJHSG-UHFFFAOYSA-N,CN1C2CCC1CC(OC(=O)C(CO)c1ccccc1)C2,Atropine,vNo-DILI-Concern,,,,strong,,,,0.0,DILIrank_neg,FDA vNo
+XJSFLOJWULLJQS-NGVXBBESSA-N,CO[C@@H]1[C@@H](O[C@@H]2O[C@H](C)[C@@H](O[C@H]3C[C@@](C)(O)[C@@H](OC(=O)CC(C)C)[C@H](C)O3)[C@H](N(C)C)[C@H]2O)[C@@H](CC=O)C[C@@H](C)[C@@H](O)/C=C/C=C/C[C@@H](C)OC(=O)C[C@H]1OC(C)=O,josamycin,unknown,,,,,,1.0,1.0,1.0,verified_pos,WebSearch verified
+QYPPJABKJHAVHS-UHFFFAOYSA-N,NCCCCN=C(N)N,Agmatine,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+YPELFRMCRYSPKZ-UHFFFAOYSA-N,CCOc1cc(N)c(Cl)cc1C(=O)NCC1CN(Cc2ccc(F)cc2)CCO1,mosapride,unknown,,,,medium,,,1.0,1.0,verified_pos,WebSearch verified
+JZQKKSLKJUAGIC-UHFFFAOYSA-N,CC(C)NCC(O)COc1cccc2[nH]ccc12,PINDOLOL,vNo-DILI-Concern,E,,,weak,,,1.0,0.0,DILIrank_neg,FDA vNo
+XEEYBQQBJWHFJM-UHFFFAOYSA-N,[Fe],iron,unknown,A,,medium,strong,,,1.0,1.0,LiverTox_pos,NIH LiverTox=A
+GUXHBMASAHGULD-UHFFFAOYSA-N,CN(C)C1C(=O)C(C(N)=O)=C(O)C2(O)C(=O)C3=C(O)c4c(O)ccc(Cl)c4C(O)C3CC12,Demeclocycline hydrochloride,Ambiguous-DILI-Concern,E,,,weak,,,,0.0,LiverTox_neg,NIH LiverTox=E
+OSFCMRGOZNQUSW-UHFFFAOYSA-N,COc1cc2c(cc1OC)CN(CCc1ccc(NC(=O)c3cccc4c(=O)c5cccc(OC)c5[nH]c34)cc1)CC2,Elacridar,unknown,,,,weak,,,1.0,,verified_exclude,WebSearch: insufficient evidence
+CBRJPFGIXUFMTM-UHFFFAOYSA-N,C=CC(=O)N1CC(Nc2ncnc3[nH]ccc23)CCC1C,Ritlecitinib,,E,warning_hepatotox,,,,,,0.0,LiverTox_neg,NIH LiverTox=E
+TWFZGCMQGLPBSX-UHFFFAOYSA-N,COC(=O)Nc1nc2ccccc2[nH]1,Carbendazim,unknown,,,,strong,,1.0,1.0,,non_drug,industrial/lab chemical
+GYDJEQRTZSCIOI-UHFFFAOYSA-N,NCC1CCC(C(=O)O)CC1,4-(Aminomethyl)cyclohexanecarboxylic acid,vNo-DILI-Concern,,,,weak,,,1.0,0.0,DILIrank_neg,FDA vNo
+NPGNOVNWUSPMDP-UTEPHESZSA-N,CC(C)(C)C(=O)OCOC(=O)[C@@H]1N2C(=O)[C@@H](/N=C/N3CCCCCC3)[C@H]2SC1(C)C,AMDINOCILLIN PIVOXIL,unknown,,,,,,1.0,1.0,0.0,verified_neg,WebSearch verified
+LELOWRISYMNNSU-UHFFFAOYSA-N,C#N,Ferric Ferrocyanide,unknown,,,,medium,,,1.0,,non_drug,industrial/lab chemical
+CXHKZHZLDMQGFF-ZSDSSEDPSA-N,CO/N=C(\C(=O)N[C@@H]1C(=O)N2C(C(=O)O)=C(CSc3cnns3)CS[C@H]12)c1csc(N)n1,cefuzonam,unknown,,,,,,1.0,1.0,0.0,verified_neg,WebSearch verified
+LORDFXWUHHSAQU-UHFFFAOYSA-N,CCC(COC(=O)c1cc(OC)c(OC)c(OC)c1)(c1ccccc1)N(C)C,trimebutine,unknown,,,,,,1.0,1.0,,non_drug,industrial/lab chemical
+UIYAXIPXULMHAI-JLGRZTKVSA-N,CO/N=C(\C(=O)N[C@@H]1C(=O)N2C(C(=O)OCOC(=O)C(C)(C)C)=C(Cn3nnc(C)n3)CS[C@H]12)c1csc(N)n1,cefteram pivoxil,unknown,,,,,,1.0,1.0,0.0,verified_neg,WebSearch verified
+ZEHYJZXQEQOSON-AATRIKPKSA-N,C#CC(O)(/C=C/Cl)CC,ETHCHLORVYNOL,unknown,,,,,,1.0,1.0,,verified_exclude,WebSearch: insufficient evidence
+FFDGPVCHZBVARC-UHFFFAOYSA-N,CN(C)CC(=O)O,"N,N-Dimethylglycine",unknown,,,,weak,,,1.0,,non_drug,industrial/lab chemical
+KMIPKYQIOVAHOP-YLGJWRNMSA-N,CO/N=C(\C(=O)N[C@@H]1C(=O)N2C(C(=O)O)=C(/C=C\c3scnc3C)CS[C@H]12)c1csc(N)n1,Cefditoren,unknown,,,,,,1.0,1.0,0.0,verified_neg,WebSearch verified
+YEZNLOUZAIOMLT-UHFFFAOYSA-N,Cc1c(Cl)cccc1Nc1ccccc1C(=O)O,tolfenamic acid,unknown,,,,,,1.0,1.0,1.0,verified_pos,WebSearch verified
+IAZDPXIOMUYVGZ-UHFFFAOYSA-N,C[S+](C)[O-],dimethyl sulfoxide,unknown,,,,strong,,1.0,1.0,,non_drug,industrial/lab chemical
+LOUPRKONTZGTKE-UHFFFAOYSA-N,C=CC1CN2CCC1CC2C(O)c1ccnc2ccc(OC)cc12,Quinidine barbiturate,vLess-DILI-Concern,B,,medium,strong,,,1.0,1.0,DILIrank_pos,FDA vLess-DILI-Concern
+DOUYETYNHWVLEO-UHFFFAOYSA-N,CC(C)Cn1cnc2c(N)nc3ccccc3c21,IMIQUIMOD,unknown,,,,medium,,,1.0,1.0,verified_pos,WebSearch verified
+RKLNONIVDFXQRX-UHFFFAOYSA-N,O=C(CCCN1CCC(O)(c2ccc(Br)cc2)CC1)c1ccc(F)cc1,bromperidol,unknown,,,,,,1.0,1.0,1.0,verified_pos,WebSearch verified
+ZNOVTXRBGFNYRX-UHFFFAOYSA-N,CN1c2c(nc(N)[nH]c2=O)NCC1CNc1ccc(C(=O)NC(CCC(=O)O)C(=O)O)cc1,Levomefolate calcium,vNo-DILI-Concern,,,,weak,,,,0.0,DILIrank_neg,FDA vNo
+NDAUXUAQIAJITI-UHFFFAOYSA-N,CC(C)(C)NCC(O)c1ccc(O)c(CO)c1,ALBUTEROL,vNo-DILI-Concern,,,,medium,medium,,1.0,0.0,DILIrank_neg,FDA vNo
+TZRXHJWUDPFEEY-UHFFFAOYSA-N,O=[N+]([O-])OCC(CO[N+](=O)[O-])(CO[N+](=O)[O-])CO[N+](=O)[O-],pentaerithrityl tetranitrate,unknown,,,,weak,,,1.0,0.0,verified_neg,WebSearch verified
+WUTYZMFRCNBCHQ-UHFFFAOYSA-N,CC1OC2(CS1)CN1CCC2CC1,CEVIMELINE,Ambiguous-DILI-Concern,E,,,,,1.0,0.0,0.0,LiverTox_neg,NIH LiverTox=E
+SMTZFNFIKUPEJC-UHFFFAOYSA-N,CC(=O)OCC(=O)NCCCOc1cccc(CN2CCCCC2)c1,roxatidine acetate,unknown,,,,,,1.0,1.0,0.0,verified_neg,WebSearch verified
+UCPOMLWZWRTIAA-UHFFFAOYSA-N,CCNc1cccnc1N1CCN(C(=O)c2cc3cc(OC)ccc3[nH]2)CC1,Atevirdine,unknown,,,,,,1.0,1.0,,verified_exclude,WebSearch: insufficient evidence
+MUMGGOZAMZWBJJ-DYKIIFRCSA-N,C[C@]12CC[C@H]3[C@@H](CCC4=CC(=O)CC[C@@]43C)[C@@H]1CC[C@@H]2O,TESTOSTERONE,unknown,,,,,,1.0,1.0,1.0,verified_pos,WebSearch verified
+AIJULSRZWUXGPQ-UHFFFAOYSA-N,CC(=O)C=O,Methylglyoxal,unknown,,,,strong,,,1.0,,non_drug,industrial/lab chemical
+GVJHHUAWPYXKBD-UHFFFAOYSA-N,Cc1c(C)c2c(c(C)c1O)CCC(C)(CCCC(C)CCCC(C)CCCC(C)C)O2,DL-alpha-Tocopherol,vNo-DILI-Concern,,,medium,strong,,,1.0,0.0,DILIrank_neg,FDA vNo
+PTDRUEDSEVLCBO-UHFFFAOYSA-N,O=S(=O)(O)CC(O)CS,"Aurate(1-), (2-hydroxy-3-mercapto-1-propanesulfonato(2-))-, sodium (1:1)",unknown,,,weak,,,,1.0,,non_drug,industrial/lab chemical
+PCOBBVZJEWWZFR-UHFFFAOYSA-N,CCOC(=O)Nc1ccc(NCc2ccc(F)cc2)cc1N,EZOGABINE,unknown,E,,,weak,,,1.0,0.0,LiverTox_neg,NIH LiverTox=E

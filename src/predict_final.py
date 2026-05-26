@@ -25,10 +25,12 @@ RDLogger.logger().setLevel(RDLogger.ERROR)
 
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DB_PATH = os.path.join(PROJECT_ROOT, "data", "labels_db", "full.parquet")
-CHEMPROP_VIVO = os.path.join(PROJECT_ROOT, "models", "chemprop_scaffold_v2",
-                              "v17_ens15_h600", "vivo")
+# v27 final: OR + manual conflicts + scaffold-balanced
+# scaffold OOD MCC 0.615, sanity MCC 0.380 (TPR 0.53, TNR 1.00)
+CHEMPROP_VIVO = os.path.join(PROJECT_ROOT, "models", "chemprop_v27")
 CHEMPROP_BIN = os.path.join(os.path.dirname(sys.executable), "chemprop")
-VIVO_THR = 0.35  # v17 의 자체 best MCC threshold
+VIVO_THR = 0.30  # sanity check best (TPR 0.53 + TNR 1.00 + MCC 0.380)
+                 # scaffold val MCC max 는 0.57 — sanity 우선 채택
 
 # DB cache
 _DB_BY_IK = None

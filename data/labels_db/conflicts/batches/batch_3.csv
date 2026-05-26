@@ -1,0 +1,77 @@
+inchi_key,name,manual_label,source,reason
+CHNUOJQWGUIOLD-NFZZJPOKSA-N,EPALRESTAT,1.0,manual_pos,known hepatotoxin: EPALRESTAT
+LGGHDPFKSSRQNS-UHFFFAOYSA-N,Tariquidar,1.0,manual_pos,known hepatotoxin: TARIQUIDAR
+HDOZVRUNCMBHFH-UHFFFAOYSA-N,zotepine,1.0,manual_pos,known hepatotoxin: ZOTEPINE
+XJGFWWJLMVZSIG-UHFFFAOYSA-N,aminoacridine,0.0,manual_neg,known safe drug: AMINOACRIDINE
+MBGGBVCUIVRRBF-UHFFFAOYSA-N,sulfinpyrazone,1.0,manual_pos,known hepatotoxin: SULFINPYRAZONE
+BGRJTUBHPOOWDU-UHFFFAOYSA-N,sulpiride,0.0,manual_neg,known safe drug: SULPIRIDE
+NJBFOOCLYDNZJN-UHFFFAOYSA-N,PIPOBROMAN,1.0,manual_pos,known hepatotoxin: PIPOBROMAN
+GECHUMIMRBOMGK-UHFFFAOYSA-N,SULFAPYRIDINE,1.0,manual_pos,known hepatotoxin: SULFAPYRIDINE
+LWAFSWPYPHEXKX-UHFFFAOYSA-N,CARTEOLOL,0.0,manual_neg,known safe drug: CARTEOLOL
+IVVNZDGDKPTYHK-UHFFFAOYSA-N,PINACIDIL ANHYDROUS,0.0,manual_neg,known safe drug: PINACIDIL
+SPFYMRJSYKOXGV-UHFFFAOYSA-N,Enrofloxacin,1.0,manual_pos,known hepatotoxin: ENROFLOXACIN
+ZCVMWBYGMWKGHF-UHFFFAOYSA-N,KETOTIFEN,0.0,manual_neg,known safe drug: KETOTIFEN
+NTHXOOBQLCIOLC-UHFFFAOYSA-N,IOHEXOL,0.0,manual_neg,known safe drug: IOHEXOL
+JUUBCHWRXWPFFH-UHFFFAOYSA-N,Hydroxytyrosol,0.0,manual_neg,known safe drug: HYDROXYTYROSOL
+YDSDEBIZUNNPOB-UHFFFAOYSA-N,Carfentanil,0.0,manual_neg,known safe drug: CARFENTANIL
+VGGGPCQERPFHOB-RDBSUJKOSA-N,ubenimex,0.0,manual_neg,known safe drug: UBENIMEX
+JXMIBUGMYLQZGO-UHFFFAOYSA-N,iotroxic acid,0.0,manual_neg,known safe drug: IOTROXIC
+WAOQONBSWFLFPE-VIFPVBQESA-N,Raclopride,0.0,manual_neg,known safe drug: RACLOPRIDE
+BARDROPHSZEBKC-OITMNORJSA-N,FOSAPREPITANT,0.0,manual_neg,known safe drug: FOSAPREPITANT
+ZDHCJEIGTNNEMY-XGXHKTLJSA-N,norethandrolone,1.0,manual_pos,known hepatotoxin: NORETHANDROLONE
+NZWOPGCLSHLLPA-UHFFFAOYSA-N,METHACHOLINE,0.0,manual_neg,known safe drug: METHACHOLINE
+DJEIHHYCDCTAAH-UHFFFAOYSA-N,MOFEZOLAC,1.0,manual_pos,known hepatotoxin: MOFEZOLAC
+DEGAKNSWVGKMLS-UHFFFAOYSA-N,oftasceine,0.0,manual_neg,known safe drug: OFTASCEINE
+RQTOOFIXOKYGAN-UHFFFAOYSA-N,NEDOCROMIL,0.0,manual_neg,known safe drug: NEDOCROMIL
+UREBDLICKHMUKA-CXSFZGCWSA-N,DEXAMETHASONE,0.0,manual_neg,known safe drug: DEXAMETHASONE
+PLHJDBGFXBMTGZ-UHFFFAOYSA-N,furazolidone,1.0,manual_pos,known hepatotoxin: FURAZOLIDONE
+BOVGTQGAOIONJV-UHFFFAOYSA-N,gliclazide,1.0,manual_pos,known hepatotoxin: GLICLAZIDE
+BNQDCRGUHNALGH-UHFFFAOYSA-N,benserazide,0.0,manual_neg,known safe drug: BENSERAZIDE
+YSGASDXSLKIKOD-UHFFFAOYSA-N,Remacemide,1.0,manual_pos,known hepatotoxin: REMACEMIDE
+BUJAGSGYPOAWEI-UHFFFAOYSA-N,TOCAINIDE,0.0,manual_neg,known safe drug: TOCAINIDE
+PJMPHNIQZUBGLI-UHFFFAOYSA-N,FENTANYL,0.0,manual_neg,known safe drug: FENTANYL
+LZNWYQJJBLGYLT-UHFFFAOYSA-N,tenoxicam,1.0,manual_pos,known hepatotoxin: TENOXICAM
+JZFPYUNJRRFVQU-UHFFFAOYSA-N,niflumic acid,1.0,manual_pos,known hepatotoxin: NIFLUMIC ACID
+LFVVNPBBFUSSHL-UHFFFAOYSA-N,alexidine,0.0,manual_neg,known safe drug: ALEXIDINE
+XPFRXWCVYUEORT-UHFFFAOYSA-N,PHENACEMIDE,1.0,manual_pos,known hepatotoxin: PHENACEMIDE
+QGFORSXNKQLDNO-UHFFFAOYSA-N,erdosteine,0.0,manual_neg,known safe drug: ERDOSTEINE
+LPEPZBJOKDYZAD-UHFFFAOYSA-N,flufenamic acid,1.0,manual_pos,known hepatotoxin: FLUFENAMIC ACID
+BEZZFPOZAYTVHN-UHFFFAOYSA-N,Oxfendazole,1.0,manual_pos,known hepatotoxin: OXFENDAZOLE
+VOXZDWNPVJITMN-ZBRFXRBCSA-N,ESTRADIOL,0.0,manual_neg,known safe drug: ESTRADIOL
+WCDWBPCFGJXFJZ-UHFFFAOYSA-N,Etanidazole,1.0,manual_pos,known hepatotoxin: ETANIDAZOLE
+GSNOZLZNQMLSKJ-UHFFFAOYSA-N,trapidil,0.0,manual_neg,known safe drug: TRAPIDIL
+ZPACYDRSPFRDHO-ROBAGEODSA-N,gefarnate,0.0,manual_neg,known safe drug: GEFARNATE
+DOBMPNYZJYQDGZ-UHFFFAOYSA-N,DICUMAROL,1.0,manual_pos,known hepatotoxin: DICUMAROL
+YKGYIDJEEQRWQH-UHFFFAOYSA-N,Gabexate,1.0,manual_pos,known hepatotoxin: GABEXATE
+FPPNZSSZRUTDAP-UWFZAAFLSA-N,CARBENICILLIN,0.0,manual_neg,known safe drug: CARBENICILLIN
+NOSIYYJFMPDDSA-UHFFFAOYSA-N,acepromazine,0.0,manual_neg,known safe drug: PROMAZINE
+RDMOROXKXONCAL-UEKVPHQBSA-N,cefroxadine,0.0,manual_neg,known safe drug: CEFROXADINE
+VQKLRVZQQYVIJW-UHFFFAOYSA-N,dihydralazine,1.0,manual_pos,known hepatotoxin: DIHYDRALAZINE
+NFACJZMKEDPNKN-UHFFFAOYSA-N,metrifonate,1.0,manual_pos,known hepatotoxin: METRIFONATE
+WUWFMDMBOJLQIV-UHFFFAOYSA-N,tosufloxacin,1.0,manual_pos,known hepatotoxin: TOSUFLOXACIN
+TYMABNNERDVXID-DLYFRVTGSA-N,panipenem,0.0,manual_neg,known safe drug: PANIPENEM
+QXHHHPZILQDDPS-UHFFFAOYSA-N,TIOCONAZOLE,1.0,manual_pos,known hepatotoxin: TIOCONAZOLE
+IOVGROKTTNBUGK-UHFFFAOYSA-N,RITODRINE,0.0,manual_neg,known safe drug: RITODRINE
+ZKUKMWMSYCIYRD-ZXFNITATSA-N,lenampicillin,0.0,manual_neg,known safe drug: LENAMPICILLIN
+UIMOJFJSJSIGLV-JNHMLNOCSA-N,carumonam,0.0,manual_neg,known safe drug: CARUMONAM
+RRYMAQUWDLIUPV-BXKDBHETSA-N,cefacetrile,0.0,manual_neg,known safe drug: CEFACETRILE
+KZUIYQJTUIACIG-YBZCJVABSA-N,nomegestrol,0.0,manual_neg,known safe drug: NOMEGESTROL
+IPOBOOXFSRWSHL-UHFFFAOYSA-N,cibenzoline,0.0,manual_neg,known safe drug: CIBENZOLINE
+IIDJRNMFWXDHID-UHFFFAOYSA-N,RISEDRONIC ACID,0.0,manual_neg,known safe drug: RISEDRONIC ACID
+VABCILAOYCMVPS-UHFFFAOYSA-N,acenocoumarol,1.0,manual_pos,known hepatotoxin: ACENOCOUMAROL
+WFWLQNSHRPWKFK-UHFFFAOYSA-N,tegafur,1.0,manual_pos,known hepatotoxin: TEGAFUR
+WGZDBVOTUVNQFP-UHFFFAOYSA-N,todralazine,1.0,manual_pos,known hepatotoxin: TODRALAZINE
+NJSMWLQOCQIOPE-OCHFTUDZSA-N,bisantrene,1.0,manual_pos,known hepatotoxin: BISANTRENE
+FSIRXIHZBIXHKT-MHTVFEQDSA-N,edatrexate,1.0,manual_pos,known hepatotoxin: EDATREXATE
+CXQGFLBVUNUQIA-UHFFFAOYSA-N,clofibride,1.0,manual_pos,known hepatotoxin: CLOFIBRIDE
+BQDBKDMTIJBJLA-UHFFFAOYSA-N,metopimazine,0.0,manual_neg,known safe drug: METOPIMAZINE
+GIIZNNXWQWCKIB-UHFFFAOYSA-N,SALMETEROL,0.0,manual_neg,known safe drug: SALMETEROL
+GSNHKUDZZFZSJB-QUMGSSFMSA-N,MARAVIROC,0.0,manual_neg,known safe drug: MARAVIROC
+QYQDKDWGWDOFFU-IUODEOHRSA-N,CEFOTIAM,0.0,manual_neg,known safe drug: CEFOTIAM
+XXYTXQGCRQLRHA-UHFFFAOYSA-N,metahexamide,1.0,manual_pos,known hepatotoxin: METAHEXAMIDE
+ACSIXWWBWUQEHA-UHFFFAOYSA-N,clodronic acid,0.0,manual_neg,known safe drug: CLODRONIC ACID
+VXTWEDPZMSVFEF-UHFFFAOYSA-N,pheniprazine,1.0,manual_pos,known hepatotoxin: PHENIPRAZINE
+SMANXXCATUTDDT-QPJJXVBHSA-N,flunarizine,0.0,manual_neg,known safe drug: FLUNARIZINE
+SSEBTPPFLLCUMN-UHFFFAOYSA-N,bufuralol,0.0,manual_neg,known safe drug: BUFURALOL
+YPBATNHYBCGSSN-VWPFQQQWSA-N,MEZLOCILLIN,0.0,manual_neg,known safe drug: MEZLOCILLIN
+GMVPRGQOIOIIMI-DWKJAMRDSA-N,ALPROSTADIL,0.0,manual_neg,known safe drug: ALPROSTADIL

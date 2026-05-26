@@ -1,0 +1,77 @@
+inchi_key,name,verified_label,evidence,original_label
+CYFLXLSBHQBMFT-UHFFFAOYSA-N,sulfamoxole,1,Sulfonamide antibiotic class - sulfonamides well-known DILI cause per LiverTox,1.0
+ANEBWFXPVPTEET-UHFFFAOYSA-N,manidipine,0,Manidipine not implicated in CCB hepatotoxicity per LiverTox calcium channel blocker entry,0.0
+DKOQGJHPHLTOJR-WHRDSVKCSA-N,cefpirome,-1,Cephalosporin class effect rare; no cefpirome-specific data,0.0
+AHEVKYYGXVEWNO-UEPZRUIBSA-N,lymecycline,1,Tetracycline class - tetracyclines linked to DILI per LiverTox,1.0
+IJKVHSBPTUYDLN-UHFFFAOYSA-N,Silodrate,-1,Antacid (magnesium aluminosilicate); no hepatotoxicity data,0.0
+NBRBXGKOEOGLOI-UHFFFAOYSA-N,DASABUVIR,1,Viekira Pak component - ALT>5xULN cases reported in trials per LiverTox,1.0
+ZPAKPRAICRBAOD-UHFFFAOYSA-N,fenbufen,1,NSAID - LFT changes in up to 25% per studies; UK CSM warning,1.0
+YMBXTVYHTMGZDW-UHFFFAOYSA-N,LOXOPROFEN,1,NSAID with carboxylic acid moiety - associated with DILI; reactive metabolite,1.0
+UNJFKXSSGBWRBZ-BJCIPQKHSA-N,CEFTIBUTEN,0,Oral cephalosporin - only mild transient enzyme elevations per LiverTox,0.0
+ANMATWQYLIFGOK-UHFFFAOYSA-N,iguratimod,1,DILI case reports documented; ALT elevation known adverse effect,0.0
+JGSARLDLIJGVTE-MBNYWOFBSA-N,PENICILLIN G,0,LiverTox: rarely and weakly linked to idiosyncratic liver injury,0.0
+IVRXNBXKWIJUQB-UHFFFAOYSA-N,Galunisertib,-1,TGF-beta inhibitor - no clinical hepatotoxicity signal; mainly hepatoprotective in studies,1.0
+JJCQSGDBDPYCEO-XVZSLQNASA-N,dibekacin,0,Aminoglycoside class - liver injury rare per LiverTox aminoglycosides entry,0.0
+PZRHRDRVRGEVNW-UHFFFAOYSA-N,MILRINONE,0,Hepatotoxicity associated with amrinone not milrinone specifically,0.0
+CWRVKFFCRWGWCS-UHFFFAOYSA-N,pentetrazol,-1,No specific hepatotoxicity data; obsolete CNS stimulant,0.0
+JWPGJSVJDAJRLW-UHFFFAOYSA-N,debrisoquine,-1,No direct hepatotoxicity reports; used as CYP2D6 phenotyping probe,1.0
+KJONHKAYOJNZEC-UHFFFAOYSA-N,nitrazepam,0,Benzodiazepine class - hepatotoxicity not documented per LiverTox,0.0
+WDRYRZXSPDWGEB-UHFFFAOYSA-N,lonidamine,1,FDA suspended use due to liver problems; pre-existing liver disease contraindicated,1.0
+BWBONKHPVHMQHE-UHFFFAOYSA-N,tiocarlide,-1,No specific hepatotoxicity data available,0.0
+YXVZOBVWVRFPTE-UHFFFAOYSA-N,metapramine,-1,No specific hepatotoxicity reports for metapramine,1.0
+AJOQSQHYDOFIOX-UHFFFAOYSA-N,pheneturide,-1,Acetylurea anticonvulsant - limited specific data but class concerns,1.0
+YEKQSSHBERGOJK-UHFFFAOYSA-N,pyricarbate,1,Hepatitis from pyricarbate documented (Gastroenterol Clin Biol 1984),0.0
+VGZSUPCWNCWDAN-UHFFFAOYSA-N,ACETOHEXAMIDE,1,First-gen sulfonylurea - rare cause of clinically apparent liver injury per LiverTox,1.0
+XAGMUUZPGZWTRP-ZETCQYMHSA-N,pazufloxacin,1,Fluoroquinolone class - DILI class effect per LiverTox fluoroquinolones,1.0
+XBJBPGROQZJDOJ-UHFFFAOYSA-N,fleroxacin,1,Fluoroquinolone class - DILI class effect per LiverTox,1.0
+DGAIEPBNLOQYER-UHFFFAOYSA-N,IOPROMIDE,0,Iodinated contrast - hepatotoxicity very rare; few case reports,0.0
+OELFLUMRDSZNSF-BRWVUGGUSA-N,NATEGLINIDE,0,LiverTox: very rare cause; ALT elevations not more common than placebo,0.0
+SPJAGILXQBHHSZ-UHFFFAOYSA-N,Benzylacyclouridine,-1,Experimental compound - no clinical hepatotoxicity data,0.0
+BHXLLRXDAYEMPP-SBGRAJFYSA-N,cefoselis,-1,Cephalosporin class - no cefoselis-specific data,0.0
+YRCWQPVGYLYSOX-UHFFFAOYSA-N,oxedrine,0,No documented hepatotoxicity per available data,0.0
+XEEQGYMUWCZPDN-DOMZBBRYSA-N,mefloquine,1,LiverTox: possible rare cause of clinically apparent liver injury,1.0
+RGPDEAGGEXEMMM-UHFFFAOYSA-N,nefopam,1,FAERS signal in children; animal models show dose-related hepatotoxicity,1.0
+UGFHIPBXIWJXNA-UHFFFAOYSA-N,Liarozole,-1,No specific clinical hepatotoxicity data; orphan drug,1.0
+OWQIUQKMMPDHQQ-UHFFFAOYSA-N,dimethocaine,-1,Novel psychoactive substance - no clinical safety data,0.0
+QDUIJCOKQCCXQY-WHJQOFBOSA-N,cefozopran,-1,Cephalosporin class effect; no cefozopran-specific data,0.0
+ZPFXAOWNKLFJDN-UHFFFAOYSA-N,alverine,1,Alverine citrate-induced acute hepatitis case reports published,0.0
+JTVPZMFULRWINT-UHFFFAOYSA-N,tiapride,-1,No specific hepatotoxicity data available for tiapride,0.0
+MGQLHRYJBWGORO-UHFFFAOYSA-N,balofloxacin,1,Fluoroquinolone class - DILI class effect per LiverTox,1.0
+MHIGBKBJSQVXNH-IWVLMIASSA-N,METHACYCLINE,1,Tetracycline class - hepatotoxicity established for IV tetracyclines per LiverTox,1.0
+KQKPFRSPSRPDEB-UHFFFAOYSA-N,SUMATRIPTAN,0,LiverTox triptans: rarely if ever cause liver injury,0.0
+NPAGDVCDWIYMMC-IZPLOLCNSA-N,nandrolone,1,LiverTox androgenic steroids: cases of hepatomegaly steatosis with nandrolone,1.0
+PFOLLRNADZZWEX-FFGRCDKISA-N,BACAMPICILLIN,0,Aminopenicillin prodrug of ampicillin - low hepatotoxicity per LiverTox,0.0
+XLOQNFNTQIRSOX-UHFFFAOYSA-N,aceprometazine,-1,Phenothiazine class can cause cholestasis; no specific aceprometazine data,0.0
+WVPAABNYMHNFJG-QDVBXLKVSA-N,cefcapene pivoxil,1,Documented DILI case with high ALT/AST and RUCAM positive,0.0
+XVUQHFRQHBLHQD-UHFFFAOYSA-N,lonazolac,-1,NSAID class effect possible; no lonazolac-specific data,1.0
+FAIIFDPAEUKBEP-UHFFFAOYSA-N,nilvadipine,-1,Dihydropyridine CCB; no nilvadipine-specific hepatotoxicity data,0.0
+GKCBAIGFKIBETG-UHFFFAOYSA-N,TETRACAINE,-1,Local anesthetic; no hepatotoxicity data found,0.0
+OLVCFLKTBJRLHI-AXAPSJFSSA-N,cefamandole,1,Cephalosporin with documented jaundice cases; NMTT side chain effects,0.0
+GBFLZEXEOZUWRN-VKHMYHEASA-N,carbocisteine,0,Rare cholestasis case reports but generally not associated with DILI,0.0
+LGYTZKPVOAIUKX-UHFFFAOYSA-N,kebuzone,1,NSAID phenylbutazone-related; hepatotoxicity reported as serious adverse effect,1.0
+JIEKMACRVQTPRC-UHFFFAOYSA-N,fentiazac,1,Documented hepatotoxicity 3/33 long-term patients; ALT to 1040 U/L,1.0
+AIZFEOPQVZBNGH-UHFFFAOYSA-N,bentazepam,1,LiverTox: unusual benzodiazepine causing chronic active hepatitis,0.0
+NGOGFTYYXHNFQH-UHFFFAOYSA-N,fasudil,0,Rho-kinase inhibitor - hepatoprotective not hepatotoxic in studies,0.0
+LEBVLXFERQHONN-UHFFFAOYSA-N,BUPIVACAINE,1,LiverTox amide anesthetics: documented liver injury cases with epidural infusion,1.0
+ALLWOAVDORUJLA-UHFFFAOYSA-N,rebamipide,0,Liver dysfunction rare and mild; established safety profile 30+ years,0.0
+ZXSWTMLNIIZPET-ZOFHRBRSSA-N,methylestrenolone,1,17alpha-alkylated AAS (normethandrone) - established hepatotoxicity cholestasis,1.0
+QMHSXPLYMTVAMK-UHFFFAOYSA-N,PYRVINIUM,0,Anthelmintic - rare liver effects only; hepatoprotective in studies,0.0
+VLLFGVHGKLDDLW-SFHVURJKSA-N,Atabecestat,1,Janssen ended BACE program due to severe liver enzyme elevations,1.0
+LXIKEPCNDFVJKC-QXMHVHEDSA-N,tenidap,1,FDA rejected 1996 due to liver and kidney toxicity,1.0
+BAINIUMDFURPJM-UHFFFAOYSA-N,oxatomide,1,Documented hepatitis cases with ALT 255 and rechallenge positive,0.0
+UJEWTUDSLQGTOA-UHFFFAOYSA-N,piretanide,0,Loop diuretic - no hepatotoxicity reports; only fluid/electrolyte effects,0.0
+QHZQILHUJDRDAI-UHFFFAOYSA-N,febarbamate,1,Tetrabamate (Atrium) component - acute liver failure cases documented,1.0
+XDXWLKQMMKQXPV-QYQHSDTDSA-N,ELTROMBOPAG,1,FDA Boxed Warning for severe hepatotoxicity; LiverTox documented,1.0
+HHHKFGXWKKUNCY-FHWLQOOXSA-N,cilazapril,-1,ACE inhibitor class - rare class effect but no cilazapril-specific data,0.0
+MFZWMTSUNYWVBU-UHFFFAOYSA-N,hycanthone,1,Dose-dependent hepatotoxin causing hepatocellular injury/necrosis; withdrawn,1.0
+NMCHYWGKBADVMK-UHFFFAOYSA-N,fenetylline,-1,Amphetamine derivative (Captagon); no specific hepatotoxicity data,1.0
+HSHNITRMYYLLCV-UHFFFAOYSA-N,hymecromone,0,Choleretic with excellent safety profile per literature,0.0
+MYBLAOJMRYYKMS-RTRLPJTCSA-N,chlorozotocin,1,Nitrosourea - hepatotoxicity listed as possible serious adverse effect,1.0
+FPZLLRFZJZRHSY-HJYUBDRYSA-N,TIGECYCLINE,1,LiverTox Likelihood Score B; FAERS acute liver failure cases,1.0
+XYKWNRUXCOIMFZ-UHFFFAOYSA-N,Tepoxalin,-1,Veterinary NSAID (dogs) - hepatotoxicity reported but not human drug,0.0
+HGGAKXAHAYOLDJ-FHZUQPTBSA-N,faropenem,-1,Carbapenem class - no faropenem-specific hepatotoxicity data,0.0
+AFLFKFHDSCQHOL-IZZDOVSWSA-N,ELAFIBRANOR,1,FDA approval label warning about DILI; LiverTox entry exists,1.0
+RKUNBYITZUJHSG-FXUDXRNXSA-N,hyoscyamine,0,LiverTox: not implicated in liver enzyme elevations or DILI,0.0
+PXBVEXGRHZFEOF-UHFFFAOYSA-N,camazepam,-1,Benzodiazepine class - no camazepam-specific hepatotoxicity data,0.0
+NUZWLKWWNNJHPT-UHFFFAOYSA-N,dithranol,0,Topical psoriasis treatment - no hepatotoxicity; no microsomal inhibition,0.0
+OBBCSXFCDPPXOL-UHFFFAOYSA-N,Misonidazole,-1,Radiosensitizer - in vitro hepatocyte changes but no clinical DILI data,1.0

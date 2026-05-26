@@ -1,0 +1,62 @@
+inchi_key,canonical_smiles,name,manual_label,source,reason
+IAAPVNQZSBLWKH-UHFFFAOYSA-N,CC=CC=CC=CC(=O)O,"octa-2,4,6-trienoic acid",,non_drug,IUPAC chemistry name
+FNGGIPWAZSFKCN-UHFFFAOYSA-N,CCC12C=CCN3CCC4(C(=C(C(=O)OC)C1)Nc1ccccc14)C32,tabersonine,1.0,expert_curation,Listed
+PZFZLRNAOHUQPH-UHFFFAOYSA-N,CCCCCCCCCCCCCCCC(=O)NC(CSCC(COC(=O)CCCCCCCCCCCCCCC)OC(=O)CCCCCCCCCCCCCCC)C(=O)O,"2,3-bis(palmitoyloxy)-2-propyl-1-palmitoylcysteine",,non_drug,IUPAC chemistry name
+IUPDWMUZBVKRGM-UHFFFAOYSA-N,Cc1cnc(C(=O)Nc2ccc(S(=O)(=O)NC(C)C)cc2)cn1,L-Lactate Dehydrogenase,0.0,expert_curation,Enzyme - non-drug
+BOGAHAUMRNNWPE-UHFFFAOYSA-N,COc1cc(CCc2ccc(Nc3c4c(nc5ccccc35)CCCC4)cc2)cc(OC)c1,CHEMBL4093419,,non_drug,ChEMBL ID only
+VTYQXQQQKWLGBA-UHFFFAOYSA-N,CC1CCC2(NC1)OC1CC3C4CC=C5CC(OC6OC(CO)C(OC7OC(C)C(O)C(O)C7OC7OC(C)C(O)C(O)C7O)C(O)C6O)CCC5(C)C4CCC3(C)C1C2C,alpha-solamargine,0.0,expert_curation,Solanum glycoalkaloid
+IRHTZOCLLONTOC-UHFFFAOYSA-N,CCCCCCCCCCCCCCCCCCCCCCCCCCO,1-hexacosanol,0.0,expert_curation,Plant alcohol supplement - safe
+TUAHORSUHVUKBD-UHFFFAOYSA-N,c1ccc2c(c1)ccc1ccc3ccccc3c12,benzo(c)phenanthrene,,non_drug,PAH
+VWFJDQUYCIWHTN-UHFFFAOYSA-N,CC(C)=CCCC(C)=CCCC(C)=CCOP(=O)(O)OP(=O)(O)O,farnesyl pyrophosphate,0.0,expert_curation,Endogenous isoprenoid
+COBXSLRIXGQVGS-UHFFFAOYSA-N,O=c1[nH]c2ccc(-c3c(Cl)cccc3OC(F)(F)F)cc2[nH]1,CHEMBL4214902,,non_drug,ChEMBL ID only
+PCXMKBOWWVXEDT-UHFFFAOYSA-N,CC(C(=O)Nc1cc(-c2ccccc2)nn1-c1ccccc1)N(C)C,CHEMBL2105587,,non_drug,ChEMBL ID only
+XLHIYUYCSMZCCC-UHFFFAOYSA-N,COc1ccc(C=Cc2cc(OC)cc(=O)o2)cc1,yangonin,1.0,expert_curation,Kava component - LiverTox B
+PEYUIKBAABKQKQ-UHFFFAOYSA-N,c1cc2c(cc1C1OCC3C(c4ccc5c(c4)OCO5)OCC13)OCO2,sesamin,0.0,expert_curation,Lignan - safe
+WDXRGPWQVHZTQJ-UHFFFAOYSA-N,CC=C1C(=O)CC2C3CCC4=CC(=O)CCC4(C)C3CCC12C,"pregna-4,17-diene-3,16-dione",,non_drug,IUPAC chemistry name
+UCDVIBNDYLUWFP-UHFFFAOYSA-N,C=C1C(=O)C23C(O)CC4C(C)(C)C(=O)CCC4(C)C2CCC1C3O,glaucocalyxin A,,non_drug,Diterpene - hepatic effects (mild)
+CWVRJTMFETXNAD-UHFFFAOYSA-N,O=C(C=Cc1ccc(O)c(O)c1)OC1CC(O)(C(=O)O)CC(O)C1O,Chlorogenic Acid,0.0,expert_curation,Coffee polyphenol - safe at dietary doses
+OKTJSMMVPCPJKN-UHFFFAOYSA-N,[C],Carbon,,non_drug,element / inorganic substance
+ZFAHNWWNDFHPOH-UHFFFAOYSA-N,C=CCSCC(N)C(=O)O,S-allylcysteine,,non_drug,garlic metabolite
+XIFVTSIIYVGRHJ-UHFFFAOYSA-N,CNc1nc(N(C)C)nc(N(C)C)n1,CHEMBL457723,,non_drug,ChEMBL ID only
+JKHRCGUTYDNCLE-UHFFFAOYSA-O,Oc1cc(O)c2cc(O)c(-c3cc(O)c(O)c(O)c3)[o+]c2c1,delphinidin,0.0,expert_curation,Anthocyanidin - safe
+LBBJNGFCXDOYMQ-UHFFFAOYSA-N,Cc1[nH]ccc2c1[nH]c1cc(=O)ccc12,harmol,1.0,expert_curation,beta-carboline metabolite
+QSXXLDDWVCEBFP-UHFFFAOYSA-N,CCOCn1cnc2c1c(=O)n(CCCCC(C)(C)O)c(=O)n2C,torbafylline,1.0,expert_curation,Hepatotoxicity reports
+UKHQRARQNZOXRL-UHFFFAOYSA-N,C[SnH](C)C,trimethyltin,,non_drug,industrial/lab/non-drug chemical
+GIMNAEMRNXUAQP-UHFFFAOYSA-N,Cc1ncc(-c2csc(N=C(N)N)n2)[nH]1,CHEMBL70209,,non_drug,ChEMBL ID only
+YYVYAPXYZVYDHN-UHFFFAOYSA-N,O=C1C(=O)c2ccccc2-c2ccccc21,"9,10-phenanthrenequinone",,non_drug,IUPAC chemistry name
+XSOKHXFFCGXDJZ-UHFFFAOYSA-N,[Te-2],cadmium telluride,,non_drug,semiconductor
+WWNNZCOKKKDOPX-UHFFFAOYSA-N,C[n+]1cccc(C(=O)[O-])c1,trigonelline,0.0,expert_curation,Methylnicotinic acid - safe
+MHVJRKBZMUDEEV-UHFFFAOYSA-N,C=CC1(C)C=C2CCC3C(C)(C(=O)O)CCCC3(C)C2CC1,pimaric acid,0.0,expert_curation,Pine diterpene - safe at low doses
+AIZFEOPQVZBNGH-UHFFFAOYSA-N,O=C1CN=C(c2ccccc2)c2c(sc3c2CCCC3)N1,bentazepam,1.0,expert_curation,Benzodiazepine - LiverTox B hepatic injury
+QOZFCKXEVSGWGS-UHFFFAOYSA-N,CC12CCC3c4ccc(O)c(O)c4CCC3C1CCC2O,4-hydroxyestradiol,,non_drug,estrogen metabolite
+DTGZHCFJNDAHEN-UHFFFAOYSA-N,CCC1CN2CCc3cc(OC)c(OC)cc3C2CC1CC1NCCc2cc(O)c(OC)cc21,cephaelin,1.0,expert_curation,Emetine - listed
+WQCWELFQKXIPCN-UHFFFAOYSA-N,O=C(C=Cc1ccc(O)cc1)c1c(O)cc(O)cc1OC1OC(CO)C(O)C(O)C1O,isosalipurposide,0.0,expert_curation,Tannin - safe
+NYHBQMYGNKIUIF-UHFFFAOYSA-N,Nc1nc2c(ncn2C2OC(CO)C(O)C2O)c(=O)[nH]1,Guanosine,0.0,expert_curation,Nucleoside - safe
+LELBFTMXCIIKKX-UHFFFAOYSA-N,CCC1CN2CCc3c([nH]c4cccc(OC)c34)C2CC1C(=COC)C(=O)OC,mitragynine,1.0,expert_curation,Listed
+PIMZUZSSNYHVCU-UHFFFAOYSA-N,C=C(C)C1C2OC(=O)C1C1(O)CC3OC34C(=O)OC2C14C,picrotoxinin,1.0,expert_curation,GABA antagonist - hepatic in toxicity
+XDOTVMNBCQVZKG-UHFFFAOYSA-N,CSC(C)=NOC(=O)N(C)SN(C)C(=O)ON=C(C)SC,thiodicarb,1.0,expert_curation,Carbamate - hepatic effects
+CFMYXEVWODSLAX-UHFFFAOYSA-N,NC1=NC(O)C2C3OC4(O)OC(C(O)C2(N1)C4O)C3(O)CO,Tetrodotoxin,1.0,expert_curation,Hepatic effects
+KYFBXCHUXFKMGQ-UHFFFAOYSA-N,CC(C)=CCc1c(O)ccc2c1OC(c1ccc(O)cc1)CC2=O,isobavachin,1.0,expert_curation,Psoralea - LiverTox B documented hepatic injury
+SDIVYZXRQHWCKF-UHFFFAOYSA-N,O=c1c2ccccc2nc2n1CCC2O,vasicinone,1.0,expert_curation,Adhatoda alkaloid - hepatic effects in toxicity
+AERBNCYCJBRYDG-UHFFFAOYSA-N,CCCCCCCCCCCCCCC(O)C(O)C(N)CO,phytosphingosine,0.0,expert_curation,Endogenous lipid
+JETQIUPBHQNHNZ-OAYJICASSA-N,CC1(C)S[C@@H]2[C@H](NC(=O)C(c3ccccc3)S(=O)(=O)O)C(=O)N2[C@H]1C(=O)O,CHEMBL1256734,,non_drug,ChEMBL ID only
+XDEURYRPQDIBSL-UHFFFAOYSA-N,O=C1C=C2CCNC2=CC1=O,aminochrome 1,,non_drug,Dopamine oxidation product - endogenous
+MQZIGYBFDRPAKN-UHFFFAOYSA-N,CC(C=CC=C(C)C=CC1=C(C)C(=O)C(O)CC1(C)C)=CC=CC=C(C)C=CC=C(C)C=CC1=C(C)C(=O)C(O)CC1(C)C,astaxanthine,0.0,expert_curation,Carotenoid - safe
+ACNHBCIZLNNLRS-UHFFFAOYSA-N,CC(C)(O)C1OC2CCC3(C)C(O)(CCC4Cc5c([nH]c6ccccc56)C43C)C2=CC1=O,paxilline,1.0,expert_curation,Tremorgenic mycotoxin
+YWXYYJSYQOXTPL-KVTDHHQDSA-N,O=[N+]([O-])O[C@@H]1CO[C@H]2[C@@H]1OC[C@H]2O,CHEMBL4076736,,non_drug,ChEMBL ID only
+OUADMZZEIRSDSG-UHFFFAOYSA-N,COC12C(CO)C3=C(C(=O)C(C)=C(N)C3=O)N1CC1NC12,10-decarbamoylmitomycin C,1.0,expert_curation,Mitomycin analog - hepatic
+SONNWYBIRXJNDC-UHFFFAOYSA-N,CNCC(O)c1cccc(O)c1,Phenylephrine,1.0,expert_curation,Sympathomimetic - LiverTox C
+XLTANAWLDBYGFU-UHFFFAOYSA-N,CCN1CC2(COC(=O)c3ccccc3N3C(=O)CC(C)C3=O)CCC(OC)C34C5CC6C(OC)CC(O)(C5C6OC)C(O)(C(OC)C23)C14,methyllycaconitine,1.0,expert_curation,Aconitum - hepatic neurotoxic
+ASXGJMSKWNBENU-UHFFFAOYSA-N,CCCN(CCC)C1CCc2cccc(O)c2C1,8-Hydroxy-2-(di-n-propylamino)tetralin,,non_drug,IUPAC chemistry name
+NAAJVHHFAXWBOK-UHFFFAOYSA-N,CC(C)=CC(=O)CC(C)c1ccc(C)cc1,ar-turmerone,1.0,expert_curation,Turmeric - hepatic effects (curcumin family)
+WFUGQJXVXHBTEM-UHFFFAOYSA-N,CCC(C)(OO)OOC(C)(CC)OO,methyl ethyl ketone peroxide,1.0,expert_curation,Industrial - hepatic
+QMGVPVSNSZLJIA-UHFFFAOYSA-N,O=C1CC2OCC=C3CN4CCC56c7ccccc7N1C5C2C3CC46,Strychnine,1.0,expert_curation,LiverTox - hepatic effects in toxicity
+RGZSQWQPBWRIAQ-UHFFFAOYSA-N,CC(C)=CCCC(C)(O)C1CC=C(C)CC1,bisabolol,0.0,expert_curation,Listed safe
+MAYJEFRPIKEYBL-UHFFFAOYSA-N,CC1(C)OC(=O)C=CC2(C)C1CC(=O)C1(C)C2CCC2(C)C(c3ccoc3)OC(=O)C3OC321,obacunone,1.0,expert_curation,Limonoid - hepatic effects
+ACTRVOBWPAIOHC-XIXRPRMCSA-N,O=C(O)[C@@H](S)[C@@H](S)C(=O)O,CHEMBL1201073,,non_drug,ChEMBL ID only
+NZHGWWWHIYHZNX-UHFFFAOYSA-N,COc1ccc(C=CC(=O)Nc2ccccc2C(=O)O)cc1OC,tranilast,1.0,expert_curation,Antifibrotic - LiverTox B hepatic injury
+AADCDMQTJNYOSS-UHFFFAOYSA-N,CCc1cc(Cl)c(OC)c(C(=O)NCC2CCCN2CC)c1O,eticlopride,,non_drug,D2 antagonist research compound
+YGYAWVDWMABLBF-UHFFFAOYSA-N,O=C(Cl)Cl,Phosgene,1.0,expert_curation,Industrial poison - severe hepatic injury
+IFFPICMESYHZPQ-UHFFFAOYSA-N,CC(Cc1ccccc1)NCCC(c1ccccc1)c1ccccc1,CHEMBL24072,,non_drug,ChEMBL ID only
+SZINUGQCTHLQAZ-UHFFFAOYSA-N,CC(=O)C1=C(O)C2C3c4c[nH]c5cccc(c45)CC3C(C)(C)N2C1=O,cyclopiazonic acid,1.0,expert_curation,Mycotoxin - hepatic effects
+SDCUWFRXMLQNCS-UHFFFAOYSA-N,CC12CC(c3ccc(OCCCCCS(=O)(=O)CCCC(F)(F)C(F)(F)F)cc3)C3c4ccc(O)cc4CCC3C1CCC2O,RU 58668,0.0,expert_curation,Research compound

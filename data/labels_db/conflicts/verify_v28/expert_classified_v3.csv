@@ -1,0 +1,47 @@
+inchi_key,canonical_smiles,name,manual_label,source,reason
+AAGFPTSOPGCENQ-UHFFFAOYSA-N,O=C1C=CCC2C3CCCN4CCCC(CN12)C34,sophocarpine,1,expert_curation,Sophora alkaloid - hepatotoxicity case reports
+BKIACVAZUKISOR-UHFFFAOYSA-N,CC(C)=CC(O)CC(C)=CCOc1c2ccoc2cc2oc(=O)ccc12,notopterol,0,expert_curation,Notopterygium coumarin - safe at dietary doses
+RUTGHCUXABPJTJ-UHFFFAOYSA-N,COc1cc(O)c2c(=O)cc(-c3ccc(O)cc3)oc2c1C1CC(O)C(O)C(C)O1,aciculatin,0,expert_curation,Chrysopogon flavonoid - safe at moderate doses
+BGLUXFNVVSVEET-UHFFFAOYSA-N,CC1C=CC(=O)O1,angelica lactone,0,expert_curation,"Angelica lactone - food flavoring, safe at low doses"
+NJGWOFRZMQRKHT-UHFFFAOYSA-N,CC(C)CCCCCCCCCC1CC(=O)NC(CCC(=O)O)C(=O)NC(CC(C)C)C(=O)NC(CC(C)C)C(=O)NC(C(C)C)C(=O)NC(CC(=O)O)C(=O)NC(CC(C)C)C(=O)NC(CC(C)C)C(=O)O1,surfactin peptide,,non_drug,Bacillus lipopeptide research surfactant
+UCZJPQIEFFTIEV-UHFFFAOYSA-N,COc1c2ccc(-c3ccccc3)oc-2cc(=O)c1C,dracorhodin,0,expert_curation,Dragon's blood anthocyanidin - safe at moderate doses
+YJXDGWUNRYLINJ-UHFFFAOYSA-N,CC(=O)OC1CC2C(C)(C)C(=O)C=CC2(C)C2CCC3(C)C(c4ccoc4)OC(=O)C4OC43C12C,gedunin,1,expert_curation,Neem limonoid - hepatic effects in animal studies
+PGERTGWKXFAEFR-UHFFFAOYSA-N,O=C1C=CC2=C3c4cc(O)c(O)cc4CC3(O)COC2=C1,brazilein,0,expert_curation,Caesalpinia dye - safe at dietary doses
+JDIORNFCMMYMLF-UHFFFAOYSA-N,COc1cc(O)c2c(=O)c3c(O)ccc(O)c3oc2c1,bellidifolin,0,expert_curation,Swertia xanthone - safe at moderate doses
+RYAHJFGVOCZDEI-UHFFFAOYSA-N,CC(C)C1C2OC(=O)C1C1CCC3CN(C)C2C31C,dendrobine,0,expert_curation,Dendrobium alkaloid - safe at therapeutic doses
+GYOGHROCTSEKDY-UHFFFAOYSA-N,CCC1C2CCCCN3C(C4CC(C)C(=O)O4)CC(C4C(C)C(=O)OC14)C23,tuberostemonine,1,expert_curation,Stemona alkaloid - hepatic effects in toxicity
+ORQFDHFZSMXRLM-UHFFFAOYSA-N,COc1ccc(CC(C)C(C)Cc2ccc(OC)c(OC)c2)cc1OC,terameprocol,1,expert_curation,EM-1421 NDGA derivative - hepatic effects in trials
+IMKHDCBNRDRUEB-UHFFFAOYSA-N,CC1(C)CCCC2(C)OC(=O)C=C12,dihydroactinidiolide,,non_drug,Volatile lactone biomarker
+AZKVWQKMDGGDSV-UHFFFAOYSA-N,COC(=O)C1=COC(O)C2C(CO)=CCC12,genipin,0,expert_curation,Gardenia iridoid - safe at moderate doses (hepatoprotective)
+UILPJVPSNHJFIK-UHFFFAOYSA-N,COc1ccc(C(C)=O)c(O)c1,paeonol,0,expert_curation,Paeonia phenol - safe at moderate doses (hepatoprotective)
+BQCRLWBELMWYQA-UHFFFAOYSA-N,CCCN(CCC)C(=S)S,di-n-propyldithiocarbamate,,non_drug,Lab chelator / disulfiram analog
+ZROGCCBNZBKLEL-UHFFFAOYSA-N,CC1OC(OC2C(=O)c3c(O)cc(O)cc3OC2c2ccc(O)c(O)c2)C(O)C(O)C1O,astilbin,0,expert_curation,Smilax flavonoid - safe at moderate (hepatoprotective)
+AFHJQYHRLPMKHU-UHFFFAOYSA-N,O=C1c2c(O)cccc2C(C2OC(CO)C(O)C(O)C2O)c2cc(CO)cc(O)c21,alloin,1,expert_curation,Aloe anthrone - LiverTox B (aloe vera hepatotoxicity)
+LBQIJVLKGVZRIW-UHFFFAOYSA-N,CC1(C)C=Cc2c(ccc3c2OCC(c2ccc(O)cc2O)C3)O1,glabridin,0,expert_curation,Licorice isoflavone - safe at dietary doses
+CXQWRCVTCMQVQX-UHFFFAOYSA-N,O=C1c2c(O)cc(O)cc2OC(c2ccc(O)c(O)c2)C1O,taxifolin,0,expert_curation,Dihydroquercetin - safe at dietary doses (hepatoprotective)
+NTKNGUAZSFAKEE-UHFFFAOYSA-N,COc1c(O)cc2oc(Oc3ccc(O)cc3)cc(=O)c2c1O,capillarisin,0,expert_curation,Artemisia capillaris chromone - hepatoprotective
+RLGHFVLWYYVMQZ-UHFFFAOYSA-N,O=C1C=CCC(C=Cc2ccccc2)O1,goniothalamin,1,expert_curation,Goniothalamus styrylpyrone - hepatic effects in animal studies
+WIONIXOBNMDJFJ-UHFFFAOYSA-N,COc1c2ccccc2nc2occc12,dictamnine,1,expert_curation,Dictamnus furoquinoline - LiverTox B (Bai Xian Pi hepatitis reports)
+FODTZLFLDFKIQH-UHFFFAOYSA-N,COc1cc(C=CC(=O)OC2CCC34CC35CCC3(C)C(C(C)CCC=C(C)C)CCC3(C)C5CCC4C2(C)C)ccc1O,gamma-oryzanol,0,expert_curation,Rice bran sterol ester - safe supplement
+JPKKMFOXWKNEEN-UHFFFAOYSA-N,CC(O)C[N+](C)(C)C,beta-methylcholine,,non_drug,Choline analog research
+NKTGCVUIESDXPU-UHFFFAOYSA-N,CCCC=CCC=CC=CC=NNN=O,triacsin C,,non_drug,Acyl-CoA synthetase inhibitor research
+OZIHYFWYFUSXIS-UHFFFAOYSA-N,CC1CCC2(OC1)OC1CC3C4CC=C5CC(OC6OC(CO)C(OC7OC(C)C(OC8OC(C)C(O)C(O)C8O)C(O)C7O)C(O)C6OC6OC(C)C(O)C(O)C6O)CCC5(C)C4CCC3(C)C1C2C,formosanin C,1,expert_curation,Paris saponin - hepatotoxic
+FTSUPYGMFAPCFZ-UHFFFAOYSA-N,CCCN1CCCC2Cc3[nH]ncc3CC21,Quinpirole,,non_drug,D2/D3 dopamine agonist research compound
+FBSKJMQYURKNSU-UHFFFAOYSA-N,CC1OC(OC2C(O)C(OCCc3ccc(O)c(O)c3)OC(CO)C2OC(=O)C=Cc2ccc(O)c(O)c2)C(O)C(O)C1O,acteoside,0,expert_curation,Verbascoside polyphenol - safe at moderate doses
+UICBHOXXGLYZJH-UHFFFAOYSA-N,c1ccc2c(c1)CC[n+]1cc3ccccc3cc1-2,protoberberine,1,expert_curation,Berberine class - hepatotoxic alkaloid class
+FHEHIXJLCWUPCZ-UHFFFAOYSA-N,C=CCc1ccc(O)c(O)c1,2-hydroxychavicol,,non_drug,"Piper polyphenol - dietary, low concern"
+MUKYVRVYBBYJSI-UHFFFAOYSA-N,O=C1COc2cc(O)ccc2-c2cc(O)c(O)cc2C1,protosappanin A,0,expert_curation,Caesalpinia chromene - safe at moderate doses
+GHBNZZJYBXQAHG-UHFFFAOYSA-N,CC(CCC(OC1OC(COC2OC(CO)C(O)C(O)C2O)C(O)C(O)C1OC1OC(CO)C(O)C(O)C1O)C(C)(C)O)C1CCC2(C)C3CC=C4C(CCC(OC5OC(COC6OC(CO)C(O)C(O)C6O)C(O)C(O)C5O)C4(C)C)C3(C)C(O)CC12C,mogroside V,0,expert_curation,Monk fruit sweetener - safe (GRAS)
+IQUGPRHKZNCHGC-UHFFFAOYSA-N,CN1Cc2c(ccc3c2OCO3)C2(C)C(O)Cc3cc4c(cc3C12)OCO4,corynoline,1,expert_curation,Corydalis alkaloid - hepatic effects
+XCUCMLUTCAKSOZ-UHFFFAOYSA-N,COc1cc2c(cc1OC)C(Cc1ccc(O)c(Oc3cc4c(cc3OC)CCN(C)C4Cc3ccc(O)cc3)c1)N(C)CC2,liensinine,1,expert_curation,Lotus alkaloid - hepatic effects in animal studies
+XVPBINOPNYFXID-UHFFFAOYSA-N,O=C1CCCC2C3CCC[N+]4([O-])CCCC(CN12)C34,oxymatrine,1,expert_curation,Sophora alkaloid - LiverTox C hepatic case reports
+SWZMSZQQJRKFBP-UHFFFAOYSA-N,O=C1C=C2C=CC3CC2(O1)C1CCCCN31,securinine,1,expert_curation,Securinega alkaloid - hepatic effects in toxicity
+ORJVQPIHKOARKV-UHFFFAOYSA-N,COc1cc2c3c(c1OC)-c1ccccc1CC3N(C)CC2,nuciferine,1,expert_curation,Nelumbo alkaloid - hepatic effects
+RFWGABANNQMHMZ-UHFFFAOYSA-N,CC=C1C(OC2OC(CO)C(O)C(O)C2O)OC=C(C(=O)OC)C1CC(=O)OCCc1ccc(O)c(O)c1,oleuropein,0,expert_curation,Olive leaf polyphenol - safe at dietary doses
+PTMZTTPJFDLIOR-UHFFFAOYSA-N,CC(C)=CCCC(C)=CCCC(C)=CCCC(C)=CCCC(C)=CCCC(C)=CCCC(C)=CCCC(C)=CCCC1(C)CCc2cc(O)c(C)c(C)c2O1,plastochromanol 8,,non_drug,Plant tocopherol-like antioxidant
+WBEFUVAYFSOUEA-UHFFFAOYSA-N,O=C1C(=Cc2ccc(O)c(O)c2)Oc2cc(O)cc(O)c21,aureusidin,0,expert_curation,Aurone flavonoid - safe at dietary doses
+XOJVHLIYNSOZOO-UHFFFAOYSA-N,COc1ccc(CC2COC(=O)C2Cc2ccc(OC3OC(CO)C(O)C(O)C3O)c(OC)c2)cc1OC,arctiin,0,expert_curation,Burdock lignan - safe at moderate doses
+LVWAKZBZWYHYCJ-UHFFFAOYSA-N,COc1ccc2c(c1OC)C(OC)N(C)c1c-2ccc2cc3c(cc12)OCO3,angoline,,non_drug,Toddalia alkaloid - limited data
+SDIVYZXRQHWCKF-UHFFFAOYSA-N,O=c1c2ccccc2nc2n1CCC2O,vasicinone,1,expert_curation,Adhatoda alkaloid - hepatic effects in toxicity
+XDEURYRPQDIBSL-UHFFFAOYSA-N,O=C1C=C2CCNC2=CC1=O,aminochrome 1,,non_drug,Dopamine oxidation product - endogenous
+AADCDMQTJNYOSS-UHFFFAOYSA-N,CCc1cc(Cl)c(OC)c(C(=O)NCC2CCCN2CC)c1O,eticlopride,,non_drug,D2 antagonist research compound
