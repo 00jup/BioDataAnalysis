@@ -83,6 +83,33 @@ data/chemprop_v9/
 data/chemprop_scaffold/
 data/chemprop_scaffold_v2/
 
+# v18~v28 학습 산출 — DB + results 만 추적, .pt 는 재생성 가능
+models/chemprop_strict_v18/
+models/chemprop_v19_balanced/
+models/chemprop_v20/
+models/chemprop_v21_repro/
+models/chemprop_v22_final/
+models/chemprop_v23/
+models/chemprop_v24/
+models/chemprop_v25/
+models/chemprop_v26/
+models/chemprop_v27/
+models/chemprop_v28/
+models/rfcb_v3/
+models/rfcb_v4/
+data/chemprop_v20/
+data/chemprop_v23_honest/
+data/chemprop_v24_pure/
+data/chemprop_v25_clean/
+data/chemprop_v26_balanced/
+data/chemprop_v27/
+data/chemprop_v28/
+data/chemprop_scaffold_balanced/
+data/chemprop_scaffold_strict/
+data/labels_db/full_balanced.parquet
+data/labels_db/full_strict.parquet
+data/labels_db/full_no_chembl_ctd.parquet
+
 # old experiments
 models/per_source/
 models/unified/
