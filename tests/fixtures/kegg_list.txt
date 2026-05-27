@@ -1,3 +1,0 @@
-dr:D00109	Aspirin (USP/INN)
-dr:D00217	Acetaminophen (USP/INN)
-dr:D00944	Metformin hydrochloride (JAN/USP)

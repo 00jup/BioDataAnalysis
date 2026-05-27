@@ -40,8 +40,6 @@ from sklearn.metrics import (
     confusion_matrix,
     f1_score,
     matthews_corrcoef,
-    precision_score,
-    recall_score,
     roc_auc_score,
 )
 
@@ -95,9 +93,12 @@ def ensure_fp_cache(smiles_list: list[str], fp_name: str) -> pd.DataFrame:
         arr = np.zeros((len(missing), nb), dtype=np.uint8)
         for i, smi in enumerate(missing):
             mol = Chem.MolFromSmiles(smi)
-            if mol is None: continue
-            try: arr[i, fp_of(fp_name, mol)] = 1
-            except Exception: pass
+            if mol is None:
+                continue
+            try:
+                arr[i, fp_of(fp_name, mol)] = 1
+            except Exception:
+                pass
         cols = [f"{fp_name}_{j}" for j in range(nb)]
         new_df = pd.DataFrame(arr, columns=cols)
         new_df.insert(0, "canonical_smiles", missing)
@@ -122,19 +123,32 @@ def fp_xy(fp_name: str, df: pd.DataFrame, domain: str = "vivo", db: pd.DataFrame
     return X, y, sub
 
 
-def train_sub_model(fp_name: str, kind: str, train_df, val_df, test_df, domain: str = "vivo", db=None):
+def train_sub_model(
+    fp_name: str, kind: str, train_df, val_df, test_df, domain: str = "vivo", db=None
+):
     Xtr, ytr, _ = fp_xy(fp_name, train_df, domain, db=db)
     Xv, yv, _ = fp_xy(fp_name, val_df, domain, db=db)
     Xte, yte, _ = fp_xy(fp_name, test_df, domain, db=db)
     spw = float((ytr == 0).sum()) / max(int(ytr.sum()), 1)
     if kind == "rf":
-        m = RandomForestClassifier(n_estimators=500, max_features="sqrt",
-            min_samples_leaf=2, class_weight="balanced",
-            random_state=RANDOM_STATE, n_jobs=-1)
+        m = RandomForestClassifier(
+            n_estimators=500,
+            max_features="sqrt",
+            min_samples_leaf=2,
+            class_weight="balanced",
+            random_state=RANDOM_STATE,
+            n_jobs=-1,
+        )
     else:
-        m = CatBoostClassifier(iterations=600, depth=6, learning_rate=0.05,
-            l2_leaf_reg=3, scale_pos_weight=spw, verbose=0,
-            random_seed=RANDOM_STATE)
+        m = CatBoostClassifier(
+            iterations=600,
+            depth=6,
+            learning_rate=0.05,
+            l2_leaf_reg=3,
+            scale_pos_weight=spw,
+            verbose=0,
+            random_seed=RANDOM_STATE,
+        )
     t0 = time.time()
     m.fit(Xtr, ytr)  # sample_weight 폐기 — class_weight 만 사용 (불균형 보정)
     pv = m.predict_proba(Xv)[:, 1]
@@ -144,38 +158,53 @@ def train_sub_model(fp_name: str, kind: str, train_df, val_df, test_df, domain: 
 
 def optimize_ensemble(Xv: np.ndarray, yv: np.ndarray):
     """Nelder-Mead 가중치 + val MCC-optimal threshold."""
+
     def loss(w):
-        w = np.abs(w); w = w / max(w.sum(), 1e-9)
+        w = np.abs(w)
+        w = w / max(w.sum(), 1e-9)
         s = Xv @ w
         return -max(matthews_corrcoef(yv, (s >= t).astype(int)) for t in THRS)
 
     rng = np.random.default_rng(RANDOM_STATE)
-    starts = [np.ones(Xv.shape[1])/Xv.shape[1]] + [rng.dirichlet(np.ones(Xv.shape[1])) for _ in range(5)]
+    starts = [np.ones(Xv.shape[1]) / Xv.shape[1]] + [
+        rng.dirichlet(np.ones(Xv.shape[1])) for _ in range(5)
+    ]
     best_loss, best_w = 0.0, None
     for x0 in starts:
-        r = minimize(loss, x0, method="Nelder-Mead",
-                     options={"xatol":5e-3,"fatol":1e-3,"maxiter":200})
-        if r.fun < best_loss: best_loss, best_w = r.fun, r.x
-    w = np.abs(best_w); w = w / w.sum()
+        r = minimize(
+            loss, x0, method="Nelder-Mead", options={"xatol": 5e-3, "fatol": 1e-3, "maxiter": 200}
+        )
+        if r.fun < best_loss:
+            best_loss, best_w = r.fun, r.x
+    w = np.abs(best_w)
+    w = w / w.sum()
     s_val = Xv @ w
     bt, bm = 0.5, -1.0
     for t in THRS:
         m = matthews_corrcoef(yv, (s_val >= t).astype(int))
-        if m > bm: bm, bt = m, t
+        if m > bm:
+            bm, bt = m, t
     return w, float(bt), float(bm)
 
 
 def full_metrics(y, p, t):
     pred = (p >= t).astype(int)
     cm = confusion_matrix(y, pred, labels=[1, 0])
-    tp, fn = cm[0]; fp, tn = cm[1]
+    tp, fn = cm[0]
+    fp, tn = cm[1]
     tpr = tp / max(tp + fn, 1)
     tnr = tn / max(fp + tn, 1)
     return {
-        "n": int(len(y)), "pos": int(tp + fn), "neg": int(fp + tn),
+        "n": int(len(y)),
+        "pos": int(tp + fn),
+        "neg": int(fp + tn),
         "threshold": float(t),
-        "tp": int(tp), "fn": int(fn), "fp": int(fp), "tn": int(tn),
-        "tpr": float(tpr), "tnr": float(tnr),
+        "tp": int(tp),
+        "fn": int(fn),
+        "fp": int(fp),
+        "tn": int(tn),
+        "tpr": float(tpr),
+        "tnr": float(tnr),
         "precision": float(tp / max(tp + fp, 1)),
         "npv": float(tn / max(tn + fn, 1)),
         "balanced_accuracy": (tpr + tnr) / 2,
@@ -189,9 +218,9 @@ def full_metrics(y, p, t):
 def train_domain(domain: str):
     out_dir = os.path.join(MODELS_DIR, domain)
     os.makedirs(out_dir, exist_ok=True)
-    print(f"\n{'='*70}")
+    print(f"\n{'=' * 70}")
     print(f"  {domain.upper()} 도메인 모델 학습 (class_weight balanced — sample_weight 폐기)")
-    print(f"{'='*70}")
+    print(f"{'=' * 70}")
 
     # DB 로드 (sample_weight 계산용)
     db = pd.read_parquet(os.path.join(PROJECT_ROOT, "data", "labels_db", "full.parquet"))
@@ -199,7 +228,7 @@ def train_domain(domain: str):
     tr = pd.read_csv(os.path.join(TRAIN_DIR, f"{domain}.csv"))
     va = pd.read_csv(os.path.join(VAL_DIR, f"{domain}.csv"))
     te = pd.read_csv(os.path.join(TEST_DIR, f"{domain}.csv"))
-    print(f"  train {len(tr)} (양성 {(tr.label==1).sum()} / 음성 {(tr.label==0).sum()})")
+    print(f"  train {len(tr)} (양성 {(tr.label == 1).sum()} / 음성 {(tr.label == 0).sum()})")
     print(f"  val   {len(va)}    test  {len(te)}\n")
 
     val_probs, test_probs = [], []
@@ -210,17 +239,21 @@ def train_domain(domain: str):
             name = f"{kind}_{fp_name}"
             model_names.append(name)
             m, pv, pte, yv, yte, elapsed = train_sub_model(fp_name, kind, tr, va, te, domain, db=db)
-            val_probs.append(pv); test_probs.append(pte)
-            if yv_ref is None: yv_ref, yte_ref = yv, yte
+            val_probs.append(pv)
+            test_probs.append(pte)
+            if yv_ref is None:
+                yv_ref, yte_ref = yv, yte
             sub_dir = os.path.join(out_dir, name)
             os.makedirs(sub_dir, exist_ok=True)
             if kind == "rf":
                 joblib.dump(m, os.path.join(sub_dir, "model.pkl"))
             else:
                 m.save_model(os.path.join(sub_dir, "model.cbm"))
-            print(f"  {name:14s} {elapsed:5.1f}s  val AUC {roc_auc_score(yv,pv):.3f} MCC@? — test AUC {roc_auc_score(yte,pte):.3f}")
+            print(
+                f"  {name:14s} {elapsed:5.1f}s  val AUC {roc_auc_score(yv, pv):.3f} MCC@? — test AUC {roc_auc_score(yte, pte):.3f}"
+            )
 
-    print(f"\n[앙상블 최적화]")
+    print("\n[앙상블 최적화]")
     Xv = np.array(val_probs).T
     Xte = np.array(test_probs).T
     w, thr, val_mcc = optimize_ensemble(Xv, yv_ref)
@@ -230,12 +263,15 @@ def train_domain(domain: str):
     val_m = full_metrics(yv_ref, val_score, thr)
     test_m = full_metrics(yte_ref, test_score, thr)
 
-    print(f"  가중치:")
-    for n, ww in zip(model_names, w): print(f"    {n:14s} {ww:.3f}")
+    print("  가중치:")
+    for n, ww in zip(model_names, w):
+        print(f"    {n:14s} {ww:.3f}")
     print(f"  val threshold (MCC max): {thr:.3f}  → val MCC {val_m['mcc']:.3f}")
-    print(f"\n  TEST 결과 (val 임계값 적용):")
+    print("\n  TEST 결과 (val 임계값 적용):")
     print(f"    N={test_m['n']} (양성 {test_m['pos']}, 음성 {test_m['neg']})")
-    print(f"    TPR {test_m['tpr']:.3f}  TNR {test_m['tnr']:.3f}  bAcc {test_m['balanced_accuracy']:.3f}")
+    print(
+        f"    TPR {test_m['tpr']:.3f}  TNR {test_m['tnr']:.3f}  bAcc {test_m['balanced_accuracy']:.3f}"
+    )
     print(f"    MCC {test_m['mcc']:.3f}  F1 {test_m['f1']:.3f}  AUC {test_m['auc']:.3f}")
 
     meta = {
@@ -258,13 +294,15 @@ def main():
     for d in targets:
         results[d] = train_domain(d)
 
-    print(f"\n{'='*70}")
+    print(f"\n{'=' * 70}")
     print("  요약")
-    print(f"{'='*70}")
+    print(f"{'=' * 70}")
     print(f"{'도메인':10s} {'AUC':>6s} {'MCC':>6s} {'TPR':>6s} {'TNR':>6s} {'F1':>6s}")
     for d, m in results.items():
         t = m["test_metrics"]
-        print(f"{d:10s} {t['auc']:6.3f} {t['mcc']:6.3f} {t['tpr']:6.3f} {t['tnr']:6.3f} {t['f1']:6.3f}")
+        print(
+            f"{d:10s} {t['auc']:6.3f} {t['mcc']:6.3f} {t['tpr']:6.3f} {t['tnr']:6.3f} {t['f1']:6.3f}"
+        )
 
 
 if __name__ == "__main__":

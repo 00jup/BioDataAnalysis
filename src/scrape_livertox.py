@@ -27,7 +27,7 @@ OUT_DIR = os.path.join(PROJECT_ROOT, "data", "raw", "livertox")
 BOOK_ACCN = "NBK547852"
 EUTILS = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils"
 HEADERS = {"User-Agent": "research scraper / contact: ai.jeje.labs@gmail.com"}
-SLEEP_NCBI = 0.35   # NCBI 권장: <3 req/sec
+SLEEP_NCBI = 0.35  # NCBI 권장: <3 req/sec
 SLEEP_PUBCHEM = 0.35
 
 LIKELIHOOD_REGEX = re.compile(
@@ -37,12 +37,17 @@ LIKELIHOOD_REGEX = re.compile(
 
 def esearch_likelihood() -> list[str]:
     """LiverTox 내 'Likelihood Score' 포함 페이지 ID 전체."""
-    r = requests.get(f"{EUTILS}/esearch.fcgi", params={
-        "db": "books",
-        "term": f"{BOOK_ACCN}[bksaccn] AND Likelihood Score[text]",
-        "retmax": "5000",
-        "retmode": "json",
-    }, headers=HEADERS, timeout=30)
+    r = requests.get(
+        f"{EUTILS}/esearch.fcgi",
+        params={
+            "db": "books",
+            "term": f"{BOOK_ACCN}[bksaccn] AND Likelihood Score[text]",
+            "retmax": "5000",
+            "retmode": "json",
+        },
+        headers=HEADERS,
+        timeout=30,
+    )
     return r.json()["esearchresult"]["idlist"]
 
 
@@ -53,27 +58,38 @@ def esummary_batch(ids: list[str]) -> list[dict]:
     """
     out = {}  # key = chapter accession (NBK), value = {drug_name, accn, uid}
     for i in range(0, len(ids), 100):
-        chunk = ids[i:i+100]
-        r = requests.get(f"{EUTILS}/esummary.fcgi", params={
-            "db": "books", "id": ",".join(chunk), "retmode": "json",
-        }, headers=HEADERS, timeout=60)
+        chunk = ids[i : i + 100]
+        r = requests.get(
+            f"{EUTILS}/esummary.fcgi",
+            params={
+                "db": "books",
+                "id": ",".join(chunk),
+                "retmode": "json",
+            },
+            headers=HEADERS,
+            timeout=60,
+        )
         data = r.json().get("result", {})
         for uid in chunk:
-            if uid not in data: continue
+            if uid not in data:
+                continue
             d = data[uid]
             chap_accn = d.get("chapteraccessionid", "")  # 진짜 약물 페이지 NBK
-            if not chap_accn: continue
+            if not chap_accn:
+                continue
             # id 경로: "livertox/{DrugName}/sec/.../PMC"
             id_path = d.get("id", "")
             parts = id_path.split("/")
             drug_name = parts[1] if len(parts) > 1 else ""
             if chap_accn not in out:
                 out[chap_accn] = {
-                    "uid": uid, "name": drug_name, "accn": chap_accn,
+                    "uid": uid,
+                    "name": drug_name,
+                    "accn": chap_accn,
                     "section_title": d.get("title", ""),
                 }
         time.sleep(SLEEP_NCBI)
-        print(f"    esummary: {i+len(chunk)}/{len(ids)} (unique chapters {len(out)})")
+        print(f"    esummary: {i + len(chunk)}/{len(ids)} (unique chapters {len(out)})")
     return list(out.values())
 
 
@@ -91,7 +107,7 @@ def fetch_chapter(accn: str) -> tuple[str, str | None]:
         if m:
             raw = m.group(1).strip()
             letter = raw[0].upper() if raw else None
-            if letter in ("A","B","C","D","E","H","X"):
+            if letter in ("A", "B", "C", "D", "E", "H", "X"):
                 return text[:300], letter
         return text[:300], None
     except Exception:
@@ -101,6 +117,7 @@ def fetch_chapter(accn: str) -> tuple[str, str | None]:
 def lookup_smiles_batch(names: list[str]) -> dict[str, str]:
     """약물명 리스트 → SMILES dict (PubChem)."""
     import pubchempy as pcp
+
     out = {}
     for i, name in enumerate(names):
         if not name:
@@ -173,7 +190,7 @@ def main():
     final_path = os.path.join(OUT_DIR, "livertox.csv")
     final.to_csv(final_path, index=False)
     print(f"\n저장: {final_path} ({len(final)} 약물 SMILES + likelihood)")
-    print(f"  Likelihood 분포 (SMILES 매핑 후):")
+    print("  Likelihood 분포 (SMILES 매핑 후):")
     print(f"  {final['likelihood'].value_counts().to_dict()}")
 
 

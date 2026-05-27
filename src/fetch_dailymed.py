@@ -17,7 +17,6 @@
 
 from __future__ import annotations
 
-import json
 import os
 import re
 import time
@@ -33,11 +32,25 @@ SLEEP_PUBCHEM = 0.35
 
 # 간독성 관련 키워드 (NLP 추출용)
 LIVER_TERMS = [
-    "hepatotoxic", "hepatic failure", "hepatic injury", "hepatitis",
-    "liver injury", "liver damage", "liver failure", "liver toxic",
-    "hepatocellular", "cholestasis", "jaundice", "hepatorenal",
-    "transaminase", "ALT", "AST elevation", "GGT", "bilirubin",
-    "elevated liver enzymes", "drug-induced liver",
+    "hepatotoxic",
+    "hepatic failure",
+    "hepatic injury",
+    "hepatitis",
+    "liver injury",
+    "liver damage",
+    "liver failure",
+    "liver toxic",
+    "hepatocellular",
+    "cholestasis",
+    "jaundice",
+    "hepatorenal",
+    "transaminase",
+    "ALT",
+    "AST elevation",
+    "GGT",
+    "bilirubin",
+    "elevated liver enzymes",
+    "drug-induced liver",
 ]
 LIVER_REGEX = re.compile("|".join(LIVER_TERMS), re.IGNORECASE)
 
@@ -76,17 +89,16 @@ def classify_label(item: dict) -> dict | None:
     if LIVER_REGEX.search(box_text):
         severity = "boxed_hepatotox"
         m = LIVER_REGEX.search(box_text)
-        snippet = box_text[max(0, m.start()-60):m.end()+60]
+        snippet = box_text[max(0, m.start() - 60) : m.end() + 60]
         sources.append("boxed_warning")
 
     # 2) Warnings & Precautions
     if severity == "no_signal":
-        warn_text = " ".join(item.get("warnings_and_cautions", [])
-                              + item.get("warnings", []))
+        warn_text = " ".join(item.get("warnings_and_cautions", []) + item.get("warnings", []))
         if LIVER_REGEX.search(warn_text):
             severity = "warning_hepatotox"
             m = LIVER_REGEX.search(warn_text)
-            snippet = warn_text[max(0, m.start()-60):m.end()+60]
+            snippet = warn_text[max(0, m.start() - 60) : m.end() + 60]
             sources.append("warnings")
 
     # 3) Adverse Reactions
@@ -95,7 +107,7 @@ def classify_label(item: dict) -> dict | None:
         if LIVER_REGEX.search(adv_text):
             severity = "adverse_hepatotox"
             m = LIVER_REGEX.search(adv_text)
-            snippet = adv_text[max(0, m.start()-60):m.end()+60]
+            snippet = adv_text[max(0, m.start() - 60) : m.end() + 60]
             sources.append("adverse_reactions")
 
     # 4) Contraindications (hepatic impairment 등 — 보조 신호)
@@ -145,15 +157,19 @@ def collect_labels() -> pd.DataFrame:
                     if sid in all_results:
                         # severity 가 더 강하면 교체
                         prev = all_results[sid]
-                        order = {"no_signal": 0, "contraindication_hepatic": 1,
-                                 "adverse_hepatotox": 2, "warning_hepatotox": 3,
-                                 "boxed_hepatotox": 4}
+                        order = {
+                            "no_signal": 0,
+                            "contraindication_hepatic": 1,
+                            "adverse_hepatotox": 2,
+                            "warning_hepatotox": 3,
+                            "boxed_hepatotox": 4,
+                        }
                         if order[rec["severity"]] > order[prev["severity"]]:
                             all_results[sid] = rec
                     else:
                         all_results[sid] = rec
             skip += 100
-            print(f"  skip={skip-100} → {len(results)} (누적 unique {len(all_results)})")
+            print(f"  skip={skip - 100} → {len(results)} (누적 unique {len(all_results)})")
             time.sleep(SLEEP_API)
             if skip >= 1000:  # openFDA 1000 limit
                 break
@@ -163,11 +179,13 @@ def collect_labels() -> pd.DataFrame:
 def lookup_smiles(names: list[str]) -> dict[str, str]:
     """약물명 → canonical SMILES (PubChem)."""
     import pubchempy as pcp
+
     out = {}
     seen = set()
     unique_names = list(set(names))
     for i, name in enumerate(unique_names):
-        if name in seen: continue
+        if name in seen:
+            continue
         seen.add(name)
         try:
             res = pcp.get_compounds(name, "name")
@@ -197,8 +215,9 @@ def main():
     name_to_smi = lookup_smiles(raw_df["name"].tolist())
     raw_df["canonical_smiles"] = raw_df["name"].map(name_to_smi)
     final = raw_df.dropna(subset=["canonical_smiles"]).copy()
-    final = final[["name", "canonical_smiles", "severity", "sources", "snippet",
-                    "set_id", "spl_id"]]
+    final = final[
+        ["name", "canonical_smiles", "severity", "sources", "snippet", "set_id", "spl_id"]
+    ]
     final_path = os.path.join(OUT_DIR, "dailymed.csv")
     final.to_csv(final_path, index=False)
     print(f"\n저장: {final_path}  ({len(final)} / {len(raw_df)} SMILES 매핑)")

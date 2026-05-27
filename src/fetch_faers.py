@@ -13,23 +13,36 @@ FAERS 는 환자/의료진이 직접 신고한 ADR.
   data/raw/faers/faers_dili_raw.csv (집계)
   data/raw/faers/faers_dili.csv     (SMILES 매핑 후)
 """
+
 from __future__ import annotations
-import json, os, time
+
+import os
+import time
 from collections import Counter
+
 import pandas as pd
 import requests
 
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT_DIR = os.path.join(PROJECT_ROOT, "data", "raw", "faers")
-HEADERS = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 14.4; rv:124.0) Gecko/20100101 Firefox/124.0"}
+HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 14.4; rv:124.0) Gecko/20100101 Firefox/124.0"
+}
 SLEEP_API = 0.30
 SLEEP_PUBCHEM = 0.35
 
 # MedDRA-like hepatic reaction term — FAERS 에서 자주 사용
 HEPATIC_TERMS = [
-    "hepatic failure", "drug-induced liver injury", "hepatocellular injury",
-    "hepatitis", "jaundice cholestatic", "hepatic necrosis", "liver injury",
-    "hepatic enzyme increased", "hepatotoxicity", "cholestasis",
+    "hepatic failure",
+    "drug-induced liver injury",
+    "hepatocellular injury",
+    "hepatitis",
+    "jaundice cholestatic",
+    "hepatic necrosis",
+    "liver injury",
+    "hepatic enzyme increased",
+    "hepatotoxicity",
+    "cholestasis",
     "alanine aminotransferase increased",
 ]
 
@@ -69,7 +82,8 @@ def collect_all_terms() -> pd.DataFrame:
         for r in results:
             name = r.get("term", "").strip().lower()
             count = int(r.get("count", 0))
-            if not name or count < 5: continue
+            if not name or count < 5:
+                continue
             drug_counter[name] += count
             drug_reactions.setdefault(name, set()).add(term)
         time.sleep(SLEEP_API)
@@ -78,20 +92,24 @@ def collect_all_terms() -> pd.DataFrame:
     for name, total in drug_counter.most_common():
         if total < 50:  # 최소 50건 이상 (noise 필터)
             continue
-        rows.append({
-            "name": name,
-            "n_reports": total,
-            "n_reaction_types": len(drug_reactions.get(name, set())),
-            "reactions": ";".join(sorted(drug_reactions.get(name, set()))),
-        })
+        rows.append(
+            {
+                "name": name,
+                "n_reports": total,
+                "n_reaction_types": len(drug_reactions.get(name, set())),
+                "reactions": ";".join(sorted(drug_reactions.get(name, set()))),
+            }
+        )
     return pd.DataFrame(rows)
 
 
 def lookup_smiles(names: list[str]) -> dict[str, str]:
     import pubchempy as pcp
+
     out = {}
     for i, name in enumerate(names):
-        if not name: continue
+        if not name:
+            continue
         try:
             res = pcp.get_compounds(name, "name")
             if res:
@@ -112,10 +130,10 @@ def main():
     if raw.empty:
         return
 
-    print(f"분포:")
+    print("분포:")
     print(f"  보고 수 평균: {raw.n_reports.mean():.0f}")
     print(f"  보고 수 중간값: {raw.n_reports.median():.0f}")
-    print(f"  보고 수 ≥1000: {(raw.n_reports>=1000).sum()}")
+    print(f"  보고 수 ≥1000: {(raw.n_reports >= 1000).sum()}")
     print(f"  reaction type 다양성 평균: {raw.n_reaction_types.mean():.1f}")
 
     raw_path = os.path.join(OUT_DIR, "faers_dili_raw.csv")

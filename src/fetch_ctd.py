@@ -20,8 +20,13 @@ inferred 관계로 분류.
   data/raw/ctd/ctd_dili_raw.csv (원본)
   data/raw/ctd/ctd_dili.csv (SMILES 매핑 후)
 """
+
 from __future__ import annotations
-import gzip, os, re, time
+
+import gzip
+import os
+import time
+
 import pandas as pd
 import requests
 
@@ -50,7 +55,7 @@ def download_ctd() -> str:
     """CTD bulk file 다운로드 (이미 있으면 재사용)."""
     out_gz = os.path.join(OUT_DIR, "CTD_chemicals_diseases.tsv.gz")
     if os.path.exists(out_gz) and os.path.getsize(out_gz) > 1_000_000:
-        print(f"  캐시 사용: {out_gz} ({os.path.getsize(out_gz)/1e6:.1f}MB)")
+        print(f"  캐시 사용: {out_gz} ({os.path.getsize(out_gz) / 1e6:.1f}MB)")
         return out_gz
     os.makedirs(OUT_DIR, exist_ok=True)
     print(f"  CTD 다운로드: {CTD_URL}")
@@ -59,24 +64,41 @@ def download_ctd() -> str:
     with open(out_gz, "wb") as f:
         total = 0
         for chunk in r.iter_content(chunk_size=8192):
-            f.write(chunk); total += len(chunk)
-            if total % (10*1024*1024) < 8192:
-                print(f"    {total/1e6:.1f}MB 다운로드")
-    print(f"  → {out_gz} ({total/1e6:.1f}MB)")
+            f.write(chunk)
+            total += len(chunk)
+            if total % (10 * 1024 * 1024) < 8192:
+                print(f"    {total / 1e6:.1f}MB 다운로드")
+    print(f"  → {out_gz} ({total / 1e6:.1f}MB)")
     return out_gz
 
 
 def parse_ctd(path: str) -> pd.DataFrame:
     """간독성 관련 chemical-disease 매핑 추출."""
-    print(f"  TSV 파싱 (메모리 큰 파일 — chunk 로드)")
+    print("  TSV 파싱 (메모리 큰 파일 — chunk 로드)")
     rows = []
     # CTD format: # 으로 시작하는 주석, 헤더 정의는 ChemicalName, ChemicalID, CasRN, DiseaseName, DiseaseID, DirectEvidence, InferenceGeneSymbol, InferenceScore, OmimIDs, PubMedIDs
-    cols = ["ChemicalName", "ChemicalID", "CasRN", "DiseaseName", "DiseaseID",
-            "DirectEvidence", "InferenceGeneSymbol", "InferenceScore",
-            "OmimIDs", "PubMedIDs"]
+    cols = [
+        "ChemicalName",
+        "ChemicalID",
+        "CasRN",
+        "DiseaseName",
+        "DiseaseID",
+        "DirectEvidence",
+        "InferenceGeneSymbol",
+        "InferenceScore",
+        "OmimIDs",
+        "PubMedIDs",
+    ]
     with gzip.open(path, "rt", encoding="utf-8") as f:
-        chunks = pd.read_csv(f, sep="\t", comment="#", names=cols, low_memory=False,
-                              chunksize=200_000, on_bad_lines="skip")
+        chunks = pd.read_csv(
+            f,
+            sep="\t",
+            comment="#",
+            names=cols,
+            low_memory=False,
+            chunksize=200_000,
+            on_bad_lines="skip",
+        )
         for ck in chunks:
             sub = ck[ck["DiseaseID"].isin(LIVER_MESH.keys())].copy()
             if not sub.empty:
@@ -99,22 +121,28 @@ def parse_ctd(path: str) -> pd.DataFrame:
 
 def aggregate_chemicals(df: pd.DataFrame) -> pd.DataFrame:
     """chemical 별로 통합. strong evidence 카운트 + total PMID."""
-    agg = df.groupby(["ChemicalName", "ChemicalID", "CasRN"]).agg(
-        strong_evidence=("evidence_strong", "sum"),
-        n_evidence=("DiseaseID", "count"),
-        max_pmid=("n_pmid", "max"),
-        diseases=("DiseaseName", lambda x: ";".join(sorted(set(x))))
-    ).reset_index()
+    agg = (
+        df.groupby(["ChemicalName", "ChemicalID", "CasRN"])
+        .agg(
+            strong_evidence=("evidence_strong", "sum"),
+            n_evidence=("DiseaseID", "count"),
+            max_pmid=("n_pmid", "max"),
+            diseases=("DiseaseName", lambda x: ";".join(sorted(set(x)))),
+        )
+        .reset_index()
+    )
     print(f"  unique chemicals: {len(agg)}")
-    print(f"  strong evidence ≥ 1: {(agg.strong_evidence>=1).sum()}")
+    print(f"  strong evidence ≥ 1: {(agg.strong_evidence >= 1).sum()}")
     return agg
 
 
 def lookup_smiles(names: list[str]) -> dict[str, str]:
     import pubchempy as pcp
+
     out = {}
     for i, name in enumerate(names):
-        if not name: continue
+        if not name:
+            continue
         try:
             res = pcp.get_compounds(name, "name")
             if res:

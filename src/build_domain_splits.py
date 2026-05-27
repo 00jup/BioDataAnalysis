@@ -33,14 +33,14 @@ SPLIT = (0.70, 0.15, 0.15)
 
 def stratified_split(df: pd.DataFrame, label_col: str):
     """70/15/15 stratified."""
-    train, temp = train_test_split(df, test_size=SPLIT[1] + SPLIT[2],
-                                    random_state=RANDOM_STATE, stratify=df[label_col])
+    train, temp = train_test_split(
+        df, test_size=SPLIT[1] + SPLIT[2], random_state=RANDOM_STATE, stratify=df[label_col]
+    )
     val_frac = SPLIT[1] / (SPLIT[1] + SPLIT[2])
-    val, test = train_test_split(temp, test_size=(1 - val_frac),
-                                  random_state=RANDOM_STATE, stratify=temp[label_col])
-    return (train.reset_index(drop=True),
-            val.reset_index(drop=True),
-            test.reset_index(drop=True))
+    val, test = train_test_split(
+        temp, test_size=(1 - val_frac), random_state=RANDOM_STATE, stratify=temp[label_col]
+    )
+    return (train.reset_index(drop=True), val.reset_index(drop=True), test.reset_index(drop=True))
 
 
 def build_domain_split(db: pd.DataFrame, domain: str):
@@ -50,8 +50,14 @@ def build_domain_split(db: pd.DataFrame, domain: str):
     sub[label_col] = sub[label_col].astype(int)
 
     # 최소 정보: smiles + label + name + 그 도메인 confidence/sources
-    cols = ["inchi_key", "canonical_smiles", "name", label_col,
-            f"{domain}_confidence", f"{domain}_n_sources"]
+    cols = [
+        "inchi_key",
+        "canonical_smiles",
+        "name",
+        label_col,
+        f"{domain}_confidence",
+        f"{domain}_n_sources",
+    ]
     sub = sub[[c for c in cols if c in sub.columns]].rename(columns={label_col: "label"})
     sub = sub.dropna(subset=["canonical_smiles", "inchi_key"]).drop_duplicates("inchi_key")
 
@@ -71,8 +77,12 @@ def main():
     print("[vivo 도메인]")
     train, val, test = build_domain_split(db, "vivo")
     print(f"  train {len(train)}  val {len(val)}  test {len(test)}")
-    print(f"  양성 분포: train {(train.label==1).sum()} / val {(val.label==1).sum()} / test {(test.label==1).sum()}")
-    print(f"  음성 분포: train {(train.label==0).sum()} / val {(val.label==0).sum()} / test {(test.label==0).sum()}")
+    print(
+        f"  양성 분포: train {(train.label == 1).sum()} / val {(val.label == 1).sum()} / test {(test.label == 1).sum()}"
+    )
+    print(
+        f"  음성 분포: train {(train.label == 0).sum()} / val {(val.label == 0).sum()} / test {(test.label == 0).sum()}"
+    )
     train.to_csv(os.path.join(TRAIN_DIR, "vivo.csv"), index=False)
     val.to_csv(os.path.join(VAL_DIR, "vivo.csv"), index=False)
     test.to_csv(os.path.join(TEST_DIR, "vivo.csv"), index=False)
@@ -81,14 +91,18 @@ def main():
     assert len(set(train.inchi_key) & set(val.inchi_key)) == 0
     assert len(set(train.inchi_key) & set(test.inchi_key)) == 0
     assert len(set(val.inchi_key) & set(test.inchi_key)) == 0
-    print(f"  ✓ 누수 없음 (train∩val=val∩test=train∩test=0)")
+    print("  ✓ 누수 없음 (train∩val=val∩test=train∩test=0)")
 
     # vitro
     print("\n[vitro 도메인]")
     train, val, test = build_domain_split(db, "vitro")
     print(f"  train {len(train)}  val {len(val)}  test {len(test)}")
-    print(f"  양성 분포: train {(train.label==1).sum()} / val {(val.label==1).sum()} / test {(test.label==1).sum()}")
-    print(f"  음성 분포: train {(train.label==0).sum()} / val {(val.label==0).sum()} / test {(test.label==0).sum()}")
+    print(
+        f"  양성 분포: train {(train.label == 1).sum()} / val {(val.label == 1).sum()} / test {(test.label == 1).sum()}"
+    )
+    print(
+        f"  음성 분포: train {(train.label == 0).sum()} / val {(val.label == 0).sum()} / test {(test.label == 0).sum()}"
+    )
     train.to_csv(os.path.join(TRAIN_DIR, "vitro.csv"), index=False)
     val.to_csv(os.path.join(VAL_DIR, "vitro.csv"), index=False)
     test.to_csv(os.path.join(TEST_DIR, "vitro.csv"), index=False)
@@ -96,9 +110,9 @@ def main():
     assert len(set(train.inchi_key) & set(val.inchi_key)) == 0
     assert len(set(train.inchi_key) & set(test.inchi_key)) == 0
     assert len(set(val.inchi_key) & set(test.inchi_key)) == 0
-    print(f"  ✓ 누수 없음")
+    print("  ✓ 누수 없음")
 
-    print(f"\n저장: data/{{train,val,test}}/{{vivo,vitro}}.csv")
+    print("\n저장: data/{train,val,test}/{vivo,vitro}.csv")
 
 
 if __name__ == "__main__":

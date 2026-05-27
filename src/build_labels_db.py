@@ -32,9 +32,7 @@ data/labels_db/full.parquet — 핵심 컬럼:
 from __future__ import annotations
 
 import os
-from collections import defaultdict
 
-import numpy as np
 import pandas as pd
 from rdkit import Chem, RDLogger
 
@@ -57,7 +55,7 @@ def standardize(smi: str) -> tuple[str, str] | None:
             return None
         # 1. 큰 단편만 보관 (염 제거)
         from rdkit.Chem.MolStandardize import rdMolStandardize
-        cleaner = rdMolStandardize.CleanupParameters()
+
         mol = rdMolStandardize.Cleanup(mol)
         chooser = rdMolStandardize.LargestFragmentChooser()
         mol = chooser.choose(mol)
@@ -113,14 +111,18 @@ def load_pubmed() -> pd.DataFrame:
     """PubMed DILI MeSH 기반 — n_papers 빈도로 신뢰도 코드화."""
     p = pd.read_csv(os.path.join(RAW, "pubmed", "pubmed_dili.csv"))
     p = p.dropna(subset=["canonical_smiles", "n_papers"])
+
     # n_papers 별 강도
     #   >= 20 = strong (Acetaminophen 같은 well-known hepatotox)
     #   5-19 = medium
     #   3-4  = weak
     def code(n):
-        if n >= 20: return "strong"
-        if n >= 5: return "medium"
+        if n >= 20:
+            return "strong"
+        if n >= 5:
+            return "medium"
         return "weak"
+
     p["vivo_pubmed"] = p["n_papers"].apply(code)
     p["pubmed_n_papers"] = p["n_papers"]
     return p[["canonical_smiles", "name", "vivo_pubmed", "pubmed_n_papers"]]
@@ -134,15 +136,20 @@ def load_ctd() -> pd.DataFrame:
     """
     path = os.path.join(RAW, "ctd", "ctd_dili.csv")
     if not os.path.exists(path):
-        return pd.DataFrame(columns=["canonical_smiles", "name", "vivo_ctd",
-                                      "ctd_strong", "ctd_pmid"])
+        return pd.DataFrame(
+            columns=["canonical_smiles", "name", "vivo_ctd", "ctd_strong", "ctd_pmid"]
+        )
     p = pd.read_csv(path)
     p = p.dropna(subset=["canonical_smiles"])
+
     # 강도 코드화
     def code(row):
-        if row.get("strong_evidence", 0) >= 1: return "strong"
-        if row.get("n_evidence", 0) >= 10: return "medium"
+        if row.get("strong_evidence", 0) >= 1:
+            return "strong"
+        if row.get("n_evidence", 0) >= 10:
+            return "medium"
         return "weak"
+
     p["vivo_ctd"] = p.apply(code, axis=1)
     p["ctd_strong"] = p.get("strong_evidence", 0)
     p["ctd_pmid"] = p.get("max_pmid", 0)
@@ -156,14 +163,17 @@ def load_faers() -> pd.DataFrame:
     """
     path = os.path.join(RAW, "faers", "faers_dili.csv")
     if not os.path.exists(path):
-        return pd.DataFrame(columns=["canonical_smiles", "name", "vivo_faers",
-                                      "faers_n_reports"])
+        return pd.DataFrame(columns=["canonical_smiles", "name", "vivo_faers", "faers_n_reports"])
     p = pd.read_csv(path)
     p = p.dropna(subset=["canonical_smiles"])
+
     def code(n):
-        if n >= 5000: return "strong"
-        if n >= 1000: return "medium"
+        if n >= 5000:
+            return "strong"
+        if n >= 1000:
+            return "medium"
         return "weak"
+
     p["vivo_faers"] = p["n_reports"].apply(code)
     p["faers_n_reports"] = p["n_reports"]
     return p[["canonical_smiles", "name", "vivo_faers", "faers_n_reports"]]
@@ -205,7 +215,9 @@ def load_marketed_clean() -> pd.DataFrame:
     """시판약 음성 풀 — DILIrank 카테고리도 함께."""
     p = pd.read_csv(os.path.join(RAW, "marketed", "marketed_clean.csv"))
     p = p.dropna(subset=["canonical_smiles", "inchi_key"]).drop_duplicates("inchi_key")
-    p["vivo_marketed_clean_neg"] = (p["dilirank_category"] != "Ambiguous-DILI-Concern").astype("Int64")
+    p["vivo_marketed_clean_neg"] = (p["dilirank_category"] != "Ambiguous-DILI-Concern").astype(
+        "Int64"
+    )
     p["vivo_dilirank"] = p["dilirank_category"]
     return p[["canonical_smiles", "inchi_key", "name", "vivo_marketed_clean_neg", "vivo_dilirank"]]
 
@@ -217,8 +229,14 @@ def load_clintox():
     for _, r in data.iterrows():
         std = standardize(r["Drug"])
         if std:
-            rows.append({"canonical_smiles": std[0], "inchi_key": std[1],
-                         "name": r.get("Drug_ID", ""), "vivo_clintox": int(r["Y"])})
+            rows.append(
+                {
+                    "canonical_smiles": std[0],
+                    "inchi_key": std[1],
+                    "name": r.get("Drug_ID", ""),
+                    "vivo_clintox": int(r["Y"]),
+                }
+            )
     return pd.DataFrame(rows).drop_duplicates("inchi_key")
 
 
@@ -232,32 +250,51 @@ def load_chembl() -> pd.DataFrame:
     한 컬럼 'vivo_chembl' 로 라벨 부여.
     """
     POS_TERMS = {
-        "drug-induced liver injury reported", "Toxic", "Most-Dili-Concern",
-        "Less-Dili-Concern", "HH: Evidence of human hepatotoxicity",
-        "DILI positive (training set)", "DILI positive (test set)",
+        "drug-induced liver injury reported",
+        "Toxic",
+        "Most-Dili-Concern",
+        "Less-Dili-Concern",
+        "HH: Evidence of human hepatotoxicity",
+        "DILI positive (training set)",
+        "DILI positive (test set)",
     }
-    NEG_TERMS = {"no drug-induced liver injury reported", "Non-Toxic", "Non-toxic", "No-Dili-Concern"}
+    NEG_TERMS = {
+        "no drug-induced liver injury reported",
+        "Non-Toxic",
+        "Non-toxic",
+        "No-Dili-Concern",
+    }
 
     pos_set = pd.read_csv(os.path.join(RAW, "chembl", "chembl_toxic_positive_set.csv"))
     compounds = pd.read_csv(os.path.join(RAW, "chembl", "chembl_hepatotoxicity_compounds.csv"))
 
-    p1 = pos_set.copy(); p1["label"] = 1
-    p2 = compounds[compounds["activity_comment"].isin(POS_TERMS)].copy(); p2["label"] = 1
-    n = compounds[compounds["activity_comment"].isin(NEG_TERMS)].copy(); n["label"] = 0
+    p1 = pos_set.copy()
+    p1["label"] = 1
+    p2 = compounds[compounds["activity_comment"].isin(POS_TERMS)].copy()
+    p2["label"] = 1
+    n = compounds[compounds["activity_comment"].isin(NEG_TERMS)].copy()
+    n["label"] = 0
 
-    pool = pd.concat([
-        p1[["canonical_smiles","molecule_chembl_id","label"]],
-        p2[["canonical_smiles","molecule_chembl_id","label"]],
-        n[["canonical_smiles","molecule_chembl_id","label"]],
-    ], ignore_index=True).dropna(subset=["canonical_smiles"]).drop_duplicates(["molecule_chembl_id","label"])
+    pool = (
+        pd.concat(
+            [
+                p1[["canonical_smiles", "molecule_chembl_id", "label"]],
+                p2[["canonical_smiles", "molecule_chembl_id", "label"]],
+                n[["canonical_smiles", "molecule_chembl_id", "label"]],
+            ],
+            ignore_index=True,
+        )
+        .dropna(subset=["canonical_smiles"])
+        .drop_duplicates(["molecule_chembl_id", "label"])
+    )
 
     # molecule_chembl_id 단위 라벨 충돌 제거
     g = pool.groupby("molecule_chembl_id")["label"].nunique()
-    pool = pool[~pool["molecule_chembl_id"].isin(set(g[g>1].index))]
+    pool = pool[~pool["molecule_chembl_id"].isin(set(g[g > 1].index))]
 
     pool["vivo_chembl"] = pool["label"].astype("Int64")
     pool["name"] = pool["molecule_chembl_id"]
-    return pool[["canonical_smiles","name","vivo_chembl"]].drop_duplicates("canonical_smiles")
+    return pool[["canonical_smiles", "name", "vivo_chembl"]].drop_duplicates("canonical_smiles")
 
 
 def load_tox21() -> pd.DataFrame:
@@ -267,12 +304,20 @@ def load_tox21() -> pd.DataFrame:
     for _, r in data.iterrows():
         std = standardize(r["smiles"])
         if std:
-            rows.append({"canonical_smiles": std[0], "inchi_key": std[1], "name": "",
-                         "vitro_tox21": int(r["label_any_pos"]),
-                         "tox21_pos_count": int(r["n_assays_pos"]),
-                         "tox21_total_assays": int(r["n_assays_tested"])})
+            rows.append(
+                {
+                    "canonical_smiles": std[0],
+                    "inchi_key": std[1],
+                    "name": "",
+                    "vitro_tox21": int(r["label_any_pos"]),
+                    "tox21_pos_count": int(r["n_assays_pos"]),
+                    "tox21_total_assays": int(r["n_assays_tested"]),
+                }
+            )
     df = pd.DataFrame(rows).drop_duplicates("inchi_key")
-    print(f"  Tox21 통합: {len(df)} 분자 (양성 {int((df.vitro_tox21==1).sum())} / 음성 {int((df.vitro_tox21==0).sum())})")
+    print(
+        f"  Tox21 통합: {len(df)} 분자 (양성 {int((df.vitro_tox21 == 1).sum())} / 음성 {int((df.vitro_tox21 == 0).sum())})"
+    )
     return df
 
 
@@ -314,11 +359,22 @@ def merge_and_label(loaded: dict[str, pd.DataFrame]) -> pd.DataFrame:
     df = pd.DataFrame(records)
 
     # 4. vivo / vitro 라벨 컬럼 정렬 (없는 컬럼은 NaN)
-    vivo_cols = ["vivo_dilirank", "vivo_livertox", "vivo_dailymed", "vivo_pubmed",
-                 "vivo_ctd", "vivo_faers", "vivo_chembl",   # chEMBL human assay 추가
-                 "vivo_dilist", "vivo_gold",
-                 "vivo_sider_liver", "vivo_sider_hepatotox",
-                 "vivo_tdc_dili", "vivo_clintox", "vivo_marketed_clean_neg"]
+    vivo_cols = [
+        "vivo_dilirank",
+        "vivo_livertox",
+        "vivo_dailymed",
+        "vivo_pubmed",
+        "vivo_ctd",
+        "vivo_faers",
+        "vivo_chembl",  # chEMBL human assay 추가
+        "vivo_dilist",
+        "vivo_gold",
+        "vivo_sider_liver",
+        "vivo_sider_hepatotox",
+        "vivo_tdc_dili",
+        "vivo_clintox",
+        "vivo_marketed_clean_neg",
+    ]
     vitro_cols = ["vitro_tox21"]  # chEMBL 은 vivo 로 옮김
     for c in vivo_cols + vitro_cols + ["tox21_pos_count", "tox21_total_assays"]:
         if c not in df.columns:
@@ -333,22 +389,35 @@ def merge_and_label(loaded: dict[str, pd.DataFrame]) -> pd.DataFrame:
     #   - 둘 다 없음 / DILIrank=Ambiguous → None
     #
     def has_pos_signal(row) -> bool:
-        if row.get("vivo_dilirank") in ("vMost-DILI-Concern", "vLess-DILI-Concern"): return True
-        if row.get("vivo_livertox") in ("A", "B", "C", "D"): return True
-        if row.get("vivo_dailymed") in ("boxed_hepatotox", "warning_hepatotox",
-                                         "adverse_hepatotox"): return True
-        if row.get("vivo_pubmed") in ("strong", "medium", "weak"): return True
-        if row.get("vivo_ctd") in ("strong", "medium", "weak"): return True
-        if row.get("vivo_faers") in ("strong", "medium", "weak"): return True
+        if row.get("vivo_dilirank") in ("vMost-DILI-Concern", "vLess-DILI-Concern"):
+            return True
+        if row.get("vivo_livertox") in ("A", "B", "C", "D"):
+            return True
+        if row.get("vivo_dailymed") in (
+            "boxed_hepatotox",
+            "warning_hepatotox",
+            "adverse_hepatotox",
+        ):
+            return True
+        if row.get("vivo_pubmed") in ("strong", "medium", "weak"):
+            return True
+        if row.get("vivo_ctd") in ("strong", "medium", "weak"):
+            return True
+        if row.get("vivo_faers") in ("strong", "medium", "weak"):
+            return True
         ce = row.get("vivo_chembl")
-        if pd.notna(ce) and int(ce) == 1: return True
+        if pd.notna(ce) and int(ce) == 1:
+            return True
         return False
 
     def has_neg_signal(row) -> bool:
-        if row.get("vivo_dilirank") == "vNo-DILI-Concern": return True
-        if row.get("vivo_livertox") == "E": return True
+        if row.get("vivo_dilirank") == "vNo-DILI-Concern":
+            return True
+        if row.get("vivo_livertox") == "E":
+            return True
         ce = row.get("vivo_chembl")
-        if pd.notna(ce) and int(ce) == 0: return True
+        if pd.notna(ce) and int(ce) == 0:
+            return True
         if pd.notna(row.get("vivo_marketed_clean_neg")) and row["vivo_marketed_clean_neg"] == 1:
             return True
         return False
@@ -360,13 +429,15 @@ def merge_and_label(loaded: dict[str, pd.DataFrame]) -> pd.DataFrame:
         cur = pd.read_csv(curated_path)
         for _, r in cur.iterrows():
             lab = r["manual_label"]
-            curated_map[r["inchi_key"]] = (None if pd.isna(lab) else int(lab))
-        print(f"  curated 충돌 라벨: {len(curated_map)}건 로드 (양성 "
-              f"{sum(1 for v in curated_map.values() if v == 1)}, "
-              f"음성 {sum(1 for v in curated_map.values() if v == 0)}, "
-              f"제외 {sum(1 for v in curated_map.values() if v is None)})")
+            curated_map[r["inchi_key"]] = None if pd.isna(lab) else int(lab)
+        print(
+            f"  curated 충돌 라벨: {len(curated_map)}건 로드 (양성 "
+            f"{sum(1 for v in curated_map.values() if v == 1)}, "
+            f"음성 {sum(1 for v in curated_map.values() if v == 0)}, "
+            f"제외 {sum(1 for v in curated_map.values() if v is None)})"
+        )
     else:
-        print(f"  ⚠️  curated 파일 없음 — 충돌 케이스 전부 제외됨")
+        print("  ⚠️  curated 파일 없음 — 충돌 케이스 전부 제외됨")
 
     def vivo_decide(row):
         # Ambiguous → 제외
@@ -411,8 +482,7 @@ def main():
     # 약한 출처 (Gold/DILIst/SIDER/TDC/ClinTox) — _unreliable 로 분리 (학습 미사용)
     # source_reliability 분석 결과 AUC ≤ 0.58 → 노이즈 우세 → 제외
     # raw 데이터는 data/raw/_unreliable/ 에 보존
-    dl = pd.DataFrame(columns=["canonical_smiles", "inchi_key", "name",
-                                "vivo_dilist", "vivo_gold"])
+    dl = pd.DataFrame(columns=["canonical_smiles", "inchi_key", "name", "vivo_dilist", "vivo_gold"])
     sd_s = pd.DataFrame(columns=["canonical_smiles", "inchi_key", "name", "vivo_sider_liver"])
     sd_l = pd.DataFrame(columns=["canonical_smiles", "inchi_key", "name", "vivo_sider_hepatotox"])
     td = pd.DataFrame(columns=["canonical_smiles", "inchi_key", "name", "vivo_tdc_dili"])
@@ -424,7 +494,9 @@ def main():
 
     print("[9/10] chEMBL (in vitro)")
     ch = load_chembl()
-    print(f"  {len(ch)} 분자 (양성 {int((ch.vivo_chembl==1).sum())} / 음성 {int((ch.vivo_chembl==0).sum())}) — vivo 로 재분류")
+    print(
+        f"  {len(ch)} 분자 (양성 {int((ch.vivo_chembl == 1).sum())} / 음성 {int((ch.vivo_chembl == 0).sum())}) — vivo 로 재분류"
+    )
 
     print("[10/11] Tox21 통합 (in vitro)")
     tx = load_tox21()
@@ -453,20 +525,31 @@ def main():
 
     # 순서 중요 — merge 시 뒤에 오는 게 같은 컬럼 덮어씀
     # marketed_clean 의 dilirank_category 보다 dilirank_full 우선
-    loaded = {"marketed_clean": mc, "dilirank_full": drk, "livertox": lt,
-              "dilist_gold": dl, "sider_strict": sd_s, "sider_lenient": sd_l,
-              "tdc": td, "clintox": ct, "dailymed": dm, "pubmed": pm,
-              "ctd": ctd, "faers": fa,
-              "chembl": ch, "tox21": tx}
+    loaded = {
+        "marketed_clean": mc,
+        "dilirank_full": drk,
+        "livertox": lt,
+        "dilist_gold": dl,
+        "sider_strict": sd_s,
+        "sider_lenient": sd_l,
+        "tdc": td,
+        "clintox": ct,
+        "dailymed": dm,
+        "pubmed": pm,
+        "ctd": ctd,
+        "faers": fa,
+        "chembl": ch,
+        "tox21": tx,
+    }
 
     print("\n=== 병합 + 라벨 결정 ===")
     db = merge_and_label(loaded)
     print(f"\n전체 unique InChIKey: {len(db)}")
 
     # 요약
-    print(f"\n=== vivo 라벨 분포 ===")
+    print("\n=== vivo 라벨 분포 ===")
     print(db["vivo_label"].value_counts(dropna=False).to_dict())
-    print(f"\n=== vitro 라벨 분포 ===")
+    print("\n=== vitro 라벨 분포 ===")
     print(db["vitro_label"].value_counts(dropna=False).to_dict())
 
     # 저장

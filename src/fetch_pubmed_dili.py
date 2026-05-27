@@ -55,16 +55,25 @@ def esearch_dili_pmids(max_results: int = 10000) -> list[str]:
     batch = 1000
     while True:
         try:
-            r = requests.get(f"{EUTILS}/esearch.fcgi", params={
-                "db": "pubmed", "term": DILI_QUERY,
-                "retmax": batch, "retstart": retstart, "retmode": "json",
-            }, headers=HEADERS, timeout=30)
+            r = requests.get(
+                f"{EUTILS}/esearch.fcgi",
+                params={
+                    "db": "pubmed",
+                    "term": DILI_QUERY,
+                    "retmax": batch,
+                    "retstart": retstart,
+                    "retmode": "json",
+                },
+                headers=HEADERS,
+                timeout=30,
+            )
             data = r.json()
         except Exception as e:
             print(f"  retstart={retstart} 에러 (계속): {e}")
             time.sleep(2.0)
             retstart += batch
-            if retstart > 50000: break
+            if retstart > 50000:
+                break
             continue
         batch_ids = data["esearchresult"]["idlist"]
         pmids += batch_ids
@@ -84,11 +93,18 @@ def efetch_articles(pmids: list[str]) -> list[dict]:
     out = []
     batch = 100
     for i in range(0, len(pmids), batch):
-        chunk = pmids[i:i+batch]
-        r = requests.post(f"{EUTILS}/efetch.fcgi", data={
-            "db": "pubmed", "id": ",".join(chunk),
-            "rettype": "xml", "retmode": "xml",
-        }, headers=HEADERS, timeout=60)
+        chunk = pmids[i : i + batch]
+        r = requests.post(
+            f"{EUTILS}/efetch.fcgi",
+            data={
+                "db": "pubmed",
+                "id": ",".join(chunk),
+                "rettype": "xml",
+                "retmode": "xml",
+            },
+            headers=HEADERS,
+            timeout=60,
+        )
         try:
             root = ET.fromstring(r.text)
         except Exception as e:
@@ -104,7 +120,8 @@ def efetch_articles(pmids: list[str]) -> list[dict]:
             drug_terms = []
             for mh in art.findall(".//MeshHeading"):
                 desc = mh.find("DescriptorName")
-                if desc is None: continue
+                if desc is None:
+                    continue
                 desc_text = desc.text or ""
                 major = desc.get("MajorTopicYN", "N")
                 drug_terms.append({"name": desc_text, "major": major})
@@ -112,21 +129,25 @@ def efetch_articles(pmids: list[str]) -> list[dict]:
             chemicals = []
             for chem in art.findall(".//Chemical/NameOfSubstance"):
                 chemicals.append(chem.text)
-            out.append({
-                "pmid": pmid, "title": title, "year": year,
-                "pub_types": ";".join(ptypes),
-                "mesh_drugs": ";".join(d["name"] for d in drug_terms if d["name"]),
-                "chemicals": ";".join(c for c in chemicals if c),
-            })
+            out.append(
+                {
+                    "pmid": pmid,
+                    "title": title,
+                    "year": year,
+                    "pub_types": ";".join(ptypes),
+                    "mesh_drugs": ";".join(d["name"] for d in drug_terms if d["name"]),
+                    "chemicals": ";".join(c for c in chemicals if c),
+                }
+            )
         time.sleep(SLEEP_NCBI)
         if i % 1000 == 0:
-            print(f"  처리 {i+len(chunk)}/{len(pmids)}")
+            print(f"  처리 {i + len(chunk)}/{len(pmids)}")
     return out
 
 
 def aggregate_drugs(articles: list[dict]) -> pd.DataFrame:
     """약물별로 등장 횟수 + 관련 PMID 집계."""
-    print(f"\n[3/4] 약물별 통합")
+    print("\n[3/4] 약물별 통합")
     drug_counter = Counter()
     drug_pmids = defaultdict(list)
     for a in articles:
@@ -138,19 +159,23 @@ def aggregate_drugs(articles: list[dict]) -> pd.DataFrame:
                 drug_pmids[c].append(a["pmid"])
     rows = []
     for drug, n in drug_counter.most_common():
-        rows.append({
-            "name": drug,
-            "n_papers": n,
-            "pmid_examples": ";".join(drug_pmids[drug][:5]),
-        })
+        rows.append(
+            {
+                "name": drug,
+                "n_papers": n,
+                "pmid_examples": ";".join(drug_pmids[drug][:5]),
+            }
+        )
     return pd.DataFrame(rows)
 
 
 def lookup_smiles(names: list[str]) -> dict[str, str]:
     import pubchempy as pcp
+
     out = {}
     for i, name in enumerate(names):
-        if not name: continue
+        if not name:
+            continue
         try:
             res = pcp.get_compounds(name, "name")
             if res:
@@ -161,7 +186,8 @@ def lookup_smiles(names: list[str]) -> dict[str, str]:
                 simple = re.split(r"[\s,;]", name.strip())[0]
                 if simple and simple != name:
                     res = pcp.get_compounds(simple, "name")
-                    if res: out[name] = res[0].canonical_smiles
+                    if res:
+                        out[name] = res[0].canonical_smiles
             except Exception:
                 pass
         time.sleep(SLEEP_PUBCHEM)
@@ -192,7 +218,9 @@ def main():
     drugs_filtered["canonical_smiles"] = drugs_filtered["name"].map(name_to_smi)
     final = drugs_filtered.dropna(subset=["canonical_smiles"]).copy()
     final.to_csv(os.path.join(OUT_DIR, "pubmed_dili.csv"), index=False)
-    print(f"\n저장: data/raw/pubmed/pubmed_dili.csv  ({len(final)} / {len(drugs_filtered)} SMILES 매핑)")
+    print(
+        f"\n저장: data/raw/pubmed/pubmed_dili.csv  ({len(final)} / {len(drugs_filtered)} SMILES 매핑)"
+    )
     print(f"등장 빈도 분포 — 평균 {final['n_papers'].mean():.1f}, 최대 {final['n_papers'].max()}")
 
 

@@ -17,9 +17,9 @@ SLEEP_PUBCHEM = 0.35
 
 # FDA 표기 → DB 표준 표기
 CAT_MAP = {
-    "vmost-dili-concern":     "vMost-DILI-Concern",
-    "vless-dili-concern":     "vLess-DILI-Concern",
-    "vno-dili-concern":       "vNo-DILI-Concern",
+    "vmost-dili-concern": "vMost-DILI-Concern",
+    "vless-dili-concern": "vLess-DILI-Concern",
+    "vno-dili-concern": "vNo-DILI-Concern",
     "ambiguous-dili-concern": "Ambiguous-DILI-Concern",
 }
 
@@ -34,7 +34,7 @@ def download_excel(path: str) -> bool:
         r.raise_for_status()
         with open(path, "wb") as f:
             f.write(r.content)
-        print(f"  완료, {len(r.content)/1024:.1f} KB")
+        print(f"  완료, {len(r.content) / 1024:.1f} KB")
         return True
     except Exception as e:
         print(f"  실패: {e}")
@@ -42,21 +42,30 @@ def download_excel(path: str) -> bool:
 
 
 def parse(xlsx_path: str) -> pd.DataFrame:
-    print(f"\n[2/3] Excel 파싱 (header=1)")
+    print("\n[2/3] Excel 파싱 (header=1)")
     df = pd.read_excel(xlsx_path, sheet_name="version 2", header=1)
-    df = df.rename(columns={"CompoundName": "name", "vDILI-Concern": "dilirank_category_raw",
-                            "SeverityClass": "severity_class", "LabelSection": "label_section",
-                            "LTKBID": "ltkb_id"})
+    df = df.rename(
+        columns={
+            "CompoundName": "name",
+            "vDILI-Concern": "dilirank_category_raw",
+            "SeverityClass": "severity_class",
+            "LabelSection": "label_section",
+            "LTKBID": "ltkb_id",
+        }
+    )
     df = df.dropna(subset=["name"]).reset_index(drop=True)
-    df["dilirank_category"] = df["dilirank_category_raw"].astype(str).str.strip().str.lower().map(CAT_MAP)
+    df["dilirank_category"] = (
+        df["dilirank_category_raw"].astype(str).str.strip().str.lower().map(CAT_MAP)
+    )
     print(f"  rows: {len(df)}")
-    print(f"  카테고리 분포:")
+    print("  카테고리 분포:")
     print(df["dilirank_category"].value_counts(dropna=False).to_dict())
     return df
 
 
 def lookup_smiles(names: list[str]) -> dict[str, str]:
     import pubchempy as pcp
+
     out = {}
     for i, name in enumerate(names):
         if not isinstance(name, str) or not name.strip():

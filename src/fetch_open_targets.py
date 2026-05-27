@@ -16,8 +16,13 @@ Open Targets 는 EMBL-EBI + Wellcome Sanger + GSK 가 공동 운영하는
 저장:
   data/raw/open_targets/opentargets_dili.csv
 """
+
 from __future__ import annotations
-import gzip, json, os, re, time
+
+import os
+import re
+import time
+
 import pandas as pd
 import requests
 
@@ -54,8 +59,9 @@ def graphql_drug_aes(chembl_id: str) -> dict:
       }
     }
     """
-    r = requests.post(GQL_URL, json={"query": query, "variables": {"id": chembl_id}},
-                       headers=HEADERS, timeout=30)
+    r = requests.post(
+        GQL_URL, json={"query": query, "variables": {"id": chembl_id}}, headers=HEADERS, timeout=30
+    )
     if r.status_code != 200:
         return None
     return r.json().get("data", {}).get("drug")
@@ -82,12 +88,14 @@ def search_drug_by_name(name: str) -> str | None:
     }
     """
     try:
-        r = requests.post(GQL_URL, json={"query": query, "variables": {"q": name}},
-                           headers=HEADERS, timeout=30)
+        r = requests.post(
+            GQL_URL, json={"query": query, "variables": {"q": name}}, headers=HEADERS, timeout=30
+        )
         if r.status_code != 200:
             return None
         data = r.json()
-        if "errors" in data: return None
+        if "errors" in data:
+            return None
         hits = data.get("data", {}).get("search", {}).get("hits", []) or []
         for h in hits:
             entity = h.get("entity")
@@ -111,19 +119,22 @@ def fetch_via_graphql(names: list[str]) -> pd.DataFrame:
         except Exception:
             time.sleep(1.0)
             continue
-        if not data: continue
+        if not data:
+            continue
         aes = data.get("adverseEvents", {}).get("rows", [])
         liver_aes = [a for a in aes if LIVER_TERMS.search(a.get("name", ""))]
         if not liver_aes:
             continue
-        rows.append({
-            "chembl_id": chembl_id,
-            "name": data.get("name", name),
-            "n_total_AE": data.get("adverseEvents", {}).get("count", 0),
-            "n_liver_AE": len(liver_aes),
-            "max_logLR": max([float(a.get("logLR", 0)) for a in liver_aes]),
-            "liver_AEs": ";".join(a["name"] for a in liver_aes[:10]),
-        })
+        rows.append(
+            {
+                "chembl_id": chembl_id,
+                "name": data.get("name", name),
+                "n_total_AE": data.get("adverseEvents", {}).get("count", 0),
+                "n_liver_AE": len(liver_aes),
+                "max_logLR": max([float(a.get("logLR", 0)) for a in liver_aes]),
+                "liver_AEs": ";".join(a["name"] for a in liver_aes[:10]),
+            }
+        )
         time.sleep(0.5)
         if i % 50 == 0 and i > 0:
             print(f"  진행 {i}/{len(names)} 매핑 {len(rows)}")
@@ -135,8 +146,7 @@ def main():
     print("=== Open Targets — drug adverse events (hepatic 필터) ===\n")
 
     # 우리 marketed unknown 분자 중 name 있는 것
-    mc = pd.read_csv(os.path.join(PROJECT_ROOT, "data", "raw", "marketed",
-                                    "marketed_clean.csv"))
+    mc = pd.read_csv(os.path.join(PROJECT_ROOT, "data", "raw", "marketed", "marketed_clean.csv"))
     print(f"전체 marketed: {len(mc)}")
     # 우리 DB 와 매칭 — unknown 만 (DILIrank 평가 안 됨)
     db = pd.read_parquet(os.path.join(PROJECT_ROOT, "data", "labels_db", "full.parquet"))
@@ -157,16 +167,20 @@ def main():
 
     # SMILES 매핑 — marketed_clean 에서 직접
     df_with_smi = df.merge(
-        mc[["name", "canonical_smiles", "inchi_key"]],
-        on="name", how="left").dropna(subset=["canonical_smiles"])
+        mc[["name", "canonical_smiles", "inchi_key"]], on="name", how="left"
+    ).dropna(subset=["canonical_smiles"])
     print(f"SMILES 매칭: {len(df_with_smi)}")
 
     # 강도 코드
     def code(row):
-        n = row["n_liver_AE"]; lr = row["max_logLR"]
-        if n >= 5 or lr >= 4.0: return "strong"
-        if n >= 2 or lr >= 2.0: return "medium"
+        n = row["n_liver_AE"]
+        lr = row["max_logLR"]
+        if n >= 5 or lr >= 4.0:
+            return "strong"
+        if n >= 2 or lr >= 2.0:
+            return "medium"
         return "weak"
+
     df_with_smi["vivo_open_targets"] = df_with_smi.apply(code, axis=1)
 
     out_path = os.path.join(OUT_DIR, "opentargets_dili.csv")

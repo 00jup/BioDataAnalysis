@@ -1,16 +1,27 @@
 """RF/CB scaffold v2 — new data (CTD+FAERS 포함) + 같은 split."""
+
 from __future__ import annotations
-import json, os, sys, time
+
+import json
+import os
+import sys
+import time
+
+import joblib
 import numpy as np
 import pandas as pd
-import joblib
 from catboost import CatBoostClassifier
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import roc_auc_score
 
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, PROJECT_ROOT)
-from src.train_domain_models import ensure_fp_cache, FPS, optimize_ensemble, full_metrics
+from src.train_domain_models import (  # noqa: E402
+    FPS,
+    ensure_fp_cache,
+    full_metrics,
+    optimize_ensemble,
+)
 
 DATA_DIR = os.path.join(PROJECT_ROOT, "data", "chemprop_scaffold_v2")
 SCAFFOLD_V2 = os.path.join(PROJECT_ROOT, "models", "chemprop_scaffold_v2", "v12_baseline")
@@ -39,60 +50,85 @@ def train(domain):
     print(f"\n=== RF/CB scaffold v2 — {domain} ===")
     tr, va, te = load_splits(domain)
     print(f"  train {len(tr)} val {len(va)} test {len(te)}")
-    print(f"  train 양성 {(tr.label==1).sum()} / 음성 {(tr.label==0).sum()}")
+    print(f"  train 양성 {(tr.label == 1).sum()} / 음성 {(tr.label == 0).sum()}")
 
-    out_dir = os.path.join(MODELS_DIR, domain); os.makedirs(out_dir, exist_ok=True)
+    out_dir = os.path.join(MODELS_DIR, domain)
+    os.makedirs(out_dir, exist_ok=True)
     val_probs, test_probs = [], []
     yv_ref = yte_ref = None
     names = []
     for fp_name in FPS:
         for kind in ("rf", "cb"):
-            name = f"{kind}_{fp_name}"; names.append(name)
+            name = f"{kind}_{fp_name}"
+            names.append(name)
             Xtr, ytr = fp_xy(fp_name, tr)
-            Xv,  yv  = fp_xy(fp_name, va)
+            Xv, yv = fp_xy(fp_name, va)
             Xte, yte = fp_xy(fp_name, te)
             t0 = time.time()
             if kind == "rf":
-                m = RandomForestClassifier(n_estimators=500, max_features="sqrt",
-                                            min_samples_leaf=2, class_weight="balanced",
-                                            random_state=RANDOM_STATE, n_jobs=-1)
+                m = RandomForestClassifier(
+                    n_estimators=500,
+                    max_features="sqrt",
+                    min_samples_leaf=2,
+                    class_weight="balanced",
+                    random_state=RANDOM_STATE,
+                    n_jobs=-1,
+                )
                 m.fit(Xtr, ytr)
             else:
-                m = CatBoostClassifier(iterations=500, depth=6, learning_rate=0.05,
-                                       loss_function="Logloss", verbose=0,
-                                       class_weights={0: 1, 1: 3},
-                                       random_state=RANDOM_STATE)
+                m = CatBoostClassifier(
+                    iterations=500,
+                    depth=6,
+                    learning_rate=0.05,
+                    loss_function="Logloss",
+                    verbose=0,
+                    class_weights={0: 1, 1: 3},
+                    random_state=RANDOM_STATE,
+                )
                 m.fit(Xtr, ytr)
             pv = m.predict_proba(Xv)[:, 1]
             pte = m.predict_proba(Xte)[:, 1]
-            val_probs.append(pv); test_probs.append(pte)
-            if yv_ref is None: yv_ref, yte_ref = yv, yte
-            sd = os.path.join(out_dir, name); os.makedirs(sd, exist_ok=True)
+            val_probs.append(pv)
+            test_probs.append(pte)
+            if yv_ref is None:
+                yv_ref, yte_ref = yv, yte
+            sd = os.path.join(out_dir, name)
+            os.makedirs(sd, exist_ok=True)
             if kind == "rf":
                 joblib.dump(m, os.path.join(sd, "model.pkl"))
             else:
                 m.save_model(os.path.join(sd, "model.cbm"))
-            print(f"  {name:14s} {time.time()-t0:5.1f}s  val AUC {roc_auc_score(yv,pv):.3f}  test AUC {roc_auc_score(yte,pte):.3f}")
+            print(
+                f"  {name:14s} {time.time() - t0:5.1f}s  val AUC {roc_auc_score(yv, pv):.3f}  test AUC {roc_auc_score(yte, pte):.3f}"
+            )
 
     Xv = np.array(val_probs).T
     Xte = np.array(test_probs).T
     w, thr, val_mcc = optimize_ensemble(Xv, yv_ref)
     test_m = full_metrics(yte_ref, Xte @ w, thr)
-    print(f"  [{domain} RF/CB v2 test] AUC {test_m['auc']:.3f}  MCC {test_m['mcc']:.3f}  "
-          f"TPR {test_m['tpr']:.3f}  TNR {test_m['tnr']:.3f}")
-    meta = {"domain": domain, "members": names, "weights": w.tolist(),
-            "threshold": thr, "test_metrics": test_m}
+    print(
+        f"  [{domain} RF/CB v2 test] AUC {test_m['auc']:.3f}  MCC {test_m['mcc']:.3f}  "
+        f"TPR {test_m['tpr']:.3f}  TNR {test_m['tnr']:.3f}"
+    )
+    meta = {
+        "domain": domain,
+        "members": names,
+        "weights": w.tolist(),
+        "threshold": thr,
+        "test_metrics": test_m,
+    }
     with open(os.path.join(out_dir, "ensemble_meta.json"), "w") as f:
         json.dump(meta, f, indent=2)
     return test_m
 
 
 def main():
-    os.makedirs(MODELS_DIR, exist_ok=True); os.makedirs(RESULTS, exist_ok=True)
+    os.makedirs(MODELS_DIR, exist_ok=True)
+    os.makedirs(RESULTS, exist_ok=True)
     out = {d: train(d) for d in ("vivo", "vitro")}
     with open(os.path.join(RESULTS, "rfcb_scaffold_v2.json"), "w") as f:
         json.dump(out, f, indent=2)
-    print(f"\n저장: results/rfcb_scaffold_v2.json")
+    print("\n저장: results/rfcb_scaffold_v2.json")
 
 
 if __name__ == "__main__":

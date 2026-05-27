@@ -8,9 +8,13 @@
 
 저장: data/raw/clinicaltrials/ct_dili.csv
 """
+
 from __future__ import annotations
-import json, os, re, time
+
+import os
+import time
 from collections import Counter
+
 import pandas as pd
 import requests
 
@@ -22,10 +26,16 @@ SLEEP = 0.3
 SLEEP_PUBCHEM = 0.35
 
 HEPATIC_TERMS = [
-    "drug-induced liver injury", "hepatotoxicity", "hepatic failure",
-    "hepatitis", "elevated liver enzymes", "transaminase increase",
-    "alanine aminotransferase increased", "hepatocellular injury",
-    "cholestasis", "jaundice",
+    "drug-induced liver injury",
+    "hepatotoxicity",
+    "hepatic failure",
+    "hepatitis",
+    "elevated liver enzymes",
+    "transaminase increase",
+    "alanine aminotransferase increased",
+    "hepatocellular injury",
+    "cholestasis",
+    "jaundice",
 ]
 
 
@@ -38,18 +48,21 @@ def search_studies(query, page_size=100, max_pages=20):
     next_token = None
     for p in range(max_pages):
         params = {"query.cond": query, "pageSize": page_size}
-        if next_token: params["pageToken"] = next_token
+        if next_token:
+            params["pageToken"] = next_token
         r = requests.get(API, params=params, headers=HEADERS, timeout=30)
         if r.status_code != 200:
             print(f"  API 오류 {r.status_code}: {r.text[:200]}")
             break
         data = r.json()
         studies = data.get("studies", [])
-        if not studies: break
+        if not studies:
+            break
         all_studies.extend(studies)
         next_token = data.get("nextPageToken")
         time.sleep(SLEEP)
-        if not next_token: break
+        if not next_token:
+            break
     print(f"  {len(all_studies)} studies 수집")
     return all_studies
 
@@ -68,12 +81,15 @@ def extract_drugs(studies):
 
 def lookup_smiles(names):
     import pubchempy as pcp
+
     out = {}
     for i, name in enumerate(names):
-        if not name: continue
+        if not name:
+            continue
         try:
             res = pcp.get_compounds(name, "name")
-            if res: out[name] = res[0].canonical_smiles
+            if res:
+                out[name] = res[0].canonical_smiles
         except Exception:
             pass
         time.sleep(SLEEP_PUBCHEM)
@@ -92,8 +108,7 @@ def main():
 
     # 약물명 집계
     drug_counter = extract_drugs(all_studies)
-    df = pd.DataFrame([{"name": n, "n_trials": c}
-                        for n, c in drug_counter.most_common() if c >= 2])
+    df = pd.DataFrame([{"name": n, "n_trials": c} for n, c in drug_counter.most_common() if c >= 2])
     print(f"\n수집 unique 약물 (≥2 trials): {len(df)}")
     df.to_csv(os.path.join(OUT_DIR, "ct_dili_raw.csv"), index=False)
 

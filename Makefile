@@ -34,7 +34,7 @@ else
     ENV_NAME := conda
 endif
 
-.PHONY: init init-conda init-venv init-py init-update format lint check data features train validate test predict predict-sample predict-test all clean clean-env
+.PHONY: init init-conda init-venv init-py init-update format lint check labels curate splits train-rfcb train-chemprop stack sanity all clean clean-env
 
 ## ──────────────────────────────────────────────
 ## 환경 설정
@@ -143,49 +143,28 @@ check: lint ## 포맷 + 린트 검사 (pre-push에서 사용)
 ## 파이프라인
 ## ──────────────────────────────────────────────
 
-data: ## 데이터 다운로드, 정제, train/validation/test 분할
-	$(PYTHON) src/data_preparation.py
+labels: ## 통합 라벨 DB 빌드 (data/raw → data/labels_db/full.parquet)
+	$(PYTHON) src/build_labels_db.py
 
-features: ## Feature 추출
-	$(PYTHON) src/feature_engineering.py
+curate: ## 충돌 1,210건 curate (data/labels_db/conflicts/conflicts_curated.csv)
+	$(PYTHON) src/curate_conflicts.py
 
-train: ## Train set으로 모델 학습 + Validation 평가
-	$(PYTHON) src/model_training.py
+splits: ## 도메인별 train/val/test 분할 (vivo, vitro)
+	$(PYTHON) src/build_domain_splits.py
 
-validate: ## Validation set으로 현재 모델 평가 (모델 조절용)
-	$(PYTHON) -c "\
-from src.model_training import load_split_data, evaluate_on_set; \
-import joblib; \
-model = joblib.load('models/best_model.pkl'); \
-X_val, y_val = load_split_data('validation', feature_set='B'); \
-evaluate_on_set(model, X_val, y_val, 'Validation')"
+train-rfcb: ## RF/CB 5 fingerprint × scaffold-v2 학습
+	$(PYTHON) src/train_rfcb_scaffold_v2.py
 
-test: ## Test set으로 최종 평가 (마지막에 1번만 실행)
-	$(PYTHON) -c "\
-from src.model_training import load_split_data, evaluate_on_set; \
-import joblib; \
-model = joblib.load('models/best_model.pkl'); \
-X_test, y_test = load_split_data('test', feature_set='B'); \
-evaluate_on_set(model, X_test, y_test, 'Test')"
+train-chemprop: ## Chemprop v17 (ensemble 15 + hidden 600)
+	$(PYTHON) src/train_chemprop_v17.py
 
-predict: ## 예측 (usage: make predict INPUT=data/sample_input.csv)
-	$(PYTHON) src/predict.py -f $(INPUT) $(if $(OUTPUT),-o $(OUTPUT))
+stack: ## Honest stacking (val 에서 α/threshold 결정 → test 평가)
+	$(PYTHON) src/stack_honest.py
 
-predict-sample: ## 샘플 CSV (data/sample_input.csv) 로 빠른 예측 데모
-	$(PYTHON) src/predict.py -f data/sample_input.csv
+sanity: ## 잘 알려진 약 (Acetaminophen 등) sanity check
+	$(PYTHON) src/sanity_check.py
 
-# predict-test: 교수님 평가셋 예측. data/test/professor_test.csv (Name,SMILES) 를
-#   넣고 `make predict-test` → 콘솔 요약 + results/ 에 CSV 저장.
-#   다른 파일명: make predict-test FILE=data/test/xxx.csv
-TEST_INPUT ?= data/test/professor_test.csv
-TEST_OUTPUT ?= results/predictions_professor_test.csv
-
-predict-test: ## 교수님 평가셋 예측 (FILE 기본: data/test/professor_test.csv → results/ CSV)
-	@mkdir -p results
-	$(PYTHON) src/predict.py -f $(if $(FILE),$(FILE),$(TEST_INPUT)) \
-		--format csv -o $(if $(OUTPUT),$(OUTPUT),$(TEST_OUTPUT))
-
-all: data features train ## 전체 파이프라인 (data → features → train + validation)
+all: labels curate splits train-rfcb train-chemprop stack ## 전체 파이프라인
 
 ## ──────────────────────────────────────────────
 ## 유틸리티
