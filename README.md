@@ -92,6 +92,188 @@ make all            → labels → curate → splits → train-rfcb →
                       train-chemprop → stack 전부 순차 실행
 ```
 
+## 모델을 처음부터 학습하기
+
+> 사전 조건: `make init-venv` 또는 `make init-conda` 로 환경 설정. raw 데이터 다운로드는 별도 `fetch_*.py` 스크립트 (PyTDC + `requirements-dev.txt` 필요).
+
+### Step 1 — 원본 데이터 수집
+
+각 출처별로 한 번씩만 실행하면 된다. `data/raw/<source>/` 아래에 캐시됨.
+
+```bash
+# FDA DILIrank 2.0 (1,223 분자) — 이미 data/raw/dilirank/ 에 포함됨
+.venv/bin/python src/fetch_dilirank_full.py
+
+# NIH LiverTox (Likelihood Score A-E, 851 분자)
+.venv/bin/python src/fetch_livertox_extended.py
+
+# FDA DailyMed Drug Label (hepatotoxicity severity, 1,300 분자)
+.venv/bin/python src/fetch_dailymed.py
+
+# PubMed DILI MeSH (518 분자)
+.venv/bin/python src/fetch_pubmed_dili.py
+
+# CTD chemical-disease curation (3,488 분자)
+.venv/bin/python src/fetch_ctd.py
+
+# FAERS adverse event reports (234 분자)
+.venv/bin/python src/fetch_faers.py
+```
+
+> Tox21, chEMBL, marketed_clean 은 이미 `data/raw/` 에 포함되어 있다.
+
+### Step 2 — 통합 라벨 DB 빌드
+
+```bash
+make labels
+# 또는: .venv/bin/python src/build_labels_db.py
+```
+
+**수행 작업**:
+1. 모든 출처의 SMILES 를 RDKit `MolStandardize` 체인으로 표준화 (염 제거 → 전하 중화 → canonical)
+2. InChIKey 기준으로 9개 출처 outer-join (19,273 unique compound)
+3. OR 룰 적용: 양성 신호 only → 1, 음성 신호 only → 0
+4. 양·음 신호 충돌 1,210건 → `data/labels_db/conflicts/conflicts_curated.csv` lookup
+
+**결과**:
+- `data/labels_db/full.parquet` (19,273 행)
+- vivo 라벨: 양성 3,327 / 음성 10,494 / 제외 5,452
+- vitro 라벨: 양성 2,117 / 음성 5,444 / 제외 11,712
+
+**소요 시간**: ~2분
+
+### Step 3 — 충돌 큐레이션 (옵션, 이미 적용됨)
+
+이미 `conflicts_curated.csv` 가 포함되어 있어 `make labels` 만으로 충분하다. 처음부터 다시 큐레이션하려면:
+
+```bash
+make curate
+# 또는: .venv/bin/python src/curate_conflicts.py
+```
+
+**큐레이션 룰**:
+1. **FDA/NIH 공식 라벨** (331건) → DILIrank, LiverTox A-E, DailyMed Boxed Warning 그대로
+2. **비약물 화학물질** (425건) → 산업 화학물·지방산·아미노산·시약 등 학습 제외
+3. **잘 알려진 시판약** (454건) → 6개 sub-agent 가 LiverTox/PubMed/DrugBank WebSearch 검증 (양성 182 / 음성 111 / 증거 부족 161 제외)
+
+**결과**: `data/labels_db/conflicts/conflicts_curated.csv` + 검증 상세 `conflicts_verified.csv` + `batches/batch_{1..6}_verified.csv`
+
+### Step 4 — Scaffold OOD Split
+
+```bash
+make splits
+# 또는: .venv/bin/python src/build_domain_splits.py
+```
+
+**수행 작업**:
+- vivo / vitro 도메인별로 Bemis-Murcko scaffold split (70% train / 15% val / 15% test)
+- 같은 scaffold 의 분자는 한 split 에만 배정 → 누설(leakage) 차단
+
+**결과**: `data/train/{vivo,vitro}.csv`, `data/val/{vivo,vitro}.csv`, `data/test/{vivo,vitro}.csv`
+
+### Step 5 — Chemprop D-MPNN 학습 (Production)
+
+```bash
+make train-chemprop
+# 또는: .venv/bin/python src/train_chemprop_v17.py
+```
+
+**모델 하이퍼파라미터**:
+- D-MPNN architecture, message-passing hidden dim **600**
+- Ensemble size **15** (15 개 모델 random init 후 평균)
+- RDKit 2D normalized descriptors (200-dim) 보조 feature
+- Epochs **40**, early stopping patience **8**
+- Loss: binary cross-entropy
+- Optimizer: Adam (default)
+- Class imbalance: scaffold split 의 stratification 으로 처리
+
+**결과**:
+- `models/chemprop_scaffold_v2/v17_ens15_h600/{vivo,vitro}/model_{0..14}/` (15 model checkpoint)
+- `results/chemprop_v17.json`
+
+**소요 시간**: vivo + vitro 합쳐서 ~1.5~2시간 (CPU 기준). GPU 가 있으면 `--accelerator gpu` 로 단축 가능.
+
+### Step 6 — RF/CB Fingerprint Ablation 학습
+
+```bash
+make train-rfcb
+# 또는: .venv/bin/python src/train_rfcb_scaffold_v2.py
+```
+
+**모델 구성**:
+- 5종 fingerprint (ECFP6, Avalon, AtomPair, TT, Pattern) × {Random Forest, CatBoost} = **10개 sub-model**
+- **Random Forest**: `n_estimators=500, max_features='sqrt', min_samples_leaf=2, class_weight='balanced'`
+- **CatBoost**: `iterations=500, depth=6, learning_rate=0.05, class_weights={0:1, 1:3}`
+- 10개 sub-model 의 val MCC 를 Nelder-Mead 로 최적화하여 soft-voting 가중치 결정
+
+**결과**:
+- `models/rfcb_scaffold_v2/{vivo,vitro}/{rf,cb}_{ecfp6,avalon,atompair,tt,pattern}/model.{pkl,cbm}`
+- `models/rfcb_scaffold_v2/{vivo,vitro}/ensemble_meta.json` (가중치 + threshold + 성능)
+- `results/rfcb_scaffold_v2.json`
+
+**소요 시간**: ~20~30분
+
+### Step 7 — Honest Stacking
+
+```bash
+make stack
+# 또는: .venv/bin/python src/stack_honest.py
+```
+
+**수행 작업**:
+1. val 셋에서 두 모델(Chemprop, RFCB) 예측 확률을 결합
+2. α ∈ [0, 1] 21-step × threshold ∈ [0.05, 0.95] 91-step 그리드 서치로 **val MCC 최대화**
+3. 결정된 α, threshold 를 test 셋에 그대로 적용 → **honest 일반화 성능**
+
+**결과**: `results/stack_honest.json`
+```json
+{
+  "honest_best_alpha": 0.30,
+  "honest_best_threshold": 0.47,
+  "honest_test_mcc": 0.788,
+  "honest_test_auc": 0.963,
+  "honest_test_tpr": 0.811,
+  "honest_test_tnr": 0.962
+}
+```
+
+**중요**: val 에서 결정한 α, threshold 를 test 에 적용한 honest MCC (0.788) 가 test 에서 직접 그리드 서치한 peek MCC (0.801) 와 거의 같다 → **하이퍼파라미터 선택의 안정성** 입증.
+
+### Step 8 — Sanity Check (옵션)
+
+잘 알려진 약 20종 (Acetaminophen, Isoniazid, Halothane 등 양성 10 + Aspirin, Ibuprofen, Loratadine 등 음성 10) 에 대한 예측을 확인한다:
+
+```bash
+make sanity
+# 또는: .venv/bin/python src/sanity_check.py
+```
+
+학습된 모델이 임상적으로 명백한 케이스에서 합리적인 예측을 하는지 빠르게 검증할 수 있다.
+
+### 전체 파이프라인 한 번에
+
+```bash
+make all
+```
+
+Step 2 ~ 7 을 순차 실행. 총 소요 시간 약 **2~3시간** (CPU 기준).
+
+### v31 — Verified Labels 재학습 (alternative)
+
+WebSearch 검증된 라벨로 재학습한 별도 시나리오:
+
+```bash
+.venv/bin/python src/train_chemprop_v31.py
+.venv/bin/python src/train_rfcb_v31.py
+.venv/bin/python src/eval_sanity_v2_v31.py
+```
+
+**결과** (verified labels, more conservative):
+- Chemprop v31: vivo test MCC 0.436, AUC 0.788
+- RFCB v31: vivo test MCC 0.338, AUC 0.748
+
+라벨 노이즈가 줄어들면서 MCC 가 v17 (0.788) → v31 (0.436) 으로 낮아지는 것은 **train/test 동시에 더 엄격한 라벨 적용**으로 인한 정직한 일반화 성능 측정의 결과다.
+
 ## Feature
 
 **(1) Chemprop D-MPNN — Production 입력 (Yang et al., 2019; Heid et al., 2024)**
