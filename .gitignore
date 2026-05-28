@@ -146,3 +146,14 @@ catboost_info/
 
 # Claude Code 로컬 설정
 .claude/
+
+docs/
+~$*
+
+# v31 학습 산출 (큰 .pt + .pkl) — 재생성 가능
+models/chemprop_v31_class_expanded/
+models/rfcb_v31/
+models/rfcb_v31_v2/
+
+# 학습 로그
+logs/
