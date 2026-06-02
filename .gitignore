@@ -25,7 +25,8 @@ data/marketed_drugs/raw/
 data/marketed_drugs/processed/
 data/marketed_drugs/reference/
 
-# Models — 학습된 모델도 저장소에 함께 포함 (Windows 등에서 즉시 inference 가능)
+# Models — 학습된 모델 바이너리/산출물은 git 추적 제외 (용량 큼, 재생성 가능)
+models/
 models/model_meta.json.legacy
 # v1.4.0, v1.5.0 은 GitHub 100MB 제한 초과 → repo 미포함 (필요 시 별도 전달)
 models/v1.4.0/
@@ -157,3 +158,6 @@ models/rfcb_v31_v2/
 
 # 학습 로그
 logs/
+
+# 로컬 전용 lookup 도구 (git 추적 제외)
+src/lookup.py
