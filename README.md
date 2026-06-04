@@ -1,33 +1,15 @@
-# DILI Prediction — SMILES 기반 약물성 간독성 예측
+# DILI Prediction
 
-약물의 SMILES를 입력하면 간독성(Drug-Induced Liver Injury, DILI) 여부를 1(있음) / 0(없음)으로 예측한다.
+SMILES를 입력하면 간독성(Drug-Induced Liver Injury) 여부를 1(있음) / 0(없음)으로 예측한다.
 
-## 최종 모델 (제출본)
-
-표현 계열이 서로 다른 세 모델을 honest stacking으로 결합한다.
-
-| 구성 모델 | 표현 | 가중치 |
-|---|---|---:|
-| Chemprop D-MPNN ensemble | 분자 그래프 | 0.8 |
-| ChemBERTa-zinc (fine-tuned) | SMILES 트랜스포머 (전이학습) | 0.2 |
-| RF / CatBoost (5 fingerprint) | fingerprint | 0.0 (ablation) |
-
-- 결합: `P = 0.8 × Chemprop + 0.2 × ChemBERTa`, threshold 0.45
-- scaffold-OOD test(2,086분자): AUC 0.797 / MCC 0.42 / Specificity 0.96
-
-## 데이터
-
-9개 출처(DILIrank, LiverTox, DailyMed, PubMed, CTD, FAERS, ChEMBL, Marketed pool, Class Expansion)를 InChIKey 기준 통합 → vivo 라벨 13,902분자(양성 3,381 / 음성 10,521, 양성률 24%). Bemis-Murcko scaffold-balanced split 70/15/15 (train 9,731 / val 2,085 / test 2,086).
-
-음성의 약 94%(9,919)는 "독성 신호가 없는 시판약"을 음성 anchor로 사용한 것이다.
-
-## 예측 사용법
+## 실행 방법
 
 ```bash
 # 단일 / 다중 SMILES → 1/0
 .venv/bin/python src/predict_stack.py "CC(=O)Nc1ccc(O)cc1"
+.venv/bin/python src/predict_stack.py "SMILES1" "SMILES2"
 
-# 파일 입력 (한 줄에 SMILES 하나)
+# 파일 입력 (한 줄에 SMILES 하나) + 결과 CSV 저장
 .venv/bin/python src/predict_stack.py --file drugs.txt --out out.csv
 
 # 대화형 (실행해두고 SMILES 붙여넣기)
@@ -37,41 +19,54 @@
 .venv/bin/python src/predict_compare.py "SMILES"
 ```
 
-전부 로컬 CPU에서 동작한다(GPU·인터넷 불필요). 입력 SMILES는 학습과 동일한 RDKit MolStandardize 체인으로 표준화 후 예측한다.
+전부 로컬 CPU에서 동작한다 (GPU·인터넷 불필요).
 
-## ChemBERTa Fine-tuning (Colab GPU)
+## 모델 학습 방법
 
-`notebooks/chemberta_finetune.ipynb` — ZINC 사전학습 ChemBERTa에 분류 헤드를 붙여 DILI train(9,731)으로 fine-tuning. 클래스 가중 손실, 10 epoch, val MCC 최고 epoch 채택. 산출된 val/test 확률을 stacking에 사용한다.
+학습 데이터(`data/chemprop_scaffold_v3/vivo/`: `all.csv`, `splits.json`)는 이미 빌드돼 있다. 최종 모델(stacking)은 아래 순서로 만든다.
 
-## 주요 스크립트
+```bash
+# 1) Chemprop D-MPNN ensemble (로컬 CPU, 약 45분)
+.venv/bin/python src/train_chemprop_v31.py
 
+# 2) RF / CatBoost fingerprint ensemble
+.venv/bin/python src/train_rfcb_v31.py
+
+# 3) ChemBERTa fine-tuning  →  Colab GPU에서 실행
+#    notebooks/chemberta_finetune.ipynb 업로드 → GPU 켜고 셀 실행
+#    all.csv, splits.json 업로드 → val/test 확률 CSV + 가중치 다운로드
+
+# 4) Stacking — 각 모델의 val/test 예측 생성 후 가중치/threshold 결정
+.venv/bin/python src/gen_stack_preds.py    # chemprop / RFCB 의 val·test 예측
+.venv/bin/python src/stack_final.py         # honest stacking (val→test)
 ```
-src/
-  predict_stack.py        최종 stacked 추론 (chemprop v31 + ChemBERTa)
-  predict_app.py          대화형 추론
-  predict_compare.py      전 모델 비교 추론
-  predict.py              단일 chemprop(v27) 추론
-  gen_stack_preds.py      chemprop/RFCB의 val/test 예측 생성
-  stack_final.py          honest stacking (val 가중치/threshold → test)
-  build_strict_labels.py  엄격 라벨(DILIrank vMost) 재구성 (실험)
-notebooks/
-  chemberta_finetune.ipynb   ChemBERTa 파인튜닝 (Colab)
+
+데이터 DB(라벨)부터 새로 빌드하려면:
+
+```bash
+make labels     # 9개 출처 통합 라벨 DB
+make splits     # Bemis-Murcko scaffold split (70/15/15)
 ```
 
-## 평가 결과 요약
+## Make 명령어
 
-| 평가셋 | AUC | MCC | 비고 |
-|---|---:|---:|---|
-| scaffold-OOD test (2,086) | 0.797 | 0.42 | 동일 라벨 정의 |
-| 외부 263 신약 (구성 모델) | 0.51 | 0.01 | 학습 DB와 0 중첩 |
-
-## 한계 (핵심 발견)
-
-성능은 모델보다 라벨 정의에 종속된다. 학습 라벨은 "독성 신호 없으면 안전"(양성 24%) 기준이라 보수적이며, specificity(0.96)는 높으나 sensitivity(0.38)는 낮다(독성 약을 일부 놓침). 평가 기준의 양성률이 다르면 정확도가 크게 달라진다. 외부 신약 평가에서 random 수준으로 떨어지는 것은 본 모델만의 문제가 아니라 DILI prediction 분야 전반의 한계로, MoLFormer·ChemBERTa·GROVER·KPGT 등 최신 모델도 동일한 경향을 보인다.
-
-## References
-
-- Yang et al. (2019), Heid et al. (2024) — Chemprop D-MPNN
-- Chithrananda et al. (2020) — ChemBERTa
-- Bemis & Murcko (1996) — Scaffold split
-- FDA DILIrank, NIH LiverTox, CTD, FAERS, ChEMBL 등 데이터 출처
+| 명령어 | 설명 |
+|---|---|
+| `make init` | 환경 설정 (conda 또는 venv 선택) |
+| `make init-venv` | venv 환경 생성 및 패키지 설치 (python 3.10~3.13) |
+| `make init-conda` | conda 환경 생성 및 패키지 설치 |
+| `make init-py` | Windows: py launcher로 패키지 직접 설치 (venv 없음) |
+| `make init-update` | 환경 업데이트 (현재 활성 환경 기준) |
+| `make labels` | 통합 라벨 DB 빌드 (data/raw → data/labels_db/full.parquet) |
+| `make curate` | 충돌 1,210건 큐레이션 (conflicts_curated.csv) |
+| `make splits` | 도메인별 train/val/test 분할 (vivo, vitro) |
+| `make train-rfcb` | RF/CB 5 fingerprint × scaffold 학습 |
+| `make train-chemprop` | Chemprop ensemble (size 15, hidden 600) 학습 |
+| `make stack` | Honest stacking (val에서 α/threshold 결정 → test 평가) |
+| `make sanity` | 잘 알려진 약(Acetaminophen 등) sanity check |
+| `make all` | 전체 파이프라인 (labels → curate → splits → train → stack) |
+| `make format` | ruff 코드 포맷팅 |
+| `make lint` | ruff 린트 검사 |
+| `make check` | 포맷 + 린트 검사 (pre-push에서 사용) |
+| `make clean` | 생성된 파일 정리 |
+| `make clean-env` | 가상환경 삭제 |
